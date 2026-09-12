@@ -1,6 +1,6 @@
-# VIBE Lift — Digitale gewichtloosheid
+# Vibe Lift — Digitale gewichtloosheid
 
-Nederlandstalige interactieve leeromgeving voor iemand zonder programmeerachtergrond. Veertien vrij toegankelijke stappen in vijf fasen, één fictief voorbeeldproject, visuele flows en alle 28 AI-opdrachten uit de bewerkte lezerseditie uit het handboek.
+Nederlandstalige interactieve leeromgeving voor iemand zonder programmeerachtergrond. Veertien vrij toegankelijke stappen in vijf fasen, één fictief voorbeeldproject, visuele flows en 28 bouwopdrachten, 12 tools met uitleg per stap en een aanvullende SEO-cursus van vijf lessen met vijf eigen opdrachten. De route gebruikt Antigravity met toegang tot GitHub; de cursist voert zelf geen Git-commando’s uit.
 
 ## Lokaal openen
 
@@ -20,12 +20,17 @@ De lokale server luistert alleen op `127.0.0.1:4173`. Dit lokale adres is geen o
 
 - `dist/content.js`: lessen, fasen, begrippen en Studio Maan-voorbeelden.
 - `dist/app.js`: weergaven, gereedschappen, opdrachtcontext en navigatie.
-- `dist/styles.css`: kleuren, typografie, responsive layout en beweging.
-- `dist/prompts.js`: opdrachten uit de actuele VIBE Lift-lezerseditie. Opnieuw genereren vanuit het handboek met `python scripts/extract_prompts.py`.
-- `dist/downloads/handboek.md`: VIBE Lift-lezerseditie 1.1. Wijzig een opdracht in deze handleiding en genereer daarna `prompts.js` opnieuw. Het oorspronkelijke aangeleverde document wordt buiten de publicatiemap bewaard.
+- `dist/styles.css` en `dist/lift.css`: basisstijl en huidige Vibe Lift-vormgeving.
+- `dist/tools.js`: 12 tools, officiële links, toolgebruik per hoofdles en repositoryhandleiding.
+- `dist/seo.js`: vijf SEO-lessen, instellingen, bronnen en SEO-bouwafspraken.
+- `dist/air.js`: eigen decoratief deeltjesveld, cursorrespons en pauzeren.
+- `dist/prompts.js`: opdrachten uit de actuele Vibe Lift-lezerseditie. Opnieuw genereren vanuit het handboek met `python scripts/extract_prompts.py`.
+- `dist/downloads/handboek.md`: Vibe Lift-lezerseditie 1.2. Wijzig een opdracht in deze handleiding en genereer daarna `prompts.js` opnieuw. Het oorspronkelijke aangeleverde document wordt buiten de publicatiemap bewaard.
 - `dist/assets/`: originele illustraties en favicon.
 
-Iedere les moet de vaste inhoudsvelden blijven bevatten. Een opdracht-ID verwijst naar een bestaande opdracht uit de lezerseditie; schrijf aanvullingen in de context in `app.js`, zodat context en kopieerbare opdracht herkenbaar gescheiden blijven.
+Iedere les moet de vaste inhoudsvelden blijven bevatten. Synchroniseer na wijzigingen in tool- of SEO-inhoud eerst met `node scripts/update-guide.mjs`. De automatisch beheerde aanvulling van het handboek is afgebakend met een vaste marker. Genereer daarna de 28 kernprompts opnieuw.
+
+Een opdracht-ID verwijst naar een bestaande opdracht uit de lezerseditie; schrijf aanvullingen in de context in `app.js`, zodat context en kopieerbare opdracht herkenbaar gescheiden blijven.
 
 ## Controleren
 
@@ -34,18 +39,25 @@ node --check dist/app.js
 node --check dist/content.js
 node --check dist/prompts.js
 node scripts/validate.mjs
+node scripts/check-air.mjs
+node scripts/check-http.mjs
 ```
+
+Voor check-http moet de lokale server draaien. De bewegingscontrole test rekenlogica en lifecycle met een kleine harness, geen browserweergave.
 
 De validator controleert bronintegriteit, volledige inhoud, routes, gerenderde HTML-strings en de interactiecontracten van de handlers. Hij schrijft `docs/validation.json`. Dit is geen browsertest of visuele beoordeling.
 
 ## Publicatie
 
-Dit is een statische site. `dist/` bevat de daadwerkelijke bronbestanden die worden gepubliceerd; er is geen bundelstap. `.openai/hosting.json` koppelt deze map aan de bestaande Sites-site. Behoud die identiteit bij wijzigingen. Publiceer de gecontroleerde bron via de Sites-werkwijze en behoud de huidige toegang. De eerste versie wordt alleen voor de eigenaar gepubliceerd.
+Dit is een statische site. `dist/` bevat de daadwerkelijke bronbestanden die worden gepubliceerd; er is geen bundelstap. `.openai/hosting.json` koppelt deze map aan de bestaande Sites-site. Behoud die identiteit bij wijzigingen. Publiceer de gecontroleerde bron via de Sites-werkwijze en behoud de huidige toegang. De site blijft alleen voor de eigenaar gepubliceerd.
 
 Geen appdatabase, accounts, analytics, AI-API of externe bibliotheken. Sites verzorgt de toegangslaag buiten deze applicatie. De site kopieert alleen op verzoek tekst naar het klembord; opdrachten en publicaties voor leerlingprojecten worden niet vanuit deze site uitgevoerd.
 
 ## Documentatie
 
+- `docs/UITBREIDINGSPLAN.md`: analyse, eisen en afwegingen voor toolhulp, SEO en gewichtloosheid.
+- `docs/BRONNEN_1_2.md`: gecontroleerde officiële documentatie en grenzen.
+- `docs/HERO_PROMPT_1_2.md`: exacte prompt voor het vervangende hoofdbeeld.
 - `docs/REBRANDING.md`: actuele merkkeuzes, verwijdering van bezoekersgerichte frameworkverwijzingen en controles.
 - `PLAN_SPOS.md`: intern analyse- en bouwplan van de eerste oplevering.
 - `docs/ARCHITECTUUR_SPOS.md`: onderbouwing, grenzen, risico's en verificatie.

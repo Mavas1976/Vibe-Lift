@@ -13,10 +13,12 @@ const text=`# Bronmapping en redactionele keuzes
 | S02 | Eerdere SPOS-analyse in ../analyse/SPOS_analyse_werkwijze_v3.1.md | Verbeterpunten voor zelfstandige beginnersroute | Analyse van S01; geen afzonderlijke empirische gebruikerstest |
 | S03 | https://advey.ai/ | Visuele referentie, inhoud en screenshot bekeken op 12 september | IJsblauw, donkerblauw, ruime typografie, ronde knoppen, zachte schaduwen; geen commerciële claims overgenomen |
 | S04 | Officiële leverancierslinks uit S01 | Gereedschappenpagina | In eerdere broncontrole geraadpleegd; kosten en functies kunnen wijzigen |
-| S05 | Twee originele gegenereerde illustraties | Gewichtloze vliegtuig- en ontwerplagenvisual | Illustratief; generatie-instructies in IMAGE_PROMPTS.md |
+| S05 | Twee originele gegenereerde illustraties | Gewichtloze ontwerplagenvisual; hoofdbeeld vervangen in editie 1.2, zie HERO_PROMPT_1_2.md | Illustratief; generatie-instructies in IMAGE_PROMPTS.md |
 | S06 | SPOS 4.7.0 lokale CORE/BUILD/RESEARCH/PRODUCT-instructies | Werkmethode en dossierstructuur | Instructiekader, geen bewijs van geleverde productkwaliteit |
 
-De publicatiemap bevat nu de bewerkte VIBE Lift-lezerseditie 1.1. De oorspronkelijke bron buiten de publicatiemap heeft SHA256 b9d113362560d98decd21cc958815cc58022b4d2e1b542acbc409c9138d44072. De hash van de actuele lezerseditie staat in validation.json.
+De publicatiemap bevat nu de bewerkte Vibe Lift-lezerseditie 1.2. De oorspronkelijke bron buiten de publicatiemap heeft SHA256 b9d113362560d98decd21cc958815cc58022b4d2e1b542acbc409c9138d44072. De hash van de actuele lezerseditie staat in validation.json.
+
+De uitbreiding met tools en vijf SEO-lessen is gebaseerd op de gebruikersvraag en officiële leveranciersdocumentatie; zie BRONNEN_1_2.md. Kiolo is aanvullend bekeken voor de deeltjesachtergrond.
 
 ## Les naar bron
 

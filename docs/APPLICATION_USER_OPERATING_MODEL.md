@@ -2,7 +2,7 @@
 
 ## 1. Executive summary
 
-**Observatie:** VIBE Lift is een Nederlandstalige leeromgeving voor beginners die met AI een IT-project of website willen opbouwen. De inhoud is verdeeld over veertien stappen en vijf fasen. Lezers kiezen vrij een stap en wisselen tussen Uitleg, Voorbeeld, Opdracht en Controle. De fictieve Studio Maan verbindt de uitleg. Alle 28 genummerde opdrachten uit de actuele lezerseditie zijn leesbaar en kopieerbaar.
+**Observatie:** Vibe Lift is een Nederlandstalige leeromgeving voor beginners die met AI een IT-project of website willen opbouwen. De inhoud is verdeeld over veertien stappen en vijf fasen. Lezers kiezen vrij een stap en wisselen tussen Uitleg, Voorbeeld, Opdracht en Controle. De fictieve Studio Maan verbindt de uitleg. Alle 28 genummerde bouwopdrachten en vijf SEO-opdrachten zijn leesbaar en kopieerbaar. Iedere hoofdles heeft toolhulp; de aanvullende SEO-cursus heeft vijf vrij toegankelijke lessen met instellingen en bronlinks.
 
 Er is één appgebruikersrol: lezer. De site-eigenaar onderhoudt de bron buiten de website. Sites regelt de besloten toegang. De applicatie beheert geen accounts of leerlingprojecten. Ze verzendt geen aanvragen en voert geen AI-opdrachten uit.
 
@@ -18,7 +18,9 @@ Status PASS betekent hier geïmplementeerd en voor de genoemde broncontracten ge
 | Veertien lessen | PASS | content.js, app.js | Vier onderdelen per les | Didactische duidelijkheid niet gemeten | Test met beginner |
 | Voorbeeldproject | PASS | content.js, app.js | Fictief, zonder echte verwerking | Illustratie als echt resultaat opvatten | Fictieve status zichtbaar |
 | Opdrachten | PASS | prompts.js, app.js | 28 teksten uit de lezerseditie + losse context | Gebruiker plakt zonder documenten | Context vóór de opdracht |
-| Werkwijze en tools | PASS | app.js | Rollen en officiële verwijzingen | Externe omgeving kan wijzigen | Laat gebruiker actuele beschikbaarheid checken |
+| Werkwijze en tools | PASS | app.js, tools.js | 12 tools, per stap concrete inzet en officiële verwijzingen | Externe omgeving kan wijzigen | Laat gebruiker actuele beschikbaarheid checken |
+| SEO-cursus | PASS | seo.js, app.js | Vijf lessen, toolhulp, werkbladen en copy/fallback gecontroleerd | Externe schermen kunnen wijzigen | Officiële bronlinks behouden |
+| Deeltjesveld | PASS | air.js, lift.css | Cursorrespons, pauze, visibility en reduced motion met harness gecontroleerd | Geen visuele browsermeting | Effect achter inhoud; systeemvoorkeur respecteren |
 | Bronhandboek | PASS | downloads/handboek.md | Bewerkte lezerseditie | Lang naslagwerk voor beginner | Lessen als hoofdingang |
 | Appregistratie/voortgang | Niet in scope | app.js | Geen appaccounts of opslag | Onterechte verwachting van voortgang | Geen voortgangsscore tonen |
 | Browser QA | Nog niet uitgevoerd | validation.json | Bron- en handlerchecks wel uitgevoerd | Layout/echte bediening onbekend | Afzonderlijk controleren |
@@ -30,19 +32,19 @@ Bronpaden in dit document zijn ten opzichte van `dist/`, tenzij anders genoemd.
 | Observatie | Waarde | Bron | Zekerheid | Opmerking |
 |---|---|---|---|---|
 | Type | Statische interactieve leeromgeving | index.html, app.js | Hoog | Hashnavigatie, geen serverfuncties |
-| Inhoud | 5 fasen → 14 lessen → 4 lesonderdelen | content.js, app.js | Hoog | Vrije navigatie |
-| Opdrachten | 28 bewerkte teksten gekoppeld aan lessen | prompts.js | Hoog | Geen AI-uitvoering |
+| Inhoud | 5 fasen → 14 lessen → 4 lesonderdelen; aanvullend 5 SEO-lessen | content.js, app.js | Hoog | Vrije navigatie |
+| Opdrachten | 28 bouwteksten + 5 SEO-opdrachten | prompts.js, seo.js | Hoog | Geen AI-uitvoering |
 | Voorbeeld | Eén fictieve keramiekstudio | content.js | Hoog | Geen klant of verkochte dienst |
 | Leereffect | Waarschijnlijk eenvoudiger dan een lang document | Plan | [AFGELEID] | Geen gebruikersonderzoek |
 
-Werkelijk model: fase → les → uitleg/voorbeeld/opdracht/controle → resultaat in het eigen project buiten VIBE Lift. Een les verwijst naar één of meer bronopdrachten en procescodes. Er zijn geen leerlingprojectrecords.
+Werkelijk model: fase → les → uitleg/voorbeeld/opdracht/controle → resultaat in het eigen project buiten Vibe Lift. Een les verwijst naar één of meer bronopdrachten en procescodes. Er zijn geen leerlingprojectrecords.
 
 ## 4. Gebruikersrollen en rechtenmodel
 
 | Rol | Lezen/navigeren | Kopiëren/downloaden | Lesinhoud wijzigen | Appgebruikers beheren | Opslaan/verwijderen | Bron |
 |---|---|---|---|---|---|---|
 | Toegelaten lezer | Ja | Ja, eigen apparaat | Nee | Nee | Geen leerlingdata | app.js |
-| Site-eigenaar buiten app | Ja | Ja | Via bronproject | Via Sites, niet in VIBE Lift | Bronversies beheren | README.md, hostingconfig |
+| Site-eigenaar buiten app | Ja | Ja | Via bronproject | Via Sites, niet in Vibe Lift | Bronversies beheren | README.md, hostingconfig |
 
 De inhoud verschilt niet per lezer. Er zijn geen app-authroutes, redirects na login of administratorpanelen. De gepubliceerde toegang wordt vóór de site door Sites gehandhaafd. De eerste publicatie is uitsluitend voor de eigenaar. Clientcode zelf kan toegang niet afdwingen.
 
@@ -54,7 +56,7 @@ De inhoud verschilt niet per lezer. Er zijn geen app-authroutes, redirects na lo
 | Les | Auteur | id, fase, uitleg, input, output, taken, flow, casus, criteria, prompts | Fase en opdrachten | #stap/1–14 | content.js |
 | Bronopdracht | Extractiescript | id, titel, tekst | Eén les; aanvullende context | #opdrachten; lesonderdeel | prompts.js |
 | Casus | Auteur | Studio Maan-voorbeeld per les | Les | #voorbeeld; lesonderdeel | content.js |
-| Tijdelijke UI-staat | Lezer | hashroute, kaart/lijst, kopieermelding | Huidige weergave | Alle routes | app.js |
+| Tijdelijke UI-staat | Lezer | hashroute, kaart/lijst, kopieermelding, beweging gepauzeerd | Huidige weergave | Alle routes | app.js |
 
 | Object/veld | Persoonsgegeven? | Waar gebruikt | Risico | Actie |
 |---|---|---|---|---|
@@ -67,7 +69,7 @@ De inhoud verschilt niet per lezer. Er zijn geen app-authroutes, redirects na lo
 
 ```mermaid
 flowchart TD
-  A[Toegelaten lezer opent VIBE Lift] --> B[Routekaart of lijst]
+  A[Toegelaten lezer opent Vibe Lift] --> B[Routekaart of lijst]
   B --> C[Kiest een van 14 stappen]
   C --> D[Leest uitleg en benodigde input]
   D --> E[Bekijkt Studio Maan]
@@ -78,14 +80,17 @@ flowchart TD
   I -->|Ja| J[Volgende stap]
   I -->|Nog niet| K[Herstellen of teruggaan]
   J --> C
+  J -->|Na stap 14| L[SEO-cursus: 5 lessen]
+  L --> M[Instellingen, AI-opdracht en controle]
+  M --> C
   K --> C
 ```
 
-VIBE Lift slaat het externe resultaat niet op en kent geen voltooide-lesstatus. De beoordelingsbeslissing is van de leerling.
+Vibe Lift slaat het externe resultaat niet op en kent geen voltooide-lesstatus. De beoordelingsbeslissing is van de leerling.
 
 ## 7. Toegang, registratie, uitnodigingen en activatie
 
-Geen zelfregistratie, uitnodigingsformulier, appaccount of eigen login aanwezig. Sites levert de toegangslaag voor de besloten publicatie. Deze website bevat geen knoppen waarmee de lezer anderen toegang kan geven. Accountactivatie, e-mailverificatie en wachtwoordherstel zijn daarom geen eigen VIBE Lift-flows.
+Geen zelfregistratie, uitnodigingsformulier, appaccount of eigen login aanwezig. Sites levert de toegangslaag voor de besloten publicatie. Deze website bevat geen knoppen waarmee de lezer anderen toegang kan geven. Accountactivatie, e-mailverificatie en wachtwoordherstel zijn daarom geen eigen Vibe Lift-flows.
 
 ## 8. Onboarding per rol
 
@@ -116,7 +121,9 @@ Desktop: vijf fasekolommen. Smallere schermen: fasen onder elkaar; op telefoons 
 | Opdrachten | Bronprompts meenemen | #opdrachten, #stap/n/opdracht | Openklappen, lezen, kopiëren | Gebouwd | promptCard |
 | Gereedschappen | Begrippen en rollen | #tools | Officiële site openen | Gebouwd | renderTools |
 | Werkwijze | Praktische werkwijze | #werkwijze | Uitleg lezen, handboek ophalen | Gebouwd | renderMethod |
-| Naslag | Volledige bron | downloads/handboek.md | Download/openen | Gebouwd | index.html |
+| SEO | Vindbaarheid en meting | #seo, #seo/1–5 | Les wisselen, prompt kopiëren, bronnen openen | Gebouwd | renderSEO |
+| Achtergrond | Decoratief cursorveld | Alle routes | Beweging pauzeren of hervatten | Gebouwd | air.js |
+| Naslag | Bewerkte lezerseditie | downloads/handboek.md | Download/openen | Gebouwd | index.html |
 
 ## 11. Kernobjectbeheer
 
@@ -127,6 +134,7 @@ De lezer maakt geen kernobjecten in deze applicatie aan. De eigenaar beheert de 
 | Les | Bekijken | Lezer | id 1–14, bekende tab | Lesweergave | Ongeldige route → herstelpagina |
 | Bronopdracht | Bekijken/kopiëren | Lezer | Bestaand id 1–28 | Klembordtekst | Weigering → tekst selecteren |
 | Les | Wijzigen | Eigenaar buiten app | Vast inhoudscontract | Nieuwe bronversie | Validator stopt bij ontbrekende inhoud |
+| SEO-opdracht | Lezen/kopiëren | Lezer | Bestaand SEO-id 1–5 | Klembordtekst | Weigering → tekstselectie |
 | Opdracht | Opnieuw extraheren | Eigenaar buiten app | 28 genummerde tekstblokken | prompts.js | Extractie stopt bij ontbrekend blok |
 | Versie | Publiceren/herstellen | Eigenaar buiten app | Gecontroleerde bron en huidige toegang | Sites-versie | Publicatiefout volgens Sites |
 
@@ -143,6 +151,8 @@ Zoeken, dupliceren, archiveren en toewijzen zijn geen appfuncties voor lezers.
 | Opdracht meenemen | Details geopend | Lees context; kopieer | Expliciete klik | Bronopdracht op klembord + melding | Geen toegang → selectie en uitleg | Platformklembord kan verschillen |
 | Casus volgen | #voorbeeld | Kies een van 14 casuslinks | Stapkeuze | Voorbeeldtab van die les | Geen externe verwerking | Casus is fictief |
 | Extern gereedschap | #tools | Officiële link openen | Klik | Nieuwe tab naar leverancier | Leverancier kan onbereikbaar zijn | Actuele functies/kosten daar controleren |
-| Naslag ophalen | Footer of Werkwijze-pagina | Download handboek | Klik | Oorspronkelijk Markdown-bestand | Browserdownloadinstelling | Geen interne documenteditor |
+| SEO volgen | #seo of einde stap 14 | Kies een van 5 lessen, werkblad, opdracht en controle | Leskeuze | Gekozen SEO-les in URL | Ongeldige SEO-id → herstelpagina | Geen echte Google-accountinrichting uitgevoerd |
+| Beweging regelen | Footer | Pauzeren/hervatten | Knop of systeemvoorkeur | Alleen tijdelijke animatiestatus | Geen canvas → decoratie vervalt | Geen opgeslagen voorkeur |
+| Naslag ophalen | Footer of Werkwijze-pagina | Download handboek | Klik | Bewerkte Markdown-lezerseditie | Browserdownloadinstelling | Geen interne documenteditor |
 
-Geen flow verstuurt berichten, publiceert leerlingprojecten of slaat resultaten op. De tijdelijke kopieermelding is de enige appnotificatie. De leerling rondt de werkelijke projecttaak buiten VIBE Lift af.
+Geen flow verstuurt berichten, publiceert leerlingprojecten of slaat resultaten op. De tijdelijke kopieermelding is de enige appnotificatie. De leerling rondt de werkelijke projecttaak buiten Vibe Lift af.

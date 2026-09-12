@@ -1,3 +1,5 @@
+> Historisch verslag van de eerdere editie. Voor de actuele naam Vibe Lift, toolhulp, SEO en het vervangende hoofdbeeld zie UITBREIDINGSPLAN.md, BRONNEN_1_2.md en HERO_PROMPT_1_2.md.
+
 # VIBE Lift — Digitale gewichtloosheid
 
 ## Analyse en besluit

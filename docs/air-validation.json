@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "checks": 12,
+  "browser_qa": false,
+  "scope": "Numerical pointer response, origin recovery, stability, DPR, pause/resume, visibility, reduced motion and missing canvas"
+}

@@ -1,9 +1,9 @@
-# VIBE Lift — Digitale gewichtloosheid
+# Vibe Lift — Digitale gewichtloosheid
 
 **Van idee naar een werkende website of app**  
-Lezerseditie 1.1 · Gebaseerd op de werkwijze van Mark van Asten · 12 september 2026
+Lezerseditie 1.2 · Gebaseerd op de werkwijze van Mark van Asten · 12 september 2026
 
-Deze editie is redactioneel aangepast voor VIBE Lift. De uitleg en opdrachten zijn zelfstandig bruikbaar met je eigen AI-omgeving. De historische verantwoording beschrijft de oorspronkelijke bron; zij is geen nieuwe toets van een werkend product.
+Deze editie is redactioneel aangepast voor Vibe Lift. De uitleg en opdrachten zijn zelfstandig bruikbaar met je eigen AI-omgeving. De historische verantwoording beschrijft de oorspronkelijke bron; zij is geen nieuwe toets van een werkend product.
 
 Een idee wordt bruikbaar wanneer je het kunt uitleggen, laten zien en uitproberen. In mijn werkwijze verbind ik die drie dingen. Ik onderzoek voor wie ik iets maak, werk het aanbod uit, laat processen en schermen ontwerpen en geef AI gerichte opdrachten om het te bouwen. Vervolgens open ik het resultaat zelf in de browser, doorloop ik de stappen en laat ik verbeteren wat nog niet klopt.
 
@@ -11,11 +11,13 @@ Dit document legt uit hoe je die werkwijze kunt volgen. Je hoeft vooraf geen pro
 
 ## Zo lees je dit document
 
-**Deel A is de handleiding voor de eindgebruiker.** Je doorloopt veertien begrijpelijke stappen, met directe links, kopieerbare opdrachten en een duidelijk resultaat per stap. Dit deel is de basis voor de toekomstige uitlegsite.
+**Deel A is de handleiding voor de eindgebruiker.** Je doorloopt veertien begrijpelijke stappen, met directe links, kopieerbare opdrachten en een duidelijk resultaat per stap. Dit deel is de basis van de interactieve leerroute.
 
 **Deel B is het volledige naslagwerk.** Daar staan de 28 gedetailleerde processtappen, gedragsanalyse, architectuurafspraken, kwaliteitscontroles, invulmodellen en bronnen. Die verdieping blijft beschikbaar zonder dat een beginnende lezer haar eerst hoeft te doorgronden.
 
 De opdrachten in Deel A zijn opnieuw geformuleerd op basis van mijn beschreven werkwijze en aangevuld om ze uitvoerbaar te maken. Het zijn **kopieerbare werkinstructies, geen letterlijke citaten uit oude gesprekken**. Vul tekst tussen vierkante haken in voordat je een opdracht gebruikt. Een stap beschrijft hoe je het werk aanpakt; zij bewijst niet dat elke controle in alle eerdere trajecten is uitgevoerd.
+
+**Aanvulling: Tools en SEO.** Achter in deze editie staan toolkeuzes voor alle veertien stappen en vijf SEO-lessen met concrete instellingen voor Search Console en Analytics.
 
 ### Kies je ingang
 
@@ -61,13 +63,18 @@ Je mag teruggaan. Als een scherm het aanbod niet duidelijk maakt, pas je de inho
 
 | Gereedschap | Waarvoor open je het? | Directe link |
 |---|---|---|
-| Google Stitch | De schermen en visuele richting uitwerken. | [Open Stitch](https://stitch.withgoogle.com/). |
-| Google Antigravity | Werken aan de projectbestanden en de implementatie laten uitvoeren. | [Antigravity](https://antigravity.google/) · [Download](https://antigravity.google/download) · [Aan de slag](https://antigravity.google/docs/getting-started). |
-| Node.js | De lokale JavaScript-omgeving installeren als je project die nodig heeft. | [Download Node.js](https://nodejs.org/en/download). |
-| Git en GitHub | Wijzigingen bewaren en de code op afstand vastleggen. | [Git voor Windows](https://git-scm.com/install/windows) · [GitHub-uitleg](https://docs.github.com/en/get-started/using-github/hello-world). |
-| Docker Desktop | Lokale diensten draaien wanneer de gekozen projectopzet containers gebruikt. | [Docker voor Windows](https://docs.docker.com/desktop/setup/install/windows-install/). |
-| Playwright | Browserhandelingen vastleggen en gebruikersroutes testen. | [Handelingen opnemen](https://playwright.dev/docs/codegen) · [Testverloop bekijken](https://playwright.dev/docs/trace-viewer). |
-| Railway | De applicatie publiceren volgens de gekozen hostingopzet. | [Railway-documentatie](https://docs.railway.com/). |
+| ChatGPT | Orden je idee, analyseer documenten en onderzoek vragen. Gebruik Search of Deep research voor actuele bronnen, als jouw account die functie heeft. | [Open ChatGPT](https://chatgpt.com/) · [Officiële uitleg](https://help.openai.com/en/articles/10500283-deep-research) |
+| Claude | Werk je projectbrief, onderzoek en teksten uit. Gebruik web search of Research voor bronnen; bekijk de beschikbaarheid in je account. | [Open Claude](https://claude.ai/) · [Officiële uitleg](https://support.claude.com/en/articles/11088861-use-research-on-claude) |
+| Stitch | Vertaal je schermen en echte inhoud naar een visueel ontwerp. Verfijn het resultaat en geef de gekozen versie door aan je bouwer. | [Open Stitch](https://stitch.withgoogle.com/) · [Officiële uitleg](https://developers.googleblog.com/stitch-a-new-way-to-design-uis/) |
+| Antigravity | Laat je agent in je project werken: plannen, bouwen, testen en wijzigingen vastleggen. Het versiebeheerpaneel laat wijzigingen, commits en push naar je repository zien. | [Open Antigravity](https://antigravity.google/) · [Officiële uitleg](https://antigravity.google/docs/features) |
+| GitHub | De online bewaarplaats voor je projectcode en versies. Antigravity kan met de gekoppelde repository werken; jij controleert de wijziging en de opgeslagen versie. | [Open GitHub](https://github.com/) · [Officiële uitleg](https://docs.github.com/en/get-started/using-github/hello-world) |
+| Railway | Laat een versie uit je GitHub-repository online draaien. Controleer vooraf instellingen, toegang, kosten en wanneer wijzigingen automatisch worden gepubliceerd. | [Open Railway](https://railway.com/) · [Officiële uitleg](https://docs.railway.com/guides/vibe-coding-deploy) |
+| Playwright | Laat Antigravity herhaalbare browsertests maken voor afgesproken gebruikersroutes. Jij kiest het verwachte resultaat en beoordeelt de uitkomst. | [Open Playwright](https://playwright.dev/) · [Officiële uitleg](https://playwright.dev/docs/codegen) |
+| PageSpeed Insights | Onderzoek een openbare pagina op prestaties. Maak onderscheid tussen een gesimuleerde meting en beschikbare gegevens van echte bezoekers. | [Open PageSpeed Insights](https://pagespeed.web.dev/) · [Officiële uitleg](https://developers.google.com/speed/docs/insights/v5/about) |
+| Search Console | Verifieer je eigen website, dien je sitemap in en bekijk indexatie, zoekopdrachten en klikken uit Google. Dit maakt je site niet automatisch beter vindbaar. | [Open Search Console](https://search.google.com/search-console/) · [Officiële uitleg](https://support.google.com/webmasters/answer/9008080?hl=nl) |
+| Google Analytics | Richt GA4 in om te leren wat bezoekers op je website doen. Kies eerst je meetdoel, gegevens en toestemmingsgedrag; controleer daarna de echte meting. | [Open Google Analytics](https://analytics.google.com/) · [Officiële uitleg](https://support.google.com/analytics/answer/9304153?hl=nl) |
+| Node.js | Alleen nodig als de projecttechniek dat vraagt. Laat Antigravity vaststellen welke versie en startwijze passen; je hoeft geen code te schrijven. | [Open Node.js](https://nodejs.org/en/download) · [Officiële uitleg](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) |
+| Docker | Alleen gebruiken als het project diensten in containers nodig heeft. Een eenvoudige website heeft dit vaak niet nodig; volg de vastgelegde projectopzet. | [Open Docker](https://www.docker.com/products/docker-desktop/) · [Officiële uitleg](https://docs.docker.com/desktop/setup/install/windows-install/) |
 
 **Hostingkeuze:** in deze werkwijze gebruiken we Railway. Je kunt ook een andere hostingprovider gebruiken; pas dan de deploymentconfiguratie en beheerinstructies aan de gekozen provider aan.
 
@@ -131,6 +138,8 @@ Maak zichtbaar wat bevestigd is, wat afgeleid is en wat onbekend blijft.
 Verzin geen schermen, klantenaantallen, prijzen of productmogelijkheden.
 Geef bij iedere belangrijke conclusie de bron en datum. Zoek tegenbewijs
 voor mijn uitgangspunt. Eindig met de consequenties voor mijn propositie.
+
+Gebruik webonderzoek met bronlinks waar beschikbaar, bijvoorbeeld in Claude of ChatGPT. Onderzoek ook de zoekvragen achter mogelijke openbare pagina’s. Scheid echte waarnemingen van aannames; verzin geen zoekvolumes.
 ```
 
 **Controle:** openen de bronlinks, zijn de bedoelde afbeeldingen echt opgenomen en volgt de conclusie uit het gevonden materiaal? **Wat je overhoudt:** `onderzoek.md` met een bronnenregister. **Verdieping:** P04–P05.
@@ -201,6 +210,8 @@ uit: laden, leeg, gevuld, fout, succes en onvoldoende rechten.
 Koppel schermen aan processen en maak zichtbaar wat nu wordt gebouwd,
 wat later komt en waar nog een beslissing nodig is. Lever schermen.md
 plus een dekkingsmatrix op. Laat geen proces zonder scherm of afhandeling.
+
+Maak voor openbare contentpagina’s ook seo-plan.md: de zoekvraag, gewone pagina-URL, unieke paginatitel, meta-beschrijving, hoofdkop, interne links en vervolgstap. Gebruik echte informatie uit het onderzoek.
 ```
 
 **Controle:** je kunt elke gebruikersroute aanwijzen in de inventaris. **Wat je overhoudt:** `schermen.md`, een paginastructuur en een dekkingsmatrix. Leg daarnaast alle letterlijke paginainhoud, gedeelde teksten en taalvarianten vast volgens opdracht 25 en hoofdstuk 11.3. **Verdieping:** P11–P12.
@@ -238,6 +249,10 @@ inhoud en functies uit de specificatie. Mijn concrete feedback: [feedback].
 
 ## Stap 7: Draag alles over aan Antigravity
 
+**Je bouwroute zonder zelf Git-commando’s te typen:** geef Antigravity toegang tot de bedoelde GitHub-repository. Laat de agent de wijzigingen uitvoeren, controleren en committen. Een commit is een vastgelegde codeversie; naar GitHub sturen heet pushen. Controleer de online commitlink en spreek vóór het doorsturen af of Railway deze branch automatisch publiceert. De precieze aanmeldroute kan per installatie verschillen. Voltooi die aanmelding zelf en plak geen geheime toegangstokens in een gesprek.
+
+**SEO hoort al in dit bouwplan:** geef seo-plan.md uit stap 5 mee. Laat openbare URL’s, inhoud, metadata, sitemap, robots, mobiel, snelheid en meetgedrag meteen opnemen. De vijf SEO-lessen achter in dit handboek werken de instellingen later stap voor stap uit.
+
 **Je doel:** zorgen dat de bouwomgeving de inhoud, het ontwerp en de bestaande techniek samen begrijpt.
 
 Open [Antigravity](https://antigravity.google/) en de juiste projectmap. Voeg de definitieve documenten en ontwerpbestanden toe. Laat eerst controleren wat er al bestaat. Mijn overdracht draait om samenhang: de marketingsite, een eventuele demo en een bestaande inlogomgeving moeten aansluiten op dezelfde propositie en gebruikersroute.
@@ -255,6 +270,8 @@ proces-ID's. Behoud bestaande werking. Schrijf besluiten en open punten weg
 in het projectdossier. Voer de afgesproken eerste bouwstap uit zodra de
 benodigde keuzes duidelijk zijn. Werk vóór implementatie het toepasselijke
 architectuurdossier uit volgens opdracht 26 en hoofdstuk 11.
+
+Werk in Antigravity met de bedoelde GitHub-repository. Controleer eigenaar, repository, branch en lees-/schrijftoegang; laat mij zelf de aangeboden aanmelding afronden. Vraag geen toegangstoken in de chat. Laat de agent het technische versiebeheer uitvoeren en beschrijf hoe ik de wijziging en commitlink controleer. Spreek af welke branch Railway mag publiceren. Neem seo-plan.md op in het bouwplan: echte openbare URL’s, uitleesbare inhoud, title, meta-beschrijving, canonical, sitemap.xml, robots.txt, juiste 404/redirects, interne links, mobiel en lichte beelden. Houd besloten delen achter toegangscontrole. Plan GA4 met de juiste meet-ID en het afgesproken toestemmingsgedrag; tel succesvolle aanvragen alleen na bevestigde ontvangst en voorkom dubbele events. Leg per eis het acceptatiebewijs vast. Voer externe accountinstellingen alleen binnen de afgesproken opdracht uit.
 ```
 
 **Opdracht 10 — Verbind site, demo en portaal**
@@ -288,6 +305,8 @@ laden, lege resultaten, fouten en herstel mee waar ze relevant zijn.
 Maak testdata herkenbaar en vermeld iedere nog gesimuleerde koppeling.
 Controleer de route van begin tot eind. Rapporteer wat werkt, wat is getest,
 welke onderdelen nog ontbreken en hoe ik het resultaat zelf kan openen.
+
+Bouw de afgesproken SEO-basis direct mee voor openbare pagina’s. Controleer echte URL’s, uitleesbare inhoud, metadata en interne links. Houd het meetplan aan: geen succes-event bij een fout en geen dubbele gebeurtenissen; respecteer de gekozen toestemming.
 ```
 
 **Controle:** de belangrijkste handeling levert het bedoelde resultaat op, ook na verversen als gegevens bewaard moeten blijven. **Wat je overhoudt:** een kleine, samenhangende eerste versie. **Verdieping:** P19.
@@ -315,7 +334,7 @@ Gebruik zo nodig een duidelijk benoemd PowerShell-hulpscript.
 
 De starter moet:
 1. Controleren welke vereisten en configuratie ontbreken en dat begrijpelijk
-   melden. Geheimen blijven buiten scripts, logs en Git.
+   melden. Geheimen blijven buiten scripts, logs en de codebewaarplaats.
 2. Alleen de voor dit project benodigde diensten starten. Als Docker nodig
    is, controleer beschikbaarheid en wacht begrensd op gereedheid.
 3. De afgesproken poorten gebruiken. Controleer bij een bezette poort of
@@ -421,6 +440,8 @@ schermen op mobiel en desktop. Leg per bevinding uit welk gebruikersprobleem
 je ziet. Maak een geprioriteerd verbeterplan en voer de afgesproken
 verbeteringen uit. Behoud de functies. Vergelijk voor en na en controleer
 dat de belangrijkste gebruikersroutes blijven werken.
+
+Controleer ook de SEO-basis uit het bouwplan: indexeerbare openbare pagina’s, juiste canonical en sitemap, metadata, mobiel en snelheid. Controleer bij aanwezige meting echte events, ontdubbeling en accepteren, weigeren en intrekken van toestemming. Rapporteer controles die nog ontbreken.
 ```
 
 **Opdracht 17 — Test de hele keten**
@@ -456,12 +477,13 @@ Voor publicatie controleer ik ook bestanden en media. Grote originele foto’s h
 **Opdracht 19 — Maak bestanden en media publicatieklaar**
 
 ```text
-Controleer welke bestanden gepubliceerd en in Git opgenomen worden.
+Controleer in Antigravity welke bestanden gepubliceerd en in de
+GitHub-codeversie opgenomen worden.
 Maak passende webvarianten van afbeeldingen met behoud van de originelen.
 Controleer afmetingen, bestandsgrootte, kwaliteit en werkende verwijzingen.
 Houd geheime configuratie, lokale logs, testauthenticatie en onnodige grote
 bronbestanden buiten commits. Controleer al gevolgde bestanden afzonderlijk;
-alleen .gitignore aanpassen verwijdert bestaande Git-inhoud niet.
+alleen uitsluitregels aanpassen verwijdert eerder opgeslagen inhoud niet.
 Lever een overzicht van wijzigingen en resterende aandachtspunten.
 ```
 
@@ -469,13 +491,17 @@ Lever een overzicht van wijzigingen en resterende aandachtspunten.
 
 ```text
 Controleer de wijzigingen, teststatus en doelomgeving voor deze release.
-Leg de afgesproken versie vast in Git en controleer de bedoelde remote.
+Laat Antigravity de afgesproken versie committen en naar de bedoelde
+GitHub-repository en branch sturen. Controleer de commitlink op GitHub.
+Leg vooraf vast of die branch automatisch via Railway live publiceert.
 Bereid publicatie voor op de gekozen hostingomgeving: [omgeving]. Gebruik
 de actuele projectconfiguratie en officiële documentatie. Controleer build,
 startcommando, instellingen, gegevensopslag en herstelmogelijkheid voor zover
 relevant. Publiceer binnen de gegeven opdracht en toegangsrechten. Controleer
 daarna de echte live-URL, kernroutes, media, formulieren en eventuele login.
 Rapporteer welke versie live staat en welke livecontroles werkelijk zijn gedaan.
+
+De voorkeursroute is Antigravity naar GitHub naar Railway. Controleer de verbonden repository en branch, build- en startinstellingen, benodigde Variables en de auto-deploy-afspraak. Gebruik het echte live-domein in canonical en sitemap. Leg uit welke volgende stappen nodig zijn voor Search Console en GA4; claim geen externe koppeling zonder controle.
 ```
 
 **Controle:** het juiste domein toont de bedoelde versie en de belangrijkste handeling werkt daar. **Wat je overhoudt:** een live-URL en een controleerbare release. **Verdieping:** P23–P25.
@@ -529,6 +555,8 @@ manier bewaard zijn. Controleer ook de wijzigingsimpact op alle teksten,
 pagina’s, handleidingen, architectuur, contracten en Mermaid-schema’s. Werk
 de geraakte onderdelen bij en leg document- en codeversie samen vast.
 Laat geheimen buiten openbare statusinformatie.
+
+Laat Antigravity de gecontroleerde wijziging committen en naar de bedoelde GitHub-repository en branch sturen volgens de vrijgaveafspraak. Bewaar de online commitlink en houd bij welke versie werkelijk live staat.
 ```
 
 **Opdracht 24 — Hervat een bestaand project**
@@ -626,6 +654,8 @@ Lever ARCHITECTURE.md met gekoppelde detaildocumenten, besluitenregister,
 diagramregister en open punten. Benoem wat alleen is gelezen en wat werkelijk
 is uitgevoerd. Wijzig productcode alleen binnen een afzonderlijk gegeven
 bouw- of herstelopdracht.
+
+Neem voor openbare websites het SEO-plan en meetplan op in de architectuur: echte routes en uitleesbare inhoud, metadata, sitemap/canonical/robots, mobiel en prestaties, Analytics met toestemming en meetvalidatie. Beschrijf GitHub als codebewaarplaats, Antigravity als bouwagent en Railway als gekozen hostingroute wanneer die voor dit project zijn afgesproken. Voeg geen diensten toe die het project niet nodig heeft.
 ```
 
 ### Opdracht 27 — Maak gebruikersdocumentatie en Mermaid-schema’s
@@ -986,7 +1016,7 @@ Dit zijn procesrisico’s, geen diagnoses of bewezen negatieve eigenschappen.
 | Publiceren en in de markt brengen | P23–P27 | Beheerde assets, versiebeheer, live product, marktcontact en leren. |
 | Continuïteit | P28 | Actuele status, overdracht, herstart en herstelbaarheid. |
 
-De nummering helpt bij documentatie. Git, statusbeheer, risicoafweging en commerciële toetsing lopen ook tijdens eerdere stappen mee.
+De nummering helpt bij documentatie. Versiebeheer via Antigravity, statusbeheer, risicoafweging en commerciële toetsing lopen ook tijdens eerdere stappen mee.
 
 ```mermaid
 flowchart TD
@@ -1441,7 +1471,7 @@ Controleer vóór het releasebesluit ook opdracht 28 en 11.7–11.9: volledige s
 3. Maak webvarianten passend bij de weergavegrootte en functie van het beeld.
 4. Controleer scherpte, uitsnede, transparantie en mobiele weergave.
 5. Werk verwijzingen en eventueel responsive beeldgedrag bij.
-6. Controleer wat Git volgt en wat bij een build wordt meegenomen.
+6. Laat Antigravity controleren welke bestanden versiebeheer volgt en wat bij de publicatie wordt meegenomen.
 7. Leg vast of grote bestanden alleen uit de huidige versie moeten verdwijnen of ook historische opschoning vragen.
 8. Controleer credits, gebruiksrechten en privacy bij publiceerbare media waar relevant.
 
@@ -1457,12 +1487,12 @@ Controleer vóór het releasebesluit ook opdracht 28 en 11.7–11.9: volledige s
 
 1. Inspecteer de gewijzigde bestanden vóór de commit.
 2. Sluit dependencies, tijdelijke buildresultaten, geheimen, gevoelige testbestanden en niet-publiceerbare originelen uit.
-3. Controleer apart of uitgesloten bestanden al gevolgd worden; een nieuwe `.gitignore` verwijdert ze niet automatisch.
+3. Laat de agent ook eerder opgeslagen bestanden controleren; nieuwe uitsluitregels verwijderen die niet automatisch.
 4. Maak een samenhangende commit met een begrijpelijke beschrijving.
 5. Controleer de juiste remote en branch voordat wijzigingen worden gepusht.
 6. Verifieer de pushstatus en leg vast welke codeversie bij een test of release hoort.
 7. Maak geschiedeniswijzigingen, verwijderacties en geheime-sleutelincidenten een afzonderlijk hersteltraject.
-8. Leg vast welke data en assets buiten Git een eigen back-up nodig hebben.
+8. Leg vast welke data en assets naast de codebewaarplaats een eigen back-up nodig hebben.
 
 **Mijn rol:** de beoogde publicatie of overdracht autoriseren binnen de opdracht. **Bouwagent:** wijzigingen en versiebeheer zorgvuldig uitvoeren.  
 **Output:** navolgbare codeversie en bekende remote status.  
@@ -1566,7 +1596,7 @@ Onderstaande producten en bestanden staan in B01 of in de genoemde gebruikerscon
 | Docker Desktop en containers | Benodigde lokale services starten. | Werkelijke gereedheid, volumes en testisolatie controleren. |
 | Windows batchscripts en PowerShell | Herhaalbare lokale start en testtaken. | Script uitvoeren, fouten en stopgedrag controleren. |
 | Playwright | Browserinteractie, E2E-controles en testbewijs. | Versie, omgeving, scenario’s en resultaten vastleggen. |
-| Git en GitHub | Lokale versiegeschiedenis en remote codeopslag. | Commitinhoud, branch, remote en pushstatus controleren. |
+| Antigravity en GitHub | De agent bewaart gecontroleerde codeversies in de gekoppelde repository. | Zelf de wijziging, doelbranch en commitlink op GitHub controleren; de agent doet het technische werk. |
 | Railway | Applicatie of website beschikbaar maken. | Juiste configuratie, build, runtime en live werking controleren. |
 | Analytics en cookiemanager | Meten van websitegebruik met toepasselijke instellingen. | Werkelijk netwerkgedrag en instellingen controleren; de aanwezigheid ervan bewijst geen compliance. |
 
@@ -2018,7 +2048,7 @@ Bij latere screenshots van de werkplek moeten projectnamen, paden, accounts, URL
 | 6 Lokale starters | P18; 5.3 | Gereedheid, foutmelding, stoppen en hervatten. |
 | 7 Kwaliteitscontrole en E2E | P20–P22; 5.4, 5.6; hoofdstuk 6 | Eigen waarneming, tweede testlaag, herstel, bewijs en releasebesluit. |
 | 8 State tracking en synchronisatie | P28; 5.5; 7.9–7.10 | Versies, beperkingen, gemeten versus geschatte tijd, publiek versus intern en herstelbaarheid. |
-| 9 Git en remotes | P23–P24 | Continue versiecontrole, assetbeleid, gevolgde bestanden en afzonderlijke pushstatus. |
+| 9 Versies via Antigravity en GitHub | P23–P24 | Continue versiecontrole, assetbeleid, gevolgde bestanden en afzonderlijke pushstatus. |
 | 10 Deployment en hosting | P25; 5.9 | Live kernflow, configuratie, herstel en het verschil tussen healthcheck en echte werking. |
 
 ### 9.2 Overige inhoudelijke elementen uit de bijlage
@@ -2135,7 +2165,7 @@ Dit zijn begrenzingen van wat deze analyse kan vaststellen. Zij betekenen niet d
 
 ### 10.4 Verantwoording van deze lezerseditie
 
-Deze versie is bewerkt voor VIBE Lift. Formuleringen, opdrachten en verwijzingen naar de interne analysemethode zijn aangepast voor de lezer. De procesindeling en inhoudelijke controlecriteria blijven beschikbaar. De download is daardoor geen ongewijzigde kopie van het oorspronkelijke document.
+Deze versie is bewerkt voor Vibe Lift. Editie 1.2 voegt toolkeuzes, de Antigravity–GitHub–Railway-route en een SEO-cursus toe. Formuleringen, opdrachten en verwijzingen naar de interne analysemethode zijn aangepast voor de lezer. De procesindeling en inhoudelijke controlecriteria blijven beschikbaar. De download is daardoor geen ongewijzigde kopie van het oorspronkelijke document.
 
 De historische reconstructie en haar beperkingen blijven als achtergrond herkenbaar. Er is bij deze redactionele bewerking geen nieuwe inspectie van onderliggende producten, installatie of technische certificering uitgevoerd. Beoordeel in je eigen project welke controles werkelijk zijn uitgevoerd en welk bewijs daarbij hoort.
 
@@ -2570,3 +2600,393 @@ De documentcontrole omvat hoofdstukstructuur, 14 lezersstappen, 28 kopieerbare o
 De nieuwe Mermaid-voorbeelden zijn tekstueel gecontroleerd; zij zijn in deze sessie niet gerenderd. De syntaxis- en visuele rendercontrole blijven voor deze voorbeelden dus **NIET UITGEVOERD**. Er zijn geen lokale Windows-tests, repository-audits of livecontroles uitgevoerd. De aanwezige externe links zijn overgenomen uit de vorige editie en in deze documentaudit niet opnieuw bezocht.
 
 **Eindstatus:** de vijf vastgestelde documentatiegaps zijn verwerkt in versie 3.1. Dit is een aangevuld en gecontroleerd werkwijzedocument op basis van de beschreven werkwijze, geen certificaat voor een onderliggende site of ontwikkelomgeving.
+
+<!-- VIBE_LIFT_COURSE_SUPPLEMENT -->
+
+# Vibe Lift · Tools en SEO
+
+Deze aanvulling hoort bij lezerseditie 1.2. Gebruik Antigravity met toegang tot je GitHub-repository; de agent voert de technische versiehandelingen uit. Jij controleert de wijziging, de online versie en de vrijgave.
+
+## Tools bij iedere stap
+
+### Stap 1 · Maak je idee concreet
+
+Kies ChatGPT óf Claude; je hebt voor deze stap één gesprekspartner nodig.
+
+- [ChatGPT](https://chatgpt.com/): Voeg je notities toe en laat één korte projectbrief maken.
+- [Claude](https://claude.ai/): Alternatief: laat je aannames en de grens van de eerste versie aanscherpen.
+
+**Neem mee:** Bewaar projectbrief.md. Geef dezelfde brief bij de volgende stap mee.
+
+### Stap 2 · Onderzoek het probleem
+
+Gebruik een onderzoeksfunctie met bronnen. Spreek daarnaast zelf potentiële gebruikers.
+
+- [Claude](https://claude.ai/): Zet web search of Research aan en vergelijk bestaande oplossingen met bronlinks.
+- [ChatGPT](https://chatgpt.com/): Alternatief: kies Search of Deep research en geef doelgroep, vragen en gewenste bronnen mee.
+
+**Neem mee:** Bewaar onderzoek.md met bron, datum, bevinding en onzekerheid. Verzonnen zoekvolumes of interviews horen er niet in.
+
+**SEO in deze stap:** Onderzoek ook welke vragen mensen in Google stellen. Bewaar aannames apart van echte zoekgegevens.
+
+### Stap 3 · Scherp je aanbod aan
+
+AI helpt het aanbod en de toets voorbereiden. De praktijktoets voer jij uit.
+
+- [ChatGPT](https://chatgpt.com/): Maak een korte belofte en interview- of testvragen op basis van je onderzoek.
+- [Claude](https://claude.ai/): Alternatief: orden de echte reacties en benoem wat je wel en niet kunt concluderen.
+
+**Neem mee:** Bewaar propositie.md en praktijktoets.md met waarnemingen en je besluit.
+
+### Stap 4 · Teken de gebruikersroute
+
+Laat AI je route uitschrijven en teken ook wat er bij een fout gebeurt.
+
+- [Claude](https://claude.ai/): Maak een stroomschema van handelingen, verwerking en bevestiging; laat het ook in gewone taal uitleggen.
+- [ChatGPT](https://chatgpt.com/): Alternatief: laat dezelfde route controleren op ontbrekende stappen en uitzonderingen.
+
+**Neem mee:** Bewaar het schema en de uitleg als flows.md voor Stitch en Antigravity.
+
+### Stap 5 · Bepaal pagina’s en teksten
+
+Werk met echte teksten en neem vindbaarheid nu al mee.
+
+- [ChatGPT](https://chatgpt.com/): Maak een schermenlijst, knoppen, foutteksten en een SEO-paginaplan met URL, zoekvraag en titel.
+- [Claude](https://claude.ai/): Alternatief: herschrijf de teksten voor beginners en controleer of elke pagina één duidelijke vraag beantwoordt.
+
+**Neem mee:** Bewaar schermen.md, teksten.md en seo-plan.md. Eén zoekvraag krijgt één passende hoofdcontentpagina.
+
+**SEO in deze stap:** Maak per openbare pagina een zoekvraag, URL, paginatitel, meta-beschrijving en interne links. Bewaar dit in seo-plan.md.
+
+### Stap 6 · Geef je idee een gezicht
+
+Open Stitch met je schermen, teksten en stijlreferenties.
+
+- [Stitch](https://stitch.withgoogle.com/): Maak en verfijn het schermontwerp, inclusief mobiel. Controleer welke export jouw versie aanbiedt.
+- [ChatGPT](https://chatgpt.com/): Maak vooraf de ontwerpbrief; beschrijf daarna concrete feedback op leesbaarheid en volgorde.
+
+**Neem mee:** Geef de gekozen export, afbeeldingen, tekst en ontwerpafspraken aan Antigravity. Een screenshot alleen beschrijft de werking onvoldoende.
+
+### Stap 7 · Zet de bouw goed klaar
+
+Antigravity is je bouwpartner. Koppel de bedoelde GitHub-repository en laat de agent de technische inrichting uitvoeren.
+
+- [Antigravity](https://antigravity.google/): Lees het dossier, controleer repositorytoegang en maak kleine bouwstappen met SEO en meting als vaste eisen.
+- [GitHub](https://github.com/): Maak of kies je repository en controleer de eigenaar, naam en zichtbaarheid. Deel de repositorylink met je agent.
+- [Railway](https://railway.com/): Controleer vooraf of de gekozen techniek hier kan draaien en welke kosten en startinstellingen nodig zijn.
+
+**Neem mee:** Bewaar bouwplan.md en architectuur.md, inclusief SEO, meetplan, repository, publicatiebranch en vrijgaveafspraak.
+
+**SEO in deze stap:** Neem echte openbare URL’s, uitleesbare inhoud, metadata, canonical, sitemap, robots, mobiel, snelheid en meetgedrag op in het bouwplan. Bepaal vooraf welke pagina’s privé blijven.
+
+### Stap 8 · Bouw één complete route
+
+Laat Antigravity bouwen en uitleggen wat aantoonbaar werkt.
+
+- [Antigravity](https://antigravity.google/): Bouw de kernroute, gewone pagina-URL’s waar SEO nodig is, metadata en het afgesproken meetgedrag.
+- [GitHub](https://github.com/): Laat een gecontroleerd werkend tussenpunt vastleggen. Controleer of de commit ook naar GitHub is verzonden.
+
+**Neem mee:** Bewaar testbewijs en de versielink. Laat geen ongecontroleerde wijziging naar een branch sturen die direct live publiceert.
+
+**SEO in deze stap:** Laat Antigravity de SEO-afspraken direct meebouwen. Meet een aanvraag pas na bevestigde ontvangst en volgens de gekozen toestemming.
+
+### Stap 9 · Start je project zelf
+
+Laat de agent de starter maken; probeer starten en stoppen daarna zelf.
+
+- [Antigravity](https://antigravity.google/): Maak een begrijpelijke starter op basis van de echte projectopzet. Leg fouten en het lokale adres uit.
+- [Node.js](https://nodejs.org/en/download): Alleen als nodig: de omgeving die het JavaScript-project uitvoert. Laat installatie en versie controleren.
+
+**Neem mee:** Bewaar START_PROJECT.bat en startinstructie.md. Dit is je lokale oefenomgeving.
+
+### Stap 10 · Test als een echte gebruiker
+
+Jij probeert de website; Antigravity helpt bevindingen onderzoeken en herhalen.
+
+- [Antigravity](https://antigravity.google/): Geef exacte stappen, verwachting en waarneming. Laat herstellen en hertesten.
+- [Playwright](https://playwright.dev/): Laat je agent de belangrijkste browserroute automatisch herhalen, inclusief fouten en mobiel formaat.
+
+**Neem mee:** Bewaar bevindingen.md met versie, bewijs en hercontrole. Een geslaagde test dekt alleen wat echt is getest.
+
+### Stap 11 · Controleer de hele keten
+
+Controleer werking én vindbaarheid voordat je een versie vrijgeeft.
+
+- [Antigravity](https://antigravity.google/): Controleer kernroute, toegang, metadata, sitemap, indexeerbaarheid en toestemming voor meting.
+- [Playwright](https://playwright.dev/): Herhaal de afgesproken tests op de laatste versie.
+- [PageSpeed Insights](https://pagespeed.web.dev/): Meet een openbare testpagina. Bij een besloten preview laat je de agent lokaal een prestatiecontrole uitvoeren.
+
+**Neem mee:** Bewaar releasecheck.md met open punten, meetresultaten en het besluit. Een hoge snelheidsscore is geen SEO-garantie.
+
+**SEO in deze stap:** Controleer openbare kernpagina’s op bereikbaarheid, inhoud, metadata, indexatie-instellingen en mobiel. Test analytics op dubbele events, fouten en toestemming.
+
+### Stap 12 · Zet je website live
+
+Van gecontroleerde code naar online: Antigravity → GitHub → Railway.
+
+- [Antigravity](https://antigravity.google/): Laat de vrijgegeven versie committen en naar de afgesproken repository en branch sturen.
+- [GitHub](https://github.com/): Controleer de laatste commit, gewijzigde bestanden en eventuele publicatiestatus.
+- [Railway](https://railway.com/): Koppel de repository, controleer instellingen en publiceer. Open de echte live-URL na een geslaagde deployment.
+
+**Neem mee:** Leg versie, URL, toegang en herstelroute vast. Voor een openbare site volgen Search Console en Analytics in de SEO-cursus.
+
+**SEO in deze stap:** Gebruik het echte live-domein in canonical en sitemap. Controleer de openbare versie en volg de SEO-cursus voor Search Console en GA4.
+
+### Stap 13 · Nodig je eerste gebruikers uit
+
+Maak je eerste uitnodiging en onderzoek de echte reactie.
+
+- [Claude](https://claude.ai/): Schrijf een eerlijk concept op basis van wat live werkt. Jij bepaalt wie het ontvangt en verstuurt het.
+- [ChatGPT](https://chatgpt.com/): Alternatief: groepeer echte feedback en bereid vervolgvragen voor.
+- [Google Analytics](https://analytics.google.com/): Als je meting is ingericht: bekijk of bezoekers de bedoelde handeling afronden.
+
+**Neem mee:** Bewaar introductieplan.md en leersignalen.md. Start de SEO-cursus voor de concrete meetinstellingen.
+
+### Stap 14 · Blijf rustig doorbouwen
+
+Gebruik je actuele project en echte signalen als vertrekpunt voor de volgende sessie.
+
+- [Antigravity](https://antigravity.google/): Werk overdracht en handleiding bij, leg de gecontroleerde versie vast en maak één volgende bouwtaak.
+- [GitHub](https://github.com/): Controleer de online versielink; broncode alleen is geen back-up van formulieren of databases.
+- [Search Console](https://search.google.com/search-console/): Gebruik echte zoekvragen en indexatieproblemen om een passende verbetering te kiezen.
+
+**Neem mee:** Bewaar overdracht.md en ga verder met de korte SEO-cursus: gevonden worden, meten en verbeteren.
+
+## Antigravity, GitHub en Railway
+
+1. **Kies je codebewaarplaats.** Maak op GitHub een repository of gebruik je bestaande repository. Kies bewust wie de code mag zien en kopieer de link. Een repository is de map met je code en versiegeschiedenis.
+2. **Geef Antigravity toegang.** Open het juiste project in Antigravity en geef de repositorylink. Laat de agent controleren of die repository bereikbaar is en schrijven is toegestaan. Voltooi de aangeboden GitHub-aanmelding zelf; plak geen toegangstokens in een chat. De precieze aanmeldroute kan per installatie verschillen.
+3. **Controleer de wijziging.** Vraag om een korte samenvatting, de gewijzigde bestanden en uitgevoerde tests. Bekijk het Review-/versiebeheerpaneel. Laat alleen het bedoelde werk meenemen; sleutels, testgegevens en grote originelen blijven buiten de codebewaarplaats.
+4. **Laat vastleggen en verzenden.** Geef Antigravity opdracht de gecontroleerde wijziging te committen en naar de afgesproken GitHub-branch te pushen. Commit betekent een versie vastleggen; push betekent die versie naar GitHub sturen. Je hoeft de commando’s niet zelf uit te voeren. Controleer de commitlink op GitHub.
+5. **Spreek af wanneer iets live gaat.** Railway kan nieuwe commits op een gekoppelde branch automatisch publiceren. Kies bij de inrichting een aparte werkbranch of een bewuste vrijgavestap, zodat een tussentijdse wijziging niet onverwacht live komt. Je kunt automatische publicatie bij de dienstinstellingen uitschakelen met Disable en later bewust Deploy Latest Commit kiezen. Controleer repository, branch én publicatiestatus.
+
+[Antigravity: versiebeheer](https://antigravity.google/docs/features) · [Railway: publiceren](https://docs.railway.com/guides/vibe-coding-deploy)
+
+## Korte SEO-cursus
+
+Voor je eigen openbare website. Deze besloten leeromgeving wordt hierdoor niet openbaar of gekoppeld aan Analytics. De voorbeelden zijn fictief; vervang .example-adressen, meet-ID’s en invulvelden door je eigen gegevens.
+
+### SEO-les 1 · Beantwoord de vraag achter de zoekopdracht.
+
+SEO helpt mensen en zoekmachines begrijpen waar je pagina over gaat. Begin bij een echte vraag van je doelgroep. Een zoekwoord zonder bruikbaar antwoord levert weinig op.
+
+**Tools:** [ChatGPT](https://chatgpt.com/) · [Claude](https://claude.ai/)
+
+**Begin met:** Je doelgroep, aanbod, onderzoek en bestaande paginalijst.
+
+1. **Kies een vraag per pagina.** Laat ChatGPT of Claude mogelijke zoekvragen ordenen. Controleer ze met gesprekken, echte zoekresultaten en later Search Console. Laat AI geen zoekvolume of gegarandeerde positie verzinnen.
+2. **Maak je inhoud concreet.** Beantwoord de vraag met eigen informatie, voorbeelden, prijs, locatie of werkwijze voor zover relevant. Voeg een duidelijke hoofdkop en logische tussenkoppen toe.
+3. **Schrijf titel en beschrijving.** Geef iedere belangrijke pagina een beschrijvende, eigen paginatitel en een korte meta-beschrijving. De beschrijving kan als samenvatting in Google verschijnen; Google kan ook andere tekst kiezen.
+4. **Verbind je pagina’s.** Link vanuit relevante tekst naar de volgende nuttige pagina. Gebruik een herkenbare linktekst, zoals “Bekijk de keramiekworkshop”, en vermijd meerdere vrijwel identieke pagina’s voor dezelfde vraag.
+
+**Voorbeeld · Studio Maan in een zoekresultaat**
+
+- Zoekvraag: Keramiekworkshop voor beginners in Utrecht
+- Voorbeeld-URL: https://studio-maan.example/keramiekworkshop
+- Paginatitel: Keramiekworkshop voor beginners in Utrecht | Studio Maan
+- Meta-beschrijving: Maak je eerste keramiek tijdens een workshop in Utrecht. Bekijk wat je leert, de data en de prijs. Vraag daarna een plek aan.
+
+Voor deze oefening ligt de fictieve studio in Utrecht. De zoeksamenvatting is een redactioneel voorbeeld, geen bestaand Google-resultaat of belofte over de weergave.
+
+**Samenhang:** Vraag van een bezoeker → Passende pagina → Duidelijk antwoord → Logische volgende stap
+
+**Neem mee:** seo-plan.md met zoekvraag, pagina, titel en volgende actie.
+
+**SEO-opdracht 1**
+
+```text
+Maak een SEO-paginaplan voor [project] op basis van mijn doelgroep, aanbod en onderzoek. Benoem per pagina de zoekvraag, URL, paginatitel, meta-beschrijving, hoofdkop, kerninhoud, interne links en gewenste vervolgstap. Onderscheid aannames van onderzochte vragen. Verzin geen zoekvolumes, reviews of resultaten. Voorkom bijna-identieke pagina’s. Leg open vragen vast in seo-plan.md.
+```
+
+**Controle**
+
+- De pagina beantwoordt een concrete vraag met eigen, controleerbare inhoud.
+- Titel, hoofdkop en volgende actie passen bij dezelfde bedoeling.
+- De belangrijkste pagina’s zijn via gewone links bereikbaar.
+
+**Officiële uitleg**
+
+- [Google: SEO voor beginners](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=nl)
+- [Google: samenvattingen in zoekresultaten](https://developers.google.com/search/docs/appearance/snippet)
+
+### SEO-les 2 · Laat vindbaarheid meteen meebouwen.
+
+Geef je SEO-plan aan Antigravity vóór de eerste bouwstap. Je hoeft deze techniek niet zelf te schrijven. Je wilt wel kunnen aanwijzen wat de agent heeft ingebouwd en gecontroleerd.
+
+**Tools:** [Antigravity](https://antigravity.google/) · [PageSpeed Insights](https://pagespeed.web.dev/)
+
+**Begin met:** seo-plan.md, de pagina’s die openbaar mogen worden en het bouwplan.
+
+1. **Gebruik bereikbare pagina-URL’s.** Laat belangrijke openbare inhoud op eigen echte URL’s zetten. Alleen wisselen na een # in de URL is geen goede basis voor afzonderlijke zoekpagina’s. Laat essentiële inhoud en links controleerbaar renderen; bij voorkeur direct in de geleverde HTML.
+2. **Leg indexatie bewust vast.** Laat title, meta-beschrijving en canonical instellen. Canonical is de voorkeurs-URL bij vergelijkbare pagina’s. Een openbare pagina die gevonden mag worden mag niet per ongeluk noindex bevatten. Besloten delen blijven achter echte toegangscontrole; robots.txt is geen slot.
+3. **Voeg sitemap en foutgedrag toe.** Laat een sitemap.xml met de bedoelde canonieke, indexeerbare URL’s maken. Controleer robots.txt, interne links en echte 404-antwoorden voor ontbrekende pagina’s. Laat oude adressen bij een verhuizing passend doorverwijzen.
+4. **Houd de pagina licht en begrijpelijk.** Gebruik passende afbeeldingsformaten en afmetingen, omschrijvende alt-tekst voor informatieve beelden en lege alt-tekst voor decoratie. Controleer mobiel, layoutverschuivingen en laden met PageSpeed Insights. Neem alleen gestructureerde gegevens op die je echte inhoud ondersteunen.
+
+**Dit hoort in het bouwplan**
+
+- Publieke pagina: /keramiekworkshop · eigen titel en uitleesbare inhoud
+- Voorkeursadres: Canonical naar de echte openbare HTTPS-URL
+- Vindbaarheid: Geen onbedoelde noindex; sitemap en robots gecontroleerd
+- Meting: Eén succesvolle aanvraag meten, pas na ontvangst en volgens de gekozen toestemming
+
+Deze besloten leeromgeving wisselt lessen met #routes. Voor openbare landingspagina’s van jouw eigen project laat je Antigravity gewone pagina-URL’s en indexeerbare inhoud bouwen. Een besloten preview hoef je niet voor Google open te zetten.
+
+**Samenhang:** SEO-plan → Bouwafspraken → Openbare pagina → Technische controle
+
+**Neem mee:** Een technische SEO-check met bewijs per openbare pagina.
+
+**SEO-opdracht 2**
+
+```text
+Verwerk SEO en meting expliciet in het bestaande bouwplan voor [project]. Gebruik seo-plan.md. Beschrijf en bouw waar passend: echte openbare pagina-URL’s, uitleesbare inhoud, unieke titles en meta-beschrijvingen, hoofdkoppen, interne links, canonical, sitemap.xml, robots.txt, juiste 404/redirects, mobiel en lichte afbeeldingen. Behoud echte toegangscontrole voor besloten delen. Plan GA4 afzonderlijk met de gekozen toestemmingsinstellingen; tel alleen bevestigde succesvolle aanvragen en voorkom dubbele events. Leg per eis het testbewijs vast en rapporteer wat nog niet is gecontroleerd. Gebruik geen verzonnen domein of meet-ID.
+```
+
+**Controle**
+
+- Een openbare kernpagina opent rechtstreeks en de hoofdinhoud is uitleesbaar.
+- Sitemap, canonical en indexatie-instellingen passen bij het echte live-domein.
+- Mobiele werking, snelheid en de meetafspraak zijn gecontroleerd en vastgelegd.
+
+**Officiële uitleg**
+
+- [Google: JavaScript en SEO](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics)
+- [Google: robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
+- [Google: een sitemap bouwen](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+- [Google: PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about)
+
+### SEO-les 3 · Maak je website zichtbaar voor jezelf in Google.
+
+Met Search Console controleer je of Google je pagina’s kan vinden en indexeren. Je moet eigenaar zijn van de website, of de juiste toegang hebben. Verificatie en een sitemap geven geen garantie op opname of een hoge positie.
+
+**Tools:** [Search Console](https://search.google.com/search-console/) · [Antigravity](https://antigravity.google/)
+
+**Begin met:** Je openbare HTTPS-adres en toegang tot je domeininstellingen of websitebestanden.
+
+1. **Voeg je website toe.** Open Search Console en kies Property toevoegen. Met toegang tot de DNS-instellingen kies je Domein en vul je alleen het domein in. Zonder DNS-toegang kies je URL-prefix met het precieze HTTPS-adres dat je wilt volgen.
+2. **Verifieer het eigendom.** Bij Domein: kopieer de aangeboden TXT-waarde en voeg die toe bij je domeinprovider. Laat bestaande records staan, sla op en kies Verifiëren in Search Console. Bij URL-prefix kun je bijvoorbeeld het aangeboden HTML-bestand of de meta-tag door Antigravity laten plaatsen. Bewaar het verificatiemiddel ook na goedkeuring.
+3. **Dien de echte sitemap in.** Open Sitemaps, vul het adres van de door je bouwer gemaakte sitemap in en verstuur het. Open de sitemap zelf en controleer of de bedoelde live-URL’s erin staan. Herstel een ophaalfout; “verzonden” betekent niet dat alle pagina’s geïndexeerd zijn.
+4. **Inspecteer een kernpagina.** Plak de volledige pagina-URL in URL-inspectie. Vergelijk de indexstatus met Live URL testen. Los blokkades of fouten op en vraag daarna zo nodig indexering aan. Bekijk later Pagina’s en Prestaties; nieuwe data verschijnt niet altijd direct.
+
+**Kies de verificatie die je kunt uitvoeren**
+
+- Domeinproperty: studio-maan.example · alle protocollen en subdomeinen
+- Controle nodig: DNS-toegang bij de domeinprovider
+- URL-prefix als alternatief: https://studio-maan.example/ · alleen dit voorvoegsel
+- Na verificatie: Sitemaps → echte sitemap-URL · URL-inspectie → kernpagina
+
+De .example-adressen zijn invulvoorbeelden. Neem altijd de echte waarde uit jouw Search Console-scherm over. Bij deze besloten cursus is openbare Google-indexatie geen doel; je oefent dit op je eigen openbare website.
+
+**Samenhang:** Eigendom aantonen → Sitemap indienen → Pagina inspecteren → Probleem herstellen
+
+**Neem mee:** Een geverifieerde property, ingediende sitemap en gecontroleerde kernpagina.
+
+**SEO-opdracht 3**
+
+```text
+Help mij Search Console instellen voor [echte openbare website]. Vraag welke toegang ik heb en leg Domein versus URL-prefix uit. Laat mij zelf aanmelden en de echte verificatiewaarde ophalen. Plaats alleen het afgesproken verificatiebestand of de meta-tag als dat mijn gekozen methode is. Controleer sitemap, bereikbaarheid, canonical en indexatieblokkades. Begeleid URL-inspectie en leg echte uitkomsten vast. Verzin geen verificatiecode en claim geen indexatie of rangpositie zonder bewijs.
+```
+
+**Controle**
+
+- Search Console toont dat het eigendom is geverifieerd.
+- De sitemap is opgehaald en bevat de juiste openbare URL’s.
+- Je kunt de uitkomst van URL-inspectie uitleggen: live bereikbaar is niet hetzelfde als al geïndexeerd.
+
+**Officiële uitleg**
+
+- [Google: site-eigendom verifiëren](https://support.google.com/webmasters/answer/9008080?hl=nl)
+- [Google: sitemaps beheren](https://support.google.com/webmasters/answer/7451001?hl=nl)
+- [Google: URL-inspectie](https://support.google.com/webmasters/answer/9012289?hl=nl)
+
+### SEO-les 4 · Meet wat ertoe doet, met de juiste instellingen.
+
+Search Console vertelt hoe mensen je via Google vinden. Google Analytics 4 (GA4) meet gedrag op je website. Begin klein: een pagina bekijken en een aanvraag die werkelijk is ontvangen. Analytics installeren verhoogt je Google-positie niet.
+
+**Tools:** [Google Analytics](https://analytics.google.com/) · [Antigravity](https://antigravity.google/)
+
+**Begin met:** Een meetdoel, je openbare website, Google-account en afspraken over gegevens en toestemming.
+
+1. **Maak een property en webstream.** Open Analytics. Via Beheerder → Maken → Property geef je een herkenbare naam, passende tijdzone en valuta op. Maak daarna bij Gegevensstreams een Web-stream voor je echte HTTPS-adres. Neem het G- meet-ID van die stream over.
+2. **Kies je metingen bewust.** Open de webstream en bekijk Verbeterde meting. Behoud alleen relevante opties en controleer formulier- en sitezoekmeting extra op onbedoelde gegevens. Laat één bevestigde aanvraag als generate_lead meten. Een klik of automatisch form_submit-event bewijst nog geen ontvangst.
+3. **Laat tag en toestemming samen bouwen.** Geef Antigravity de echte meet-ID en je meetplan. Onze eenvoudige startkeuze: laad de Analytics-tag pas na toestemming voor analytics. Laat accepteren, weigeren en intrekken werken en controleer het netwerkgedrag. Zet geen persoonsgegevens in eventnamen, parameters of URL’s. Een banner alleen bewijst geen juiste inrichting.
+4. **Test voordat je op cijfers stuurt.** Open de live-site, geef de gekozen toestemming en voer één testaanvraag uit. Controleer Realtime en met je agent DebugView. Er moet één passende gebeurtenis zijn. Markeer generate_lead in Beheerder → Gegevensweergave → Gebeurtenissen als belangrijke gebeurtenis zodra die correct wordt gemeten. Test ook zonder toestemming.
+
+**Voorbeeldinstellingen · bespreek ze met je bouwer**
+
+- Property: Studio Maan · website
+- Tijdzone / valuta: Nederland / EUR, als dat bij je organisatie past
+- Google-tag: G-… uit jouw webstream · één installatiepad
+- Belangrijke gebeurtenis: generate_lead · alleen na bevestigde ontvangst
+- Toestemming: Startkeuze: tag geblokkeerd vóór akkoord; intrekken blijft bereikbaar
+- Eigen testverkeer: Optioneel filter voor intern verkeer: eerst in status Testen
+
+Als dezelfde tag via de code én via Tag Manager laadt, kun je dubbel tellen. Kies één installatiepad. Een intern-verkeerfilter zet je pas actief nadat je hebt gecontroleerd wie het uitsluit; uitgesloten gegevens zijn later niet terug te halen.
+
+**Samenhang:** Meetdoel → Property & webstream → Toestemming & tag → Echte testgebeurtenis
+
+**Neem mee:** Een GA4-webstream met gecontroleerde, beperkte meting.
+
+**SEO-opdracht 4**
+
+```text
+Help GA4 zorgvuldig inrichten voor [website], met meet-ID [echte G-ID]. Meet page_view en generate_lead uitsluitend na bevestigde succesvolle ontvangst van een aanvraag. Spreek vooraf af welke extra events nodig zijn. Gebruik één tag-installatiepad en voorkom dubbele pageviews/events bij navigatie of herladen. Onze startkeuze is basis-toestemming: de Analytics-tag laadt niet vóór akkoord; weigeren en intrekken moeten werken. Verwerk geen persoonsgegevens in URL’s, eventnamen of parameters. Laat mij property en webstream controleren. Test Realtime, DebugView, één succes, een fout, weigeren en intrekken. Leg bewijs, beperkingen en nog benodigde keuzes vast.
+```
+
+**Controle**
+
+- De meet-ID hoort bij de juiste website en property.
+- Eén echte testhandeling geeft één correct event; een fout geeft geen succes-event.
+- Weigeren en intrekken zijn gecontroleerd; er gaan geen onbedoelde persoonsgegevens mee.
+
+**Officiële uitleg**
+
+- [Google: GA4 instellen](https://support.google.com/analytics/answer/9304153?hl=nl)
+- [Google: verbeterde meting](https://support.google.com/analytics/answer/9216061?hl=nl)
+- [Google: belangrijke gebeurtenissen](https://support.google.com/analytics/answer/12946393?hl=en)
+- [Google: toestemmingsmodus](https://developers.google.com/tag-platform/security/concepts/consent-mode)
+- [Google: intern verkeer filteren](https://support.google.com/analytics/answer/10104470?hl=nl)
+
+### SEO-les 5 · Verbind de cijfers aan één volgende verbetering.
+
+De eerste weken kunnen rustig zijn. Gebruik echte waarnemingen en vergelijk passende perioden. Een momentopname of een enkele gemiddelde positie vertelt niet het hele verhaal.
+
+**Tools:** [Search Console](https://search.google.com/search-console/) · [Google Analytics](https://analytics.google.com/) · [ChatGPT](https://chatgpt.com/) · [Antigravity](https://antigravity.google/)
+
+**Begin met:** Geverifieerde Search Console-property, werkende Analytics-meting en voldoende eigen gegevens.
+
+1. **Koppel de twee omgevingen.** In Analytics: Beheerder → Productkoppelingen → Search Console-koppelingen → Koppelen. Kies de juiste geverifieerde property en webstream en rond af. Je hebt de rol Bewerker in Analytics en geverifieerd eigendom in Search Console nodig. Beide moeten dezelfde pagina’s betreffen.
+2. **Maak de rapporten bereikbaar.** Verschijnt de Search Console-collectie niet in Analytics? Kijk bij Rapporten → Bibliotheek en publiceer de collectie als je de juiste rechten hebt. Deze gegevens komen met vertraging; Realtime is een ander rapport.
+3. **Lees de route van zoeken naar doen.** Bekijk in Search Console Prestaties: zoekopdrachten, pagina’s, vertoningen en klikken. Bekijk in Analytics welke landingspagina’s organisch verkeer krijgen en of je belangrijke gebeurtenis plaatsvindt. Toestemming, meetwijze en vertraging maken aantallen niet één-op-één vergelijkbaar.
+4. **Kies en toets één verbetering.** Bij relevante vertoningen maar weinig klikken: beoordeel titel en aansluiting op de zoekvraag. Bij bezoekers zonder aanvragen: onderzoek inhoud, aanbod en formulierroute. Laat Antigravity één onderbouwde wijziging uitvoeren, testen en vastleggen. Vergelijk later een passende periode en houd rekening met kleine aantallen.
+
+**Wekelijkse kijkronde · geen scorejacht**
+
+- Search Console: Welke relevante vragen en pagina’s krijgen vertoningen en klikken?
+- Analytics: Wat doen bezoekers na binnenkomst; bereiken ze het echte resultaat?
+- Kwalitatief: Wat vragen bezoekers en waar lopen ze vast?
+- Bouwplan: Eén wijziging · verwachting · datum · latere controle
+
+Voorbeeldbesluit zonder verzonnen cijfers: als echte feedback zegt dat beginners twijfelen over ervaring, verduidelijk je dat op de workshoppagina. Leg vast wat je verwacht en onderzoek later of de onduidelijkheid afneemt.
+
+**Samenhang:** Vindbaarheid → Bezoek → Succesvolle actie → Gerichte verbetering
+
+**Neem mee:** Een korte meetnotitie en één onderbouwde verbetering in je bouwplan.
+
+**SEO-opdracht 5**
+
+```text
+Analyseer mijn aangeleverde Search Console- en GA4-gegevens voor [periode] en [website], samen met de echte gebruikersfeedback. Controleer definities, meetbeperkingen, toestemming, vertraging en vergelijkbaarheid van perioden. Scheid vindbaarheid, klikken, bezoek en bevestigde aanvragen. Trek geen sterke conclusie uit te weinig gegevens en verzin niets wat ontbreekt. Kies één onderbouwde SEO- of gebruiksverbetering, met verwachting en controleplan. Voeg die toe aan het bestaande bouwplan en laat Antigravity de kleine wijziging testen en gecontroleerd via GitHub vrijgeven.
+```
+
+**Controle**
+
+- Property en webstream horen bij dezelfde website; de koppeling is zichtbaar.
+- Je onderscheidt vindbaarheid, bezoekersgedrag en echte aanvragen.
+- Je vervolgstap verwijst naar echte gegevens of feedback en heeft een controlemoment.
+
+**Officiële uitleg**
+
+- [Google: Search Console koppelen aan Analytics](https://support.google.com/analytics/answer/10737381?hl=nl)
+- [Google: rapport Prestaties](https://support.google.com/webmasters/answer/7576553?hl=nl)
+
+Documentatie geraadpleegd op 12 september 2026. Schermnamen en beschikbare functies kunnen per account, taal en versie verschillen.

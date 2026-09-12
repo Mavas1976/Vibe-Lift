@@ -4,25 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eff5fc">
-  <meta name="description" content="VIBE Lift. Digitale gewichtloosheid. Bouw met AI van idee naar live, met 14 heldere stappen, voorbeelden en praktische opdrachten. Geen programmeerervaring nodig.">
-  <title>VIBE Lift — Digitale gewichtloosheid</title>
+  <meta name="description" content="Vibe Lift. Digitale gewichtloosheid. Bouw met AI van idee naar live, met 14 heldere stappen, toolkeuzes, voorbeelden en een SEO-cursus. Geen programmeerervaring nodig.">
+  <title>Vibe Lift — Digitale gewichtloosheid</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="lift.css">
   <script type="module" src="app.js"></script>
 </head>
 <body>
+  <canvas id="air-field" aria-hidden="true"></canvas>
   <a class="skip-link" href="#main">Naar de inhoud</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#route" aria-label="VIBE Lift, naar de route"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 23 15 6l12 17-12-5Z" fill="currentColor"/><path d="m15 18 1 9 4-7" fill="currentColor" opacity=".45"/></svg><span class="brand-wordmark"><span class="brand-vibe">VIBE</span> <span class="brand-lift">Lift</span></span></a>
+      <a class="brand" href="#route" aria-label="Vibe Lift, naar de route"><svg class="brand-symbol" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M9 12c3 8 7 15 13 23 7-7 12-16 17-28" stroke="currentColor" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 34c9 6 22 4 30-3" stroke="#83a7d2" stroke-width="2.8" stroke-linecap="round"/></svg><span class="brand-wordmark"><span class="brand-vibe">Vibe</span> <span class="brand-lift">Lift</span></span></a>
       <nav class="main-nav" aria-label="Hoofdnavigatie">
-        <a href="#route">De route</a><a href="#voorbeeld">Voorbeeldproject</a><a href="#tools">Gereedschappen</a><a href="#werkwijze">Werkwijze</a>
+        <a href="#route">De route</a><a href="#voorbeeld">Voorbeeldproject</a><a href="#tools">Gereedschappen</a><a href="#seo">SEO-cursus</a><a href="#werkwijze">Werkwijze</a>
       </nav>
       <a class="header-link" href="#opdrachten">AI-opdrachten <span aria-hidden="true">↗</span></a>
     </div>
   </header>
-  <main id="main" tabindex="-1"><section class="empty-state"><p class="eyebrow">VIBE Lift · Digitale gewichtloosheid</p><h1>Geef je idee de ruimte.</h1><p>VIBE Lift helpt je in veertien stappen een website op te bouwen. De interactieve route opent zodra de site is geladen. Lukt dat niet, dan kun je de volledige uitleg in het handboek lezen.</p><a class="btn primary" href="downloads/handboek.md">Lees het handboek ↗</a></section></main>
-  <footer class="site-footer"><a class="brand small" href="#route"><span class="brand-wordmark"><span class="brand-vibe">VIBE</span> <span class="brand-lift">Lift</span></span></a><p><strong class="brand-tagline">Digitale gewichtloosheid.</strong><br>Alle ruimte voor jouw volgende stap.</p><a href="downloads/handboek.md" download>Download het VIBE Lift-handboek <span aria-hidden="true">↗</span></a><span class="footer-note">VIBE Lift · Van idee naar live · Lezerseditie 1.1</span></footer>
+  <main id="main" tabindex="-1"><section class="empty-state"><p class="eyebrow">Vibe Lift · Digitale gewichtloosheid</p><h1>Geef je idee de ruimte.</h1><p>Vibe Lift helpt je in veertien stappen een website op te bouwen. De interactieve route opent zodra de site is geladen. Lukt dat niet, dan kun je de volledige uitleg in het handboek lezen.</p><a class="btn primary" href="downloads/handboek.md">Lees het handboek ↗</a></section></main>
+  <footer class="site-footer"><a class="brand small" href="#route" aria-label="Vibe Lift, naar de route"><svg class="brand-symbol" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M9 12c3 8 7 15 13 23 7-7 12-16 17-28" stroke="currentColor" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 34c9 6 22 4 30-3" stroke="#83a7d2" stroke-width="2.8" stroke-linecap="round"/></svg><span class="brand-wordmark"><span class="brand-vibe">Vibe</span> <span class="brand-lift">Lift</span></span></a><p><strong class="brand-tagline">Digitale gewichtloosheid.</strong><br>Alle ruimte voor jouw volgende stap.</p><a href="downloads/handboek.md" download>Download het Vibe Lift-handboek <span aria-hidden="true">↗</span></a><button class="motion-toggle" id="motion-toggle" aria-pressed="false">Beweging pauzeren</button><span class="footer-note">Vibe Lift · Van idee naar live · Lezerseditie 1.2</span></footer>
   <div id="notice" class="notice" role="status" aria-live="polite"></div>
   <noscript><div class="noscript">Schakel JavaScript in voor de interactieve route. Je kunt ook <a href="downloads/handboek.md">het volledige handboek lezen</a>.</div></noscript>
 </body>
