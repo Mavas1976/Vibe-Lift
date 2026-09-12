@@ -55,6 +55,7 @@ export function createDraftStore(storage){
     if(!parsed||typeof parsed!=='object'||Array.isArray(parsed)||parsed.version!==1||!parsed.project||typeof parsed.project!=='object'||Array.isArray(parsed.project))throw new Error('Invalid draft');
     state=normalizeDraft(parsed);
   }}catch{restoreIssue=true;}
+  state.ui.projectOpen??=!state.project.goal;
   // A readable storage object does not prove that saving is permitted.
   try{if(storage){storage.setItem(`${key}-probe`,'1');storage.removeItem(`${key}-probe`);persistent=true;}}catch{persistent=false;}
   const save=()=>{try{if(storage){storage.setItem(key,JSON.stringify(state));persistent=true;clearIssue=false;}}catch{persistent=false;}};
@@ -65,7 +66,7 @@ export function createDraftStore(storage){
     tool(prompt,tool){const c=getPrompt(prompt)?.config;if(!c?.tools.includes(tool))return;state.prompts[prompt]={...(state.prompts[prompt]||{fields:{}}),tool};save();},
     projectOpen(open){if(typeof open!=='boolean'||state.ui.projectOpen===open)return;state.ui.projectOpen=open;save();},
     clear(){
-      state=normalizeDraft(null);restoreIssue=false;clearIssue=false;
+      state=normalizeDraft(null);state.ui.projectOpen=true;restoreIssue=false;clearIssue=false;
       try{storage?.removeItem(key);}catch{
         // If removal is blocked but replacement works, an old draft must not reappear.
         try{storage.setItem(key,JSON.stringify(state));}catch{persistent=false;clearIssue=true;}

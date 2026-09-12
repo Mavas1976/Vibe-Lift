@@ -11,6 +11,9 @@ async (page) => {
     await navigate('#opdrachten');
     const project={name:'Sessie <audit> & café',path:'C:/projecten/audit',goal:'Eerste regel\nTweede regel 🎨',audience:'Beginners'};
     for(const [key,value] of Object.entries(project))await p.locator('#project-'+key).fill(value);
+    await navigate('#stap/2/opdracht');
+    check(await p.locator('#project-brief').evaluate(e=>e.open),'Initially open project stays open after filling and navigating');
+    await navigate('#opdrachten');
     const fields=await p.locator('[data-prompt-field]').evaluateAll(els=>els.map(e=>({id:e.id,select:e.tagName==='SELECT'})));
     await p.locator('.composer-card').evaluateAll(els=>els.forEach(e=>e.open=true));
     for(const f of fields){

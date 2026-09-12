@@ -1,6 +1,7 @@
 {
   "status": "PASS",
   "checks": [
+    "Initially open project stays open after filling and navigating",
     "Shared project survives step navigation",
     "Closed project stays closed",
     "Multiline project survives SEO navigation",

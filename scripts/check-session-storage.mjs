@@ -9,7 +9,7 @@ const memory=new Map();
 const storage={getItem:k=>memory.get(k),setItem:(k,v)=>memory.set(k,v),removeItem:k=>memory.delete(k)};
 check('Legacy version 1 restores without UI settings',()=>{
   storage.setItem(key,JSON.stringify({version:1,project:{goal:'Existing goal'},prompts:{}}));
-  const s=createDraftStore(storage);assert.equal(s.state.project.goal,'Existing goal');assert.equal(s.state.ui.projectOpen,null);
+  const s=createDraftStore(storage);assert.equal(s.state.project.goal,'Existing goal');assert.equal(s.state.ui.projectOpen,false);
 });
 check('Project disclosure choice survives restore',()=>{
   const s=createDraftStore(storage);s.projectOpen(true);assert.equal(createDraftStore(storage).state.ui.projectOpen,true);
@@ -37,7 +37,7 @@ check('Allowed heavily escaped input larger than the old limit restores',()=>{
   const value=normalizeDraft(null);
   for(const k of allPromptKeys)value.prompts[k]={tool:getPrompt(k).config.tools[0],fields:Object.fromEntries(getPrompt(k).config.fields.filter(f=>f.key!=='publish').map(f=>[f.key,'\u0000'.repeat(8000)]))};
   const raw=JSON.stringify(value);assert.ok(raw.length>1_500_000);storage.setItem(key,raw);
-  const s=createDraftStore(storage);assert.equal(s.restoreIssue,false);assert.ok(JSON.stringify(s.state)===JSON.stringify(normalizeDraft(value)),'Restored draft matches all normalized input');
+  const s=createDraftStore(storage);assert.equal(s.restoreIssue,false);const expected=normalizeDraft(value);expected.ui.projectOpen=true;assert.ok(JSON.stringify(s.state)===JSON.stringify(expected),'Restored draft matches all normalized input');
 });
 check('Successful clear does not leave a probe or draft behind',()=>{
   const s=createDraftStore(storage);assert.equal(s.clear(),true);assert.equal(memory.size,0);
