@@ -33,7 +33,7 @@ export function getPrompt(key){
 }
 export const allPromptKeys=[...prompts.map(p=>String(p.id)),...seoLessons.map(l=>`s${l.id}`)];
 export function normalizeDraft(value){
-  const result={version:1,project:{name:'',goal:'',audience:''},prompts:{}};
+  const result={version:1,project:{name:'',goal:'',audience:''},prompts:{},ui:{projectOpen:typeof value?.ui?.projectOpen==='boolean'?value.ui.projectOpen:null}};
   const bounded=(v,n)=>typeof v==='string'?v.slice(0,n):'';
   for(const field of projectFields)result.project[field.key]=bounded(value?.project?.[field.key],field.max);
   for(const key of allPromptKeys){
@@ -46,16 +46,32 @@ export function normalizeDraft(value){
   return result;
 }
 export function createDraftStore(storage){
-  const key='vibe-lift-project-tab-v1';let state=normalizeDraft(null),persistent=!!storage,restoreIssue=false;
-  try{const raw=storage?.getItem(key);if(raw){if(raw.length>1_500_000)throw new Error('Oversized draft');state=normalizeDraft(JSON.parse(raw));}}
-  catch{persistent=false;restoreIssue=true;}
-  const save=()=>{try{if(storage){storage.setItem(key,JSON.stringify(state));persistent=true;}}catch{persistent=false;}};
+  const key='vibe-lift-project-tab-v1';let state=normalizeDraft(null),persistent=false,restoreIssue=false,clearIssue=false;
+  // Include worst-case JSON escaping for every allowed field; valid drafts must round-trip.
+  const maxLength=50_000+6*(projectFields.reduce((n,f)=>n+f.max,0)+allPromptKeys.reduce((n,k)=>n+getPrompt(k).config.fields.length*8000,0));
+  try{const raw=storage?.getItem(key);if(raw){
+    if(raw.length>maxLength)throw new Error('Oversized draft');
+    const parsed=JSON.parse(raw);
+    if(!parsed||typeof parsed!=='object'||Array.isArray(parsed)||parsed.version!==1||!parsed.project||typeof parsed.project!=='object'||Array.isArray(parsed.project))throw new Error('Invalid draft');
+    state=normalizeDraft(parsed);
+  }}catch{restoreIssue=true;}
+  // A readable storage object does not prove that saving is permitted.
+  try{if(storage){storage.setItem(`${key}-probe`,'1');storage.removeItem(`${key}-probe`);persistent=true;}}catch{persistent=false;}
+  const save=()=>{try{if(storage){storage.setItem(key,JSON.stringify(state));persistent=true;clearIssue=false;}}catch{persistent=false;}};
   return {
-    get state(){return state;},get persistent(){return persistent;},get restoreIssue(){return restoreIssue;},
+    get state(){return state;},get persistent(){return persistent;},get restoreIssue(){return restoreIssue;},get clearIssue(){return clearIssue;},
     project(field,value){if(!projectFields.some(f=>f.key===field))return;state=normalizeDraft({...state,project:{...state.project,[field]:value}});save();},
     field(prompt,field,value){const c=getPrompt(prompt)?.config;if(!c?.fields.some(f=>f.key===field))return;const current=state.prompts[prompt]||{tool:c.tools[0],fields:{}};state.prompts[prompt]={...current,fields:{...current.fields,[field]:String(value).slice(0,8000)}};save();},
     tool(prompt,tool){const c=getPrompt(prompt)?.config;if(!c?.tools.includes(tool))return;state.prompts[prompt]={...(state.prompts[prompt]||{fields:{}}),tool};save();},
-    clear(){state=normalizeDraft(null);restoreIssue=false;try{storage?.removeItem(key);}catch{persistent=false;}}
+    projectOpen(open){if(typeof open!=='boolean'||state.ui.projectOpen===open)return;state.ui.projectOpen=open;save();},
+    clear(){
+      state=normalizeDraft(null);restoreIssue=false;clearIssue=false;
+      try{storage?.removeItem(key);}catch{
+        // If removal is blocked but replacement works, an old draft must not reappear.
+        try{storage.setItem(key,JSON.stringify(state));}catch{persistent=false;clearIssue=true;}
+      }
+      return !clearIssue;
+    }
   };
 }
 let tabStorage;
@@ -120,8 +136,19 @@ export function templatePrompt(key){
   state.prompts[p.key]={tool:p.config.tools[0],fields:Object.fromEntries(p.config.fields.map(f=>[f.key,f.required?`[${f.label}]`:'']))};
   return composePrompt(key,state);
 }
-function storageMessage(){return draftStore.persistent?'Je invoer wordt tijdelijk in dit tabblad bewaard, ook na vernieuwen. Gebruik Invoer wissen als je klaar bent.':'Je invoer blijft tijdens het wisselen van stappen bewaard. Bewaren voor vernieuwen is niet beschikbaar; bij opnieuw laden vervalt je invoer.';}
-export function projectMarkup(){return `<details class="project-brief" id="project-brief" ${draftStore.state.project.goal?'':'open'}><summary><span><span class="eyebrow">Eenmaal invullen · voor alle stappen</span><strong id="project-summary">${esc(draftStore.state.project.name||'Jouw project')}</strong></span><span class="project-edit">Invullen / wijzigen</span></summary><div class="project-brief-content"><p>Vertel kort wat je wilt maken. We nemen deze informatie automatisch mee in elke opdracht. Bij een gerichte bouwopdracht kun je dit overslaan.</p><div class="project-fields">${projectFields.map(f=>`<div class="draft-field ${f.key==='goal'?'wide':''}"><label for="project-${f.key}">${f.label}${f.key!=='goal'?' <span>optioneel</span>':''}</label>${f.key==='goal'?`<textarea id="project-${f.key}" data-project="${f.key}" rows="3" maxlength="${f.max}" placeholder="${esc(f.placeholder)}" aria-describedby="project-${f.key}-error">${esc(draftStore.state.project[f.key])}</textarea>`:`<input id="project-${f.key}" data-project="${f.key}" maxlength="${f.max}" placeholder="${esc(f.placeholder)}" value="${esc(draftStore.state.project[f.key])}" aria-describedby="project-${f.key}-error">`}<small class="field-error" id="project-${f.key}-error" hidden></small></div>`).join('')}</div><div class="draft-storage"><p><span id="draft-storage-message">${storageMessage()}</span> Dit is geen opslag van je projectbestanden. Bewaar het Markdown-resultaat zelf in de projectroot. Deze site verstuurt je invoer niet. Voeg hier geen wachtwoorden of geheime sleutels toe.</p><button class="text-link clear-draft" data-draft-clear>Invoer wissen</button></div><div id="draft-clear-confirm" class="draft-clear-confirm" hidden>Wil je alle project- en opdrachtinvoer in dit tabblad wissen? <button data-draft-confirm>Ja, wis mijn invoer</button><button data-draft-cancel>Behouden</button></div></div></details>`;}
+function storageMessage(){
+  if(draftStore.clearIssue)return 'Wissen uit de tabbladopslag is mislukt. De velden zijn hier leeggemaakt, maar oude invoer kan na vernieuwen terugkomen. Sluit dit tabblad om de sessie te beëindigen.';
+  if(draftStore.restoreIssue)return 'Eerder bewaarde invoer kon niet worden hersteld. '+(draftStore.persistent?'Nieuwe invoer wordt weer in dit tabblad bewaard.':'Bewaren voor vernieuwen is niet beschikbaar.');
+  return draftStore.persistent?'Projectgegevens, antwoorden en AI-toolkeuzes worden automatisch in dit tabblad bewaard, ook na vernieuwen. Je projectgegevens gaan mee naar elke stap; antwoorden en toolkeuzes blijven bij hun eigen opdracht. Gebruik Invoer wissen als je klaar bent.':'Je invoer blijft tijdens het wisselen van stappen bewaard. Bewaren voor vernieuwen is niet beschikbaar; je laatste wijzigingen kunnen bij opnieuw laden verloren gaan.';
+}
+function projectStatus(){
+  if(draftStore.clearIssue)return 'Wissen niet volledig gelukt';
+  if(draftStore.restoreIssue)return 'Eerdere invoer niet hersteld';
+  const count=projectFields.filter(f=>draftStore.state.project[f.key].trim()).length;
+  if(!draftStore.persistent)return 'Alleen op deze pagina bewaard · vernieuwen kan invoer wissen';
+  return count?`Bewaard in dit tabblad · ${count} van ${projectFields.length} projectvelden ingevuld`:'Nog geen projectgegevens ingevuld';
+}
+export function projectMarkup(){return `<details class="project-brief" id="project-brief" data-draft-open="${draftStore.state.ui.projectOpen??!draftStore.state.project.goal}" ${(draftStore.state.ui.projectOpen??!draftStore.state.project.goal)?'open':''}><summary><span><span class="eyebrow">Eenmaal invullen · voor alle stappen</span><strong id="project-summary">${esc(draftStore.state.project.name||'Jouw project')}</strong><small id="project-status" class="project-status" role="status">${esc(projectStatus())}</small></span><span class="project-edit">Invullen / wijzigen</span></summary><div class="project-brief-content"><p>Vertel kort wat je wilt maken. We nemen deze informatie automatisch mee in elke opdracht. Bij een gerichte bouwopdracht kun je dit overslaan.</p><div class="project-fields">${projectFields.map(f=>`<div class="draft-field ${f.key==='goal'?'wide':''}"><label for="project-${f.key}">${f.label}${f.key!=='goal'?' <span>optioneel</span>':''}</label>${f.key==='goal'?`<textarea id="project-${f.key}" data-project="${f.key}" rows="3" maxlength="${f.max}" placeholder="${esc(f.placeholder)}" aria-describedby="project-${f.key}-error">${esc(draftStore.state.project[f.key])}</textarea>`:`<input id="project-${f.key}" data-project="${f.key}" maxlength="${f.max}" placeholder="${esc(f.placeholder)}" value="${esc(draftStore.state.project[f.key])}" aria-describedby="project-${f.key}-error">`}<small class="field-error" id="project-${f.key}-error" hidden></small></div>`).join('')}</div><div class="draft-storage"><p><span id="draft-storage-message">${storageMessage()}</span> Dit is geen opslag van je projectbestanden. Bewaar het Markdown-resultaat zelf in de projectroot. Deze site verstuurt je invoer niet. Voeg hier geen wachtwoorden of geheime sleutels toe.</p><button class="text-link clear-draft" data-draft-clear>Invoer wissen</button></div><div id="draft-clear-confirm" class="draft-clear-confirm" hidden>Wil je alle project- en opdrachtinvoer in dit tabblad wissen? <button data-draft-confirm>Ja, wis mijn invoer</button><button data-draft-cancel>Behouden</button></div></div></details>`;}
 const getFieldValue=(key,f)=>draftStore.state.prompts[key]?.fields?.[f]||'';
 function fieldMarkup(key,f){
   const id=`input-${key}-${f.key}`,value=getFieldValue(key,f.key);
@@ -142,7 +169,14 @@ export function refreshPreviews(){
   document.querySelectorAll('[data-ready]').forEach(el=>{const count=missingInput(el.dataset.ready).length;el.textContent=count?`Vul nog ${count} ${count===1?'veld':'velden'} in.`:'Je prompt is klaar om te kopiëren, inclusief jouw input.';el.classList.toggle('ready',!count);});
   document.querySelectorAll('[data-prompt-result]').forEach(el=>{el.textContent=expectedResult(el.dataset.promptResult);});
   const summary=document.querySelector('#project-summary');if(summary)summary.textContent=draftStore.state.project.name||'Jouw project';
+  const status=document.querySelector('#project-status');if(status)status.textContent=projectStatus();
   const message=document.querySelector('#draft-storage-message');if(message)message.textContent=storageMessage();
+}
+export function handleDraftToggle(event){
+  const el=event.target;
+  if(el.id==='project-brief'&&el.isConnected&&String(el.open)!==el.dataset.draftOpen){
+    el.dataset.draftOpen=String(el.open);draftStore.projectOpen(el.open);refreshPreviews();
+  }
 }
 export function handleDraftInput(event){
   const el=event.target;
@@ -174,7 +208,7 @@ export async function handlePromptClick(event,notify,rerender){
   }
   if(event.target.closest('[data-draft-clear]')){document.querySelector('#draft-clear-confirm').hidden=false;document.querySelector('[data-draft-confirm]')?.focus();return true;}
   if(event.target.closest('[data-draft-cancel]')){document.querySelector('#draft-clear-confirm').hidden=true;document.querySelector('[data-draft-clear]')?.focus();return true;}
-  if(event.target.closest('[data-draft-confirm]')){draftStore.clear();rerender();notify('Je ingevulde project- en opdrachtgegevens zijn gewist.');return true;}
+  if(event.target.closest('[data-draft-confirm]')){const cleared=draftStore.clear();rerender();notify(cleared?'Je ingevulde project- en opdrachtgegevens zijn gewist.':storageMessage());return true;}
   const copy=event.target.closest('[data-composer-copy]');if(!copy)return false;
   const key=copy.dataset.composerCopy,missing=missingInput(key);
   if(missing.length){

@@ -2,6 +2,7 @@
 .project-brief>summary{padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;list-style:none}
 .project-brief summary .eyebrow{display:block;margin-bottom:5px;font-size:.7rem}
 .project-brief summary strong{font-size:1.18rem;overflow-wrap:anywhere}.project-edit{font-size:.8rem;color:#52637b;white-space:nowrap}
+.project-status{display:block;font-size:.875rem;font-weight:400;line-height:1.5;color:var(--muted);margin-top:8px;overflow-wrap:anywhere}
 .project-brief-content{padding:0 24px 24px}.project-brief-content>p{font-size:.93rem;margin-bottom:21px;line-height:1.7}
 .project-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.project-fields .wide{grid-column:1/-1;grid-row:2}
 .draft-field{display:flex;flex-direction:column;gap:7px;min-width:0}.draft-field label{font-weight:600;font-size:.94rem;line-height:1.5;color:var(--ink)}

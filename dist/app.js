@@ -2,7 +2,7 @@ import {methodMarkup} from './method.js';
 import {phases, lessons} from './content.js';
 import {prompts} from './prompts.js';
 import {stepPrompts} from './prompt-config.js';
-import {escapeHTML, projectMarkup, promptMarkup, lessonPromptMarkup, handleDraftInput, handlePromptClick} from './prompt-workbench.js';
+import {escapeHTML, projectMarkup, promptMarkup, lessonPromptMarkup, handleDraftInput, handleDraftToggle, handlePromptClick} from './prompt-workbench.js';
 export {escapeHTML};
 import {tools, lessonTools, repositoryGuide} from './tools.js';
 import {seoLessons, seoInBuild} from './seo.js';
@@ -134,6 +134,7 @@ main.addEventListener('click', async event=> {
   if(await handlePromptClick(event,showNotice,render))return;
 });
 main.addEventListener('input',handleDraftInput);
+main.addEventListener('toggle',handleDraftToggle,true);
 main.addEventListener('change',event=>{if(handleDraftInput(event))return;if(event.target.id==='step-select'){const id=Number(event.target.value);if(id>=1 && id<=14)location.hash=`stap/${id}`;}});
 main.addEventListener('keydown',event=> {
   const tab=event.target.closest('[role=tab]');

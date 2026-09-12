@@ -66,6 +66,8 @@ Dit is een statische site. `dist/` bevat de daadwerkelijke bronbestanden die wor
 
 Invoer wordt uitsluitend in sessionStorage van hetzelfde tabblad bewaard, met geheugenfallback als opslag niet beschikbaar is. Geen invoer in de URL, server, downloads of tool-links. Wissen verwijdert de volledige lokale draft. De site start zelf geen AI-opdracht.
 
+Dit geldt voor alle vier projectvelden, de 81 opdrachtvelden en de toolkeuzes van alle 47 generators. De open/dicht-stand van Jouw project blijft ook behouden. De samenvatting toont de bewaartoestand, ook wanneer het paneel gesloten is. Bij fouten met herstellen of wissen verschijnt een expliciete melding; bij geblokkeerde opslag blijft navigatie werken, maar kunnen wijzigingen na vernieuwen verloren gaan. Een zelfstandig nieuw tabblad of ander siteadres deelt de invoer niet. Zie `docs/SESSION_AUDIT_SPOS.md`; regressies: `node scripts/check-session-storage.mjs` en de browserfunctie `scripts/check-session.pw.js`.
+
 Geen appdatabase, accounts, analytics, AI-API of externe bibliotheken. Sites verzorgt de toegangslaag buiten deze applicatie. De site kopieert alleen op verzoek tekst naar het klembord; opdrachten en publicaties voor leerlingprojecten worden niet vanuit deze site uitgevoerd.
 
 ### Railway

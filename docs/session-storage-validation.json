@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Legacy version 1 restores without UI settings",
+    "Project disclosure choice survives restore",
+    "Read access does not imply write access",
+    "Removal failure falls back to replacing the old draft",
+    "Unremovable storage reports incomplete clear",
+    "Invalid schema and future versions report failed restore",
+    "Allowed heavily escaped input larger than the old limit restores",
+    "Successful clear does not leave a probe or draft behind"
+  ],
+  "scope": "Session storage edge cases; synthetic fixtures only"
+}
