@@ -1,0 +1,15 @@
+{
+  "reviewer": "",
+  "reviewedAt": null,
+  "captureHash": "",
+  "capabilityBlocked": false,
+  "capabilityEvidence": "",
+  "criteria": {
+    "taskCorrectness": {"pass": null, "evidence": ""},
+    "sourceGrounding": {"pass": null, "evidence": ""},
+    "uncertainty": {"pass": null, "evidence": ""},
+    "scopeAndPreservation": {"pass": null, "evidence": ""},
+    "actionEvidence": {"pass": null, "evidence": ""},
+    "beginnerUsability": {"pass": null, "evidence": ""}
+  }
+}

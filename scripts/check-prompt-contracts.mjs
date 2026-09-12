@@ -45,7 +45,7 @@ for(const key of allPromptKeys){
     const prompt=composePrompt(key,state);
     check(missingInput(key,state).length===0,`${key}/${scenario}/${tool}: explicit data is usable`);
     check(prompt.includes(value),`${key}/${scenario}/${tool}: input is preserved`);
-    check(prompt.includes(`precies één volledig Markdown-document: ${c.file}`)&&prompt.includes('niet in een submap'),`${key}/${scenario}/${tool}: immutable output target`);
+    check(prompt.includes(`één primair, volledig Markdown-verslag: ${c.file}`)&&prompt.includes('niet in een submap'),`${key}/${scenario}/${tool}: immutable primary output target`);
     check(prompt.split('VERPLICHTE MARKDOWN-OPLEVERING').length===2,`${key}/${scenario}/${tool}: exactly one output block`);
     check(prompt.includes('volledige documentinhoud')&&prompt.includes('Claim dan niet'),`${key}/${scenario}/${tool}: honest fallback`);
     check(c.sections.every(([h])=>prompt.includes(`## ${h}`)),`${key}/${scenario}/${tool}: every output section retained`);
@@ -77,6 +77,14 @@ for(const option of ['',...commandOptions.map(([v])=>v),'Publiceer alles']){
   check(allowed?text.includes('Push die commit')&&!text.includes('Push niet naar GitHub'):text.includes('Push niet naar GitHub')&&!text.includes('Push die commit'),'Push authorization is exact and fails closed');
 }
 check(promptContracts[14].file!==promptContracts[15].file,'Test plan cannot overwrite findings');
+check(promptContracts[23].additionalDocuments.includes('START-HIER.md')&&composePrompt('23',normalizeDraft(null)).includes('Werk daarnaast alleen'),'Handoff permits the required index update alongside its primary report');
+check(promptContracts[28].scopedDocumentUpdates&&promptContracts[28].additionalDocuments.includes('gebruikershandleiding.md'),'Documentation audit permits bounded corrections alongside its primary report');
+check(!composePrompt('1',normalizeDraft(null)).includes('Werk daarnaast alleen')&&promptContracts[1].artifacts.length===0,'Project brief cannot expand into extra document or code outputs');
+const offline41=templatePrompt('41');
+check(offline41.includes('alleen lokaal (downloadvariant)')&&!offline41.includes('[Wat gebeurt er na een push?]'),'Offline copy is explicitly local and has no misleading editable publication choice');
+check(offline41.includes('Push niet naar GitHub')&&offline41.includes('generator 41 op de website'),'Offline copy retains safe default and points to the interactive push flow');
+const filledOffline41=offline41.replace('[Welke wijziging mag worden opgeslagen?]','Een afgeronde formulierwijziging');
+check(filledOffline41.includes('alleen voor lokaal bewaren')&&!filledOffline41.includes('Push die commit'),'Filling the offline template does not imply a push');
 check(getPrompt(29).text.includes('scopebesluit')&&getPrompt(40).text.includes('gegevenscontract'),'Early-step extras do not start an unplanned build');
 check(promptContracts[7].file===promptContracts[8].file&&promptContracts[6].file===promptContracts[25].file,'Revisions update the canonical artifact');
 for(const [a,b] of [[7,8],[6,25]])check(promptContracts[a].title===promptContracts[b].title&&JSON.stringify(promptContracts[a].sections.map(s=>s[0]))===JSON.stringify(promptContracts[b].sections.map(s=>s[0])),'Revisions preserve the document title and schema');

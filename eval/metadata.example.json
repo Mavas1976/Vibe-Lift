@@ -1,0 +1,13 @@
+{
+  "tool": "antigravity",
+  "model": null,
+  "environment": "REPLACE: tool version, operating system and isolated test environment",
+  "accountMode": "REPLACE: actual account mode",
+  "availableTools": [],
+  "startedAt": null,
+  "finishedAt": null,
+  "outputMode": "files",
+  "testOnly": false,
+  "durationSeconds": null,
+  "cost": null
+}

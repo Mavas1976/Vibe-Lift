@@ -4,7 +4,8 @@ import {tools} from './tools.js';
 import {toolLogo} from './tool-branding.js';
 import {stepPrompts,promptConfig,seoPromptConfig} from './prompt-config.js';
 import {projectSetupPrompt,readFirstInstruction,saveOutputInstruction} from './project-guide.js';
-import {promptContracts,promptContractVersion} from './prompt-contracts.js';
+import {promptContracts,promptContractVersion,setupContract} from './prompt-contracts.js';
+import {profileText} from './prompt-profiles.js';
 
 export const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const esc=escapeHTML;
@@ -87,7 +88,10 @@ const inputBlock=text=>{
 export function markdownContract(p,tool){
   const c=p.contract;
   return [
-    `Lever precies één volledig Markdown-document: ${c.file}. Plaats dit bestand direct in de projectroot (de hoofdmap van het project), niet in een submap.`,
+    `Lever één primair, volledig Markdown-verslag: ${c.file}. Plaats dit bestand direct in de projectroot (de hoofdmap van het project), niet in een submap.`,
+    c.additionalDocuments.length?`Werk daarnaast alleen de noodzakelijke delen bij van: ${c.additionalDocuments.join(', ')}. Lees ze eerst en behoud geldige inhoud en historie.`:'Maak geen andere Markdown-verslagen zonder dat deze opdracht die vereist.',
+    ...(c.scopedDocumentUpdates?['Gerichte correcties in andere bestaande documenten zijn alleen toegestaan als die documenten expliciet binnen de opgegeven wijzigingsscope vallen. Benoem die scope vóór de wijziging.']:[]),
+    ...(c.artifacts.length?[`Het hoofdverslag vervangt het opgedragen werk niet. Lever waar nodig ook: ${c.artifacts.join('; ')}. Voeg geen ongevraagde functies of extra deliverables toe.`]:[]),
     tool==='antigravity'?'Schrijf het bestand als je toegang tot de bevestigde projectroot hebt. Lees een bestaand bestand eerst en werk het gericht bij; behoud geldige inhoud en eerdere testhistorie. Controleer na opslaan de inhoud en het echte pad. Zonder schrijftoegang geldt dezelfde tekstfallback als hieronder.':saveOutputInstruction,
     'Als een bestandsbijlage of lokaal opslaan niet mogelijk is: geef de volledige documentinhoud in één buitenste Markdown-codeblok met een langere fence dan eventuele codeblokken in het document. Zet de bestandsnaam boven dat blok en vermeld dat de gebruiker het zelf in de projectroot moet opslaan. Claim dan niet dat het bestand al is opgeslagen.',
     'Het bestand bevat de uitgewerkte uitkomst, geen kopie van deze prompt, lege sjabloontekst of herhaalde uitleg. Gebruik deze koppen en werk de inhoud projectspecifiek uit:',
@@ -95,23 +99,24 @@ export function markdownContract(p,tool){
     '## Context en bronnen\nNoteer project, deze stap, beoordeelde versie indien beschikbaar en werkelijk gebruikte bronnen. Herhaal broninhoud niet integraal.',
     ...c.sections.map(([heading,description])=>`## ${heading}\n${description}`),
     '## Open punten en volgende stap\nBenoem onzekerheden, ontbrekende input en wat de volgende stap nodig heeft. Noteer GEREED of GEBLOKKEERD met reden; dat is geen publicatievrijgave.',
-    'Voorbeeld van bewijsnotatie: "Bron: schermen.md, scherm S-02; de hoofdknop heet Aanvragen." Gebruik dit alleen als die inhoud echt is gelezen. Grensgeval: "[ONZEKER] De bron ontbreekt; deze controle is NIET GETEST."',
     `Eindcontrole voor deze opdracht: ${c.check} Controleer ook de bestandsnaam, alle verplichte secties en verwijder dubbele zinnen zonder unieke inhoud te verliezen.`
   ].join('\n\n');
 }
-export function composePrompt(key,state=draftStore.state){
+export function composePrompt(key,state=draftStore.state,{offline=false}={}){
   const p=getPrompt(key);if(!p)return '';
   const values=state.prompts[p.key]||{},tool=p.config.tools.includes(values.tool)?values.tool:p.config.tools[0];
   const project=projectFields.filter(f=>state.project?.[f.key]?.trim()).map(f=>`${f.label}\n${state.project[f.key].trim()}`);
-  const own=p.config.fields.filter(f=>values.fields?.[f.key]?.trim()).map(f=>`${f.label}\n${values.fields[f.key].trim()}`);
+  const offlineLocal=offline&&p.key==='41';
+  const own=p.config.fields.filter(f=>!(offlineLocal&&f.key==='publish')&&values.fields?.[f.key]?.trim()).map(f=>`${f.label}\n${values.fields[f.key].trim()}`);
   let task=p.text;
-  if(p.key==='41')task+='\n'+(noPush(state)?'Bereid alleen een lokale commit voor binnen de opgegeven scope. Push niet naar GitHub en publiceer niet. Ontbreekt de publicatieafspraak of is deze onbekend, noteer welke beslissing nog nodig is.':'Push die commit naar de exact opgegeven GitHub-repository en branch. Controleer daarna de remote commit en geef de echte versielink. Pas alleen de gekozen publicatieafspraak toe.');
+  if(p.key==='41')task=offlineLocal?'Controleer de opgegeven wijzigingen en bereid alleen een lokale commit voor. Behoud andermans werk, neem geen geheimen mee en overschrijf geen geschiedenis. Push niet naar GitHub en publiceer niet. Deze download is alleen voor lokaal bewaren; maak voor een push een nieuwe prompt in generator 41 op de website en kies daar de publicatieafspraak.':task+'\n'+(noPush(state)?'Bereid alleen een lokale commit voor binnen de opgegeven scope. Push niet naar GitHub en publiceer niet. Ontbreekt de publicatieafspraak of is deze onbekend, noteer welke beslissing nog nodig is.':'Push die commit naar de exact opgegeven GitHub-repository en branch. Controleer daarna de remote commit en geef de echte versielink. Pas alleen de gekozen publicatieafspraak toe.');
   return [
-    `OPDRACHT: ${p.title} · ${p.home} · promptversie ${promptContractVersion}`,`Je bent ${p.role.toLowerCase()}. Ik gebruik deze opdracht in ${tools[tool].name}.`,
+    `OPDRACHT: ${offlineLocal?'Bewaar je wijzigingen alleen lokaal (downloadvariant)':p.title} · ${p.home} · promptversie ${promptContractVersion}`,`Je bent ${p.role.toLowerCase()}. Ik gebruik deze opdracht in ${tools[tool].name}.`,
     'DOEL EN AFBAKENING',task,
     'BRONNEN VOOR DEZE STAP',p.contract.inputs.length?`Gebruik de relevante beschikbare versies van: ${p.contract.inputs.join(', ')}. Een passende, daadwerkelijk bijgevoegde tekst mag als bron dienen als het bestand nog niet bestaat.`:'Gebruik mijn projectgegevens en de daadwerkelijk beschikbare aantekeningen.',
     tool==='antigravity'?readFirstInstruction:'Gebruik uitsluitend informatie die in deze omgeving echt is bijgevoegd of toegankelijk is. Een genoemde bestandsnaam of andere chat geeft geen toegang tot die inhoud.',
     'WERKAFSPRAKEN',base,
+    profileText(p.contract),
     'Ontbreekt essentiële input, maak dan het document met de onderbouwde onderdelen en zichtbare blokkade. Vraag alleen de informatie die nodig is voor een wezenlijke beslissing. Voer afhankelijk werk nog niet uit. Niet-essentiële gaten mogen als open punt blijven. Noteer bij tests GESLAAGD, MISLUKT, NIET GETEST of NIET VAN TOEPASSING met reden en werkelijk bewijs.',
     'VERPLICHTE MARKDOWN-OPLEVERING',markdownContract(p,tool),
     ...(tool==='stitch'?['Lever daarnaast de beschikbare ontwerpassets. Als deze tool geen Markdown-bestand of volledige tekst kan leveren, meld die beperking expliciet; beschouw de documentoverdracht dan als onvolledig.']:[]),
@@ -135,8 +140,13 @@ export function templatePrompt(key){
   const p=getPrompt(key),state=normalizeDraft(null);
   for(const f of projectFields)state.project[f.key]=`[${f.label}]`;
   state.prompts[p.key]={tool:p.config.tools[0],fields:Object.fromEntries(p.config.fields.map(f=>[f.key,f.required?`[${f.label}]`:'']))};
-  return composePrompt(key,state);
+  return composePrompt(key,state,{offline:true});
 }
+export const allRegisteredPromptKeys=[...allPromptKeys,'setup'];
+export function getRegisteredPrompt(key){
+  return key==='setup'?{key:'setup',title:'Richt de projectmap in',home:'Start',contract:setupContract,config:{tools:['antigravity'],fields:[]},role:setupContract.role,text:projectSetupPrompt}:getPrompt(key);
+}
+export function registeredPromptText(key,state){return key==='setup'?projectSetupPrompt:composePrompt(key,state);}
 function storageMessage(){
   if(draftStore.clearIssue)return 'Wissen uit de tabbladopslag is mislukt. De velden zijn hier leeggemaakt, maar oude invoer kan na vernieuwen terugkomen. Sluit dit tabblad om de sessie te beëindigen.';
   if(draftStore.restoreIssue)return 'Eerder bewaarde invoer kon niet worden hersteld. '+(draftStore.persistent?'Nieuwe invoer wordt weer in dit tabblad bewaard.':'Bewaren voor vernieuwen is niet beschikbaar.');

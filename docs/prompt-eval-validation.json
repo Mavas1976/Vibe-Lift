@@ -1,0 +1,603 @@
+{
+  "status": "PASS",
+  "checks": 2139,
+  "version": "2.1.0",
+  "registered": 48,
+  "configurations": 58,
+  "cases": 348,
+  "plannedTrials": 1044,
+  "pilotTrials": 180,
+  "modelExecution": "NOT_RUN",
+  "reason": "User confirmed no model/tool test access is available.",
+  "fixtureAppTests": "PASS",
+  "seededDefect": "REPRODUCED",
+  "assessmentTests": "SYNTHETIC_ONLY",
+  "registry": [
+    {
+      "key": "1",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "chatgpt",
+        "claude"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "ea462ec5f977080d955483a1970c7868b7653a0ec3552f91b99ec66ab19152cf"
+    },
+    {
+      "key": "2",
+      "version": "2.1.0",
+      "profile": "research",
+      "rationale": "Conclusies vragen bronweging, tegenbewijs en een expliciete onzekerheidsstatus.",
+      "complexity": "M",
+      "tools": [
+        "claude",
+        "chatgpt"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "675e7c79d388a1da1f66ade8d8f071cbc3f69a93d2ba75298e9160881026121a"
+    },
+    {
+      "key": "3",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "chatgpt",
+        "claude"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "c1c1fcb15da032e16e73832868aa7d065b7302619e80ec4974fa4df9bdfd4edd"
+    },
+    {
+      "key": "4",
+      "version": "2.1.0",
+      "profile": "research",
+      "rationale": "Conclusies vragen bronweging, tegenbewijs en een expliciete onzekerheidsstatus.",
+      "complexity": "M",
+      "tools": [
+        "chatgpt",
+        "claude"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "e59696611e34962ccfd349efc3c13d5dab4185454deb3a92ab77be8a75f04808"
+    },
+    {
+      "key": "5",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "chatgpt",
+        "claude"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "26d3d6d47a252a5bf9a87bf6ce02e8e828372913d2da148f8e1a9052e11d4145"
+    },
+    {
+      "key": "6",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "chatgpt",
+        "claude"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "06d6a880d7a68b4fd2824bce29a4c6d660a3dd01908febc925cd18739ebcce39"
+    },
+    {
+      "key": "7",
+      "version": "2.1.0",
+      "profile": "design",
+      "rationale": "Schermrelaties en haalbare overdracht zijn leidend; een ontwerp is geen implementatie.",
+      "complexity": "M",
+      "tools": [
+        "stitch"
+      ],
+      "capabilityGaps": "STITCH_SESSION_AND_EXPORT",
+      "promptHash": "f5ac488c983c837c6b4777e7ebd5e884549e5a57adedf64f955da4643b8faa31"
+    },
+    {
+      "key": "8",
+      "version": "2.1.0",
+      "profile": "design",
+      "rationale": "Schermrelaties en haalbare overdracht zijn leidend; een ontwerp is geen implementatie.",
+      "complexity": "M",
+      "tools": [
+        "stitch"
+      ],
+      "capabilityGaps": "STITCH_SESSION_AND_EXPORT",
+      "promptHash": "be1223155c7513ebecf50776d427c99af097708282e9dbaa5da1f9b08153da3d"
+    },
+    {
+      "key": "9",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "b6b6e98e0b644e747804f1fd809e16655c84cdab1944e8c00c8bbad4d2350f69"
+    },
+    {
+      "key": "10",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "fa292bb7e7802bfa9b69e606f607a7c26c0d8f8779b4eceb837d7aff3f2baeea"
+    },
+    {
+      "key": "11",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "4907b3132591e588f5fa5c5e93427cc82f5c664778883772546bc9b5abd6b292"
+    },
+    {
+      "key": "12",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "26dd0f68870382e9504b5f24b738c03608bebf6a28b21dda335ae2f5a5809c3a"
+    },
+    {
+      "key": "13",
+      "version": "2.1.0",
+      "profile": "operations",
+      "rationale": "Bestemming, behoud van bestaand werk en bewijs van uitvoerstatus bepalen de overdracht.",
+      "complexity": "S",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "6f849a0f3af79084ec69a630e3d18f3524c7e0f93204bb984a61dcca9525871f"
+    },
+    {
+      "key": "14",
+      "version": "2.1.0",
+      "profile": "audit",
+      "rationale": "Het doel is een onderbouwd oordeel; bevindingen moeten eerst worden tegengesproken.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "a9abfd9c58987ae0a64ba83af7c9b922ba3ef48703506b5588134fb1d603b454"
+    },
+    {
+      "key": "15",
+      "version": "2.1.0",
+      "profile": "debug",
+      "rationale": "Reproductie en toetsing van oorzaken zijn noodzakelijk voordat herstel wordt geclaimd.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "2d117905ade37071e501a27641c063926c62df9e7f5d32f9468c81ba861cd21d"
+    },
+    {
+      "key": "16",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "ee1c86031b4d1920d99e1ce7972b9a859700596a1d09503f05bd5ab5c0f8750b"
+    },
+    {
+      "key": "17",
+      "version": "2.1.0",
+      "profile": "audit",
+      "rationale": "Het doel is een onderbouwd oordeel; bevindingen moeten eerst worden tegengesproken.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "1f4860798fed8775bf3ca24025e9244c9aa845561b5931b538d97186998ba71a"
+    },
+    {
+      "key": "18",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "2c4b45fde60bbd5a8e037f72d6b07216419c7eb64c14b50055f95024bd1f99ef"
+    },
+    {
+      "key": "19",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "5697ebcce51d09cce210fedec85b6979c64a9de8e7dc0de0adba7e4bcddf21c3"
+    },
+    {
+      "key": "20",
+      "version": "2.1.0",
+      "profile": "operations",
+      "rationale": "Bestemming, behoud van bestaand werk en bewijs van uitvoerstatus bepalen de overdracht.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": "RAILWAY_TEST_PROJECT",
+      "promptHash": "d5d0542dbaf088e904594f0f0e4a854e46c862cbffdfb649a450e05d976caf43"
+    },
+    {
+      "key": "21",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "claude",
+        "chatgpt"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "8e0c63379eac836840b5e7d741258be4682a9fbbdf2cb950aa0e9e379c71683a"
+    },
+    {
+      "key": "22",
+      "version": "2.1.0",
+      "profile": "research",
+      "rationale": "Conclusies vragen bronweging, tegenbewijs en een expliciete onzekerheidsstatus.",
+      "complexity": "M",
+      "tools": [
+        "chatgpt",
+        "claude"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "66aae5bb007b5d2836981c70767f8e56132e2682d159d287cab56bc6784693e0"
+    },
+    {
+      "key": "23",
+      "version": "2.1.0",
+      "profile": "operations",
+      "rationale": "Bestemming, behoud van bestaand werk en bewijs van uitvoerstatus bepalen de overdracht.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "df2190e8e0cc7ea37502c5f7ea802ff61d2977e69e9ef2f7f2e238049893b2c7"
+    },
+    {
+      "key": "24",
+      "version": "2.1.0",
+      "profile": "operations",
+      "rationale": "Bestemming, behoud van bestaand werk en bewijs van uitvoerstatus bepalen de overdracht.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "83aa9647727d7809dc8bbc3e7787998d304839391e4c47a1097034b1cde1eaa8"
+    },
+    {
+      "key": "25",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "6beac6c248942b7874a77837c64b9092b6eb94fef396ab30333b7d77e439d8c8"
+    },
+    {
+      "key": "26",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "f76327763503de37d9bbf8b032c817852d2572cc9022da20d5f182032740f82a"
+    },
+    {
+      "key": "27",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "371b3347d547f39bc2714312bb1038c6b41f400ea05d362bfb3e506703b49da4"
+    },
+    {
+      "key": "28",
+      "version": "2.1.0",
+      "profile": "audit",
+      "rationale": "Het doel is een onderbouwd oordeel; bevindingen moeten eerst worden tegengesproken.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "d41dab4750926f0de9631e8e76e39cd2e7e5e45f7da5a4bac1b340fd9b2723bb"
+    },
+    {
+      "key": "29",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "04aeb5d4abef65d76fdf7b7d1560b64d9465ff3e35b6f62fb125445bc4e11e5a"
+    },
+    {
+      "key": "30",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "e20ee9e46390bbe3fb7f5f29f75d482cd0047fa37dd4b12b569e22497d5704e1"
+    },
+    {
+      "key": "31",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "ef8e8c1e9e50fac27d05cb2c522d190230ce6f80e2b985fd4c14ea0dcfa89896"
+    },
+    {
+      "key": "32",
+      "version": "2.1.0",
+      "profile": "debug",
+      "rationale": "Reproductie en toetsing van oorzaken zijn noodzakelijk voordat herstel wordt geclaimd.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "a6e951ab5cf8c382f8ec6f7398282867d4097fbbd618d1eea689fdbef9d46eda"
+    },
+    {
+      "key": "33",
+      "version": "2.1.0",
+      "profile": "research",
+      "rationale": "Conclusies vragen bronweging, tegenbewijs en een expliciete onzekerheidsstatus.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "a6adc14d2e3ebc0f2896259a4573d824c7dac2664d6163922abd2adbe5620210"
+    },
+    {
+      "key": "34",
+      "version": "2.1.0",
+      "profile": "audit",
+      "rationale": "Het doel is een onderbouwd oordeel; bevindingen moeten eerst worden tegengesproken.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "b2c86a74293a8107766e5d0b29d2d8dfdd830a2f689fd4909e6bb0ad8e1a1b1c"
+    },
+    {
+      "key": "35",
+      "version": "2.1.0",
+      "profile": "research",
+      "rationale": "Conclusies vragen bronweging, tegenbewijs en een expliciete onzekerheidsstatus.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "8dc30529b9f84249e48b0abf5131021114101654257c05317d7cfcd1a0927c52"
+    },
+    {
+      "key": "36",
+      "version": "2.1.0",
+      "profile": "audit",
+      "rationale": "Het doel is een onderbouwd oordeel; bevindingen moeten eerst worden tegengesproken.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": "AI_FEATURE_NOT_PRESENT",
+      "promptHash": "b5be19268104594e85f62fa3225a2ba409c38adb4051690c5edfb9a207f4f3ad"
+    },
+    {
+      "key": "37",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "5abb5cbda7f6f6b162a0e505ea4e877548f3da985e00163865f1d40179c7401f"
+    },
+    {
+      "key": "38",
+      "version": "2.1.0",
+      "profile": "audit",
+      "rationale": "Het doel is een onderbouwd oordeel; bevindingen moeten eerst worden tegengesproken.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "e0d3204c482f47494c392e42761fd4f81289e25c86ddc4e7026d371dc9e6e130"
+    },
+    {
+      "key": "39",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "2de1055530d13907dd99e6ab5cd80e84bf4623780bac2e5c8630f45f754795ef"
+    },
+    {
+      "key": "40",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "c314ca612e479e64291443d61bfeb8da0e31533bcf41d829c9f8bbac4fa43d60"
+    },
+    {
+      "key": "41",
+      "version": "2.1.0",
+      "profile": "operations",
+      "rationale": "Bestemming, behoud van bestaand werk en bewijs van uitvoerstatus bepalen de overdracht.",
+      "complexity": "S",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": "GITHUB_TEST_REMOTE",
+      "promptHash": "b05380eaad15c1197b86b42fdf0f0600195bc99dcd04d34a400b117bd03b42ec"
+    },
+    {
+      "key": "42",
+      "version": "2.1.0",
+      "profile": "operations",
+      "rationale": "Bestemming, behoud van bestaand werk en bewijs van uitvoerstatus bepalen de overdracht.",
+      "complexity": "S",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": "GITHUB_TEST_REMOTE",
+      "promptHash": "f5ef551e174d8d406f3582050cda83f02b20f37191cf2df272e439c4a10bafa1"
+    },
+    {
+      "key": "s1",
+      "version": "2.1.0",
+      "profile": "product",
+      "rationale": "Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.",
+      "complexity": "M",
+      "tools": [
+        "chatgpt",
+        "claude"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "a0e2ae8a2a4bbaa9b796b041e9b7b4440c3fa8e0e943c49be725cb1e78a83d0c"
+    },
+    {
+      "key": "s2",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "c02770b2cd8517fd6e0794454815a28cbad284d3a82d59e5b3e14241c202beaf"
+    },
+    {
+      "key": "s3",
+      "version": "2.1.0",
+      "profile": "operations",
+      "rationale": "Bestemming, behoud van bestaand werk en bewijs van uitvoerstatus bepalen de overdracht.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": "GOOGLE_VERIFICATION",
+      "promptHash": "59822e12e4d665c2fe6ac51819780ffe085f7eeea944904dff2010e77ff0d877"
+    },
+    {
+      "key": "s4",
+      "version": "2.1.0",
+      "profile": "build",
+      "rationale": "Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.",
+      "complexity": "M",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": "GA4_TEST_PROPERTY",
+      "promptHash": "a3b02b83b04598cddd1d81a4d1658777361aa1b279e8fcde3a6856490e4975ca"
+    },
+    {
+      "key": "s5",
+      "version": "2.1.0",
+      "profile": "research",
+      "rationale": "Conclusies vragen bronweging, tegenbewijs en een expliciete onzekerheidsstatus.",
+      "complexity": "M",
+      "tools": [
+        "chatgpt",
+        "claude"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "d3b2ec41fbbba43a40a737a38e797ca33e477af5e0b3415c0335854b56d33a11"
+    },
+    {
+      "key": "setup",
+      "version": "2.1.0",
+      "profile": "operations",
+      "rationale": "De startopdracht richt alleen ontbrekende mappen en de projectindex in.",
+      "complexity": "S",
+      "tools": [
+        "antigravity"
+      ],
+      "capabilityGaps": null,
+      "promptHash": "3ce57c7f68f8d93802182593b7f762356d991b0cd5a305a2f51ce27eb61e7ce7"
+    }
+  ]
+}

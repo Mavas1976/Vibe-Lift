@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T13:36:03.528Z",
+  "generated_at": "2026-09-12T13:59:46.596Z",
   "base_url": "http://127.0.0.1:4173",
   "assets": [
     {
@@ -13,7 +13,7 @@
     {
       "file": "app.js",
       "status": 200,
-      "bytes": 34905,
+      "bytes": 34980,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -69,7 +69,7 @@
     {
       "file": "project-guide.js",
       "status": 200,
-      "bytes": 5438,
+      "bytes": 5617,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -83,21 +83,28 @@
     {
       "file": "prompt-contracts.js",
       "status": 200,
-      "bytes": 25605,
+      "bytes": 28844,
+      "content_type": "text/javascript; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "prompt-profiles.js",
+      "status": 200,
+      "bytes": 6255,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "prompt-workbench.js",
       "status": 200,
-      "bytes": 23316,
+      "bytes": 27762,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "prompts.css",
       "status": 200,
-      "bytes": 7284,
+      "bytes": 7422,
       "content_type": "text/css; charset=utf-8",
       "exact_content": true
     },
@@ -174,14 +181,14 @@
     {
       "file": "downloads\\handboek.md",
       "status": 200,
-      "bytes": 296028,
+      "bytes": 332852,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "downloads\\opdrachten.md",
       "status": 200,
-      "bytes": 223999,
+      "bytes": 260723,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     },

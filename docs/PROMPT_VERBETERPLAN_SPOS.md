@@ -1,6 +1,14 @@
 # Verbeterplan voor SPOS-promptkwaliteit
 
-Status: voorgesteld plan, nog niet geïmplementeerd. Basis: `PROMPT_AUDIT_SPOS_3.md`, promptcontract 2.0.0. Doel: duidelijke opdrachten met aantoonbare resultaten per geteste toolconfiguratie. De bestaande generators, veilige pushkeuzes en Markdown-output blijven het uitgangspunt.
+Status op 12 september 2026: **lokale implementatie gereed; empirische validatie open door ontbrekende testtoegang**. De gebruiker bevestigde dat geen toegang beschikbaar is. Basis: `PROMPT_AUDIT_SPOS_3.md`, promptcontract 2.0.0; huidige kandidaat: 2.1.0. De bestaande generators, veilige pushkeuzes en Markdown-output blijven het uitgangspunt. Zie `PROMPT_IMPLEMENTATIE_SPOS.md` voor bewijs en grenzen.
+
+| Onderdeel | Uitvoering |
+|---|---|
+| 1. Reproduceerbare inconsistenties | Geïmplementeerd en afzonderlijk lokaal getest. |
+| 2. Profielen en registratie | Alle 48 prompts hebben profiel, rationale, complexiteit en versie; setup inbegrepen. |
+| 3. Evaluatieset en baseline | Tekstbaseline behouden; 348 concrete gevallen, recorder, rubric en 1.044 NOT_RUN-regels voorbereid. Succesvolle providerfixtures blijven afhankelijk van testtoegang. |
+| 4. Pilot en volledige modelserie | NIET UITGEVOERD: geen accounts/API-sleutels of testomgeving beschikbaar. |
+| 5. Optimalisatie en regressie | Lokale regressies en hulpmiddel voor gepaarde vergelijking gereed. Geen empirische optimalisatie, geen gemeten winnaar. Onafhankelijke holdout en modelregressies blijven open. |
 
 ## 1. Los reproduceerbare inconsistenties op
 

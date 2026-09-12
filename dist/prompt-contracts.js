@@ -1,6 +1,6 @@
 // Versioned output contracts; shared by the composer, lessons and downloads.
-export const promptContractVersion = '2.0.0';
-const c=(file,role,inputs,sections,check)=>({file,title:file[0].toUpperCase()+file.slice(1,-3).replaceAll('-',' '),role,inputs,sections,check});
+export const promptContractVersion = '2.1.0';
+const c=(file,role,inputs,sections,check)=>({file,title:file[0].toUpperCase()+file.slice(1,-3).replaceAll('-',' '),role,inputs,sections,check,additionalDocuments:[],scopedDocumentUpdates:false,artifacts:[]});
 export const promptContracts = {
   1:c('projectbrief.md','productbegeleider',[],[
     ['Probleem en doelgroep','Beschrijf de huidige situatie, gebruiker en concrete behoefte op basis van de invoer.'],
@@ -238,3 +238,46 @@ export const promptContracts = {
     ['Eén volgende verbetering','Kies een aantoonbaar probleem en schrijf een afgebakende bouwopdracht met acceptatiecriteria en nameting.']
   ],'Bij onvoldoende gegevens lever je een meetplan met open vragen; geen verzonnen trend, oorzakelijk verband of codewijziging.')
 };
+
+// Primary report and necessary changes are separate, explicit outputs.
+promptContracts[23].additionalDocuments=['START-HIER.md'];
+promptContracts[28].additionalDocuments=['schermen.md','architectuur.md','gebruikershandleiding.md'];
+for(const key of [28,37,39])promptContracts[key].scopedDocumentUpdates=true;
+for(const key of [7,8])promptContracts[key].artifacts=['ontwerpschermen en beschikbare exports in 03-ontwerp/'];
+for(const key of [10,11,12,15,16,18,19,30,31,32,33,36,37,39,40,'s2','s3','s4'])promptContracts[key].artifacts=['de opgedragen code- of inhoudswijzigingen','noodzakelijke tests en hun bijlagen'];
+promptContracts[20].artifacts=['de vrijgegeven deployment en bewijs van de livecontrole'];
+promptContracts[41].artifacts=['de bedoelde commit en alleen indien toegestaan de push'];
+promptContracts[42].artifacts=['de gecontroleerde repositorykoppeling'];
+
+const profileGroups={
+  product:[1,3,5,6,21,25,27,29,'s1'],
+  research:[2,4,22,33,35,'s5'],
+  design:[7,8],
+  build:[9,10,11,12,16,18,19,26,30,31,37,39,40,'s2','s4'],
+  debug:[15,32],
+  audit:[14,17,28,34,36,38],
+  operations:[13,20,23,24,41,42,'s3']
+};
+const profileReasons={
+  product:'Gebruikersprobleem, concrete inhoud en beperkte scope bepalen het resultaat.',
+  research:'Conclusies vragen bronweging, tegenbewijs en een expliciete onzekerheidsstatus.',
+  design:'Schermrelaties en haalbare overdracht zijn leidend; een ontwerp is geen implementatie.',
+  build:'Technische verandering of voorbereiding vraagt relevante failure modes en regressiecontrole.',
+  debug:'Reproductie en toetsing van oorzaken zijn noodzakelijk voordat herstel wordt geclaimd.',
+  audit:'Het doel is een onderbouwd oordeel; bevindingen moeten eerst worden tegengesproken.',
+  operations:'Bestemming, behoud van bestaand werk en bewijs van uitvoerstatus bepalen de overdracht.'
+};
+for(const [profile,keys] of Object.entries(profileGroups))for(const key of keys){
+  const contract=promptContracts[key];
+  if(!contract||contract.profile)throw new Error(`Ongeldige profieltoewijzing: ${key}`);
+  Object.assign(contract,{profile,profileRationale:profileReasons[profile],complexity:[13,41,42].includes(key)?'S':'M',version:promptContractVersion});
+}
+export const setupContract={...c('START-HIER.md','projectbegeleider',[],[
+  ['Projectdoel','Leg alleen het bekende projectdoel vast.'],['Huidige stap','Gebruik de vastgelegde stap of begin met de projectbrief.'],
+  ['Gekozen documenten','Noem alleen werkelijk beschikbare bestanden met paden.'],['Werkafspraken','Leg projectroot, bronbehandeling en lees-eerst-afspraken vast.'],
+  ['Open vragen','Markeer ontbrekende informatie en conflicten.'],['Volgende actie','Noem één concrete vervolghandeling.']
+],'Controleer werkelijke paden en behoud van bestaande inhoud; zonder schrijftoegang geef je volledige tekst zonder opslagclaim.'),
+  title:'Projectstart',profile:'operations',profileRationale:'De startopdracht richt alleen ontbrekende mappen en de projectindex in.',complexity:'S',version:promptContractVersion,
+  artifacts:['alleen ontbrekende archiefmappen 01-bronnen, 03-ontwerp en 05-tests']
+};
+export const promptRegistry={...promptContracts,setup:setupContract};
