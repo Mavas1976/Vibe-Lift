@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const html = await readFile(resolve(root, "dist/index.html"), "utf8");
 const image = await readFile(resolve(root, "dist/og.png"));
-const expectedUrl = "https://lift-van-idee-naar-live.markvanasten.chatgpt.site/";
+const expectedUrl = "https://vibe-lift-production.up.railway.app/";
 const expectedImage = `${expectedUrl}og.png`;
 
 const required = [
@@ -15,6 +15,7 @@ const required = [
   '<meta property="og:site_name" content="Vibe Lift">',
   `<meta property="og:url" content="${expectedUrl}">`,
   `<meta property="og:image" content="${expectedImage}">`,
+  `<meta property="og:image:secure_url" content="${expectedImage}">`,
   '<meta property="og:image:width" content="1200">',
   '<meta property="og:image:height" content="630">',
   '<meta name="twitter:card" content="summary_large_image">',
@@ -39,3 +40,30 @@ if (width !== 1200 || height !== 630) {
 }
 
 console.log(`Social-preview gecontroleerd: ${width} × ${height}, Open Graph, X en favicon.`);
+
+// De lokale tags kunnen kloppen terwijl de gedeelde URL achter een login staat.
+// Controleer na publicatie ook de echte pagina en afbeelding zonder credentials.
+if (process.argv.includes("--live")) {
+  for (const userAgent of ["WhatsApp/2.26", "facebookexternalhit/1.1"]) {
+    const options = { headers: { "User-Agent": userAgent }, signal: AbortSignal.timeout(15000) };
+    const page = await fetch(expectedUrl, options);
+    if (page.status !== 200 || !page.headers.get("content-type")?.includes("text/html")) {
+      throw new Error(`${userAgent}: deelpagina geeft ${page.status}, verwacht openbare HTML.`);
+    }
+    const liveHtml = await page.text();
+    const missingLive = required.filter((tag) => !liveHtml.includes(tag));
+    if (missingLive.length) {
+      throw new Error(`${userAgent}: live deelmetadata ontbreekt of is verouderd:\n${missingLive.join("\n")}`);
+    }
+    const liveImage = await fetch(expectedImage, {
+      headers: { "User-Agent": userAgent }, signal: AbortSignal.timeout(15000),
+    });
+    if (liveImage.status !== 200 || !liveImage.headers.get("content-type")?.includes("image/png")) {
+      throw new Error(`${userAgent}: deelafbeelding geeft ${liveImage.status}, verwacht openbare PNG.`);
+    }
+    if (!Buffer.from(await liveImage.arrayBuffer()).equals(image)) {
+      throw new Error(`${userAgent}: live deelafbeelding wijkt af van dist/og.png.`);
+    }
+    console.log(`${userAgent}: openbare HTML, juiste deelmetadata en exacte PNG gecontroleerd.`);
+  }
+}

@@ -47,9 +47,12 @@ node scripts/check-prompt-workbench.mjs
 node scripts/check-editorial.mjs
 node scripts/check-air.mjs
 node scripts/check-http.mjs
+node scripts/check-social.mjs
 ```
 
 Voor check-http moet de lokale server draaien. De bewegingscontrole test rekenlogica en lifecycle met een kleine harness, geen browserweergave.
+
+De deelmetadata gebruikt het openbare Railway-adres `https://vibe-lift-production.up.railway.app/` en de daar gehoste `og.png`. Verwijs hiervoor niet naar de afgeschermde Sites-publicatie: sociale crawlers kunnen die afbeelding niet zonder inloggen ophalen. Controleer na publicatie met `node scripts/check-social.mjs --live` dat de echte HTML en PNG zonder credentials bereikbaar zijn voor WhatsApp- en Facebook-crawlerheaders. Deze controle simuleert HTTP-verzoeken; hij controleert niet de cache of weergave in de apps zelf.
 
 De validator controleert bronintegriteit, volledige inhoud, routes, gerenderde HTML-strings en de interactiecontracten van de handlers. Hij schrijft `docs/validation.json`. Dit is geen browsertest of visuele beoordeling.
 
