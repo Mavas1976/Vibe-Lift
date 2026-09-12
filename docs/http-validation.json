@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T12:26:45.708Z",
+  "generated_at": "2026-09-12T12:36:21.730Z",
   "base_url": "http://127.0.0.1:4173",
   "assets": [
     {
@@ -27,7 +27,7 @@
     {
       "file": "index.html",
       "status": 200,
-      "bytes": 3351,
+      "bytes": 4932,
       "content_type": "text/html; charset=utf-8",
       "exact_content": true
     },
@@ -36,6 +36,13 @@
       "status": 200,
       "bytes": 15314,
       "content_type": "text/css; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "og.png",
+      "status": 200,
+      "bytes": 485135,
+      "content_type": "image/png",
       "exact_content": true
     },
     {
@@ -69,7 +76,7 @@
     {
       "file": "assets\\favicon.svg",
       "status": 200,
-      "bytes": 396,
+      "bytes": 460,
       "content_type": "image/svg+xml",
       "exact_content": true
     },

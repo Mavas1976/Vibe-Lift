@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T12:26:44.491Z",
+  "generated_at": "2026-09-12T12:36:33.667Z",
   "brand": "Vibe Lift",
   "tagline": "Digitale gewichtloosheid",
-  "checks": 2611,
+  "checks": 2612,
   "rendered_routes": 67,
   "lessons": 14,
   "reader_edition_prompts": 28,
@@ -12,8 +12,8 @@
   "tools": 12,
   "public_framework_references": 0,
   "reader_edition_sha256": "fc539ce99f299bcbb15fbffa3b078e6e440e7c55670c6f7b07186e8de803d67a",
-  "published_files": 13,
-  "published_bytes": 3346609,
+  "published_files": 14,
+  "published_bytes": 3833389,
   "browser_qa": "Not performed; these are source, data and in-memory renderer checks, not browser UI tests.",
   "limitations": [
     "No real novice usability study",

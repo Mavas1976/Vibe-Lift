@@ -146,7 +146,7 @@ for(const file of files) {
   if(/\.(html|js|css|md|svg|json|txt)$/i.test(file)) verify(!/spos|truth contract/i.test(fs.readFileSync(path.join(output,file),'utf8')),`${file}: public source and downloads are free of framework references`);
 }
 const shell=fs.readFileSync(path.join(output,'index.html'),'utf8');
-verify(shell.includes('<title>Vibe Lift — Digitale gewichtloosheid</title>'),'Static metadata uses the full brand');
+verify(shell.includes('<title>Vibe Lift — Van idee naar live met AI</title>'),'Static metadata uses the full brand and proposition');
 verify((shell.match(/class="brand-vibe">Vibe/g)||[]).length===2,'Header and footer both use the Vibe Lift wordmark');
 verify(shell.includes('id="air-field" aria-hidden="true"') && shell.includes('id="motion-toggle"'),'Decorative field and accessible pause control exist');
 verify(source.startsWith('# Vibe Lift — Digitale gewichtloosheid'),'Download has the current brand');
