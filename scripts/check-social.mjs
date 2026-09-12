@@ -3,9 +3,10 @@ import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
 const html = await readFile(resolve(root, "dist/index.html"), "utf8");
-const image = await readFile(resolve(root, "dist/og.png"));
+const imageFile = "og-vibe-lift-logo-v2.png";
+const image = await readFile(resolve(root, "dist", imageFile));
 const expectedUrl = "https://vibe-lift-production.up.railway.app/";
-const expectedImage = `${expectedUrl}og.png`;
+const expectedImage = `${expectedUrl}${imageFile}`;
 
 const required = [
   `<link rel="canonical" href="${expectedUrl}">`,
@@ -30,7 +31,7 @@ if (missing.length) {
 
 const pngSignature = image.subarray(0, 8).toString("hex");
 if (pngSignature !== "89504e470d0a1a0a") {
-  throw new Error("dist/og.png is geen geldig PNG-bestand.");
+  throw new Error(`${imageFile} is geen geldig PNG-bestand.`);
 }
 
 const width = image.readUInt32BE(16);
@@ -62,7 +63,7 @@ if (process.argv.includes("--live")) {
       throw new Error(`${userAgent}: deelafbeelding geeft ${liveImage.status}, verwacht openbare PNG.`);
     }
     if (!Buffer.from(await liveImage.arrayBuffer()).equals(image)) {
-      throw new Error(`${userAgent}: live deelafbeelding wijkt af van dist/og.png.`);
+      throw new Error(`${userAgent}: live deelafbeelding wijkt af van ${imageFile}.`);
     }
     console.log(`${userAgent}: openbare HTML, juiste deelmetadata en exacte PNG gecontroleerd.`);
   }

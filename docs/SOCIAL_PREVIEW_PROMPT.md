@@ -1,5 +1,13 @@
 # Vibe Lift social preview — prompt and provenance
 
+## Current image — header logo, 12 September 2026
+
+The current sharing image is `dist/og-vibe-lift-logo-v2.png` (1200 × 630). It directly renders the first `.brand` element from `dist/index.html`, using the existing SVG paths, `styles.css`, `lift.css`, and bundled Space Grotesk 700 font, at 4.5× scale on white. It matches the black V, orange corner, and wordmark in the live site header. No image generation or replacement logo design was used. `dist/og.png` is an identical compatibility copy. Open Graph and Twitter use the versioned filename to distinguish it from the previous artwork.
+
+The rendered PNG was visually inspected; the checks in `scripts/check-social.mjs` verify its dimensions, metadata, and (with `--live`) unauthenticated page/image access. This does not verify cached previews inside WhatsApp.
+
+## Superseded image — historical provenance
+
 ## Generation tool
 
 - Tool: built-in `image_gen`
