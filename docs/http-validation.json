@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T13:32:20.056Z",
+  "generated_at": "2026-09-12T13:36:03.528Z",
   "base_url": "http://127.0.0.1:4173",
   "assets": [
     {
@@ -13,7 +13,7 @@
     {
       "file": "app.js",
       "status": 200,
-      "bytes": 38543,
+      "bytes": 34905,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -27,7 +27,7 @@
     {
       "file": "index.html",
       "status": 200,
-      "bytes": 5271,
+      "bytes": 5315,
       "content_type": "text/html; charset=utf-8",
       "exact_content": true
     },
@@ -36,6 +36,20 @@
       "status": 200,
       "bytes": 31732,
       "content_type": "text/css; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "method.css",
+      "status": 200,
+      "bytes": 6351,
+      "content_type": "text/css; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "method.js",
+      "status": 200,
+      "bytes": 6755,
+      "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
@@ -55,7 +69,7 @@
     {
       "file": "project-guide.js",
       "status": 200,
-      "bytes": 5002,
+      "bytes": 5438,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -76,7 +90,7 @@
     {
       "file": "prompt-workbench.js",
       "status": 200,
-      "bytes": 23237,
+      "bytes": 23316,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -160,14 +174,14 @@
     {
       "file": "downloads\\handboek.md",
       "status": 200,
-      "bytes": 295592,
+      "bytes": 296028,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "downloads\\opdrachten.md",
       "status": 200,
-      "bytes": 223563,
+      "bytes": 223999,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     },

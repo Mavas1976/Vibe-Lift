@@ -6,14 +6,15 @@ import {lessons} from '../dist/content.js';
 import {stepPrompts} from '../dist/prompt-config.js';
 let checks=0;const check=(value,message)=>{assert.ok(value,message);checks++;};
 let copied='',notice='',focused=false,selected=false;
+const disclosure={open:false};
 Object.defineProperty(globalThis,'navigator',{configurable:true,value:{clipboard:{writeText:async text=>{copied=text;}}}});
 const event={target:{closest:selector=>selector==='[data-project-setup-copy]'?{}:null}};
 check(await handlePromptClick(event,text=>notice=text,()=>{}),'Setup action is handled');
 check(copied===projectSetupPrompt&&notice.includes('Antigravity'),'Setup copy includes exact instructions and destination');
 globalThis.navigator.clipboard.writeText=async()=>{throw Error('Denied');};
-globalThis.document={querySelector:selector=>selector==='#project-setup-prompt'?{focus:()=>focused=true,select:()=>selected=true}:null};
+globalThis.document={querySelector:selector=>selector==='#project-setup-prompt'?{closest:()=>disclosure,focus:()=>focused=true,select:()=>selected=true}:null};
 await handlePromptClick(event,text=>notice=text,()=>{});
-check(focused&&selected&&notice.includes('zelf'),'Blocked clipboard selects the visible text with manual-copy guidance');
+check(disclosure.open&&focused&&selected&&notice.includes('zelf'),'Blocked clipboard selects the visible text with manual-copy guidance');
 const state=normalizeDraft(null);state.project.path='C:/Projecten/TEST-ONLY';
 for(const key of allPromptKeys){
   const p=getPrompt(key),text=composePrompt(key,state);

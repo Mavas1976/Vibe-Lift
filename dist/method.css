@@ -1,0 +1,38 @@
+/* The method uses one reading grid, with supporting detail disclosed on demand. */
+.method-page{max-width:1200px}
+.method-heading{padding:12px 0 40px;max-width:850px}
+.method-heading h1{font-size:clamp(2.5rem,5.2vw,4.5rem);font-weight:700;line-height:1.08;margin:18px 0 24px;letter-spacing:-.055em}
+.method-heading h1 span{color:var(--accent-ink,#c84222)}
+.method-heading>p:not(.eyebrow){max-width:610px;font-size:1.125rem;line-height:1.7;margin-bottom:24px}
+.method-overview{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;padding:0;border-block:1px solid var(--line)}
+.method-overview li{padding:24px 24px 24px 0;display:grid;grid-template-columns:auto 1fr;gap:3px 14px;align-content:start}
+.method-overview li+li{border-left:1px solid var(--line);padding-left:24px}
+.method-overview span{grid-row:span 2;color:var(--accent-ink,#c84222);font-size:.875rem;padding-top:3px}
+.method-overview strong{font-size:1rem}.method-overview p{font-size:.9375rem}
+.method-section{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.65fr);gap:clamp(32px,5vw,80px);padding:64px 0;border-bottom:1px solid var(--line)}
+.method-section>*{min-width:0}.method-number{font-size:.8125rem;letter-spacing:.1em;color:var(--accent-ink,#c84222);font-weight:600}
+.method-section-heading h2{font-size:clamp(1.8rem,2.8vw,2.5rem);font-weight:700;line-height:1.15;margin:16px 0;letter-spacing:-.045em}
+.method-section-heading p{max-width:30ch;font-size:1rem;line-height:1.7}
+.method-section-body{display:flex;flex-direction:column;gap:24px}
+.method-actions{list-style:none;margin:0;padding:0;display:grid;gap:24px}
+.method-actions li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px}
+.method-action-number{height:28px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:.8125rem;font-weight:600;color:var(--muted)}
+.method-actions h3{font-size:1.0625rem;font-weight:600;line-height:1.5;margin:0 0 6px}
+.method-actions p,.method-section-body p{font-size:1rem;line-height:1.7}
+.method-prompt{padding:28px;border:1px solid #e1d7cf;border-top:3px solid var(--accent,#ee522b);border-radius:6px;background:#fffaf6;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.method-prompt-heading{display:flex;gap:14px;align-items:center}.method-prompt-heading>div{min-width:0}.method-prompt-heading h3{font-size:1.25rem;font-weight:600;margin-top:4px}.method-prompt-heading .tool-badge{flex-shrink:0}
+.method-prompt-result{width:100%;border-block:1px solid #e8ddd5;padding:16px 0}.method-prompt-result>span{display:block;font-size:.875rem;color:var(--muted);margin-bottom:3px}.method-prompt-result strong{display:block;font-size:1rem}.method-prompt-result p{font-size:.9375rem;margin-top:4px}
+.method-disclosure{width:100%;border-block:1px solid var(--line)}
+.method-disclosure summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 0;cursor:pointer;list-style:none;font-size:1rem;font-weight:600;min-height:52px}
+.method-disclosure summary::-webkit-details-marker{display:none}.method-disclosure summary::after{content:'+';font-size:1.4rem;line-height:1;flex-shrink:0}.method-disclosure[open]>summary::after{content:'−'}
+.method-disclosure-body{padding:4px 0 22px;display:grid;gap:20px}.method-prompt-details{border-bottom:0}.method-prompt-details summary{padding-bottom:0}.method-prompt-details[open] summary{padding-bottom:16px}
+.method-prompt .prompt-text{display:block;box-sizing:border-box;width:100%;min-width:0;max-height:520px;resize:vertical;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.9375rem;line-height:1.65;background:#fff;padding:18px;border:1px solid var(--line);border-radius:4px;color:var(--ink)}
+.method-prompt .method-caption{font-size:.875rem;color:var(--muted)}
+.method-folders{margin:0;display:grid;gap:0}.method-folders>div{display:grid;grid-template-columns:minmax(120px,.8fr) minmax(0,1.2fr);gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}.method-folders dt{font-size:.9375rem}.method-folders dd{margin:0;font-size:.9375rem;color:var(--muted)}
+.method-tool-roles{display:grid;gap:0;margin-top:-12px}.method-tool-roles>div{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}.method-tool-roles strong,.method-tool-roles small{display:block}.method-tool-roles small{font-size:.9375rem;color:var(--muted);margin-top:2px}
+.method-next-links{display:flex;flex-wrap:wrap;gap:8px 24px}.method-checks{padding:0;margin:0;list-style:none;display:grid;gap:22px}.method-checks li{position:relative;padding-left:28px}.method-checks li::before{content:'✓';position:absolute;left:0;color:var(--accent-ink,#c84222);font-weight:600}.method-checks strong{font-size:1.0625rem}.method-checks p{margin-top:5px}
+.method-return{border-left:2px solid var(--accent,#ee522b);padding:3px 0 3px 20px}.method-return p{margin-top:5px}
+.method-footer{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:40px 0 0}.method-footer h2{font-size:1.7rem;font-weight:700;margin:10px 0}.method-footer-actions{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+@media(max-width:760px){.method-section{grid-template-columns:1fr;gap:28px;padding:40px 0}.method-section-heading p{max-width:55ch}.method-section-heading h2 br{display:none}.method-section-heading h2{margin:12px 0}.method-overview li{display:block;padding:18px 12px 18px 0}.method-overview li+li{padding-left:14px}.method-overview span,.method-overview strong{display:block}.method-overview strong{margin:8px 0 4px}.method-overview p{font-size:.875rem}.method-footer{align-items:flex-start;flex-direction:column}.method-prompt{padding:22px}.method-heading{padding-bottom:30px}}
+@media(max-width:420px){.method-overview{grid-template-columns:1fr}.method-overview li,.method-overview li+li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:0 10px;padding:13px 0;border-left:0}.method-overview li+li{border-top:1px solid var(--line)}.method-overview strong{margin:0}.method-overview p{grid-column:2}.method-overview span{grid-row:span 2}.method-prompt{padding:18px}.method-prompt .btn{width:100%}.method-folders>div{grid-template-columns:1fr;gap:5px}}
+@media print{.method-section{break-inside:avoid}.method-prompt .prompt-text{max-height:none}.method-prompt button{display:none}}

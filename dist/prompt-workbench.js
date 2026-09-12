@@ -155,7 +155,7 @@ export function handleDraftInput(event){
 export async function handlePromptClick(event,notify,rerender){
   if(event.target.closest('[data-project-setup-copy]')){
     try{if(!navigator.clipboard?.writeText)throw Error('Unavailable');await navigator.clipboard.writeText(projectSetupPrompt);notify('Startopdracht gekopieerd. Plak hem in Antigravity met je projectmap geopend.');}
-    catch{const field=document.querySelector('#project-setup-prompt');if(field){field.focus();field.select();}notify('Kopiëren is geblokkeerd. Selecteer en kopieer de startopdracht hieronder zelf.');}
+    catch{const field=document.querySelector('#project-setup-prompt');if(field){const disclosure=field.closest?.('details');if(disclosure)disclosure.open=true;field.focus();field.select();}notify('Kopiëren is geblokkeerd. Selecteer en kopieer de startopdracht hieronder zelf.');}
     return true;
   }
   const jump=event.target.closest('[data-generator-jump]');

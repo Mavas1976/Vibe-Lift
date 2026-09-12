@@ -1,0 +1,33 @@
+import {escapeHTML as esc} from './prompt-workbench.js';
+import {projectSetup, projectFolders, projectSetupPrompt} from './project-guide.js';
+import {toolLogo} from './tool-branding.js';
+
+const actions = items => `<ol class="method-actions">${items.map(([title,text],i)=>`<li><span class="method-action-number" aria-hidden="true">${i+1}</span><div><h3>${esc(title)}</h3><p>${esc(text)}</p></div></li>`).join('')}</ol>`;
+
+export function methodMarkup() {
+  return `<div class="page method-page">
+    <header class="method-heading"><p class="eyebrow">De werkwijze van Vibe Lift</p><h1>Van idee naar website.<br><span>Stap voor stap.</span></h1><p>Begin met één projectmap. Geef AI steeds een duidelijke opdracht, controleer de uitkomst en bewaar wat je verder wilt gebruiken.</p><a class="btn primary" href="#stap/1">Begin bij stap 1 <span aria-hidden="true">↗</span></a></header>
+    <ol class="method-overview" aria-label="De werkwijze in drie delen"><li><span>01</span><strong>Start je project</strong><p>Eén map voor al je werk.</p></li><li><span>02</span><strong>Werk samen met AI</strong><p>Eén opdracht per stap.</p></li><li><span>03</span><strong>Controleer en bewaar</strong><p>Een duidelijke volgende actie.</p></li></ol>
+
+    <section class="method-section" aria-labelledby="method-start"><header class="method-section-heading"><span class="method-number">01 / START</span><h2 id="method-start">Geef je project<br> een vaste plek.</h2><p>Dit doe je één keer. Daarna bouw je steeds verder in dezelfde map.</p></header><div class="method-section-body">
+      ${actions(projectSetup.slice(0,3))}
+      <section class="method-prompt" aria-labelledby="method-prompt-title"><header class="method-prompt-heading">${toolLogo('antigravity')}<div><span class="eyebrow">Plakken in Antigravity</span><h3 id="method-prompt-title">Je project goed laten starten.</h3></div></header><p>Open eerst je projectmap in Antigravity. Kopieer dan deze startopdracht, plak hem in de chat en verstuur hem.</p><div class="method-prompt-result"><span>Wat je krijgt</span><strong>START-HIER.md + drie archiefmappen</strong><p>De afspraken voor je project. Het bouwen begint bij stap 8.</p></div><button class="btn primary" type="button" data-project-setup-copy>Kopieer startopdracht <span aria-hidden="true">↗</span></button><details class="method-disclosure method-prompt-details"><summary>Lees de volledige startopdracht</summary><textarea class="prompt-text" id="project-setup-prompt" rows="16" readonly aria-label="Startopdracht voor de projectmap">${esc(projectSetupPrompt)}</textarea></details><p class="method-caption">Controleer daarna of START-HIER.md echt in je geopende map staat.</p></section>
+      <details class="method-disclosure"><summary>Waar bewaar je welk bestand?</summary><div class="method-disclosure-body"><dl class="method-folders">${projectFolders.map(([name,use])=>`<div><dt><code>${esc(name)}</code></dt><dd>${esc(use)}</dd></div>`).join('')}</dl><p>Een .md-bestand is een tekstbestand met eenvoudige opmaak: Markdown. Sla actuele stapdocumenten op naast START-HIER.md. Maak ook een back-up van de hele projectmap.</p><a class="text-link" href="https://antigravity.google/docs/projects/" target="_blank" rel="noopener noreferrer">Uitleg over projecten in Antigravity ↗</a></div></details>
+    </div></section>
+
+    <section class="method-section" aria-labelledby="method-ai"><header class="method-section-heading"><span class="method-number">02 / SAMENWERKEN</span><h2 id="method-ai">Geef AI één<br> duidelijke opdracht.</h2><p>Jij bepaalt het doel en beoordeelt de keuzes. De tools helpen je bij de uitwerking.</p></header><div class="method-section-body"><div class="method-tool-roles"><div>${toolLogo('chatgpt')}<span><strong>ChatGPT of Claude</strong><small>Idee, onderzoek en teksten</small></span></div><div>${toolLogo('stitch')}<span><strong>Stitch</strong><small>Schermen en visueel ontwerp</small></span></div><div>${toolLogo('antigravity')}<span><strong>Antigravity</strong><small>Project lezen, plannen, bouwen en testen</small></span></div></div>
+      ${actions([
+        ['Kies de prompt bij je huidige stap','Open de Promptgenerator in de les. Vul je projectgegevens, gewenste resultaat en informatie voor die stap in. De generator maakt daar één complete opdracht van.'],
+        ['Geef de tool de juiste context','Kopieer de prompt en plak hem in de aangegeven AI-tool. Voeg de gekozen documenten of ontwerpbestanden toe. Alleen een bestandsnaam noemen geeft AI nog geen toegang.'],
+        ['Laat Antigravity eerst lezen','Laat bij het bouwen eerst START-HIER.md, de gekozen documenten en relevante code lezen. Controleer het voorgestelde plan en geef vervolgens één concrete bouwopdracht.']
+      ])}<div class="method-next-links"><a class="text-link" href="#opdrachten">Naar de promptgenerators ↗</a><a class="text-link" href="#stap/7/opdracht">Klaar om te bouwen? Begin hier ↗</a></div>
+    </div></section>
+
+    <section class="method-section" aria-labelledby="method-check"><header class="method-section-heading"><span class="method-number">03 / VERDERGAAN</span><h2 id="method-check">Controleer.<br> Bewaar. Ga verder.</h2><p>Een AI-antwoord is een eerste uitwerking. Jij beslist wat de volgende stap in mag.</p></header><div class="method-section-body">
+      <ul class="method-checks"><li><strong>Past het bij je doel?</strong><p>Kan de bedoelde gebruiker doen wat je voor deze stap hebt afgesproken?</p></li><li><strong>Klopt de onderbouwing?</strong><p>Controleer bronnen en aannames. Laat ontbrekende informatie als open vraag staan.</p></li><li><strong>Werkt het in de praktijk?</strong><p>Probeer de echte gebruikersroute. Vraag welke controles zijn uitgevoerd en wat nog niet is getest.</p></li></ul>
+      <details class="method-disclosure"><summary>Zo bewaar je de uitkomst en de volgende stap</summary><div class="method-disclosure-body">${actions(projectSetup.slice(3,5))}<p>Gebruik herkenbare namen voor oorspronkelijke AI-output, met datum, tool en versie. Werk START-HIER.md bij met de gekozen bestanden, open punten en één volgende actie.</p></div></details>
+      <aside class="method-return"><strong>Teruggaan hoort erbij.</strong><p>Klopt een uitkomst niet? Verbeter eerst het document of ontwerp. Laat Antigravity daarna het bouwplan bijwerken.</p></aside>
+    </div></section>
+    <footer class="method-footer"><div><span class="eyebrow">Klaar voor je eerste stap?</span><h2>Maak ruimte voor je idee.</h2><p>Volg de veertien stappen met je eigen project.</p></div><div class="method-footer-actions"><a class="btn primary" href="#stap/1">Start je project ↗</a><a class="text-link" href="downloads/handboek.md" download>Download het handboek ↗</a></div></footer>
+  </div>`;
+}
