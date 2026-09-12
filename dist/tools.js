@@ -1,41 +1,342 @@
-// Product names are paired with typographic badges, not reproduced vendor logos.
 export const tools = {
-  chatgpt:{name:'ChatGPT',mark:'C',tone:'teal',kind:'AI · onderzoeken & uitwerken',url:'https://chatgpt.com/',docs:'https://help.openai.com/en/articles/10500283-deep-research',description:'Orden je idee, analyseer documenten en onderzoek vragen. Gebruik Search of Deep research voor actuele bronnen, als jouw account die functie heeft.'},
-  claude:{name:'Claude',mark:'✳',tone:'clay',kind:'AI · onderzoeken & schrijven',url:'https://claude.ai/',docs:'https://support.claude.com/en/articles/11088861-use-research-on-claude',description:'Werk je projectbrief, onderzoek en teksten uit. Gebruik web search of Research voor bronnen; bekijk de beschikbaarheid in je account.'},
-  stitch:{name:'Stitch',mark:'S',tone:'indigo',kind:'AI · visueel ontwerpen',url:'https://stitch.withgoogle.com/',docs:'https://developers.googleblog.com/stitch-a-new-way-to-design-uis/',description:'Vertaal je schermen en echte inhoud naar een visueel ontwerp. Verfijn het resultaat en geef de gekozen versie door aan je bouwer.'},
-  antigravity:{name:'Antigravity',mark:'A',tone:'blue',kind:'AI · bouwen & controleren',url:'https://antigravity.google/',docs:'https://antigravity.google/docs/features',description:'Laat je agent in je project werken: plannen, bouwen, testen en wijzigingen vastleggen. Het versiebeheerpaneel laat wijzigingen, commits en push naar je repository zien.'},
-  github:{name:'GitHub',mark:'GH',tone:'ink',kind:'Code bewaren · geen AI-bouwer',url:'https://github.com/',docs:'https://docs.github.com/en/get-started/using-github/hello-world',description:'De online bewaarplaats voor je projectcode en versies. Antigravity kan met de gekoppelde repository werken; jij controleert de wijziging en de opgeslagen versie.'},
-  railway:{name:'Railway',mark:'R',tone:'ink',kind:'Hosting · online publiceren',url:'https://railway.com/',docs:'https://docs.railway.com/guides/vibe-coding-deploy',description:'Laat een versie uit je GitHub-repository online draaien. Controleer vooraf instellingen, toegang, kosten en wanneer wijzigingen automatisch worden gepubliceerd.'},
-  playwright:{name:'Playwright',mark:'PW',tone:'mint',kind:'Testhulp · door je bouwagent',url:'https://playwright.dev/',docs:'https://playwright.dev/docs/codegen',description:'Laat Antigravity herhaalbare browsertests maken voor afgesproken gebruikersroutes. Jij kiest het verwachte resultaat en beoordeelt de uitkomst.'},
-  pagespeed:{name:'PageSpeed Insights',mark:'PS',tone:'blue',kind:'Controle · snelheid & mobiel',url:'https://pagespeed.web.dev/',docs:'https://developers.google.com/speed/docs/insights/v5/about',description:'Onderzoek een openbare pagina op prestaties. Maak onderscheid tussen een gesimuleerde meting en beschikbare gegevens van echte bezoekers.'},
-  searchconsole:{name:'Search Console',mark:'SC',tone:'mint',kind:'Google · vindbaarheid',url:'https://search.google.com/search-console/',docs:'https://support.google.com/webmasters/answer/9008080?hl=nl',description:'Verifieer je eigen website, dien je sitemap in en bekijk indexatie, zoekopdrachten en klikken uit Google. Dit maakt je site niet automatisch beter vindbaar.'},
-  analytics:{name:'Google Analytics',mark:'GA',tone:'amber',kind:'Google · gebruik meten',url:'https://analytics.google.com/',docs:'https://support.google.com/analytics/answer/9304153?hl=nl',description:'Richt GA4 in om te leren wat bezoekers op je website doen. Kies eerst je meetdoel, gegevens en toestemmingsgedrag; controleer daarna de echte meting.'},
-  node:{name:'Node.js',mark:'JS',tone:'mint',kind:'Optioneel · programma om code uit te voeren',url:'https://nodejs.org/en/download',docs:'https://nodejs.org/en/learn/getting-started/introduction-to-nodejs',description:'Alleen nodig als de projecttechniek dat vraagt. Laat Antigravity vaststellen welke versie en startwijze passen; je hoeft geen code te schrijven.'},
-  docker:{name:'Docker',mark:'D',tone:'blue',kind:'Optioneel · lokale diensten',url:'https://www.docker.com/products/docker-desktop/',docs:'https://docs.docker.com/desktop/setup/install/windows-install/',description:'Alleen gebruiken als het project diensten in containers nodig heeft. Een eenvoudige website heeft dit vaak niet nodig; volg de vastgelegde projectopzet.'}
+  "chatgpt": {
+    "name": "ChatGPT",
+    "logo": "assets/tools/chatgpt.png",
+    "kind": "AI · onderzoeken & uitwerken",
+    "url": "https://chatgpt.com/",
+    "docs": "https://help.openai.com/en/articles/10500283-deep-research",
+    "description": "Orden je idee, analyseer documenten en onderzoek vragen. Gebruik Search of Deep research voor actuele bronnen, als jouw account die functie heeft."
+  },
+  "claude": {
+    "name": "Claude",
+    "logo": "assets/tools/claude.png",
+    "kind": "AI · onderzoeken & schrijven",
+    "url": "https://claude.ai/",
+    "docs": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+    "description": "Werk je projectbrief, onderzoek en teksten uit. Gebruik web search of Research voor bronnen; bekijk de beschikbaarheid in je account."
+  },
+  "stitch": {
+    "name": "Stitch",
+    "logo": "assets/tools/stitch.png",
+    "kind": "AI · visueel ontwerpen",
+    "url": "https://stitch.withgoogle.com/",
+    "docs": "https://developers.googleblog.com/stitch-a-new-way-to-design-uis/",
+    "description": "Vertaal je schermen en echte inhoud naar een visueel ontwerp. Verfijn het resultaat en geef de gekozen versie door aan je bouwer."
+  },
+  "antigravity": {
+    "name": "Antigravity",
+    "logo": "assets/tools/antigravity.png",
+    "kind": "AI · bouwen & controleren",
+    "url": "https://antigravity.google/",
+    "docs": "https://antigravity.google/docs/features",
+    "description": "Open je lokale projectmap. Laat eerst bestanden lezen en een plan maken. Geef daarna opdrachten om te bouwen, te testen en gecontroleerde versies op GitHub te bewaren."
+  },
+  "github": {
+    "name": "GitHub",
+    "logo": "assets/tools/github.svg",
+    "kind": "Code bewaren · geen AI-bouwer",
+    "url": "https://github.com/",
+    "docs": "https://docs.github.com/en/get-started/using-github/hello-world",
+    "description": "Bewaar hier de code en de versiegeschiedenis die je vanuit Antigravity verstuurt. Je lokale projectmap bevat daarnaast je onderzoek, AI-output en ontwerpen."
+  },
+  "railway": {
+    "name": "Railway",
+    "logo": "assets/tools/railway.png",
+    "kind": "Hosting · online publiceren",
+    "url": "https://railway.com/",
+    "docs": "https://docs.railway.com/guides/vibe-coding-deploy",
+    "description": "Laat een versie uit je GitHub-repository online draaien. Controleer vooraf instellingen, toegang, kosten en wanneer wijzigingen automatisch worden gepubliceerd."
+  },
+  "playwright": {
+    "name": "Playwright",
+    "logo": "assets/tools/playwright.svg",
+    "kind": "Testhulp · door je bouwagent",
+    "url": "https://playwright.dev/",
+    "docs": "https://playwright.dev/docs/codegen",
+    "description": "Laat Antigravity herhaalbare browsertests maken voor afgesproken gebruikersroutes. Jij kiest het verwachte resultaat en beoordeelt de uitkomst."
+  },
+  "pagespeed": {
+    "name": "PageSpeed Insights",
+    "logo": "assets/tools/pagespeed.png",
+    "kind": "Controle · snelheid & mobiel",
+    "url": "https://pagespeed.web.dev/",
+    "docs": "https://developers.google.com/speed/docs/insights/v5/about",
+    "description": "Plak een openbaar webadres en start de analyse van snelheid en mobiel gebruik. Geef het rapport aan Antigravity om concrete problemen te onderzoeken."
+  },
+  "searchconsole": {
+    "name": "Search Console",
+    "logo": "assets/tools/searchconsole.png",
+    "kind": "Google · vindbaarheid",
+    "url": "https://search.google.com/search-console/",
+    "docs": "https://support.google.com/webmasters/answer/9008080?hl=nl",
+    "description": "Bekijk of Google je pagina’s kan vinden en welke zoekvragen bezoekers opleveren. Volg SEO-les 3 om je website toe te voegen en je eigendom aan te tonen."
+  },
+  "analytics": {
+    "name": "Google Analytics",
+    "logo": "assets/tools/analytics.svg",
+    "kind": "Google · gebruik meten",
+    "url": "https://analytics.google.com/",
+    "docs": "https://support.google.com/analytics/answer/9304153?hl=nl",
+    "description": "Bekijk hoe bezoekers je website gebruiken. Spreek eerst af wat je wilt meten. Volg SEO-les 4 om Analytics in te richten en te controleren."
+  },
+  "node": {
+    "name": "Node.js",
+    "logo": "assets/tools/node.png",
+    "kind": "Optioneel · programma om code uit te voeren",
+    "url": "https://nodejs.org/en/download",
+    "docs": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+    "description": "Alleen nodig als de projecttechniek dat vraagt. Laat Antigravity vaststellen welke versie en startwijze passen; je hoeft geen code te schrijven."
+  },
+  "docker": {
+    "name": "Docker",
+    "logo": "assets/tools/docker.png",
+    "kind": "Optioneel · lokale diensten",
+    "url": "https://www.docker.com/products/docker-desktop/",
+    "docs": "https://docs.docker.com/desktop/setup/install/windows-install/",
+    "description": "Laat Antigravity controleren of dit programma nodig is. Docker kan de bijbehorende diensten in een afgescheiden omgeving draaien. Installeer het alleen als het bouwplan dat vraagt."
+  }
 };
-
-// [tool key, concrete use in this step]. The first item is the default suggestion.
 export const lessonTools = {
-  1:{intro:'Kies ChatGPT óf Claude; je hebt voor deze stap één gesprekspartner nodig.',items:[['chatgpt','Voeg je notities toe en laat één korte projectbrief maken.'],['claude','Alternatief: laat je aannames en de grens van de eerste versie aanscherpen.']],handoff:'Bewaar projectbrief.md. Geef dezelfde brief bij de volgende stap mee.'},
-  2:{intro:'Gebruik een onderzoeksfunctie met bronnen. Spreek daarnaast zelf potentiële gebruikers.',items:[['claude','Zet web search of Research aan en vergelijk bestaande oplossingen met bronlinks.'],['chatgpt','Alternatief: kies Search of Deep research en geef doelgroep, vragen en gewenste bronnen mee.']],handoff:'Bewaar onderzoek.md met bron, datum, bevinding en onzekerheid. Verzonnen zoekvolumes of interviews horen er niet in.'},
-  3:{intro:'AI helpt het aanbod en de toets voorbereiden. De praktijktoets voer jij uit.',items:[['chatgpt','Maak een korte belofte en interview- of testvragen op basis van je onderzoek.'],['claude','Alternatief: orden de echte reacties en benoem wat je wel en niet kunt concluderen.']],handoff:'Bewaar propositie.md en praktijktoets.md met waarnemingen en je besluit.'},
-  4:{intro:'Laat AI je route uitschrijven en teken ook wat er bij een fout gebeurt.',items:[['claude','Maak een stroomschema van handelingen, verwerking en bevestiging; laat het ook in gewone taal uitleggen.'],['chatgpt','Alternatief: laat dezelfde route controleren op ontbrekende stappen en uitzonderingen.']],handoff:'Bewaar het schema en de uitleg als flows.md voor Stitch en Antigravity.'},
-  5:{intro:'Werk met echte teksten en neem vindbaarheid nu al mee.',items:[['chatgpt','Maak een schermenlijst, knoppen, foutteksten en een SEO-paginaplan met URL, zoekvraag en titel.'],['claude','Alternatief: herschrijf de teksten voor beginners en controleer of elke pagina één duidelijke vraag beantwoordt.']],handoff:'Bewaar schermen.md, teksten.md en seo-plan.md. Eén zoekvraag krijgt één passende hoofdcontentpagina.'},
-  6:{intro:'Open Stitch met je schermen, teksten en stijlreferenties.',items:[['stitch','Maak en verfijn het schermontwerp, inclusief mobiel. Controleer welke export jouw versie aanbiedt.'],['chatgpt','Maak vooraf de ontwerpbrief; beschrijf daarna concrete feedback op leesbaarheid en volgorde.']],handoff:'Geef de gekozen export, afbeeldingen, tekst en ontwerpafspraken aan Antigravity. Een screenshot alleen beschrijft de werking onvoldoende.'},
-  7:{intro:'Antigravity is je bouwpartner. Koppel de bedoelde GitHub-repository en laat de agent de technische inrichting uitvoeren.',items:[['antigravity','Lees het dossier, controleer repositorytoegang en maak kleine bouwstappen met SEO en meting als vaste eisen.'],['github','Maak of kies je repository en controleer de eigenaar, naam en zichtbaarheid. Deel de repositorylink met je agent.'],['railway','Controleer vooraf of de gekozen techniek hier kan draaien en welke kosten en startinstellingen nodig zijn.']],handoff:'Bewaar bouwplan.md en architectuur.md, inclusief SEO, meetplan, repository, publicatiebranch en vrijgaveafspraak.'},
-  8:{intro:'Laat Antigravity bouwen en uitleggen wat aantoonbaar werkt.',items:[['antigravity','Bouw de kernroute, gewone pagina-URL’s waar SEO nodig is, metadata en het afgesproken meetgedrag.'],['github','Laat een gecontroleerd werkend tussenpunt vastleggen. Controleer of de commit ook naar GitHub is verzonden.']],handoff:'Bewaar testbewijs en de versielink. Laat geen ongecontroleerde wijziging naar een branch sturen die direct live publiceert.'},
-  9:{intro:'Laat de agent de starter maken; probeer starten en stoppen daarna zelf.',items:[['antigravity','Maak een begrijpelijke starter op basis van de echte projectopzet. Leg fouten en het lokale adres uit.'],['node','Alleen als nodig: de omgeving die het JavaScript-project uitvoert. Laat installatie en versie controleren.']],handoff:'Bewaar START_PROJECT.bat en startinstructie.md. Dit is je lokale oefenomgeving.'},
-  10:{intro:'Jij probeert de website; Antigravity helpt bevindingen onderzoeken en herhalen.',items:[['antigravity','Geef exacte stappen, verwachting en waarneming. Laat herstellen en hertesten.'],['playwright','Laat je agent de belangrijkste browserroute automatisch herhalen, inclusief fouten en mobiel formaat.']],handoff:'Bewaar bevindingen.md met versie, bewijs en hercontrole. Een geslaagde test dekt alleen wat echt is getest.'},
-  11:{intro:'Controleer werking én vindbaarheid voordat je een versie vrijgeeft.',items:[['antigravity','Controleer kernroute, toegang, metadata, sitemap, indexeerbaarheid en toestemming voor meting.'],['playwright','Herhaal de afgesproken tests op de laatste versie.'],['pagespeed','Meet een openbare testpagina. Bij een besloten preview laat je de agent lokaal een prestatiecontrole uitvoeren.']],handoff:'Bewaar releasecheck.md met open punten, meetresultaten en het besluit. Een hoge snelheidsscore is geen SEO-garantie.'},
-  12:{intro:'Van gecontroleerde code naar online: Antigravity → GitHub → Railway.',items:[['antigravity','Laat de vrijgegeven versie committen en naar de afgesproken repository en branch sturen.'],['github','Controleer de laatste commit, gewijzigde bestanden en eventuele publicatiestatus.'],['railway','Koppel de repository, controleer instellingen en publiceer. Open de echte live-URL na een geslaagde deployment.']],handoff:'Leg versie, URL, toegang en herstelroute vast. Voor een openbare site volgen Search Console en Analytics in de SEO-cursus.'},
-  13:{intro:'Maak je eerste uitnodiging en onderzoek de echte reactie.',items:[['claude','Schrijf een eerlijk concept op basis van wat live werkt. Jij bepaalt wie het ontvangt en verstuurt het.'],['chatgpt','Alternatief: groepeer echte feedback en bereid vervolgvragen voor.'],['analytics','Als je meting is ingericht: bekijk of bezoekers de bedoelde handeling afronden.']],handoff:'Bewaar introductieplan.md en leersignalen.md. Start de SEO-cursus voor de concrete meetinstellingen.'},
-  14:{intro:'Gebruik je actuele project en echte signalen als vertrekpunt voor de volgende sessie.',items:[['antigravity','Werk overdracht en handleiding bij, leg de gecontroleerde versie vast en maak één volgende bouwtaak.'],['github','Controleer de online versielink; broncode alleen is geen back-up van formulieren of databases.'],['searchconsole','Gebruik echte zoekvragen en indexatieproblemen om een passende verbetering te kiezen.']],handoff:'Bewaar overdracht.md en ga verder met de korte SEO-cursus: gevonden worden, meten en verbeteren.'}
+  "1": {
+    "intro": "Richt eerst je map in met Antigravity. Werk je idee daarna uit met ChatGPT óf Claude.",
+    "items": [
+      [
+        "antigravity",
+        "Open je lokale map en gebruik de startopdracht bij Uitleg om die in te richten."
+      ],
+      [
+        "chatgpt",
+        "Plak de ingevulde prompt en voeg je notities toe. Lees de projectbrief na."
+      ],
+      [
+        "claude",
+        "Alternatief voor ChatGPT: gebruik dezelfde opdracht en notities."
+      ]
+    ],
+    "handoff": "Bewaar: 02-plan/projectbrief.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "2": {
+    "intro": "Kies ChatGPT óf Claude en zet zoeken op internet aan. Spreek zelf je doelgroep.",
+    "items": [
+      [
+        "claude",
+        "Zet web search aan. Gebruik Research bij uitgebreidere vragen als je account dit aanbiedt. Controleer de bronlinks."
+      ],
+      [
+        "chatgpt",
+        "Alternatief: gebruik Search. Kies Deep research als je vraag meerdere bronnen en vergelijkingen vereist."
+      ]
+    ],
+    "handoff": "Bewaar: 02-plan/onderzoek.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "3": {
+    "intro": "Gebruik ChatGPT of Claude voor het aanbod. Jij voert de praktijktoets uit.",
+    "items": [
+      [
+        "chatgpt",
+        "Maak een korte belofte en interview- of testvragen op basis van je onderzoek."
+      ],
+      [
+        "claude",
+        "Alternatief: orden de echte reacties en benoem wat je wel en niet kunt concluderen."
+      ]
+    ],
+    "handoff": "Bewaar: 02-plan/propositie.md + 02-plan/praktijktoets.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "4": {
+    "intro": "Gebruik ChatGPT of Claude om handelingen en foutgevallen uit te schrijven.",
+    "items": [
+      [
+        "chatgpt",
+        "Schrijf de route uit en laat controleren wat na elke handeling gebeurt."
+      ],
+      [
+        "claude",
+        "Alternatief: gebruik dezelfde opdracht en documenten."
+      ]
+    ],
+    "handoff": "Bewaar: 02-plan/flows.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "5": {
+    "intro": "Gebruik ChatGPT of Claude voor pagina’s, echte teksten en het SEO-plan.",
+    "items": [
+      [
+        "chatgpt",
+        "Maak schermen.md, teksten.md en seo-plan.md met de hoofdopdracht."
+      ],
+      [
+        "claude",
+        "Alternatief: gebruik dezelfde input en controleer de teksten zelf."
+      ]
+    ],
+    "handoff": "Bewaar: 02-plan/schermen.md + 02-plan/teksten.md + 02-plan/seo-plan.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "6": {
+    "intro": "Plak de ontwerpopdracht rechtstreeks in Stitch. Je hoeft die niet eerst door een andere AI te laten herschrijven.",
+    "items": [
+      [
+        "stitch",
+        "Maak het ontwerp voor computer en telefoon. Bewaar de gekozen exports in 03-ontwerp."
+      ],
+      [
+        "antigravity",
+        "Bij stap 7: lees de export en de ontwerpafspraken. Bouw nu nog niets."
+      ]
+    ],
+    "handoff": "Bewaar: 03-ontwerp/ met exports en ontwerpafspraken.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "7": {
+    "intro": "Open dezelfde projectmap in Antigravity. Laat eerst lezen en plannen; regel daarna GitHub.",
+    "items": [
+      [
+        "antigravity",
+        "Lees START-HIER.md en de gekozen bestanden. Maak het bouwplan en leg uit wat ontbreekt."
+      ],
+      [
+        "github",
+        "Maak of kies de online map voor je code en versies. Geef Antigravity de repositorylink."
+      ],
+      [
+        "railway",
+        "Laat bij het plan controleren hoe jouw site hier kan draaien en wat daarvoor nodig is."
+      ]
+    ],
+    "handoff": "Bewaar: 04-bouw/bouwplan.md + 04-bouw/architectuur.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "8": {
+    "intro": "Laat Antigravity één route bouwen. Controleer daarna zelf de werking.",
+    "items": [
+      [
+        "antigravity",
+        "Bouw volgens het gecontroleerde plan. Start de website en test succes én fouten."
+      ],
+      [
+        "github",
+        "Laat alleen de afgesproken bestanden en gecontroleerde versie hier bewaren."
+      ]
+    ],
+    "handoff": "Bewaar: Projectcode + 05-tests/bouwcontrole.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "9": {
+    "intro": "Laat Antigravity een startbestand maken. Probeer starten en stoppen zelf.",
+    "items": [
+      [
+        "antigravity",
+        "Maak een begrijpelijke starter op basis van de echte projectopzet. Leg fouten en het lokale adres uit."
+      ],
+      [
+        "node",
+        "Alleen als nodig: de omgeving die het JavaScript-project uitvoert. Laat installatie en versie controleren."
+      ]
+    ],
+    "handoff": "Bewaar: START_PROJECT.bat + 06-overdracht/startinstructie.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "10": {
+    "intro": "Jij test; Antigravity onderzoekt en herstelt de fouten die je doorgeeft.",
+    "items": [
+      [
+        "antigravity",
+        "Geef de stappen, verwachte uitkomst en foutmelding door. Laat repareren en opnieuw testen."
+      ],
+      [
+        "playwright",
+        "Laat Antigravity hiermee vaak gebruikte browserroutes automatisch testen. Je hoeft deze tool niet zelf te bedienen."
+      ]
+    ],
+    "handoff": "Bewaar: 05-tests/bevindingen.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "11": {
+    "intro": "Laat Antigravity de laatste versie controleren. Beslis daarna of de site live mag.",
+    "items": [
+      [
+        "antigravity",
+        "Controleer werking, teksten, toegang en de afgesproken vindbaarheid. Noteer ook wat niet is getest."
+      ],
+      [
+        "playwright",
+        "Laat Antigravity de afgesproken automatische tests herhalen op de laatste versie."
+      ],
+      [
+        "pagespeed",
+        "Plak een openbaar pagina-adres en start de analyse. Geef het rapport aan Antigravity."
+      ]
+    ],
+    "handoff": "Bewaar: 05-tests/releasecheck.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "12": {
+    "intro": "Antigravity bewaart de versie op GitHub. Railway publiceert die versie.",
+    "items": [
+      [
+        "antigravity",
+        "Laat de vrijgegeven versie committen en naar de afgesproken repository en branch sturen."
+      ],
+      [
+        "github",
+        "Controleer de laatste commit, gewijzigde bestanden en eventuele publicatiestatus."
+      ],
+      [
+        "railway",
+        "Koppel de repository, controleer instellingen en publiceer. Open de echte live-URL na een geslaagde deployment."
+      ]
+    ],
+    "handoff": "Bewaar: 06-overdracht/release.md met het echte live-adres. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "13": {
+    "intro": "Laat Claude of ChatGPT een uitnodiging schrijven en echte reacties ordenen.",
+    "items": [
+      [
+        "claude",
+        "Schrijf een kort uitnodigingsbericht met de hoofdopdracht. Jij verstuurt het zelf."
+      ],
+      [
+        "chatgpt",
+        "Alternatief: maak het bericht of groepeer echte feedback."
+      ],
+      [
+        "analytics",
+        "Alleen als ingericht: bekijk of bezoekers de gewenste handeling afronden."
+      ]
+    ],
+    "handoff": "Bewaar: 02-plan/introductieplan.md + 05-tests/leersignalen.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  },
+  "14": {
+    "intro": "Laat Antigravity de overdracht bijwerken. Begin de volgende sessie met dezelfde projectmap.",
+    "items": [
+      [
+        "antigravity",
+        "Werk overdracht en handleiding bij, leg de gecontroleerde versie vast en maak één volgende bouwtaak."
+      ],
+      [
+        "github",
+        "Controleer de online versielink; broncode alleen is geen back-up van formulieren of databases."
+      ],
+      [
+        "searchconsole",
+        "Gebruik echte zoekvragen en indexatieproblemen om een passende verbetering te kiezen."
+      ]
+    ],
+    "handoff": "Bewaar: 06-overdracht/overdracht.md + 06-overdracht/gebruikershandleiding.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+  }
 };
-
 export const repositoryGuide = [
-  ['Kies je codebewaarplaats','Maak op GitHub een repository of gebruik je bestaande repository. Kies bewust wie de code mag zien en kopieer de link. Een repository is de map met je code en versiegeschiedenis.'],
-  ['Geef Antigravity toegang','Open het juiste project in Antigravity en geef de repositorylink. Laat de agent controleren of die repository bereikbaar is en schrijven is toegestaan. Voltooi de aangeboden GitHub-aanmelding zelf; plak geen toegangstokens in een chat. De precieze aanmeldroute kan per installatie verschillen.'],
-  ['Controleer de wijziging','Vraag om een korte samenvatting, de gewijzigde bestanden en uitgevoerde tests. Bekijk het Review-/versiebeheerpaneel. Laat alleen het bedoelde werk meenemen; sleutels, testgegevens en grote originelen blijven buiten de codebewaarplaats.'],
-  ['Laat vastleggen en verzenden','Geef Antigravity opdracht de gecontroleerde wijziging te committen en naar de afgesproken GitHub-branch te pushen. Commit betekent een versie vastleggen; push betekent die versie naar GitHub sturen. Je hoeft de commando’s niet zelf uit te voeren. Controleer de commitlink op GitHub.'],
-  ['Spreek af wanneer iets live gaat','Railway kan nieuwe commits op een gekoppelde branch automatisch publiceren. Kies bij de inrichting een aparte werkbranch of een bewuste vrijgavestap, zodat een tussentijdse wijziging niet onverwacht live komt. Je kunt automatische publicatie bij de dienstinstellingen uitschakelen met Disable en later bewust Deploy Latest Commit kiezen. Controleer repository, branch én publicatiestatus.']
+  [
+    "Kies je codebewaarplaats",
+    "Maak op GitHub met New repository een online map voor de projectcode, of kies de bestaande repository. Kies wie de code mag zien en kopieer de repositorylink. De codebewaarplaats vervangt je lokale projectmap niet."
+  ],
+  [
+    "Geef Antigravity toegang",
+    "Open het juiste project in Antigravity en geef de repositorylink. Laat de agent controleren of die repository bereikbaar is en schrijven is toegestaan. Voltooi de aangeboden GitHub-aanmelding zelf; plak geen toegangstokens in een chat. De precieze aanmeldroute kan per installatie verschillen."
+  ],
+  [
+    "Controleer de wijziging",
+    "Vraag Antigravity om de gewijzigde bestanden, een korte uitleg en de testuitkomsten. Bekijk de wijzigingen in het versiebeheerpaneel. Spreek af wat naar GitHub mag. Houd privébronnen, geheime sleutels en onnodige grote originelen erbuiten; bewaar ze wel veilig in je eigen projectmap."
+  ],
+  [
+    "Laat vastleggen en verzenden",
+    "Geef Antigravity opdracht de gecontroleerde wijziging te committen en naar de afgesproken GitHub-branch te pushen. Commit betekent een versie vastleggen; push betekent die versie naar GitHub sturen. Je hoeft de commando’s niet zelf uit te voeren. Controleer de commitlink op GitHub."
+  ],
+  [
+    "Spreek af wanneer iets live gaat",
+    "Railway kan nieuwe commits op een gekoppelde branch automatisch publiceren. Kies bij de inrichting een aparte werkbranch of een bewuste vrijgavestap, zodat een tussentijdse wijziging niet onverwacht live komt. Je kunt automatische publicatie bij de dienstinstellingen uitschakelen met Disable en later bewust Deploy Latest Commit kiezen. Controleer repository, branch én publicatiestatus."
+  ]
 ];

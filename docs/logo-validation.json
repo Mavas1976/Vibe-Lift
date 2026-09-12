@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "assets": 12,
+  "prompt_cards": 47,
+  "prompt_logo_appearances": 57,
+  "checks": [
+    "Every PNG has a valid signature",
+    "SVG files contain no active content or external references",
+    "Every prompt tool choice includes its real logo",
+    "Decorative logos do not duplicate accessible names"
+  ],
+  "browser_qa": false
+}

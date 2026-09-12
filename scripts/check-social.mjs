@@ -9,7 +9,7 @@ const expectedImage = `${expectedUrl}og.png`;
 
 const required = [
   `<link rel="canonical" href="${expectedUrl}">`,
-  '<meta name="description" content="Bouw stap voor stap een website met AI. Met duidelijke toolkeuzes, voorbeelden, visuele flows en een praktische SEO-cursus.">',
+  '<meta name="description" content="Digitale gewichtloosheid. Bouw zo ver als je kan denken. Ontdek AI coding en vibe coding: van jouw idee naar een website, met voorbeelden en promptgenerators.">',
   '<meta property="og:type" content="website">',
   '<meta property="og:locale" content="nl_NL">',
   '<meta property="og:site_name" content="Vibe Lift">',

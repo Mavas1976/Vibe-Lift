@@ -1,9 +1,11 @@
 # Vibe Lift — Digitale gewichtloosheid
 
-**Van idee naar een werkende website of app**  
+**Bouw zo ver als je kan denken.**  
 Lezerseditie 1.2 · Gebaseerd op de werkwijze van Mark van Asten · 12 september 2026
 
 Deze editie is redactioneel aangepast voor Vibe Lift. De uitleg en opdrachten zijn zelfstandig bruikbaar met je eigen AI-omgeving. De historische verantwoording beschrijft de oorspronkelijke bron; zij is geen nieuwe toets van een werkend product.
+
+Digitale gewichtloosheid is de vrijheid om te bouwen wat je bedenkt. Met AI coding en vibe coding geef je jouw ideeën vorm: als website, app of eigen digitale tool. Dit handboek helpt je die mogelijkheden te verkennen door je eerste website te bouwen.
 
 Een idee wordt bruikbaar wanneer je het kunt uitleggen, laten zien en uitproberen. In mijn werkwijze verbind ik die drie dingen. Ik onderzoek voor wie ik iets maak, werk het aanbod uit, laat processen en schermen ontwerpen en geef AI gerichte opdrachten om het te bouwen. Vervolgens open ik het resultaat zelf in de browser, doorloop ik de stappen en laat ik verbeteren wat nog niet klopt.
 

@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-09-12T13:13:06.363Z",
+  "browser": "Chromium",
+  "routes": 67,
+  "layout_cases": 938,
+  "widths": [
+    320,
+    360,
+    390,
+    540,
+    768,
+    1024,
+    1440
+  ],
+  "font_scales": [
+    1,
+    2
+  ],
+  "details": "All disclosure panels expanded during layout scan",
+  "touch": "390x844 / DPR 3 / Chromium emulation",
+  "checks": [
+    {
+      "label": "Mobile navigation starts collapsed",
+      "pass": true
+    },
+    {
+      "label": "Menu opens with correct accessible state",
+      "pass": true
+    },
+    {
+      "label": "Assignment library remains accessible in menu",
+      "pass": true
+    },
+    {
+      "label": "Escape closes menu and restores focus",
+      "pass": true
+    },
+    {
+      "label": "Selecting a route closes menu",
+      "pass": true
+    },
+    {
+      "label": "Resizing to desktop restores navigation",
+      "pass": true
+    },
+    {
+      "label": "Mobile step selector navigates",
+      "pass": true
+    },
+    {
+      "label": "Lesson tabs retain keyboard operation",
+      "pass": true
+    },
+    {
+      "label": "All fourteen steps accessible in list view",
+      "pass": true
+    },
+    {
+      "label": "System reduced motion at page load disables decorative animation",
+      "pass": true
+    },
+    {
+      "label": "Project input reachable with short viewport",
+      "pass": true
+    },
+    {
+      "label": "Draft survives refresh",
+      "pass": true
+    },
+    {
+      "label": "Touch opens mobile menu",
+      "pass": true
+    },
+    {
+      "label": "Touch copy includes filled project context",
+      "pass": true
+    },
+    {
+      "label": "Visible mobile form controls have at least 44px height",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "runtimeErrors": [],
+  "limitations": [
+    "No physical iOS/Android devices",
+    "No native Safari/WebKit or Firefox run",
+    "No screen-reader or accessibility certification",
+    "No field network/performance measurements",
+    "Dynamic reduced-motion emulation was inconclusive; initial system preference was verified",
+    "Concurrent copywriting is still in progress; the final publication must rerun this audit"
+  ]
+}

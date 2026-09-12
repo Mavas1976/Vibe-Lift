@@ -79,6 +79,10 @@ Bron: [Railpack — Static Sites](https://railpack.com/languages/staticfile/).
 
 ## Documentatie
 
+- `docs/MOBILE_AUDIT_SPOS.md`: mobiele SPOS-audit, reparaties en grenzen.
+- `docs/mobile-validation.json`: browsercontrole over 67 routevarianten en zeven schermbreedtes.
+- `scripts/check-mobile.pw.js`: uitvoerbaar via Playwright `browser_run_code_unsafe` met `filename`; vereist de lokale server. Het script retourneert het rapport voor opslag als `docs/mobile-validation.json`.
+
 - `docs/PROMPT_INTEGRATIE_PLAN.md`: analyse, toolroutering, keuzes en verificatie van de invulbare opdrachten.
 - `docs/prompt-validation.json`: controles van invoer, kopiëren, opslag en GitHub-opdrachten.
 - `docs/DESIGN_SPOS.md`: gezamenlijke visuele ontwerpverfijning.

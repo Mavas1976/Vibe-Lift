@@ -8,7 +8,7 @@ import {prompts} from '../dist/prompts.js';
 import {tools,lessonTools} from '../dist/tools.js';
 import {seoLessons,seoInBuild} from '../dist/seo.js';
 import {stepPrompts} from '../dist/prompt-config.js';
-import {draftStore,composePrompt,getPrompt} from '../dist/prompt-workbench.js';
+import {draftStore,composePrompt,getPrompt,allPromptKeys,commandOptions} from '../dist/prompt-workbench.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const output=path.join(root,'dist');
@@ -25,7 +25,8 @@ for(const lesson of lessons){
   verify(guide.items.length>=2 && guide.items.every(([key,use])=>tools[key] && use),`Step ${lesson.id}: real tool references and concrete uses`);
 }
 for(const [key,tool] of Object.entries(tools)){
-  verify(tool.name && tool.description && tool.mark,`${key}: complete identity`);
+  verify(tool.name && tool.description && tool.logo,`${key}: complete identity with real logo`);
+  verify(/^assets\/tools\/[a-z]+\.(png|svg)$/.test(tool.logo) && fs.existsSync(path.join(output,tool.logo)),`${key}: locally available logo asset`);
   verify(new URL(tool.url).protocol==='https:' && new URL(tool.docs).protocol==='https:',`${key}: secure official tool and documentation links`);
 }
 for(const lesson of seoLessons){
@@ -62,12 +63,13 @@ for(const prompt of prompts.filter(p=>p.id<=28)) {
 
 // In-memory renderer contract tests: no browser, screenshots or DOM automation.
 const listeners={},mainListeners={};
-const fakeElement=()=>({innerHTML:'',textContent:'',dataset:{},closest(){return {open:false};},focus(){},select(){},scrollIntoView(){},setAttribute(){},removeAttribute(){},classList:{add(){},remove(){},toggle(){}},addEventListener(){}});
+const fakeElement=()=>({innerHTML:'',textContent:'',dataset:{},contains(){return false;},closest(){return {open:false};},focus(){},select(){},scrollIntoView(){},setAttribute(){},removeAttribute(){},classList:{add(){},remove(){},toggle(){}},addEventListener(){}});
 const main=fakeElement();main.addEventListener=(name,fn)=>mainListeners[name]=fn;
 const elements=new Map([['#main',main],['.skip-link',fakeElement()],['#notice',fakeElement()],['#route-content',fakeElement()]]);
-globalThis.document={title:'',querySelector:selector=>{if(!elements.has(selector))elements.set(selector,fakeElement());return elements.get(selector);},querySelectorAll:()=>[]};
+globalThis.document={title:'',addEventListener(){},querySelector:selector=>{if(!elements.has(selector))elements.set(selector,fakeElement());return elements.get(selector);},querySelectorAll:()=>[]};
 main.querySelectorAll=()=>[];
-globalThis.window={scrollTo(){},addEventListener:(name,fn)=>listeners[name]=fn};
+document.getElementById=id=>document.querySelector(`#${id}`);
+globalThis.window={scrollTo(){},matchMedia:()=>({matches:false,addEventListener(){}}),addEventListener:(name,fn)=>listeners[name]=fn};
 globalThis.location={hash:'#route'};
 const {parseRoute,escapeHTML}=await import('../dist/app.js');
 for(const id of [0,15,-1,100]) verify(parseRoute(`#stap/${id}`).page==='missing',`Reject step ${id}`);
@@ -92,28 +94,40 @@ for(const hash of routeNames) {
     verify((html.match(/role="tab"/g)||[]).length===4,`${hash}: four tabs`);
     verify((html.match(/aria-selected="true"/g)||[]).length===1,`${hash}: one selected tab`);
     const selected=/aria-labelledby="tab-([^"]+)"/.exec(html)?.[1];
+    verify(html.includes('>Promptgenerator</button>'),`${hash}: generator has a clearly named tab`);
     verify(selected===parseRoute(hash).tab,`${hash}: panel and tab match`);
     verify((html.match(/class="side-step"/g)||[]).length===14,`${hash}: every step is reachable`);
     if(parseRoute(hash).tab!=='opdracht'){
+      verify(html.includes('Voor deze stap staat een promptgenerator klaar.') && html.includes(`href="#stap/${parseRoute(hash).id}/opdracht">Open promptgenerator`),`${hash}: direct generator entry from the lesson`);
       verify(html.includes('Tools voor deze stap') && html.includes('Neem mee →'),`${hash}: tool assistance`);
-      for(const [key] of lessonTools[parseRoute(hash).id].items)verify(html.includes(`href="${tools[key].url}"`),`${hash}: ${tools[key].name} opens directly`);
+      for(const [key] of lessonTools[parseRoute(hash).id].items){
+        verify(html.includes(`href="${tools[key].url}"`),`${hash}: ${tools[key].name} opens directly`);
+        verify(html.includes(`src="${tools[key].logo}"`),`${hash}: ${tools[key].name} has its real logo`);
+      }
     }else{
       verify(html.includes('id="project-brief"') && html.includes('data-composer-copy='),`${hash}: project input and composed copy`);
       for(const key of stepPrompts[parseRoute(hash).id].main)verify(html.includes(`href="${tools[getPrompt(key).config.tools[0]].url}"`),`${hash}: primary destination tool`);
     }
   }
   if(hash.startsWith('#seo')){
+    const seoId=parseRoute(hash).id;
+    verify(html.includes(`data-generator-jump="s${seoId}"`) && html.includes('id="seo-generator-title"'),`${hash}: current SEO generator is directly reachable`);
+    verify(html.includes(`open id="opdracht-s${seoId}"`),`${hash}: SEO generator starts expanded`);
     verify((html.match(/aria-current="step"/g)||[]).length===1,`${hash}: one active SEO lesson`);
     verify(html.includes('data-seo-copy=') && html.includes('Officiële uitleg bij deze les'),`${hash}: usable prompt and source help`);
     verify(html.includes('Controleer je resultaat') && html.includes('JOUW WERKBLAD'),`${hash}: settings example and review criteria`);
   }
 }
 verify((rendered.get('#route').match(/class="step-card /g)||[]).length===14,'Map contains every step');
+verify((rendered.get('#route').match(/Promptgenerator inbegrepen/g)||[]).length===14,'Every route card identifies its generator');
+verify((rendered.get('#opdrachten').match(/>Kopieer prompt<\/button>/g)||[]).length===47,'Every generator has an explicit copy prompt action');
+verify((rendered.get('#opdrachten').match(/4 · Plak in je AI-tool/g)||[]).length===47,'Every generator explains where to use the copied prompt');
+verify(!/open id="opdracht-s[1-5]"/.test(rendered.get('#opdrachten')),'SEO generators in the library remain collapsed until chosen');
 verify((rendered.get('#opdrachten').match(/id="opdracht-\d+"/g)||[]).length===42,'Library contains all step prompts');
 verify((rendered.get('#opdrachten').match(/id="opdracht-s\d+"/g)||[]).length===5,'Library also includes five SEO prompts');
 verify(rendered.get('#stap/14/controle').includes('href="#seo">Volgende: je SEO-cursus'),'End of main course leads to SEO');
 verify(rendered.get('#stap/7/uitleg').includes('Antigravity koppelen aan GitHub') && rendered.get('#stap/12/uitleg').includes('Van GitHub naar Railway'),'Repository and hosting walkthroughs in the actual lessons');
-verify(rendered.get('#route').includes('Goed idee.<br><span>Maak het waar.'),'Homepage leads with the current brand promise');
+verify(rendered.get('#route').includes('Digitale gewichtloosheid.<br><span>Bouw zo ver als je kan denken.'),'Homepage leads with the current brand promise');
 verify(rendered.get('#werkwijze').includes('Geef je bouwpartner de juiste context.'),'Method page provides actionable, independent guidance');
 verify((rendered.get('#voorbeeld').match(/href="#stap\/\d+\/voorbeeld"/g)||[]).length===14,'Example links to all fourteen lessons');
 // Copy success and denied-clipboard fallback exercise the production handler.
@@ -144,6 +158,22 @@ selected=false;navigator.clipboard.writeText=async()=>{throw new Error('Denied')
 document.querySelector('#prompt-text-s4').select=()=>{selected=true;};
 await mainListeners.click(seoCopyEvent);
 verify(selected,'SEO copy denial offers selectable text');
+// All generators exercise the actual copy handler with synthetic project inputs.
+navigator.clipboard.writeText=async text=>{copied=text;};
+for(const key of allPromptKeys){
+  for(const f of getPrompt(key).config.fields)draftStore.field(key,f.key,key==='41'&&f.key==='publish'?commandOptions[1][0]:`Testinvoer ${key} ${f.key}`);
+  copied='';
+  await mainListeners.click({target:{closest:s=>s==='[data-composer-copy]'?{dataset:{composerCopy:key}}:null}});
+  verify(copied===composePrompt(key),`${key}: actual copy handler copies the complete generated prompt`);
+}
+for(const lesson of seoLessons){
+  const card=document.getElementById(`opdracht-s${lesson.id}`),heading=document.getElementById('seo-generator-title');
+  let scrolled=false,focused=false;card.open=false;
+  heading.scrollIntoView=()=>{scrolled=true;};heading.focus=()=>{focused=true;};
+  const hashBefore=location.hash;
+  await mainListeners.click({target:{closest:s=>s==='[data-generator-jump]'?{dataset:{generatorJump:`s${lesson.id}`}}:null}});
+  verify(card.open&&scrolled&&focused&&location.hash===hashBefore,`SEO ${lesson.id}: shortcut opens the generator, moves focus and retains the lesson route`);
+}
 location.hash='#stap/6/opdracht';listeners.hashchange();
 verify(main.innerHTML.includes('Een reserveringssite voor lokale workshops'),'Project input survives route changes');
 await mainListeners.click({target:{closest:s=>s==='[data-draft-clear]'?{}:null}});
@@ -169,7 +199,7 @@ for(const file of files) {
   if(/\.(html|js|css|md|svg|json|txt)$/i.test(file)) verify(!/spos|truth contract/i.test(fs.readFileSync(path.join(output,file),'utf8')),`${file}: public source and downloads are free of framework references`);
 }
 const shell=fs.readFileSync(path.join(output,'index.html'),'utf8');
-verify(shell.includes('<title>Vibe Lift — Van idee naar live met AI</title>'),'Static metadata uses the full brand and proposition');
+verify(shell.includes('<title>Vibe Lift — Digitale gewichtloosheid</title>'),'Static metadata uses the full brand and proposition');
 verify((shell.match(/class="brand-vibe">Vibe/g)||[]).length===2,'Header and footer both use the Vibe Lift wordmark');
 verify(shell.includes('id="air-field" aria-hidden="true"') && shell.includes('id="motion-toggle"'),'Decorative field and accessible pause control exist');
 verify(source.startsWith('# Vibe Lift — Digitale gewichtloosheid'),'Download has the current brand');

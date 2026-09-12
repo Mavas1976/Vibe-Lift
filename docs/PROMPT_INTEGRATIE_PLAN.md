@@ -15,7 +15,7 @@ De vijf bestaande SEO-opdrachten krijgen dezelfde invoer- en kopieerroute.
 
 ## Gebruikersroute
 
-1. Open de tab Opdracht van de relevante stap.
+1. Open de tab Promptgenerator van de relevante stap.
 2. Vul één keer projectnaam, doel en doelgroep in. Alleen het doel is bij vroege
    inhoudelijke opdrachten nodig; een concrete GitHub-opdracht vraagt geen volledig projectplan.
 3. Kies uit uitsluitend passende AI-omgevingen. Onderzoek/schrijven: ChatGPT of Claude;
