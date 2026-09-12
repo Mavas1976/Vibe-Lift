@@ -7,6 +7,8 @@ import {lessons,phases} from '../dist/content.js';
 import {prompts} from '../dist/prompts.js';
 import {tools,lessonTools} from '../dist/tools.js';
 import {seoLessons,seoInBuild} from '../dist/seo.js';
+import {stepPrompts} from '../dist/prompt-config.js';
+import {draftStore,composePrompt,getPrompt} from '../dist/prompt-workbench.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const output=path.join(root,'dist');
@@ -15,7 +17,7 @@ const verify=(condition,message)=>{assert.ok(condition,message);checks++;};
 const source=fs.readFileSync(path.join(output,'downloads/handboek.md'),'utf8');
 verify(lessons.length===14,'Exactly fourteen lessons');
 verify(phases.length===5,'Exactly five phases');
-verify(prompts.length===28,'Exactly twenty-eight reader-edition prompts');
+verify(prompts.length===42,'Forty-two reusable step prompts');
 verify(seoLessons.length===5,'Five additional SEO lessons');
 for(const lesson of lessons){
   const guide=lessonTools[lesson.id];
@@ -37,8 +39,8 @@ for(const id of [2,5,7,8,11,12])verify(seoInBuild[id],`SEO integrated before and
 verify(prompts.find(p=>p.id===9).text.includes('seo-plan.md') && prompts.find(p=>p.id===9).text.includes('GitHub'), 'Actual build prompt includes SEO and connected repository workflow');
 verify(!source.includes('git-scm.com/install') && !/git (?:add|commit|push|clone)\b/.test(source),'Reader does not need a Git download or terminal command tutorial');
 assert.deepEqual(lessons.map(l=>l.id),Array.from({length:14},(_,i)=>i+1));
-assert.deepEqual(prompts.map(p=>p.id),Array.from({length:28},(_,i)=>i+1));
-assert.deepEqual(lessons.flatMap(l=>l.prompts).sort((a,b)=>a-b),prompts.map(p=>p.id));
+assert.deepEqual(prompts.map(p=>p.id),Array.from({length:42},(_,i)=>i+1));
+assert.deepEqual(Object.values(stepPrompts).flatMap(p=>[...p.main,...p.extra]).sort((a,b)=>a-b),prompts.map(p=>p.id));
 checks+=3;
 for(const lesson of lessons) {
   for(const key of ['title','short','intro','goal','input','output','sources','pitfall']) verify(typeof lesson[key]==='string' && lesson[key].trim().length>0,`Lesson ${lesson.id}: ${key}`);
@@ -50,7 +52,7 @@ for(const lesson of lessons) {
   verify(lesson.term.length===2 && lesson.term.every(Boolean),`Lesson ${lesson.id}: glossary`);
 }
 const normalizedSource=source.replace(/\r\n/g,'\n');
-for(const prompt of prompts) {
+for(const prompt of prompts.filter(p=>p.id<=28)) {
   const heading=new RegExp('(?:\\*\\*|### )Opdracht '+String(prompt.id).padStart(2,'0')+' [—–-]');
   const start=normalizedSource.search(heading);
   verify(start>=0,`Source contains prompt ${prompt.id}`);
@@ -60,7 +62,7 @@ for(const prompt of prompts) {
 
 // In-memory renderer contract tests: no browser, screenshots or DOM automation.
 const listeners={},mainListeners={};
-const fakeElement=()=>({innerHTML:'',textContent:'',focus(){},select(){},scrollIntoView(){},setAttribute(){},removeAttribute(){},classList:{add(){},remove(){}},addEventListener(){}});
+const fakeElement=()=>({innerHTML:'',textContent:'',dataset:{},closest(){return {open:false};},focus(){},select(){},scrollIntoView(){},setAttribute(){},removeAttribute(){},classList:{add(){},remove(){},toggle(){}},addEventListener(){}});
 const main=fakeElement();main.addEventListener=(name,fn)=>mainListeners[name]=fn;
 const elements=new Map([['#main',main],['.skip-link',fakeElement()],['#notice',fakeElement()],['#route-content',fakeElement()]]);
 globalThis.document={title:'',querySelector:selector=>{if(!elements.has(selector))elements.set(selector,fakeElement());return elements.get(selector);},querySelectorAll:()=>[]};
@@ -92,8 +94,13 @@ for(const hash of routeNames) {
     const selected=/aria-labelledby="tab-([^"]+)"/.exec(html)?.[1];
     verify(selected===parseRoute(hash).tab,`${hash}: panel and tab match`);
     verify((html.match(/class="side-step"/g)||[]).length===14,`${hash}: every step is reachable`);
-    verify(html.includes('Tools voor deze stap') && html.includes('Neem mee →'),`${hash}: tool assistance on every lesson tab`);
-    for(const [key] of lessonTools[parseRoute(hash).id].items)verify(html.includes(`href="${tools[key].url}"`),`${hash}: ${tools[key].name} opens directly`);
+    if(parseRoute(hash).tab!=='opdracht'){
+      verify(html.includes('Tools voor deze stap') && html.includes('Neem mee →'),`${hash}: tool assistance`);
+      for(const [key] of lessonTools[parseRoute(hash).id].items)verify(html.includes(`href="${tools[key].url}"`),`${hash}: ${tools[key].name} opens directly`);
+    }else{
+      verify(html.includes('id="project-brief"') && html.includes('data-composer-copy='),`${hash}: project input and composed copy`);
+      for(const key of stepPrompts[parseRoute(hash).id].main)verify(html.includes(`href="${tools[getPrompt(key).config.tools[0]].url}"`),`${hash}: primary destination tool`);
+    }
   }
   if(hash.startsWith('#seo')){
     verify((html.match(/aria-current="step"/g)||[]).length===1,`${hash}: one active SEO lesson`);
@@ -102,33 +109,49 @@ for(const hash of routeNames) {
   }
 }
 verify((rendered.get('#route').match(/class="step-card /g)||[]).length===14,'Map contains every step');
-verify((rendered.get('#opdrachten').match(/class="prompt-card"/g)||[]).length===28,'Library contains all reader-edition prompts');
-verify((rendered.get('#opdrachten').match(/class="seo-prompt"/g)||[]).length===5,'Library also includes five SEO prompts');
+verify((rendered.get('#opdrachten').match(/id="opdracht-\d+"/g)||[]).length===42,'Library contains all step prompts');
+verify((rendered.get('#opdrachten').match(/id="opdracht-s\d+"/g)||[]).length===5,'Library also includes five SEO prompts');
 verify(rendered.get('#stap/14/controle').includes('href="#seo">Volgende: je SEO-cursus'),'End of main course leads to SEO');
 verify(rendered.get('#stap/7/uitleg').includes('Antigravity koppelen aan GitHub') && rendered.get('#stap/12/uitleg').includes('Van GitHub naar Railway'),'Repository and hosting walkthroughs in the actual lessons');
-verify(rendered.get('#route').includes('Digitale<br><span>gewichtloosheid.'),'Homepage leads with the brand promise');
+verify(rendered.get('#route').includes('Goed idee.<br><span>Maak het waar.'),'Homepage leads with the current brand promise');
 verify(rendered.get('#werkwijze').includes('Geef je bouwpartner de juiste context.'),'Method page provides actionable, independent guidance');
 verify((rendered.get('#voorbeeld').match(/href="#stap\/\d+\/voorbeeld"/g)||[]).length===14,'Example links to all fourteen lessons');
 // Copy success and denied-clipboard fallback exercise the production handler.
 location.hash='#stap/1/opdracht';listeners.hashchange();
 let copied='',selected=false;
 Object.defineProperty(globalThis,'navigator',{configurable:true,value:{clipboard:{writeText:async t=>{copied=t;}}}});
-const copyEvent={target:{closest:selector=>selector==='[data-copy]'?{dataset:{copy:'1'}}:null}};
+const copyEvent={target:{closest:selector=>selector==='[data-composer-copy]'?{dataset:{composerCopy:'1'}}:null}};
 await mainListeners.click(copyEvent);
-verify(copied===prompts[0].text,'Copy sends the current reader-edition prompt');
+verify(copied==='','Missing project input prevents an incomplete copy');
+mainListeners.input({target:{id:'project-goal',dataset:{project:'goal'},value:'Een reserveringssite voor lokale workshops',removeAttribute(){}}});
+verify(draftStore.state.project.goal==='Een reserveringssite voor lokale workshops','Typing updates the actual draft handler');
+await mainListeners.click({target:{closest:selector=>selector==='[data-prompt-tool]'?{dataset:{promptTool:'1',tool:'claude'}}:null}});
+verify(composePrompt('1').includes('Claude'),'Production tool handler changes the copy destination');
+for(const f of getPrompt('1').config.fields)if(f.required)draftStore.field('1',f.key,'Mijn eigen informatie');
+await mainListeners.click(copyEvent);
+verify(copied===composePrompt('1') && copied.includes('Een reserveringssite voor lokale workshops'),'Copy includes the actual project input and full task');
 verify(!/spos/i.test(copied),'Copied prompt does not require the removed framework');
 navigator.clipboard.writeText=async()=>{throw new Error('Denied');};
 document.querySelector('#prompt-text-1').select=()=>{selected=true;};
 await mainListeners.click(copyEvent);
 verify(selected,'Clipboard denial offers selectable text');
-const seoCopyEvent={target:{closest:selector=>selector==='[data-seo-copy]'?{dataset:{seoCopy:'4'}}:null}};
+const seoCopyEvent={target:{closest:selector=>selector==='[data-composer-copy]'?{dataset:{composerCopy:'s4'}}:null}};
+for(const f of getPrompt('s4').config.fields)if(f.required)draftStore.field('s4',f.key,'Eigen meetplan');
 navigator.clipboard.writeText=async text=>{copied=text;};
 await mainListeners.click(seoCopyEvent);
-verify(copied===seoLessons[3].prompt,'GA4 prompt is copied verbatim');
+verify(copied===composePrompt('s4'),'GA4 copy includes the supplied measurement context');
 selected=false;navigator.clipboard.writeText=async()=>{throw new Error('Denied');};
-document.querySelector('#seo-prompt-4').select=()=>{selected=true;};
+document.querySelector('#prompt-text-s4').select=()=>{selected=true;};
 await mainListeners.click(seoCopyEvent);
 verify(selected,'SEO copy denial offers selectable text');
+location.hash='#stap/6/opdracht';listeners.hashchange();
+verify(main.innerHTML.includes('Een reserveringssite voor lokale workshops'),'Project input survives route changes');
+await mainListeners.click({target:{closest:s=>s==='[data-draft-clear]'?{}:null}});
+verify(document.querySelector('#draft-clear-confirm').hidden===false&&draftStore.state.project.goal!=='','Clear asks before deleting entered text');
+await mainListeners.click({target:{closest:s=>s==='[data-draft-cancel]'?{}:null}});
+verify(document.querySelector('#draft-clear-confirm').hidden===true&&draftStore.state.project.goal!=='','Cancel preserves input');
+await mainListeners.click({target:{closest:s=>s==='[data-draft-confirm]'?{}:null}});
+verify(draftStore.state.project.goal===''&&Object.keys(draftStore.state.prompts).length===0,'Confirmed clear removes project and step input');
 // Keyboard navigation must wrap and support the two ends of the tab list.
 for(const [current,key,expected] of [['uitleg','ArrowLeft','controle'],['controle','ArrowRight','uitleg'],['opdracht','Home','uitleg'],['voorbeeld','End','controle']]) {
   let prevented=false;location.hash=`#stap/7/${current}`;
@@ -156,10 +179,10 @@ const totalBytes=files.reduce((sum,f)=>sum+fs.statSync(path.join(output,f)).size
 verify(totalBytes<5_000_000,'Published assets stay below the five megabyte initial budget');
 for(const file of files.filter(f=>/\.(html|js|css)$/.test(f))) {
   const text=fs.readFileSync(path.join(output,file),'utf8');
-  verify(!/localStorage|sessionStorage|document\.cookie|XMLHttpRequest|fetch\(/.test(text),`${file}: no app tracking, persistent learner state or backend calls`);
+  verify(!/localStorage|document\.cookie|XMLHttpRequest|fetch\(/.test(text),`${file}: no app tracking, durable learner state or backend calls`);
 }
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'.openai/hosting.json'),'utf8').replace(/^\uFEFF/,''));
 verify(manifest.project_id==='appgprj_6aa5374be46881918efdd7f0e0b517bd' && manifest.static.directory==='dist','Existing Sites registration and output directory retained');
-const report={status:'PASS',generated_at:new Date().toISOString(),brand:'Vibe Lift',tagline:'Digitale gewichtloosheid',checks,rendered_routes:routeNames.length,lessons:14,reader_edition_prompts:28,seo_lessons:5,seo_prompts:5,tools:Object.keys(tools).length,public_framework_references:0,reader_edition_sha256:createHash('sha256').update(fs.readFileSync(path.join(output,'downloads/handboek.md'))).digest('hex'),published_files:files.length,published_bytes:totalBytes,browser_qa:'Not performed; these are source, data and in-memory renderer checks, not browser UI tests.',limitations:['No real novice usability study','No browser layout, keyboard, screen-reader or contrast certification','External tool availability may change','Private hosted access is enforced by Sites, not application JavaScript']};
+const report={status:'PASS',generated_at:new Date().toISOString(),brand:'Vibe Lift',tagline:'Digitale gewichtloosheid',checks,rendered_routes:routeNames.length,lessons:14,step_prompts:42,total_copyable_prompts:47,seo_lessons:5,seo_prompts:5,tools:Object.keys(tools).length,public_framework_references:0,reader_edition_sha256:createHash('sha256').update(fs.readFileSync(path.join(output,'downloads/handboek.md'))).digest('hex'),published_files:files.length,published_bytes:totalBytes,browser_qa:'Not performed; these are source, data and in-memory renderer checks, not browser UI tests.',limitations:['No real novice usability study','No browser layout, keyboard, screen-reader or contrast certification','External tool availability may change','Private hosted access is enforced by Sites, not application JavaScript']};
 fs.writeFileSync(path.join(root,'docs/validation.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

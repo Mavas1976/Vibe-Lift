@@ -42,7 +42,7 @@ export function startAirField(doc=document, win=window) {
       const seed=i*2.399963,unit=(i+.5)/count;
       const x=(Math.sin(seed*7.31)*.5+.5)*width;
       const y=unit*height;
-      return {homeX:x,homeY:y,x,y,vx:0,vy:0,seed,r:i%9===0?1.65:.8,color:i%7===0?'rgba(176,123,87,.24)':'rgba(58,95,139,.22)'};
+      return {homeX:x,homeY:y,x,y,vx:0,vy:0,seed,r:i%9===0?1.65:.8,color:i%7===0?'rgba(238,82,43,.18)':'rgba(65,65,61,.12)'};
     });
     pointer.active=false;paint();
   }

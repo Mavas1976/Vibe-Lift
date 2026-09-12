@@ -1,3 +1,5 @@
+> Actuele aanvulling, 12 september 2026: onderstaande oorspronkelijke architectuuranalyse is historisch. De huidige app heeft 42 stapopdrachten en 5 SEO-opdrachten, een invulcomposer en sessionStorage voor alleen de tabbladinvoer. `dist/prompts.js` is nu leidend; `prompt-config.js` bepaalt stap, tool en velden. De downloads worden daaruit gesynchroniseerd. Er is geen AI-API, backend of voortgangsdatabase toegevoegd. Zie PROMPT_INTEGRATIE_PLAN.md en APPLICATION_USER_OPERATING_MODEL.md voor de actuele werking.
+
 > Historisch dossier van de eerste oplevering. De actuele branding en bezoekersinhoud zijn gewijzigd naar VIBE Lift; zie docs/REBRANDING.md (vanuit docs: REBRANDING.md). De oorspronkelijke bronopdrachten zijn vervangen door de bewerkte lezerseditie.
 
 # Architectuur en oplevering volgens SPOS

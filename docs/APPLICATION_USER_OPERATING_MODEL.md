@@ -2,7 +2,7 @@
 
 ## 1. Executive summary
 
-**Observatie:** Vibe Lift is een Nederlandstalige leeromgeving voor beginners die met AI een IT-project of website willen opbouwen. De inhoud is verdeeld over veertien stappen en vijf fasen. Lezers kiezen vrij een stap en wisselen tussen Uitleg, Voorbeeld, Opdracht en Controle. De fictieve Studio Maan verbindt de uitleg. Alle 28 genummerde bouwopdrachten en vijf SEO-opdrachten zijn leesbaar en kopieerbaar. Iedere hoofdles heeft toolhulp; de aanvullende SEO-cursus heeft vijf vrij toegankelijke lessen met instellingen en bronlinks.
+**Observatie:** Vibe Lift is een Nederlandstalige leeromgeving voor beginners die met AI een IT-project of website willen opbouwen. De inhoud is verdeeld over veertien stappen en vijf fasen. Lezers kiezen vrij een stap en wisselen tussen Uitleg, Voorbeeld, Opdracht en Controle. De fictieve Studio Maan verbindt de uitleg. Alle 42 genummerde bouwopdrachten en vijf SEO-opdrachten zijn leesbaar en kopieerbaar. Iedere hoofdles heeft toolhulp; de aanvullende SEO-cursus heeft vijf vrij toegankelijke lessen met instellingen en bronlinks.
 
 Er is één appgebruikersrol: lezer. De site-eigenaar onderhoudt de bron buiten de website. Sites regelt de besloten toegang. De applicatie beheert geen accounts of leerlingprojecten. Ze verzendt geen aanvragen en voert geen AI-opdrachten uit.
 
@@ -17,12 +17,12 @@ Status PASS betekent hier geïmplementeerd en voor de genoemde broncontracten ge
 | Routekaart/lijst | PASS | app.js, content.js, styles.css | Alle stappen direct bereikbaar | Kaart kan voor sommige lezers minder overzichtelijk zijn | Lijstalternatief behouden |
 | Veertien lessen | PASS | content.js, app.js | Vier onderdelen per les | Didactische duidelijkheid niet gemeten | Test met beginner |
 | Voorbeeldproject | PASS | content.js, app.js | Fictief, zonder echte verwerking | Illustratie als echt resultaat opvatten | Fictieve status zichtbaar |
-| Opdrachten | PASS | prompts.js, app.js | 28 teksten uit de lezerseditie + losse context | Gebruiker plakt zonder documenten | Context vóór de opdracht |
+| Opdrachten | PASS | prompts.js, app.js | 42 taken met gedeelde projectcontext en eigen stapinput | Gebruiker plakt zonder documenten | Bijlagen zelf in de gekozen AI-tool toevoegen |
 | Werkwijze en tools | PASS | app.js, tools.js | 12 tools, per stap concrete inzet en officiële verwijzingen | Externe omgeving kan wijzigen | Laat gebruiker actuele beschikbaarheid checken |
 | SEO-cursus | PASS | seo.js, app.js | Vijf lessen, toolhulp, werkbladen en copy/fallback gecontroleerd | Externe schermen kunnen wijzigen | Officiële bronlinks behouden |
 | Deeltjesveld | PASS | air.js, lift.css | Cursorrespons, pauze, visibility en reduced motion met harness gecontroleerd | Geen visuele browsermeting | Effect achter inhoud; systeemvoorkeur respecteren |
 | Bronhandboek | PASS | downloads/handboek.md | Bewerkte lezerseditie | Lang naslagwerk voor beginner | Lessen als hoofdingang |
-| Appregistratie/voortgang | Niet in scope | app.js | Geen appaccounts of opslag | Onterechte verwachting van voortgang | Geen voortgangsscore tonen |
+| Appregistratie/voortgang | Niet in scope | app.js | Geen appaccounts of voortgang; alleen tabbladinvoer | Onterechte verwachting van voortgang | Geen voortgangsscore tonen |
 | Browser QA | Nog niet uitgevoerd | validation.json | Bron- en handlerchecks wel uitgevoerd | Layout/echte bediening onbekend | Afzonderlijk controleren |
 
 Bronpaden in dit document zijn ten opzichte van `dist/`, tenzij anders genoemd.
@@ -33,7 +33,7 @@ Bronpaden in dit document zijn ten opzichte van `dist/`, tenzij anders genoemd.
 |---|---|---|---|---|
 | Type | Statische interactieve leeromgeving | index.html, app.js | Hoog | Hashnavigatie, geen serverfuncties |
 | Inhoud | 5 fasen → 14 lessen → 4 lesonderdelen; aanvullend 5 SEO-lessen | content.js, app.js | Hoog | Vrije navigatie |
-| Opdrachten | 28 bouwteksten + 5 SEO-opdrachten | prompts.js, seo.js | Hoog | Geen AI-uitvoering |
+| Opdrachten | 42 bouwteksten + 5 SEO-opdrachten | prompts.js, seo.js | Hoog | Geen AI-uitvoering |
 | Voorbeeld | Eén fictieve keramiekstudio | content.js | Hoog | Geen klant of verkochte dienst |
 | Leereffect | Waarschijnlijk eenvoudiger dan een lang document | Plan | [AFGELEID] | Geen gebruikersonderzoek |
 
@@ -43,7 +43,7 @@ Werkelijk model: fase → les → uitleg/voorbeeld/opdracht/controle → resulta
 
 | Rol | Lezen/navigeren | Kopiëren/downloaden | Lesinhoud wijzigen | Appgebruikers beheren | Opslaan/verwijderen | Bron |
 |---|---|---|---|---|---|---|
-| Toegelaten lezer | Ja | Ja, eigen apparaat | Nee | Nee | Geen leerlingdata | app.js |
+| Toegelaten lezer | Ja | Ja, eigen apparaat | Nee | Nee | Eigen tabbladinvoer wissen | prompt-workbench.js |
 | Site-eigenaar buiten app | Ja | Ja | Via bronproject | Via Sites, niet in Vibe Lift | Bronversies beheren | README.md, hostingconfig |
 
 De inhoud verschilt niet per lezer. Er zijn geen app-authroutes, redirects na login of administratorpanelen. De gepubliceerde toegang wordt vóór de site door Sites gehandhaafd. De eerste publicatie is uitsluitend voor de eigenaar. Clientcode zelf kan toegang niet afdwingen.
@@ -54,7 +54,7 @@ De inhoud verschilt niet per lezer. Er zijn geen app-authroutes, redirects na lo
 |---|---|---|---|---|---|
 | Fase | Auteur | id, naam, toelichting, kleur, symbool | Bevat lessen | #route | content.js |
 | Les | Auteur | id, fase, uitleg, input, output, taken, flow, casus, criteria, prompts | Fase en opdrachten | #stap/1–14 | content.js |
-| Bronopdracht | Extractiescript | id, titel, tekst | Eén les; aanvullende context | #opdrachten; lesonderdeel | prompts.js |
+| Bronopdracht | Auteur | id, titel, tekst, rol, resultaat | Eén thuisstap; tool en velden in prompt-config.js | #opdrachten; lesonderdeel | prompts.js |
 | Casus | Auteur | Studio Maan-voorbeeld per les | Les | #voorbeeld; lesonderdeel | content.js |
 | Tijdelijke UI-staat | Lezer | hashroute, kaart/lijst, kopieermelding, beweging gepauzeerd | Huidige weergave | Alle routes | app.js |
 
@@ -62,7 +62,7 @@ De inhoud verschilt niet per lezer. Er zijn geen app-authroutes, redirects na lo
 |---|---|---|---|---|
 | Les/casus/opdracht | Geen leerlinggegevens | Browser en download | Tekst voor werkelijk onderzoeksresultaat aanzien | Fictieve voorbeelden benoemd |
 | Route/hash | Geen ingevulde persoonsgegevens | URL/browsergeschiedenis | URL kan lokaal onthouden worden door browser | Geen leerlinginput in URL |
-| Klembord | Alleen bronopdracht | Eigen apparaat | Vorige klembordinhoud vervangen | Alleen na expliciete knopdruk |
+| Klembord | Volledige opdracht met eigen invoer | Eigen apparaat | Vorige klembordinhoud vervangen | Alleen na expliciete knopdruk |
 | Hostingtoegang | Door Sites beheerd | Buiten eigen appcode | Niet door dit bronproject te beoordelen | Bestaande besloten toegang behouden |
 
 ## 6. End-to-end applicatieflow
@@ -73,7 +73,7 @@ flowchart TD
   B --> C[Kiest een van 14 stappen]
   C --> D[Leest uitleg en benodigde input]
   D --> E[Bekijkt Studio Maan]
-  E --> F[Leest context en kopieert opdracht]
+  E --> F[Vult project en stapinput in en kopieert de volledige opdracht]
   F --> G[Voert opdracht uit in eigen omgeving]
   G --> H[Beoordeelt eigen resultaat met Controle]
   H --> I{Voldoende?}
@@ -156,3 +156,13 @@ Zoeken, dupliceren, archiveren en toewijzen zijn geen appfuncties voor lezers.
 | Naslag ophalen | Footer of Werkwijze-pagina | Download handboek | Klik | Bewerkte Markdown-lezerseditie | Browserdownloadinstelling | Geen interne documenteditor |
 
 Geen flow verstuurt berichten, publiceert leerlingprojecten of slaat resultaten op. De tijdelijke kopieermelding is de enige appnotificatie. De leerling rondt de werkelijke projecttaak buiten Vibe Lift af.
+
+## 14. Invulbare opdrachten — editie 1.3
+
+De projectnaam, het doel en de doelgroep worden één keer ingevuld. Stapinput is per opdracht gescheiden. Alleen benodigde velden zijn verplicht; voorbeelden blijven lege placeholders. Een leeg verplicht veld wordt bij kopiëren gemarkeerd en krijgt focus. De gekozen tool staat naast een officiële link. De link verstuurt niets. De gebruiker kopieert zelf en voegt bestanden in de AI-tool toe.
+
+De complete prompt is vooraf uitklapbaar. Bij geweigerd klembord opent dezelfde tekst geselecteerd voor handmatig kopiëren. Invoer blijft bij stapwissel en, indien sessionStorage beschikbaar is, bij verversen in hetzelfde tabblad bewaard. Bij geweigerde opslag blijft de huidige pagina bruikbaar in geheugen. Wissen vraagt een korte bevestiging om onbedoeld verlies te voorkomen. Geen gegevens gaan naar een server of algemene download.
+
+De eerste hoofdopdracht is open. Verdieping staat onder ‘Ook handig’. Stap 6 geeft direct een ontwerp aan Stitch; stap 7 koppelt GitHub en plant de bouw; stap 12 geeft een concrete GitHub-opdracht en daarna publicatie. De keuze ‘nog niet live’ of onbekende publicatiegevolgen maakt de opdracht expliciet lokaal, zonder push. SEO-accountinstellingen blijven handmatige uitleg; alleen de plaatsing van het verificatiemiddel is een bouwopdracht.
+
+Bewijs: scripts/validate.mjs controleert render- en productiehandlercontracten; scripts/check-prompt-workbench.mjs controleert volledige kopie, toolkeuze, inputisolatie, opslagfalen, herstel en wissen. Browserbediening en bruikbaarheid met beginners zijn niet afzonderlijk getest.

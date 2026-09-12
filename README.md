@@ -1,6 +1,6 @@
 # Vibe Lift — Digitale gewichtloosheid
 
-Nederlandstalige interactieve leeromgeving voor iemand zonder programmeerachtergrond. Veertien vrij toegankelijke stappen in vijf fasen, één fictief voorbeeldproject, visuele flows en 28 bouwopdrachten, 12 tools met uitleg per stap en een aanvullende SEO-cursus van vijf lessen met vijf eigen opdrachten. De route gebruikt Antigravity met toegang tot GitHub; de cursist voert zelf geen Git-commando’s uit.
+Nederlandstalige interactieve leeromgeving voor iemand zonder programmeerachtergrond. Veertien vrij toegankelijke stappen in vijf fasen, één fictief voorbeeldproject, visuele flows en 42 invulbare bouwopdrachten, 12 tools met uitleg per stap en een aanvullende SEO-cursus van vijf lessen met vijf eigen opdrachten. De route gebruikt Antigravity met toegang tot GitHub; de cursist voert zelf geen Git-commando’s uit.
 
 ## Lokaal openen
 
@@ -19,18 +19,21 @@ De lokale server luistert alleen op `127.0.0.1:4173`. Dit lokale adres is geen o
 ## Inhoud aanpassen
 
 - `dist/content.js`: lessen, fasen, begrippen en Studio Maan-voorbeelden.
-- `dist/app.js`: weergaven, gereedschappen, opdrachtcontext en navigatie.
+- `dist/app.js`: weergaven, gereedschappen en navigatie.
+- `dist/prompt-config.js`: hoofd- en extra opdrachten per stap, juiste AI-tools en invulvelden.
+- `dist/prompt-workbench.js`: samenstellen, valideren, kopiëren en tijdelijk bewaren van invoer.
+- `dist/prompts.css`: invulcomponenten; de merkstijl wordt aangevuld in lift.css.
 - `dist/styles.css` en `dist/lift.css`: basisstijl en huidige Vibe Lift-vormgeving.
 - `dist/tools.js`: 12 tools, officiële links, toolgebruik per hoofdles en repositoryhandleiding.
 - `dist/seo.js`: vijf SEO-lessen, instellingen, bronnen en SEO-bouwafspraken.
 - `dist/air.js`: eigen decoratief deeltjesveld, cursorrespons en pauzeren.
-- `dist/prompts.js`: opdrachten uit de actuele Vibe Lift-lezerseditie. Opnieuw genereren vanuit het handboek met `python scripts/extract_prompts.py`.
-- `dist/downloads/handboek.md`: Vibe Lift-lezerseditie 1.2. Wijzig een opdracht in deze handleiding en genereer daarna `prompts.js` opnieuw. Het oorspronkelijke aangeleverde document wordt buiten de publicatiemap bewaard.
+- `dist/prompts.js`: leidende bron voor 42 algemene opdrachten, rollen en verwachte resultaten.
+- `dist/downloads/handboek.md` en `opdrachten.md`: lezerseditie en algemene download met 47 invulbare opdrachten. Werk prompts in de bronmodules bij en synchroniseer met `node scripts/sync-prompts.mjs`. Privébronnen blijven buiten dist/.
 - `dist/assets/`: originele illustraties en favicon.
 
-Iedere les moet de vaste inhoudsvelden blijven bevatten. Synchroniseer na wijzigingen in tool- of SEO-inhoud eerst met `node scripts/update-guide.mjs`. De automatisch beheerde aanvulling van het handboek is afgebakend met een vaste marker. Genereer daarna de 28 kernprompts opnieuw.
+Iedere les moet de vaste inhoudsvelden blijven bevatten. Synchroniseer na wijzigingen in tool- of SEO-inhoud eerst met `node scripts/update-guide.mjs`. De automatisch beheerde aanvulling van het handboek is afgebakend met een vaste marker. Deze opdracht synchroniseert daarna ook de actuele opdrachten en beide downloads.
 
-Een opdracht-ID verwijst naar een bestaande opdracht uit de lezerseditie; schrijf aanvullingen in de context in `app.js`, zodat context en kopieerbare opdracht herkenbaar gescheiden blijven.
+Een opdracht-ID heeft precies één thuisstap in `stepPrompts`. De composer combineert de algemene instructie, gekozen AI-tool, gedeelde projectcontext en stapinput. GitHub-koppelen en pushen zijn compacte opdrachten. Instellingen blijven uitleg. `extract_prompts.py` is alleen nog een compatibiliteitsingang voor synchroniseren; het overschrijft de bibliotheek niet.
 
 ## Controleren
 
@@ -39,6 +42,7 @@ node --check dist/app.js
 node --check dist/content.js
 node --check dist/prompts.js
 node scripts/validate.mjs
+node scripts/check-prompt-workbench.mjs
 node scripts/check-air.mjs
 node scripts/check-http.mjs
 ```
@@ -50,6 +54,8 @@ De validator controleert bronintegriteit, volledige inhoud, routes, gerenderde H
 ## Publicatie
 
 Dit is een statische site. `dist/` bevat de daadwerkelijke bronbestanden die worden gepubliceerd; er is geen bundelstap. `.openai/hosting.json` koppelt deze map aan de bestaande Sites-site. Behoud die identiteit bij wijzigingen. Publiceer de gecontroleerde bron via de Sites-werkwijze en behoud de huidige toegang. De site blijft alleen voor de eigenaar gepubliceerd.
+
+Invoer wordt uitsluitend in sessionStorage van hetzelfde tabblad bewaard, met geheugenfallback als opslag niet beschikbaar is. Geen invoer in de URL, server, downloads of tool-links. Wissen verwijdert de volledige lokale draft. De site start zelf geen AI-opdracht.
 
 Geen appdatabase, accounts, analytics, AI-API of externe bibliotheken. Sites verzorgt de toegangslaag buiten deze applicatie. De site kopieert alleen op verzoek tekst naar het klembord; opdrachten en publicaties voor leerlingprojecten worden niet vanuit deze site uitgevoerd.
 
@@ -72,6 +78,10 @@ De Railway-publicatie gebruikt de toegangsinstellingen van Railway; de eigenaars
 Bron: [Railpack — Static Sites](https://railpack.com/languages/staticfile/).
 
 ## Documentatie
+
+- `docs/PROMPT_INTEGRATIE_PLAN.md`: analyse, toolroutering, keuzes en verificatie van de invulbare opdrachten.
+- `docs/prompt-validation.json`: controles van invoer, kopiëren, opslag en GitHub-opdrachten.
+- `docs/DESIGN_SPOS.md`: gezamenlijke visuele ontwerpverfijning.
 
 - `docs/UITBREIDINGSPLAN.md`: analyse, eisen en afwegingen voor toolhulp, SEO en gewichtloosheid.
 - `docs/BRONNEN_1_2.md`: gecontroleerde officiële documentatie en grenzen.

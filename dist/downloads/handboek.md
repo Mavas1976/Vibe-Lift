@@ -107,8 +107,8 @@ Werk uit wat al duidelijk is en stel alleen vragen die een wezenlijke keuze
 blokkeren. Lever een leesbaar Markdown-bestand op dat ik kan gebruiken bij
 onderzoek, ontwerp en bouw.
 
-Mijn idee: [beschrijving]
-Beschikbare bronnen: [bestanden]
+Mijn idee: zie mijn projectcontext
+Beschikbare bronnen: zie mijn meegegeven bronnen
 ```
 
 **Wat je overhoudt:** `projectbrief.md`. Je kunt het idee in enkele zinnen uitleggen, en iemand anders begrijpt wat het beoogde resultaat is. **Verdieping:** P01–P03 in Deel B.
@@ -130,7 +130,7 @@ Ik laat een markt niet alleen beschrijven op basis van verkooppagina’s. Waar r
 **Opdracht 02 — Onderzoek met bewijs**
 
 ```text
-Onderzoek het probleem en de markt voor [doelgroep/probleem].
+Onderzoek het probleem en de markt voor mijn doelgroep en het beschreven probleem.
 Gebruik actuele primaire bronnen waar mogelijk. Bekijk ook openbare
 handleidingen, werkinstructies, release notes en echte schermbeelden.
 Vergelijk doelgroep, proces, functies, beperkingen en aantoonbare verschillen.
@@ -222,27 +222,28 @@ Maak voor openbare contentpagina’s ook seo-plan.md: de zoekvraag, gewone pagin
 
 Open [Google Stitch](https://stitch.withgoogle.com/). Geef de propositie, scherminventaris en visuele uitgangspunten mee. Laat eerst een herkenbare richting uitwerken en beoordeel die. Daarna volgt de rest van de schermen. Zo kun je kleuren, typografie, witruimte en de werking van knoppen bewust beoordelen.
 
-**Opdracht 07 — Laat de Stitch-opdracht maken**
+**Opdracht 07 — Ontwerp je schermen in Stitch**
 
 ```text
-Maak een complete kopieerbare opdracht voor Stitch op basis van de
-bijgevoegde propositie, flows en scherminventaris. Beschrijf doelgroep,
-uitstraling, inhoudshiërarchie, navigatie, componenten, kleuren, typografie,
-witruimte en mobiel gedrag. Gebruik de bestaande merkafspraken als die
-er zijn. Markeer ontbrekende keuzes. Neem per scherm de belangrijkste
-inhoud, acties en toestanden mee. Verzin geen functies, integraties,
-prijzen, testimonials of complianceclaims. Lever de Stitch-prompt als
-bestand op en behoud de koppeling met de scherm-ID's.
+Ontwerp de hieronder beschreven website of app met de meegegeven pagina's, teksten,
+gebruikersroute en stijlreferenties. Maak de echte schermontwerpen voor desktop en mobiel.
+Gebruik één samenhangende stijl voor kleuren, typografie, afstanden, knoppen en formulieren.
+Maak de belangrijkste handeling op elk scherm herkenbaar. Werk ook relevante lege,
+laad-, fout- en succesweergaven uit. Gebruik echte inhoud uit mijn input en behoud
+de gewenste functies. Verzin geen prijzen, testimonials, resultaten of keurmerken.
+Maak keuzes zichtbaar als nog informatie ontbreekt. Lever het ontwerp zodat ik de
+schermen kan beoordelen en daarna samen met de inhoud aan mijn bouwer kan geven.
+Beschrijf kort welke ontwerpafspraken ik moet meenemen.
 ```
 
 **Opdracht 08 — Stuur het ontwerp bij in Stitch**
 
 ```text
-Werk deze schermen verder uit binnen dezelfde visuele richting: [scherm-ID's].
+Werk deze schermen verder uit binnen dezelfde visuele richting: de genoemde schermen.
 Maak de belangrijkste handeling per scherm direct herkenbaar. Verbeter
 leesbaarheid, hiërarchie, afstanden en de samenhang van knoppen en velden.
 Houd componenten consistent en werk de mobiele variant uit. Behoud de
-inhoud en functies uit de specificatie. Mijn concrete feedback: [feedback].
+inhoud en functies uit de specificatie. Mijn concrete feedback: de feedback hieronder.
 ```
 
 **Controle:** kun je zonder uitleg zien waar je begint en wat je moet doen? Kloppen de schermen onderling? Bewaar beschikbare ontwerpen, exports en afbeeldingen met een herkenbare versie. Beschikbare exportopties moeten in de gebruikte Stitch-omgeving worden gecontroleerd. **Wat je overhoudt:** een beoordeeld ontwerp en visuele afspraken. **Verdieping:** P13–P14.
@@ -269,7 +270,7 @@ en acceptatiecriteria. Verbind iedere stap aan de relevante scherm- en
 proces-ID's. Behoud bestaande werking. Schrijf besluiten en open punten weg
 in het projectdossier. Voer de afgesproken eerste bouwstap uit zodra de
 benodigde keuzes duidelijk zijn. Werk vóór implementatie het toepasselijke
-architectuurdossier uit volgens opdracht 26 en hoofdstuk 11.
+architectuurdossier uit met systeemonderdelen, gegevensstromen, rechten, fouten en herstel.
 
 Werk in Antigravity met de bedoelde GitHub-repository. Controleer eigenaar, repository, branch en lees-/schrijftoegang; laat mij zelf de aangeboden aanmelding afronden. Vraag geen toegangstoken in de chat. Laat de agent het technische versiebeheer uitvoeren en beschrijf hoe ik de wijziging en commitlink controleer. Spreek af welke branch Railway mag publiceren. Neem seo-plan.md op in het bouwplan: echte openbare URL’s, uitleesbare inhoud, title, meta-beschrijving, canonical, sitemap.xml, robots.txt, juiste 404/redirects, interne links, mobiel en lichte beelden. Houd besloten delen achter toegangscontrole. Plan GA4 met de juiste meet-ID en het afgesproken toestemmingsgedrag; tel succesvolle aanvragen alleen na bevestigde ontvangst en voorkom dubbele events. Leg per eis het acceptatiebewijs vast. Voer externe accountinstellingen alleen binnen de afgesproken opdracht uit.
 ```
@@ -298,7 +299,7 @@ Een complete route kan klein zijn: een bezoeker vult een formulier in, krijgt be
 **Opdracht 11 — Bouw de eerste werkende route**
 
 ```text
-Implementeer de eerste complete gebruikersroute uit het bouwplan: [route-ID].
+Implementeer de eerste complete gebruikersroute uit het bouwplan: de hieronder beschreven gebruikersroute.
 Werk de benodigde schermen, validatie, rechten en gegevensverwerking uit.
 Gebruik bestaande componenten en de vastgelegde ontwerpafspraken. Neem
 laden, lege resultaten, fouten en herstel mee waar ze relevant zijn.
@@ -385,7 +386,7 @@ lever concrete stappen waarmee ik ze zelf kan controleren.
 ```text
 Start de huidige versie via het opgeleverde lokale startbestand. Controleer
 welk project op welke URL draait. Open de browser als je die toegang hebt
-en doorloop [gebruikersroute]. Geef mij het exacte lokale adres, wat ik moet
+en doorloop de hieronder beschreven gebruikersroute. Geef mij het exacte lokale adres, wat ik moet
 zien, welke handeling ik kan proberen en hoe ik stop. Claim alleen dat het
 werkt als de start en de handeling daadwerkelijk zijn gecontroleerd.
 ```
@@ -415,7 +416,7 @@ Leg uit hoe ik de sessie start en stop en hoe jij de registratie terugvindt.
 **Opdracht 15 — Onderzoek mijn zojuist doorlopen route**
 
 ```text
-Ik heb zojuist [route] doorlopen. Dit viel mij op: [korte waarneming].
+Ik heb zojuist de hieronder beschreven route doorlopen. Dit viel mij op: zie mijn waarnemingen hieronder.
 Bekijk de registratie van deze sessie en vergelijk die met de bedoelde flow.
 Benoem reproduceerbare problemen met bewijs, verwacht gedrag en werkelijk
 gedrag. Onderzoek de oorzaak in de relevante lagen. Herstel de problemen
@@ -490,18 +491,15 @@ Lever een overzicht van wijzigingen en resterende aandachtspunten.
 **Opdracht 20 — Leg de versie vast en publiceer**
 
 ```text
-Controleer de wijzigingen, teststatus en doelomgeving voor deze release.
-Laat Antigravity de afgesproken versie committen en naar de bedoelde
-GitHub-repository en branch sturen. Controleer de commitlink op GitHub.
-Leg vooraf vast of die branch automatisch via Railway live publiceert.
-Bereid publicatie voor op de gekozen hostingomgeving: [omgeving]. Gebruik
-de actuele projectconfiguratie en officiële documentatie. Controleer build,
-startcommando, instellingen, gegevensopslag en herstelmogelijkheid voor zover
-relevant. Publiceer binnen de gegeven opdracht en toegangsrechten. Controleer
-daarna de echte live-URL, kernroutes, media, formulieren en eventuele login.
-Rapporteer welke versie live staat en welke livecontroles werkelijk zijn gedaan.
-
-De voorkeursroute is Antigravity naar GitHub naar Railway. Controleer de verbonden repository en branch, build- en startinstellingen, benodigde Variables en de auto-deploy-afspraak. Gebruik het echte live-domein in canonical en sitemap. Leg uit welke volgende stappen nodig zijn voor Search Console en GA4; claim geen externe koppeling zonder controle.
+Controleer de vrijgegeven versie van dit project en bereid de publicatie op de
+hieronder gekozen hostingomgeving voor. Gebruik de bestaande projectconfiguratie en
+actuele officiële documentatie. Controleer build, starten, variabelen, opslag en
+herstelmogelijkheid voor zover relevant. De versie moet eerst in de afgesproken
+GitHub-repository en branch staan. Benoem wat ik zelf in het hostingaccount moet instellen.
+Publiceer de bedoelde versie binnen de gegeven toegang en gekozen zichtbaarheid.
+Controleer daarna de echte live-URL, kernroute, media, formulieren, SEO-instellingen
+en eventuele login. Meld welke versie is gepubliceerd, wat werkelijk is gecontroleerd
+en wat nog ontbreekt. Een succesvolle build bewijst niet dat de website bruikbaar is.
 ```
 
 **Controle:** het juiste domein toont de bedoelde versie en de belangrijkste handeling werkt daar. **Wat je overhoudt:** een live-URL en een controleerbare release. **Verdieping:** P23–P25.
@@ -2990,3 +2988,27 @@ Analyseer mijn aangeleverde Search Console- en GA4-gegevens voor [periode] en [w
 - [Google: rapport Prestaties](https://support.google.com/webmasters/answer/7576553?hl=nl)
 
 Documentatie geraadpleegd op 12 september 2026. Schermnamen en beschikbare functies kunnen per account, taal en versie verschillen.
+<!-- VIBE_LIFT_PERSONAL_PROMPTS -->
+
+# Je eigen AI-opdracht maken · editie 1.3
+
+De website heeft 42 opdrachten bij de veertien stappen en vijf opdrachten bij de SEO-cursus. Vul je projectcontext en de benodigde stapinput in. De knop kopieert de volledige opdracht met jouw invoer. Kies de juiste AI-tool en voeg bestanden daar zelf toe. Instellingen blijven gewone instructies.
+
+Je invoer blijft alleen in hetzelfde tabblad en kan worden gewist. Bij geweigerde tabbladopslag blijft het geheugen bruikbaar zolang de pagina open is.
+
+[Alle actuele algemene opdrachten, toolkeuze en invulvelden](opdrachten.md).
+
+- Stap 1: 01.
+- Stap 2: 02.
+- Stap 3: 03, 04, 29.
+- Stap 4: 05.
+- Stap 5: 06, 25.
+- Stap 6: 07, 08.
+- Stap 7: 42, 09, 26, 10, 40.
+- Stap 8: 11, 32, 36.
+- Stap 9: 12, 13.
+- Stap 10: 14, 15.
+- Stap 11: 17, 16, 30, 31, 33, 34, 18, 28.
+- Stap 12: 41, 20, 19.
+- Stap 13: 21, 22, 38.
+- Stap 14: 23, 24, 27, 35, 37, 39.

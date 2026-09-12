@@ -48,3 +48,7 @@ De uitbreiding met tools en vijf SEO-lessen is gebaseerd op de gebruikersvraag e
 ## Actualiteit en onderhoud
 
 Werk lessen alleen bij op basis van de bedoelde bronversie. Houd de actuele opdracht zichtbaar gescheiden van uitleg of extra context. Genereer prompts.js na wijzigingen uit de lezerseditie. Voer de validator na inhoudswijzigingen opnieuw uit. Controleer externe links bij een relevante wijziging of gemelde fout; er is geen automatische monitor ingesteld.
+
+## Aanvulling: algemene prompts per stap, 12 september 2026
+
+De onderstaande eerdere mapping beschrijft de eerste 28 lezersopdrachten. De actuele uitvoeringsmapping is `dist/prompt-config.js`: 42 unieke opdrachten met elk één thuisstap. De uitbreiding gebruikt de 40 algemene prompts in `../promptbibliotheek/prompts.json`; bestaande 28 sitebewerkingen zijn behouden en waar nodig voor toolgebruik aangepast. Twee concrete opdrachten zijn toegevoegd voor GitHub koppelen en wijzigingen pushen. De vijf SEO-opdrachten blijven afzonderlijk. De algemene tekst is geen letterlijk historisch citaat. De privébronselectie en historische conversaties worden niet gepubliceerd.

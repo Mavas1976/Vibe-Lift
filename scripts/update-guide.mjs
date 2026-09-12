@@ -36,3 +36,4 @@ for(const lesson of seoLessons){
 lines.push('Documentatie geraadpleegd op 12 september 2026. Schermnamen en beschikbare functies kunnen per account, taal en versie verschillen.','');
 fs.writeFileSync(file,original+'\n'+lines.join('\n'));
 console.log('Tool guidance for 14 steps and 5 SEO lessons synchronized into reader edition.');
+await import('./sync-prompts.mjs');

@@ -1,40 +1,40 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T12:36:21.730Z",
+  "generated_at": "2026-09-12T12:57:35.647Z",
   "base_url": "http://127.0.0.1:4173",
   "assets": [
     {
       "file": "air.js",
       "status": 200,
-      "bytes": 3354,
+      "bytes": 3352,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "app.js",
       "status": 200,
-      "bytes": 38100,
+      "bytes": 32637,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "content.js",
       "status": 200,
-      "bytes": 33411,
+      "bytes": 33492,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "index.html",
       "status": 200,
-      "bytes": 4932,
+      "bytes": 4947,
       "content_type": "text/html; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "lift.css",
       "status": 200,
-      "bytes": 15314,
+      "bytes": 30618,
       "content_type": "text/css; charset=utf-8",
       "exact_content": true
     },
@@ -46,9 +46,30 @@
       "exact_content": true
     },
     {
+      "file": "prompt-config.js",
+      "status": 200,
+      "bytes": 12099,
+      "content_type": "text/javascript; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "prompt-workbench.js",
+      "status": 200,
+      "bytes": 18150,
+      "content_type": "text/javascript; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "prompts.css",
+      "status": 200,
+      "bytes": 6108,
+      "content_type": "text/css; charset=utf-8",
+      "exact_content": true
+    },
+    {
       "file": "prompts.js",
       "status": 200,
-      "bytes": 24510,
+      "bytes": 43580,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -62,7 +83,7 @@
     {
       "file": "styles.css",
       "status": 200,
-      "bytes": 36581,
+      "bytes": 36559,
       "content_type": "text/css; charset=utf-8",
       "exact_content": true
     },
@@ -76,7 +97,14 @@
     {
       "file": "assets\\favicon.svg",
       "status": 200,
-      "bytes": 460,
+      "bytes": 220,
+      "content_type": "image/svg+xml",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\idea-to-live.svg",
+      "status": 200,
+      "bytes": 2595,
       "content_type": "image/svg+xml",
       "exact_content": true
     },
@@ -97,8 +125,57 @@
     {
       "file": "downloads\\handboek.md",
       "status": 200,
-      "bytes": 224025,
+      "bytes": 224968,
       "content_type": "text/markdown; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "downloads\\opdrachten.md",
+      "status": 200,
+      "bytes": 97993,
+      "content_type": "text/markdown; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\fonts\\dm-sans-400.ttf",
+      "status": 200,
+      "bytes": 48280,
+      "content_type": "application/octet-stream",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\fonts\\dm-sans-600.ttf",
+      "status": 200,
+      "bytes": 48280,
+      "content_type": "application/octet-stream",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\fonts\\DM-Sans-OFL.txt",
+      "status": 200,
+      "bytes": 4482,
+      "content_type": "application/octet-stream",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\fonts\\space-grotesk-500.ttf",
+      "status": 200,
+      "bytes": 69416,
+      "content_type": "application/octet-stream",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\fonts\\space-grotesk-700.ttf",
+      "status": 200,
+      "bytes": 69308,
+      "content_type": "application/octet-stream",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\fonts\\Space-Grotesk-OFL.txt",
+      "status": 200,
+      "bytes": 4495,
+      "content_type": "application/octet-stream",
       "exact_content": true
     }
   ],

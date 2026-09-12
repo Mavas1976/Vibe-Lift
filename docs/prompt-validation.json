@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": 368,
+  "prompts": 47,
+  "coverage": [
+    "Complete project and step input",
+    "Required fields and empty input",
+    "Tool selection",
+    "Isolation between steps",
+    "Storage restore, rejection and clear",
+    "Explicit push vs local commit",
+    "HTML escaping",
+    "General download"
+  ],
+  "browser_qa": false
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" fill="none">
+  <defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#deded8" stroke-width=".8"/></pattern></defs>
+  <path fill="#f4f4ef" d="M0 0h640v560H0z"/>
+  <path fill="url(#grid)" d="M0 0h640v560H0z"/>
+  <circle cx="334" cy="273" r="190" stroke="#d1d2ca"/>
+  <path d="M68 470h504" stroke="#bbbdb3"/>
+  <path d="M118 432 486 64M344 64h142v142" stroke="#ee522b" stroke-width="49" stroke-linejoin="miter"/>
+  <g transform="translate(49 325)">
+    <path d="M8 8h161v151H8z" fill="#20211f"/>
+    <path d="M0 0h161v151H0z" fill="#fff" stroke="#20211f" stroke-width="2"/>
+    <path d="M0 35h161" stroke="#20211f"/>
+    <text x="14" y="23" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#20211f">01 / IDEE</text>
+    <path d="m22 72 10 10 19-22M65 73h68M22 111h111M22 126h75" stroke="#20211f" stroke-width="3"/>
+    <path d="M64 86h53" stroke="#b4b5ad" stroke-width="3"/>
+  </g>
+  <g transform="translate(235 223)">
+    <path d="M8 8h168v161H8z" fill="#20211f"/>
+    <path d="M0 0h168v161H0z" fill="#fff" stroke="#20211f" stroke-width="2"/>
+    <path d="M0 35h168" stroke="#20211f"/>
+    <text x="14" y="23" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#20211f">02 / ONTWERP</text>
+    <path d="M15 52h138v23H15zM15 85h61v59H15zM87 85h66v59H87z" fill="#f1f1ec" stroke="#20211f"/>
+    <path d="M25 97h40M25 107h29M25 134h25" stroke="#20211f" stroke-width="3"/>
+    <path d="m101 130 31-32m-24 0h24v24" stroke="#ee522b" stroke-width="8"/>
+  </g>
+  <g transform="translate(421 106)">
+    <path d="M8 8h172v178H8z" fill="#20211f"/>
+    <path d="M0 0h172v178H0z" fill="#fff" stroke="#20211f" stroke-width="2"/>
+    <path d="M0 35h172" stroke="#20211f"/>
+    <text x="14" y="23" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#20211f">03 / LIVE</text>
+    <path d="M14 50h144v112H14z" fill="#ee522b"/>
+    <path d="M29 67h54M125 67h17" stroke="#20211f" stroke-width="3"/>
+    <text x="28" y="95" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#20211f">Jouw idee.</text>
+    <text x="28" y="119" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#20211f">Nu online.</text>
+    <path d="M29 135h63v12H29z" fill="#20211f"/>
+  </g>
+  <path d="M50 45h25M62.5 32.5v25M558 443h25M570.5 430.5v25" stroke="#20211f" stroke-width="2"/>
+  <text x="49" y="527" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" fill="#575952">VIBE LIFT / BOUW STAP VOOR STAP</text>
+</svg>
