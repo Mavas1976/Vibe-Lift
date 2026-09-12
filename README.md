@@ -53,6 +53,24 @@ Dit is een statische site. `dist/` bevat de daadwerkelijke bronbestanden die wor
 
 Geen appdatabase, accounts, analytics, AI-API of externe bibliotheken. Sites verzorgt de toegangslaag buiten deze applicatie. De site kopieert alleen op verzoek tekst naar het klembord; opdrachten en publicaties voor leerlingprojecten worden niet vanuit deze site uitgevoerd.
 
+### Railway
+
+Het bestand `Staticfile` in de repositoryroot laat Railpack deze site herkennen en wijst `dist/` aan als de map die Caddy moet serveren. Er is geen buildstap, `package.json` of `start.sh` nodig. Caddy gebruikt de poort uit Railway's `PORT`-variabele. De navigatie gebruikt URL-fragmenten (`#stap/1`), dus `index_fallback` blijft uit en ontbrekende bestanden geven een 404.
+
+Gebruik in Railway de volgende instellingen:
+
+- **Root Directory:** de repositoryroot (`/`), waar `Staticfile` naast `dist/` staat. Alleen als deze hele projectmap in een grotere repository staat, kies je die submap, bijvoorbeeld `/site`.
+- **Builder:** Railpack.
+- **Build Command** en **Start Command:** laat eventuele eigen overrides leeg; Railpack stelt de statische server in.
+- **Variables:** verwijder een eventuele afwijkende `RAILPACK_STATIC_FILE_ROOT`-waarde, omdat die voorrang heeft op `Staticfile`.
+- **Healthcheck Path:** `/health` als je een healthcheck wilt instellen.
+
+Zet de gewijzigde bestanden op de gekoppelde GitHub-branch en laat Railway die nieuwe commit deployen. Opnieuw deployen van de oude commit bevat de reparatie niet. De fout `Railpack could not determine how to build the app` ontstond doordat alleen `dist/index.html` aanwezig was en Railpack geen statische root kon bepalen.
+
+De Railway-publicatie gebruikt de toegangsinstellingen van Railway; de eigenaarstoegang van Sites geldt daar niet automatisch. `scripts/serve.mjs` is uitsluitend de lokale previewserver.
+
+Bron: [Railpack — Static Sites](https://railpack.com/languages/staticfile/).
+
 ## Documentatie
 
 - `docs/UITBREIDINGSPLAN.md`: analyse, eisen en afwegingen voor toolhulp, SEO en gewichtloosheid.
