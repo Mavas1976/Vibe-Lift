@@ -8,7 +8,7 @@ import {prompts} from '../dist/prompts.js';
 import {tools,lessonTools} from '../dist/tools.js';
 import {seoLessons,seoInBuild} from '../dist/seo.js';
 import {stepPrompts} from '../dist/prompt-config.js';
-import {draftStore,composePrompt,getPrompt,allPromptKeys,commandOptions} from '../dist/prompt-workbench.js';
+import {draftStore,composePrompt,getPrompt,allPromptKeys,commandOptions,templatePrompt} from '../dist/prompt-workbench.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const output=path.join(root,'dist');
@@ -53,12 +53,12 @@ for(const lesson of lessons) {
   verify(lesson.term.length===2 && lesson.term.every(Boolean),`Lesson ${lesson.id}: glossary`);
 }
 const normalizedSource=source.replace(/\r\n/g,'\n');
-for(const prompt of prompts.filter(p=>p.id<=28)) {
+for(const prompt of prompts) {
   const heading=new RegExp('(?:\\*\\*|### )Opdracht '+String(prompt.id).padStart(2,'0')+' [—–-]');
   const start=normalizedSource.search(heading);
   verify(start>=0,`Source contains prompt ${prompt.id}`);
-  const original=/```text\n([\s\S]*?)\n```/.exec(normalizedSource.slice(start))?.[1];
-  verify(original===prompt.text,`Prompt ${prompt.id} exactly matches the source (normalized line endings)`);
+  const original=/``````text\n([\s\S]*?)\n``````/.exec(normalizedSource.slice(start))?.[1];
+  verify(original===templatePrompt(prompt.id),`Prompt ${prompt.id} exactly matches the complete composer (normalized line endings)`);
 }
 
 // In-memory renderer contract tests: no browser, screenshots or DOM automation.

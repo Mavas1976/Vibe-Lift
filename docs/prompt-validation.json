@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "checks": 368,
+  "checks": 369,
   "prompts": 47,
   "coverage": [
     "Complete project and step input",

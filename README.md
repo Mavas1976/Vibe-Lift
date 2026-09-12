@@ -22,6 +22,7 @@ De lokale server luistert alleen op `127.0.0.1:4173`. Dit lokale adres is geen o
 - `dist/project-guide.js`: gedeelde mapinstructie, startopdracht en afspraken over lezen en opslaan.
 - `dist/app.js`: weergaven, gereedschappen en navigatie.
 - `dist/prompt-config.js`: hoofd- en extra opdrachten per stap, juiste AI-tools en invulvelden.
+- `dist/prompt-contracts.js`: versie 2.0 van de 47 Markdown-contracten, met projectrootbestandsnaam, rol, bronketen, inhoud en acceptatiecontrole.
 - `dist/prompt-workbench.js`: samenstellen, valideren, kopiëren en tijdelijk bewaren van invoer.
 - `dist/prompts.css`: invulcomponenten; de merkstijl wordt aangevuld in lift.css.
 - `dist/styles.css` en `dist/lift.css`: basisstijl en huidige Vibe Lift-vormgeving.
@@ -29,12 +30,14 @@ De lokale server luistert alleen op `127.0.0.1:4173`. Dit lokale adres is geen o
 - `dist/seo.js`: vijf SEO-lessen, instellingen, bronnen en SEO-bouwafspraken.
 - `dist/air.js`: eigen decoratief deeltjesveld, cursorrespons en pauzeren.
 - `dist/prompts.js`: leidende bron voor 42 algemene opdrachten, rollen en verwachte resultaten.
-- `dist/downloads/handboek.md` en `opdrachten.md`: lezerseditie en algemene download met 47 invulbare opdrachten. Werk prompts in de bronmodules bij en synchroniseer met `node scripts/sync-prompts.mjs`. Privébronnen blijven buiten dist/.
+- `dist/downloads/handboek.md` en `opdrachten.md`: lezerseditie en algemene download met 47 invulbare opdrachten. Werk prompts in de bronmodules bij en synchroniseer beide met `node scripts/update-guide.mjs`; `sync-prompts.mjs` vernieuwt alleen opdrachten.md. Privébronnen blijven buiten dist/.
 - `dist/assets/`: originele illustraties en favicon.
 
 Iedere les moet de vaste inhoudsvelden blijven bevatten. Genereer na inhoudswijzigingen het volledige handboek opnieuw met `node scripts/update-guide.mjs`. Het handboek gebruikt dezelfde lessen, voorbeelden, mapgids, tools, SEO en opdrachten als de site. Deze opdracht synchroniseert ook de invulbare opdrachtendownload. Pas downloads niet handmatig aan.
 
-Een opdracht-ID heeft precies één thuisstap in `stepPrompts`. De composer combineert de algemene instructie, gekozen AI-tool, gedeelde projectcontext en stapinput. GitHub-koppelen en pushen zijn compacte opdrachten. Instellingen blijven uitleg. `extract_prompts.py` is alleen nog een compatibiliteitsingang voor synchroniseren; het overschrijft de bibliotheek niet.
+Een opdracht-ID heeft precies één thuisstap in `stepPrompts`. De composer combineert het taakdoel, gekozen AI-tool, Markdown-contract, projectcontext en stapinput. Alle generators, inclusief GitHub en SEO, leveren één primair .md-bestand voor de projectroot. Ontwerpen en codewijzigingen blijven waar nodig onderdeel van de taak. De startopdracht levert START-HIER.md. Downloads gebruiken dezelfde volledige composer; er staat geen tweede verkorte promptvariant in het handboek. Instellingen blijven uitleg. `extract_prompts.py` is alleen nog een compatibiliteitsingang voor synchroniseren.
+
+Actuele stapdocumenten staan naast START-HIER.md. Bestaande bestanden in oude submappen worden niet automatisch verplaatst; de gekozen versie wordt eerst vastgesteld. Schermen en teksten staan samen in schermen.md, ontwerpwijzigingen werken ontwerp.md bij en testplan.md blijft gescheiden van bevindingen.md. De website genereert prompts, geen AI-antwoorden: de download-/schrijfmogelijkheid van de gekozen AI-tool bepaalt of het document als bestand of als volledige Markdown-tekst wordt aangeboden.
 
 ## Controleren
 
@@ -44,6 +47,7 @@ node --check dist/content.js
 node --check dist/prompts.js
 node scripts/validate.mjs
 node scripts/check-prompt-workbench.mjs
+node scripts/check-prompt-contracts.mjs
 node scripts/check-editorial.mjs
 node scripts/check-air.mjs
 node scripts/check-http.mjs
@@ -91,6 +95,8 @@ Bron: [Railpack — Static Sites](https://railpack.com/languages/staticfile/).
 - `docs/PROMPT_INTEGRATIE_PLAN.md`: analyse, toolroutering, keuzes en verificatie van de invulbare opdrachten.
 - `docs/TEKSTREVIEW_SPOS.md`: tekst- en stappenanalyse, projectmapafspraken, broncontrole en grenzen van de toetsing.
 - `docs/prompt-validation.json`: controles van invoer, kopiëren, opslag en GitHub-opdrachten.
+- `docs/PROMPT_AUDIT_SPOS_2.md`: audit van alle generators, bevindingen, stapmatrix en grenzen van de verificatie.
+- `docs/prompt-contract-validation.json`: scenario’s en controles per prompt, inhoudshashes en expliciete NOT_TESTED-status voor daadwerkelijke modeluitvoering.
 - `docs/DESIGN_SPOS.md`: gezamenlijke visuele ontwerpverfijning.
 
 - `docs/UITBREIDINGSPLAN.md`: analyse, eisen en afwegingen voor toolhulp, SEO en gewichtloosheid.

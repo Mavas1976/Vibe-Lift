@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T13:20:50.955Z",
+  "generated_at": "2026-09-12T13:32:20.056Z",
   "base_url": "http://127.0.0.1:4173",
   "assets": [
     {
@@ -20,14 +20,14 @@
     {
       "file": "content.js",
       "status": 200,
-      "bytes": 45984,
+      "bytes": 46120,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "index.html",
       "status": 200,
-      "bytes": 5285,
+      "bytes": 5271,
       "content_type": "text/html; charset=utf-8",
       "exact_content": true
     },
@@ -39,30 +39,44 @@
       "exact_content": true
     },
     {
+      "file": "og-vibe-lift-logo-v2.png",
+      "status": 200,
+      "bytes": 14470,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
       "file": "og.png",
       "status": 200,
-      "bytes": 485135,
+      "bytes": 14470,
       "content_type": "image/png",
       "exact_content": true
     },
     {
       "file": "project-guide.js",
       "status": 200,
-      "bytes": 4372,
+      "bytes": 5002,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "prompt-config.js",
       "status": 200,
-      "bytes": 12122,
+      "bytes": 12320,
+      "content_type": "text/javascript; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "prompt-contracts.js",
+      "status": 200,
+      "bytes": 25605,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "prompt-workbench.js",
       "status": 200,
-      "bytes": 20211,
+      "bytes": 23237,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -76,7 +90,7 @@
     {
       "file": "prompts.js",
       "status": 200,
-      "bytes": 24846,
+      "bytes": 16621,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -90,7 +104,7 @@
     {
       "file": "seo.js",
       "status": 200,
-      "bytes": 22059,
+      "bytes": 20514,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -111,7 +125,7 @@
     {
       "file": "tools.js",
       "status": 200,
-      "bytes": 15178,
+      "bytes": 15338,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -146,14 +160,14 @@
     {
       "file": "downloads\\handboek.md",
       "status": 200,
-      "bytes": 99156,
+      "bytes": 295592,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "downloads\\opdrachten.md",
       "status": 200,
-      "bytes": 101032,
+      "bytes": 223563,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     },

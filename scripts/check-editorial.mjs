@@ -18,11 +18,11 @@ const state=normalizeDraft(null);state.project.path='C:/Projecten/TEST-ONLY';
 for(const key of allPromptKeys){
   const p=getPrompt(key),text=composePrompt(key,state);
   check(text.includes(state.project.path),`${key}: project folder travels with the task`);
-  if(p.config.tools[0]==='antigravity'&&!['41','42'].includes(key))check(text.includes(readFirstInstruction),`${key}: builder reads actual project before working`);
+  if(p.config.tools[0]==='antigravity')check(text.includes(readFirstInstruction),`${key}: builder reads actual project before working`);
   if(['chatgpt','claude'].includes(p.config.tools[0]))check(text.includes(saveOutputInstruction),`${key}: chat output must be saved explicitly`);
 }
 check(stepPrompts[7].main[0]===9,'Read/analysis task precedes GitHub setup');
-check(lessons.every(l=>/0[2-6]-/.test(l.output)),'Every lesson names a concrete project folder for its result');
+check(lessons.every(l=>/\.md\b/.test(l.output)&&/projectroot/.test(l.output)),'Every lesson names a Markdown output in the project root');
 const guide=fs.readFileSync(new URL('../dist/downloads/handboek.md',import.meta.url),'utf8');
 const download=fs.readFileSync(new URL('../dist/downloads/opdrachten.md',import.meta.url),'utf8');
 check(guide.includes(projectSetupPrompt)&&download.includes(projectSetupPrompt),'Both downloads contain the same setup task');

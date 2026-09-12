@@ -9,7 +9,7 @@ export const seoLessons = [
       "claude"
     ],
     "input": "Je doelgroep, aanbod, onderzoek en bestaande paginalijst.",
-    "output": "02-plan/seo-plan.md",
+    "output": "seo-plan.md in de projectroot",
     "flow": [
       "Vraag van een bezoeker",
       "Passende pagina",
@@ -31,7 +31,7 @@ export const seoLessons = [
       ],
       [
         "Bewaar het plan en geef het door",
-        "Zet per pagina de zoekvraag, het webadres, titel, beschrijving, inhoud en links naar volgende pagina’s in 02-plan/seo-plan.md. Geef dit bestand bij stap 7 aan Antigravity. Werk een bestaand plan bij in plaats van een tweede te maken."
+        "Zet per pagina de zoekvraag, het webadres, titel, beschrijving, inhoud en links naar volgende pagina’s in seo-plan.md. Geef dit bestand bij stap 7 aan Antigravity. Werk een bestaand plan bij in plaats van een tweede te maken."
       ]
     ],
     "settingsTitle": "Voorbeeld · Studio Maan in een zoekresultaat",
@@ -59,7 +59,7 @@ export const seoLessons = [
       "Titel, hoofdkop en volgende actie passen bij dezelfde bedoeling.",
       "De belangrijkste pagina’s zijn via gewone links bereikbaar."
     ],
-    "prompt": "Maak een SEO-plan op basis van mijn doelgroep, aanbod en onderzoek. Geef per openbare pagina de vraag van de bezoeker, het webadres, titel, korte beschrijving, hoofdkop, eigen inhoud en links naar volgende pagina’s. Benoem wat nog een aanname is. Verzin geen zoekvolumes of beloofde positie in Google. Lever 02-plan/seo-plan.md.",
+    "prompt": "Werk de zoekvraag en inhoud van de opgegeven openbare pagina uit tot een SEO-plan. Baseer het plan op mijn aanbod en doelgroep en stem het af met de bestaande schermen en teksten.",
     "sources": [
       [
         "Google: SEO voor beginners",
@@ -81,7 +81,7 @@ export const seoLessons = [
       "pagespeed"
     ],
     "input": "seo-plan.md, de pagina’s die openbaar mogen worden en het bouwplan.",
-    "output": "05-tests/seo-check.md",
+    "output": "seo-bouwcontrole.md in de projectroot",
     "flow": [
       "SEO-plan",
       "Bouwafspraken",
@@ -91,7 +91,7 @@ export const seoLessons = [
     "actions": [
       [
         "Geef het SEO-plan aan Antigravity",
-        "Open je projectmap en gebruik de promptgenerator hieronder. Laat eerst 02-plan/seo-plan.md lezen. Vraag per openbare pagina een eigen webadres dat je rechtstreeks kunt openen. Een wissel achter een # is onvoldoende voor afzonderlijke zoekpagina’s."
+        "Open je projectmap en gebruik de promptgenerator hieronder. Laat eerst seo-plan.md lezen. Vraag per openbare pagina een eigen webadres dat je rechtstreeks kunt openen. Een wissel achter een # is onvoldoende voor afzonderlijke zoekpagina’s."
       ],
       [
         "Laat de pagina-instellingen invullen",
@@ -103,7 +103,7 @@ export const seoLessons = [
       ],
       [
         "Controleer de snelheid en bewaar het rapport",
-        "Open PageSpeed Insights, plak een openbaar pagina-adres en start de analyse. Geef de uitkomst aan Antigravity en vraag welke problemen eerst moeten worden opgelost. Voor een besloten testversie laat je een lokale controle doen. Bewaar echte uitkomsten en niet uitgevoerde controles in 05-tests/seo-check.md."
+        "Open PageSpeed Insights, plak een openbaar pagina-adres en start de analyse. Geef de uitkomst aan Antigravity en vraag welke problemen eerst moeten worden opgelost. Voor een besloten testversie laat je een lokale controle doen. Bewaar echte uitkomsten en niet uitgevoerde controles in seo-bouwcontrole.md."
       ]
     ],
     "settingsTitle": "Laat deze begrippen uitleggen",
@@ -135,7 +135,7 @@ export const seoLessons = [
       "Sitemap, canonical en indexatie-instellingen passen bij het echte live-domein.",
       "Mobiele werking, snelheid en de meetafspraak zijn gecontroleerd en vastgelegd."
     ],
-    "prompt": "Lees 02-plan/seo-plan.md en het bestaande bouwplan. Leg uit welke technische SEO-onderdelen nodig zijn: eigen openbare pagina-adressen, leesbare inhoud, unieke titels en beschrijvingen, voorkeursadressen, sitemap, zoekmachine-instellingen, foutpagina’s, mobiel en snelheid. Behoud de toegang tot privépagina’s. Werk 04-bouw/bouwplan.md bij. Bouw alleen wat is afgesproken en waarvoor een bouwopdracht bestaat. Controleer de gemaakte onderdelen en bewaar bewijs in 05-tests/seo-check.md. Meld niet uitgevoerde controles. Voeg Analytics alleen toe als dat afzonderlijk is afgesproken.",
+    "prompt": "Bouw of herstel de afgesproken technische SEO-basis in de bestaande website. Controleer de huidige techniek en gebruik actuele officiële documentatie waar instellingen of gedrag onzeker zijn.",
     "sources": [
       [
         "Google: JavaScript en SEO",
@@ -165,7 +165,7 @@ export const seoLessons = [
       "antigravity"
     ],
     "input": "Je openbare HTTPS-adres en toegang tot je domeininstellingen of websitebestanden.",
-    "output": "06-overdracht/search-console.md met de instellingen en controle-uitkomsten",
+    "output": "search-console.md met de instellingen en controle-uitkomsten in de projectroot",
     "flow": [
       "Eigendom aantonen",
       "Sitemap indienen",
@@ -187,7 +187,7 @@ export const seoLessons = [
       ],
       [
         "Inspecteer een kernpagina",
-        "Plak de volledige pagina-URL in URL-inspectie. Vergelijk de indexstatus met Live URL testen. Los blokkades of fouten op en vraag daarna zo nodig indexering aan. Bekijk later Pagina’s en Prestaties; nieuwe data verschijnt niet altijd direct. Bewaar de gekozen verificatiemethode, sitemap en echte uitkomsten in 06-overdracht/search-console.md."
+        "Plak de volledige pagina-URL in URL-inspectie. Vergelijk de indexstatus met Live URL testen. Los blokkades of fouten op en vraag daarna zo nodig indexering aan. Bekijk later Pagina’s en Prestaties; nieuwe data verschijnt niet altijd direct. Bewaar de gekozen verificatiemethode, sitemap en echte uitkomsten in search-console.md."
       ]
     ],
     "settingsTitle": "Kies de verificatie die je kunt uitvoeren",
@@ -215,7 +215,7 @@ export const seoLessons = [
       "De sitemap is opgehaald en bevat de juiste openbare URL’s.",
       "Je kunt de uitkomst van URL-inspectie uitleggen: live bereikbaar is niet hetzelfde als al geïndexeerd."
     ],
-    "prompt": "Help mij Search Console instellen voor [echte openbare website]. Vraag welke toegang ik heb en leg Domein versus URL-prefix uit. Laat mij zelf aanmelden en de echte verificatiewaarde ophalen. Plaats alleen het afgesproken verificatiebestand of de meta-tag als dat mijn gekozen methode is. Controleer sitemap, bereikbaarheid, canonical en indexatieblokkades. Begeleid URL-inspectie en leg echte uitkomsten vast. Verzin geen verificatiecode en claim geen indexatie of rangpositie zonder bewijs.",
+    "prompt": "Plaats het echte aangeleverde Google-verificatiebestand of de exacte meta-tag in de bedoelde website. Beperk deze opdracht tot plaatsing en controle; de gebruiker voltooit de verificatie zelf in Search Console.",
     "sources": [
       [
         "Google: site-eigendom verifiëren",
@@ -241,7 +241,7 @@ export const seoLessons = [
       "antigravity"
     ],
     "input": "Een meetdoel, je openbare website, Google-account en afspraken over gegevens en toestemming.",
-    "output": "06-overdracht/meetplan.md + 05-tests/analytics-check.md",
+    "output": "analytics.md in de projectroot",
     "flow": [
       "Meetdoel",
       "Property & webstream",
@@ -255,7 +255,7 @@ export const seoLessons = [
       ],
       [
         "Kies welke handelingen je meet",
-        "Noteer je meetdoel in 06-overdracht/meetplan.md. Begin met paginaweergaven en één echt ontvangen aanvraag. Laat de aanvraag tellen als generate_lead; dat is de naam van die meetgebeurtenis. Een klik op Versturen is nog geen ontvangen aanvraag."
+        "Noteer je meetdoel in analytics.md. Begin met paginaweergaven en één echt ontvangen aanvraag. Laat de aanvraag tellen als generate_lead; dat is de naam van die meetgebeurtenis. Een klik op Versturen is nog geen ontvangen aanvraag."
       ],
       [
         "Laat Antigravity de meting toevoegen",
@@ -263,7 +263,7 @@ export const seoLessons = [
       ],
       [
         "Controleer de meting zelf",
-        "Open de live-site, geef toestemming en verstuur één testaanvraag. Kijk in Analytics bij Realtime; laat Antigravity zo nodig DebugView gebruiken voor details. Je verwacht één generate_lead na ontvangst. Test ook een fout en het weigeren of intrekken van toestemming. Laat het bewijs in 05-tests/analytics-check.md bewaren. Markeer generate_lead bij Gebeurtenissen als belangrijke gebeurtenis zodra het correct werkt."
+        "Open de live-site, geef toestemming en verstuur één testaanvraag. Kijk in Analytics bij Realtime; laat Antigravity zo nodig DebugView gebruiken voor details. Je verwacht één generate_lead na ontvangst. Test ook een fout en het weigeren of intrekken van toestemming. Laat het bewijs in analytics.md bewaren. Markeer generate_lead bij Gebeurtenissen als belangrijke gebeurtenis zodra het correct werkt."
       ]
     ],
     "settingsTitle": "Voorbeeldinstellingen · bespreek ze met je bouwer",
@@ -299,7 +299,7 @@ export const seoLessons = [
       "Eén echte testhandeling geeft één correct event; een fout geeft geen succes-event.",
       "Weigeren en intrekken zijn gecontroleerd; er gaan geen onbedoelde persoonsgegevens mee."
     ],
-    "prompt": "Richt GA4 in voor mijn website met de echte G-ID uit mijn input. Lees eerst 06-overdracht/meetplan.md. Meet page_view bij een paginaweergave en generate_lead alleen na bevestigde ontvangst van een aanvraag. Laad de Analytics-tag pas na toestemming voor analytics. Laat weigeren en intrekken werken. Gebruik één installatiepad en voorkom dubbel tellen. Stuur geen persoonsgegevens mee in webadressen of meetgegevens. Laat mij de juiste property en webstream controleren. Test paginaweergave, één geslaagde aanvraag, een mislukte aanvraag, weigeren en intrekken. Bewaar de echte uitkomsten in 05-tests/analytics-check.md. Benoem wat niet is getest.",
+    "prompt": "Implementeer de afgesproken GA4-meting met de echte meet-ID in de bestaande website. Inspecteer eerst aanwezige tags en de meet- en toestemmingsafspraak; ontbreekt een essentiële keuze, laat de implementatie geblokkeerd totdat die is ingevuld.",
     "sources": [
       [
         "Google: GA4 instellen",
@@ -335,7 +335,7 @@ export const seoLessons = [
       "antigravity"
     ],
     "input": "Geverifieerde Search Console-property, werkende Analytics-meting en voldoende eigen gegevens.",
-    "output": "05-tests/meetnotitie.md + één volgende taak in 04-bouw/bouwplan.md",
+    "output": "groeiplan.md met één volgende bouwopdracht in de projectroot",
     "flow": [
       "Vindbaarheid",
       "Bezoek",
@@ -353,11 +353,11 @@ export const seoLessons = [
       ],
       [
         "Laat ChatGPT of Claude de informatie ordenen",
-        "Gebruik de promptgenerator en voeg de relevante exports en reacties toe. Vraag wat opvalt, wat onzeker is en welke ene verbetering het meeste onderzoek verdient. Laat AI geen ontbrekende cijfers invullen of oorzaken als bewezen presenteren. Bewaar het voorstel in 05-tests/meetnotitie.md."
+        "Gebruik de promptgenerator en voeg de relevante exports en reacties toe. Vraag wat opvalt, wat onzeker is en welke ene verbetering het meeste onderzoek verdient. Laat AI geen ontbrekende cijfers invullen of oorzaken als bewezen presenteren. Bewaar het voorstel in groeiplan.md."
       ],
       [
         "Geef één wijziging aan Antigravity",
-        "Beoordeel het voorstel en zet de gekozen taak in 04-bouw/bouwplan.md. Laat Antigravity het plan en de meetnotitie eerst lezen. Laat de wijziging bouwen en testen volgens de eerdere stappen. Noteer wanneer je opnieuw kijkt en vergelijk dan een passende periode."
+        "Beoordeel het voorstel en zet de gekozen taak in bouwplan.md. Laat Antigravity het plan en de meetnotitie eerst lezen. Laat de wijziging bouwen en testen volgens de eerdere stappen. Noteer wanneer je opnieuw kijkt en vergelijk dan een passende periode."
       ]
     ],
     "settingsTitle": "Optioneel: beide Google-tools koppelen",
@@ -389,7 +389,7 @@ export const seoLessons = [
       "Je houdt klikken, websitebezoek en werkelijk ontvangen aanvragen uit elkaar.",
       "De gekozen verbetering en het controlemoment staan in je bouwplan."
     ],
-    "prompt": "Analyseer mijn echte zoekgegevens, eventuele Analytics-metingen en bezoekersreacties. Controleer periode, betekenis en beperkingen van de cijfers. Scheid vindbaarheid, klikken, bezoek en ontvangen aanvragen. Benoem onzekerheid bij kleine aantallen en verzin geen oorzaken. Stel één verbetering voor met een verwachting en controlemoment. Lever 05-tests/meetnotitie.md met een korte bouwopdracht die ik na mijn controle zelf aan Antigravity geef. Wijzig zelf geen code.",
+    "prompt": "Analyseer de aangeleverde Search Console- en Analytics-gegevens en echte gebruikersfeedback. Kies één onderbouwde volgende verbetering en neem een kopieerbare bouwopdracht voor Antigravity op in het Markdown-document. Voer zelf geen codewijzigingen uit.",
     "sources": [
       [
         "Google: Search Console koppelen aan Analytics",
@@ -404,8 +404,8 @@ export const seoLessons = [
 ];
 export const seoInBuild = {
   "2": "Onderzoek ook welke vragen mensen in Google stellen. Bewaar aannames apart van echte zoekgegevens.",
-  "5": "Bewaar de vraag van je bezoeker, het pagina-adres, de titel en beschrijving in 02-plan/seo-plan.md. SEO-les 1 helpt je hierbij.",
-  "7": "Laat Antigravity 02-plan/seo-plan.md lezen. Neem vindbaarheid op in het bouwplan. Leg vast wat openbaar mag; bezoekersmeting is een aparte keuze.",
+  "5": "Bewaar de vraag van je bezoeker, het pagina-adres, de titel en beschrijving in seo-plan.md. SEO-les 1 helpt je hierbij.",
+  "7": "Laat Antigravity seo-plan.md lezen. Neem vindbaarheid op in het bouwplan. Leg vast wat openbaar mag; bezoekersmeting is een aparte keuze.",
   "8": "Laat de afgesproken paginatitels, webadressen en vindbaarheid meebouwen. Voeg bezoekersmeting alleen toe als je die hebt afgesproken.",
   "11": "Laat de openbare pagina’s, snelheid en instellingen voor zoekmachines controleren. Heb je Analytics ingericht? Controleer dan ook de meting en toestemming.",
   "12": "Laat Antigravity het echte live-adres verwerken in de pagina-instellingen en sitemap. Gebruik daarna SEO-les 3 voor Search Console."

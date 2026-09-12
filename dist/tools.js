@@ -113,7 +113,7 @@ export const lessonTools = {
         "Alternatief voor ChatGPT: gebruik dezelfde opdracht en notities."
       ]
     ],
-    "handoff": "Bewaar: 02-plan/projectbrief.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: projectbrief.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "2": {
     "intro": "Kies ChatGPT óf Claude en zet zoeken op internet aan. Spreek zelf je doelgroep.",
@@ -127,7 +127,7 @@ export const lessonTools = {
         "Alternatief: gebruik Search. Kies Deep research als je vraag meerdere bronnen en vergelijkingen vereist."
       ]
     ],
-    "handoff": "Bewaar: 02-plan/onderzoek.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: onderzoek.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "3": {
     "intro": "Gebruik ChatGPT of Claude voor het aanbod. Jij voert de praktijktoets uit.",
@@ -141,7 +141,7 @@ export const lessonTools = {
         "Alternatief: orden de echte reacties en benoem wat je wel en niet kunt concluderen."
       ]
     ],
-    "handoff": "Bewaar: 02-plan/propositie.md + 02-plan/praktijktoets.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: propositie.md + praktijktoets.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "4": {
     "intro": "Gebruik ChatGPT of Claude om handelingen en foutgevallen uit te schrijven.",
@@ -155,21 +155,21 @@ export const lessonTools = {
         "Alternatief: gebruik dezelfde opdracht en documenten."
       ]
     ],
-    "handoff": "Bewaar: 02-plan/flows.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: flows.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "5": {
     "intro": "Gebruik ChatGPT of Claude voor pagina’s, echte teksten en het SEO-plan.",
     "items": [
       [
         "chatgpt",
-        "Maak schermen.md, teksten.md en seo-plan.md met de hoofdopdracht."
+        "Maak schermen.md met alle teksten en de SEO-basis met de hoofdopdracht."
       ],
       [
         "claude",
         "Alternatief: gebruik dezelfde input en controleer de teksten zelf."
       ]
     ],
-    "handoff": "Bewaar: 02-plan/schermen.md + 02-plan/teksten.md + 02-plan/seo-plan.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: schermen.md met teksten en SEO-basis in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "6": {
     "intro": "Plak de ontwerpopdracht rechtstreeks in Stitch. Je hoeft die niet eerst door een andere AI te laten herschrijven.",
@@ -183,7 +183,7 @@ export const lessonTools = {
         "Bij stap 7: lees de export en de ontwerpafspraken. Bouw nu nog niets."
       ]
     ],
-    "handoff": "Bewaar: 03-ontwerp/ met exports en ontwerpafspraken.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: ontwerp.md in de projectroot; exports in 03-ontwerp/. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "7": {
     "intro": "Open dezelfde projectmap in Antigravity. Laat eerst lezen en plannen; regel daarna GitHub.",
@@ -201,7 +201,7 @@ export const lessonTools = {
         "Laat bij het plan controleren hoe jouw site hier kan draaien en wat daarvoor nodig is."
       ]
     ],
-    "handoff": "Bewaar: 04-bouw/bouwplan.md + 04-bouw/architectuur.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar bouwplan.md en github-koppeling.md in de projectroot; architectuur.md is optioneel. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "8": {
     "intro": "Laat Antigravity één route bouwen. Controleer daarna zelf de werking.",
@@ -215,7 +215,7 @@ export const lessonTools = {
         "Laat alleen de afgesproken bestanden en gecontroleerde versie hier bewaren."
       ]
     ],
-    "handoff": "Bewaar: Projectcode + 05-tests/bouwcontrole.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: Projectcode + bouwcontrole.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "9": {
     "intro": "Laat Antigravity een startbestand maken. Probeer starten en stoppen zelf.",
@@ -229,7 +229,7 @@ export const lessonTools = {
         "Alleen als nodig: de omgeving die het JavaScript-project uitvoert. Laat installatie en versie controleren."
       ]
     ],
-    "handoff": "Bewaar: START_PROJECT.bat + 06-overdracht/startinstructie.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: START_PROJECT.bat + startinstructie.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "10": {
     "intro": "Jij test; Antigravity onderzoekt en herstelt de fouten die je doorgeeft.",
@@ -243,7 +243,7 @@ export const lessonTools = {
         "Laat Antigravity hiermee vaak gebruikte browserroutes automatisch testen. Je hoeft deze tool niet zelf te bedienen."
       ]
     ],
-    "handoff": "Bewaar: 05-tests/bevindingen.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: testplan.md en na herstel bevindingen.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "11": {
     "intro": "Laat Antigravity de laatste versie controleren. Beslis daarna of de site live mag.",
@@ -261,7 +261,7 @@ export const lessonTools = {
         "Plak een openbaar pagina-adres en start de analyse. Geef het rapport aan Antigravity."
       ]
     ],
-    "handoff": "Bewaar: 05-tests/releasecheck.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: releasecheck.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "12": {
     "intro": "Antigravity bewaart de versie op GitHub. Railway publiceert die versie.",
@@ -279,7 +279,7 @@ export const lessonTools = {
         "Koppel de repository, controleer instellingen en publiceer. Open de echte live-URL na een geslaagde deployment."
       ]
     ],
-    "handoff": "Bewaar: 06-overdracht/release.md met het echte live-adres. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar github-versie.md en release.md in de projectroot, met versiestatus en het echte live-adres. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "13": {
     "intro": "Laat Claude of ChatGPT een uitnodiging schrijven en echte reacties ordenen.",
@@ -297,7 +297,7 @@ export const lessonTools = {
         "Alleen als ingericht: bekijk of bezoekers de gewenste handeling afronden."
       ]
     ],
-    "handoff": "Bewaar: 02-plan/introductieplan.md + 05-tests/leersignalen.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: introductieplan.md + leersignalen.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   },
   "14": {
     "intro": "Laat Antigravity de overdracht bijwerken. Begin de volgende sessie met dezelfde projectmap.",
@@ -315,7 +315,7 @@ export const lessonTools = {
         "Gebruik echte zoekvragen en indexatieproblemen om een passende verbetering te kiezen."
       ]
     ],
-    "handoff": "Bewaar: 06-overdracht/overdracht.md + 06-overdracht/gebruikershandleiding.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
+    "handoff": "Bewaar: overdracht.md + gebruikershandleiding.md in de projectroot. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij."
   }
 };
 export const repositoryGuide = [

@@ -1,0 +1,1009 @@
+{
+  "status": "PASS",
+  "version": "2.0.0",
+  "checks": 3731,
+  "generators": 47,
+  "setup": 1,
+  "scenarios": [
+    "standard",
+    "existing",
+    "unicode",
+    "missing_source",
+    "conflicting",
+    "adversarial"
+  ],
+  "browser_qa": false,
+  "model_execution": "NOT_TESTED",
+  "limitations": [
+    "Static composition and mocked clipboard checks do not prove model compliance, file generation or Stitch capability.",
+    "No live ChatGPT, Claude, Stitch or Antigravity runs."
+  ],
+  "prompts": [
+    {
+      "key": "1",
+      "step": "Stap 1",
+      "title": "Maak je projectbrief",
+      "file": "projectbrief.md",
+      "role": "productbegeleider",
+      "inputs": [],
+      "sections": [
+        "Probleem en doelgroep",
+        "Eerste versie",
+        "Acceptatie"
+      ],
+      "acceptance": "De hoofdactie en acceptatievoorwaarden sluiten aan op hetzelfde probleem; houd de brief binnen ongeveer één pagina.",
+      "prompt_sha256": "91563e2ef89603e25cbd95c520db2655f062bccca8843832ff5bf70c1131ee32",
+      "characters": 3962,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "2",
+      "step": "Stap 2",
+      "title": "Onderzoek je probleem met bronnen",
+      "file": "onderzoek.md",
+      "role": "onderzoeker",
+      "inputs": [
+        "projectbrief.md"
+      ],
+      "sections": [
+        "Onderzoeksvraag en methode",
+        "Bewijs en alternatieven",
+        "Praktijkonderzoek"
+      ],
+      "acceptance": "Elke belangrijke conclusie is herleidbaar; geen verzonnen interviews, marktgetallen of zoekvolumes.",
+      "prompt_sha256": "ac30a05317ef0b5f0ee60e93070e35983e82752aa1e1336b0919b06d6026a0d5",
+      "characters": 4153,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "3",
+      "step": "Stap 3",
+      "title": "Schrijf een duidelijk aanbod",
+      "file": "propositie.md",
+      "role": "propositie- en tekstschrijver",
+      "inputs": [
+        "projectbrief.md",
+        "onderzoek.md"
+      ],
+      "sections": [
+        "Aanbod",
+        "Scope en belofte",
+        "Keuze voor de eerste versie"
+      ],
+      "acceptance": "De belofte past binnen de gekozen scope en heeft bewijs of een zichtbare onzekerheidsmarkering.",
+      "prompt_sha256": "24e0d33b05f29eb5011b440ed634f38bfac5a596cb5f0ecebfc323f68c4b56af",
+      "characters": 4112,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "4",
+      "step": "Stap 3",
+      "title": "Bereid een kleine praktijktoets voor",
+      "file": "praktijktoets.md",
+      "role": "gebruikersonderzoeker",
+      "inputs": [
+        "propositie.md",
+        "onderzoek.md"
+      ],
+      "sections": [
+        "Te toetsen aanname",
+        "Uitvoering en beslisregel",
+        "Reactieblad"
+      ],
+      "acceptance": "Een geplande toets is nergens als uitgevoerd gepresenteerd; de beslisregel staat vast vóór de resultaten.",
+      "prompt_sha256": "e8b44d002ab72a879573f7ccb20cb7e61ce9a56c47b12cc075ca56297fcd1b39",
+      "characters": 4215,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "5",
+      "step": "Stap 4",
+      "title": "Schrijf de bezoekersroute uit",
+      "file": "flows.md",
+      "role": "UX-ontwerper",
+      "inputs": [
+        "propositie.md",
+        "projectbrief.md"
+      ],
+      "sections": [
+        "Hoofdroute",
+        "Afwijkingen",
+        "Overdracht"
+      ],
+      "acceptance": "De route eindigt bij het echte gebruikersresultaat, inclusief ontvangst of verwerking achter de schermen.",
+      "prompt_sha256": "0f7cf5272b94bf9f1a7b11784fa8cfa28a6e3b16df3a57d92d27ddec55d2e11a",
+      "characters": 4179,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "6",
+      "step": "Stap 5",
+      "title": "Maak je schermenlijst en teksten",
+      "file": "schermen.md",
+      "role": "UX- en contentschrijver",
+      "inputs": [
+        "propositie.md",
+        "flows.md"
+      ],
+      "sections": [
+        "Schermenlijst",
+        "Volledige schermteksten",
+        "Openbare pagina’s en zoekvraag"
+      ],
+      "acceptance": "Elk routescherm heeft concrete tekst en toestanden; dit ene bestand vormt de inhoudelijke overdracht aan Stitch.",
+      "prompt_sha256": "7e7ae41159808a476d50b83565c148d0d75a2c6d0e55a0df091537e998e50a01",
+      "characters": 4330,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "7",
+      "step": "Stap 6",
+      "title": "Ontwerp je schermen in Stitch",
+      "file": "ontwerp.md",
+      "role": "interfaceontwerper",
+      "inputs": [
+        "schermen.md",
+        "flows.md"
+      ],
+      "sections": [
+        "Schermen en toestanden",
+        "Ontwerpafspraken",
+        "Overdracht aan de bouwer"
+      ],
+      "acceptance": "Ontwerp en tekst volgen dezelfde scherm-ID’s; een visueel ontwerp of export geldt niet als geteste website.",
+      "prompt_sha256": "413ed233eccc3ddf010e9f5697622e8c6cd5a3c60e6b8a30db1a4fb9a1752774",
+      "characters": 4432,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "8",
+      "step": "Stap 6",
+      "title": "Verbeter het ontwerp in Stitch",
+      "file": "ontwerp.md",
+      "role": "interfaceontwerper",
+      "inputs": [
+        "ontwerp.md",
+        "schermen.md"
+      ],
+      "sections": [
+        "Schermen en toestanden",
+        "Ontwerpafspraken",
+        "Overdracht aan de bouwer"
+      ],
+      "acceptance": "Alle feedback is verwerkt of beargumenteerd open; inhoud en niet geraakte schermen zijn behouden.",
+      "prompt_sha256": "e8db9a097c2e0461aec34ed99d14b78c8fc5071e14ddedda76484800cd15918d",
+      "characters": 4426,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "9",
+      "step": "Stap 7",
+      "title": "Lees de projectmap en maak het bouwplan",
+      "file": "bouwplan.md",
+      "role": "softwarearchitect",
+      "inputs": [
+        "projectbrief.md",
+        "propositie.md",
+        "flows.md",
+        "schermen.md",
+        "ontwerp.md",
+        "seo-plan.md"
+      ],
+      "sections": [
+        "Gelezen project en besluiten",
+        "Technische aanpak",
+        "Kleine bouwstappen"
+      ],
+      "acceptance": "Het plan is uitvoerbaar vanuit de beschikbare bestanden; er is nog geen code gebouwd of software geïnstalleerd.",
+      "prompt_sha256": "9635412d90b30e0bb288ed36b3f324bb252b332885ce6fd309a8381ac0c8d352",
+      "characters": 4765,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "10",
+      "step": "Stap 7",
+      "title": "Laat website, demo en inloggen aansluiten",
+      "file": "routecontrole.md",
+      "role": "ontwikkelaar en tester",
+      "inputs": [
+        "flows.md",
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Routekaart",
+        "Problemen en herstel",
+        "Hercontrole"
+      ],
+      "acceptance": "Controleer zowel toegestane als geweigerde toegang; ontbrekende demo of login is geen opdracht om die te bouwen.",
+      "prompt_sha256": "cb081a5aa8f0669df7700ad899914fd4b92b33564ebb40644eb9b5025d8081c7",
+      "characters": 4509,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "11",
+      "step": "Stap 8",
+      "title": "Bouw de eerste complete bezoekersroute",
+      "file": "bouwcontrole.md",
+      "role": "ontwikkelaar",
+      "inputs": [
+        "bouwplan.md",
+        "schermen.md",
+        "ontwerp.md",
+        "flows.md",
+        "seo-plan.md"
+      ],
+      "sections": [
+        "Gebouwde route",
+        "Controles",
+        "Lokaal gebruiken"
+      ],
+      "acceptance": "De hoofdactie komt aantoonbaar op de bedoelde plek aan; zonder uitvoering geen claim dat de route werkt.",
+      "prompt_sha256": "6887690db559fcc72c48a989ce0dd970a7e4e9b29352e606a163b45b0bc7f2f0",
+      "characters": 4628,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "12",
+      "step": "Stap 9",
+      "title": "Maak een eenvoudig startbestand",
+      "file": "startinstructie.md",
+      "role": "ontwikkelaar",
+      "inputs": [
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Vereisten en startbestand",
+        "Starten en stoppen",
+        "Startcontrole"
+      ],
+      "acceptance": "De starter stopt geen andere processen en bevat geen geheimen; een niet beschikbare OS-test blijft NIET GETEST.",
+      "prompt_sha256": "c3c7d45aaaeb164725b0e8395db8571d3f7d340da97becc40ee5fc62f5e3003b",
+      "characters": 4544,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "13",
+      "step": "Stap 9",
+      "title": "Open de huidige website lokaal",
+      "file": "lokale-sessie.md",
+      "role": "ontwikkelaar",
+      "inputs": [
+        "startinstructie.md"
+      ],
+      "sections": [
+        "Startpoging",
+        "Adres of fout",
+        "Volgende handeling"
+      ],
+      "acceptance": "Een genoemd adres is alleen als bereikbaar aangeduid na een echte controle; start geen tweede server als een passende al draait.",
+      "prompt_sha256": "8a7ac063c6a429b495bc693aa830c5569f1b716fc30b805f5bb01b1c5228f56f",
+      "characters": 4557,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "14",
+      "step": "Stap 10",
+      "title": "Bereid mijn test voor",
+      "file": "testplan.md",
+      "role": "testontwerper",
+      "inputs": [
+        "flows.md",
+        "bouwcontrole.md"
+      ],
+      "sections": [
+        "Testcontext",
+        "Testgevallen",
+        "Invulblad"
+      ],
+      "acceptance": "De gebruiker kan iedere test zelfstandig uitvoeren; voorbereiding overschrijft geen bestaande bevindingen.",
+      "prompt_sha256": "f4e689c6930dbadbdc15ecba6504a908e690bc0082dcc629d5be034fc952d6ce",
+      "characters": 4561,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "15",
+      "step": "Stap 10",
+      "title": "Herstel de fout die ik heb gevonden",
+      "file": "bevindingen.md",
+      "role": "ontwikkelaar en foutonderzoeker",
+      "inputs": [
+        "testplan.md",
+        "bevindingen.md"
+      ],
+      "sections": [
+        "Reproductie",
+        "Oorzaak en reparatie",
+        "Hertest"
+      ],
+      "acceptance": "Niet reproduceerbaar is geen opgelost probleem; de reparatie heeft een expliciete herteststatus.",
+      "prompt_sha256": "9f39ac47563f5f37e35e40386530a3d5ad530bc9854d00b30868e7af17d0e882",
+      "characters": 4639,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "16",
+      "step": "Stap 11",
+      "title": "Maak de pagina’s duidelijker",
+      "file": "ux-controle.md",
+      "role": "UX-ontwikkelaar",
+      "inputs": [
+        "schermen.md",
+        "ontwerp.md"
+      ],
+      "sections": [
+        "Waargenomen problemen",
+        "Aanpassingen",
+        "Controle"
+      ],
+      "acceptance": "Elke wijziging lost een beschreven gebruikersprobleem op zonder nieuwe functies toe te voegen.",
+      "prompt_sha256": "7433682f1f9c2c178e6968d4a408a78ee250823de208eaccce1f37a7a3de25dc",
+      "characters": 4556,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "17",
+      "step": "Stap 11",
+      "title": "Controleer de hele website vóór publicatie",
+      "file": "releasecheck.md",
+      "role": "releasetester",
+      "inputs": [
+        "bouwplan.md",
+        "flows.md",
+        "testplan.md",
+        "bevindingen.md"
+      ],
+      "sections": [
+        "Versie en scope",
+        "Testbewijs",
+        "Releaseadvies"
+      ],
+      "acceptance": "Geen GO zolang kritieke controles falen of niet zijn uitgevoerd; een testadvies is geen toestemming om te publiceren.",
+      "prompt_sha256": "1bedc4dfbcd0ef1cca2662cb10068a581c489ed305cdbb25d42fcc32d68e5d5f",
+      "characters": 4808,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "18",
+      "step": "Stap 11",
+      "title": "Maak een herhaalbare testopdracht",
+      "file": "testinstructie.md",
+      "role": "testontwikkelaar",
+      "inputs": [
+        "testplan.md",
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Teststarter",
+        "Uitvoering",
+        "Dekking en uitkomsten"
+      ],
+      "acceptance": "Controleer dat een falende test een foutcode oplevert en niet als geslaagde run verschijnt.",
+      "prompt_sha256": "13bac4d4d6f2d369719dd5f63b188b0a93d8b26054473e2d5c93c2b58c72ca51",
+      "characters": 4500,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "19",
+      "step": "Stap 12",
+      "title": "Maak de bestanden geschikt voor publicatie",
+      "file": "publicatiebestanden.md",
+      "role": "releaseontwikkelaar",
+      "inputs": [
+        "releasecheck.md"
+      ],
+      "sections": [
+        "Bestandsinventaris",
+        "Optimalisaties",
+        "Publicatiecontrole"
+      ],
+      "acceptance": "Geen geheimen in het rapport; herschrijf geen geschiedenis en verwijder geen originele bronnen met deze opdracht.",
+      "prompt_sha256": "d41dc7f32e4cdabf08dcaceb18c00958aa6837ce689941937a983108afcdcca3",
+      "characters": 4624,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "20",
+      "step": "Stap 12",
+      "title": "Zet de goedgekeurde versie op Railway",
+      "file": "release.md",
+      "role": "deploymentbegeleider",
+      "inputs": [
+        "releasecheck.md",
+        "github-versie.md",
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Releasevoorwaarden",
+        "Instellingen en uitvoering",
+        "Livecontrole en herstel"
+      ],
+      "acceptance": "Publiceer alleen de vrijgegeven versie binnen de afgesproken toegang; zonder livecontrole blijft de status ongeverifieerd.",
+      "prompt_sha256": "ff4fdfdb3c761e9a3b07dfe4d35eca71392c4031929d5e50f4c0846819080c04",
+      "characters": 4732,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "21",
+      "step": "Stap 13",
+      "title": "Maak een uitnodiging voor je eerste bezoekers",
+      "file": "introductieplan.md",
+      "role": "contentschrijver",
+      "inputs": [
+        "propositie.md",
+        "release.md"
+      ],
+      "sections": [
+        "Doelgroep en kanaal",
+        "Conceptuitnodiging",
+        "Feedback en opvolging"
+      ],
+      "acceptance": "Het bericht blijft een concept dat de gebruiker zelf verstuurt; geen verzonnen resultaatclaims.",
+      "prompt_sha256": "13d8ff20af4dfd4eef2f2104881a038a1b1b70bc24ffae682bb5a0e950993abf",
+      "characters": 4134,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "22",
+      "step": "Stap 13",
+      "title": "Controleer de eerste ervaring",
+      "file": "leersignalen.md",
+      "role": "gebruikersonderzoeker",
+      "inputs": [
+        "introductieplan.md",
+        "flows.md",
+        "release.md"
+      ],
+      "sections": [
+        "Belofte en ervaring",
+        "Frictie en bewijs",
+        "Verbeterkeuze"
+      ],
+      "acceptance": "Een inhoudsreview wordt niet gepresenteerd als uitgevoerd gebruikersonderzoek.",
+      "prompt_sha256": "6474226f5283cdd2dc3d1fbb206fc1c150dd3f284743ac2d25c3398b83d1d25f",
+      "characters": 4193,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "23",
+      "step": "Stap 14",
+      "title": "Bewaar je werk aan het einde van de sessie",
+      "file": "overdracht.md",
+      "role": "projectbeheerder",
+      "inputs": [
+        "START-HIER.md",
+        "bevindingen.md",
+        "release.md"
+      ],
+      "sections": [
+        "Huidige stand",
+        "Controles en open werk",
+        "Volgende sessie"
+      ],
+      "acceptance": "Claim geen back-up, commit of publicatie zonder bewijs; pas alleen een reeds vastgelegde opslag- en publicatieafspraak toe.",
+      "prompt_sha256": "1b6d1df67de63e6129a59c227238efb5c0fb86fee440f226af84fc74c2ba9800",
+      "characters": 4589,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "24",
+      "step": "Stap 14",
+      "title": "Lees het project en hervat je werk",
+      "file": "sessiestart.md",
+      "role": "projectbeheerder",
+      "inputs": [
+        "overdracht.md",
+        "START-HIER.md",
+        "bevindingen.md"
+      ],
+      "sections": [
+        "Vergelijking met huidige project",
+        "Hervatte taak",
+        "Uitkomst"
+      ],
+      "acceptance": "Een oud AI-antwoord geldt niet als bewijs dat code nu werkt; gebruik de actuele projectversie.",
+      "prompt_sha256": "1fb225e20072fab4680c6390c270c2443df6c70b8894f839fd04656b4e3db71e",
+      "characters": 4526,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "25",
+      "step": "Stap 5",
+      "title": "Leg de gebouwde pagina’s en teksten vast",
+      "file": "schermen.md",
+      "role": "documentatiespecialist",
+      "inputs": [
+        "schermen.md"
+      ],
+      "sections": [
+        "Schermenlijst",
+        "Volledige schermteksten",
+        "Openbare pagina’s en zoekvraag"
+      ],
+      "acceptance": "Het resultaat vervangt de gekozen schermeninventaris zonder ongecontroleerde onderdelen als compleet te presenteren.",
+      "prompt_sha256": "ccbe588bb523ef2810e911126af2f84ed086fb068f6c30c1bae5a35ad617ebf3",
+      "characters": 4711,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "26",
+      "step": "Stap 7",
+      "title": "Leg uit hoe de website technisch werkt",
+      "file": "architectuur.md",
+      "role": "softwarearchitect",
+      "inputs": [
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Onderdelen en gegevensstroom",
+        "Bediening en beheer",
+        "Schema en herstel"
+      ],
+      "acceptance": "Scheid plannen van bestaande werking en wijzig geen productcode.",
+      "prompt_sha256": "0b0a49867c25b87ccfa8ebdba037b60846d723589d4f4aab3561553d715e09d6",
+      "characters": 4464,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "27",
+      "step": "Stap 14",
+      "title": "Schrijf de gebruikershandleiding",
+      "file": "gebruikershandleiding.md",
+      "role": "technisch schrijver",
+      "inputs": [
+        "schermen.md",
+        "release.md",
+        "startinstructie.md"
+      ],
+      "sections": [
+        "Gebruikers en toegang",
+        "Taken",
+        "Problemen en hulp"
+      ],
+      "acceptance": "Elke beschreven functie bestaat in de gecontroleerde versie; de uitleg past bij de benoemde lezers.",
+      "prompt_sha256": "e8642480e2a1200e9d77408fcc8d3405857e8628b301cd3fcdc0dd05c17ce27f",
+      "characters": 4488,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "28",
+      "step": "Stap 11",
+      "title": "Controleer of de handleiding nog klopt",
+      "file": "documentatiecheck.md",
+      "role": "documentatieauditor",
+      "inputs": [
+        "schermen.md",
+        "architectuur.md",
+        "gebruikershandleiding.md"
+      ],
+      "sections": [
+        "Vergelijkingsscope",
+        "Afwijkingen en correcties",
+        "Hercontrole"
+      ],
+      "acceptance": "Elke correctie is terug te voeren op de actuele website; nieuwe documentatie wordt geen bron voor haar eigen bevestiging.",
+      "prompt_sha256": "86dacf5d465a90211747c55d4f9dcfc40d0052a001b2d4562a2c7138406e5739",
+      "characters": 4586,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "29",
+      "step": "Stap 3",
+      "title": "Beperk de website tot de eerste versie",
+      "file": "scope-eerste-versie.md",
+      "role": "productanalist",
+      "inputs": [
+        "propositie.md",
+        "projectbrief.md"
+      ],
+      "sections": [
+        "Functie-indeling",
+        "Afhankelijkheden",
+        "Besluit en vervolg"
+      ],
+      "acceptance": "Bij stap 3 blijft dit een scopebesluit; ruim bestaande code alleen op als die concrete wijziging is opgedragen.",
+      "prompt_sha256": "ab3c616daa912ca03d8eec1f011cc69896e32a8fdbfaed8dea2f8eed1b1845d2",
+      "characters": 4563,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "30",
+      "step": "Stap 11",
+      "title": "Verbeter het gebruik op een telefoon",
+      "file": "mobiele-controle.md",
+      "role": "UX-tester en ontwikkelaar",
+      "inputs": [
+        "flows.md",
+        "ontwerp.md"
+      ],
+      "sections": [
+        "Mobiele bevindingen",
+        "Herstel",
+        "Vergelijkende tests"
+      ],
+      "acceptance": "Claim alleen de geteste apparaten en formaten; de hoofdactie blijft bruikbaar met schermtoetsenbord.",
+      "prompt_sha256": "515183fd6beb93adba08f3141a9edaea0c37789e4de32db7da0fefb4b942f642",
+      "characters": 4510,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "31",
+      "step": "Stap 11",
+      "title": "Controleer de talen van je website",
+      "file": "talencontrole.md",
+      "role": "lokalisatietester",
+      "inputs": [
+        "schermen.md"
+      ],
+      "sections": [
+        "Talen en dekking",
+        "Vertaalherstel",
+        "Routecontrole per taal"
+      ],
+      "acceptance": "Voeg geen talen toe en presenteer niet gecontroleerde vertalingen niet als goedgekeurd.",
+      "prompt_sha256": "551149eb5af08303d6d37e9e2ff42b4576fcce421a8b7dce1ad76eb74f83a9e4",
+      "characters": 4464,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "32",
+      "step": "Stap 8",
+      "title": "Controleer waar gegevens naartoe gaan",
+      "file": "gegevenscontrole.md",
+      "role": "ontwikkelaar en datatester",
+      "inputs": [
+        "flows.md",
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Gegevensroute",
+        "Oorzaak en herstel",
+        "Randgevallen"
+      ],
+      "acceptance": "Een bevestigingsscherm alleen bewijst geen opslag; controleer ook de ontvangende kant.",
+      "prompt_sha256": "e37f93b2f3a82f7d24de0d1071a3a3d8a7f467980e81388bc86537ae0693c2e1",
+      "characters": 4493,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "33",
+      "step": "Stap 11",
+      "title": "Onderzoek traagheid en kosten",
+      "file": "prestatieonderzoek.md",
+      "role": "performanceonderzoeker",
+      "inputs": [
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Nulmeting",
+        "Oorzaak en verbetering",
+        "Nameting en kosten"
+      ],
+      "acceptance": "Geen winstclaim zonder vergelijkbare metingen; ontbrekende facturen of meetgegevens blijven onbekend.",
+      "prompt_sha256": "0d7369fde66eeed08852c6cf6d3921f40e057270a26a6a3ade2f062cacfd58c2",
+      "characters": 4503,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "34",
+      "step": "Stap 11",
+      "title": "Controleer de beloften op je website",
+      "file": "claimcontrole.md",
+      "role": "inhoudsauditor",
+      "inputs": [
+        "propositie.md",
+        "release.md"
+      ],
+      "sections": [
+        "Claims en bewijs",
+        "Oordeel",
+        "Tekstcorrecties"
+      ],
+      "acceptance": "Marketingtekst bewijst haar eigen claim niet; ontbrekend bewijs is zichtbaar.",
+      "prompt_sha256": "0019fe2146f85b4b15de23b71f37452d1b4e8b54b64e0d8d86864dc68e271f21",
+      "characters": 4445,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "35",
+      "step": "Stap 14",
+      "title": "Bereid een overstap naar andere software voor",
+      "file": "overstapplan.md",
+      "role": "migratiearchitect",
+      "inputs": [
+        "architectuur.md",
+        "schermen.md"
+      ],
+      "sections": [
+        "Te behouden werking",
+        "Vergelijking en gaten",
+        "Migratieaanpak"
+      ],
+      "acceptance": "Deze opdracht plant de overstap; zij voert geen migratie, datawijziging of publicatie uit.",
+      "prompt_sha256": "cc2f4c75d147df07b753ec7ee6fa23e99f71d94bd80a83129765c45424882e51",
+      "characters": 4627,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "36",
+      "step": "Stap 8",
+      "title": "Controleer de AI-functie in je eigen product",
+      "file": "ai-functiecontrole.md",
+      "role": "AI-testontwerper",
+      "inputs": [
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Contract van de functie",
+        "Testgevallen en resultaten",
+        "Herstel en hertest"
+      ],
+      "acceptance": "Synthetische testdata is herkenbaar en komt niet als echte projectfeiten in het verslag.",
+      "prompt_sha256": "bd725253f9eee84a5548cc72a149927c3effcc997a93bc3f2eab14aa7a345db7",
+      "characters": 4575,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "37",
+      "step": "Stap 14",
+      "title": "Voer één wijziging overal door",
+      "file": "wijzigingsverslag.md",
+      "role": "ontwikkelaar",
+      "inputs": [
+        "START-HIER.md"
+      ],
+      "sections": [
+        "Wijzigingsscope",
+        "Doorgevoerde wijzigingen",
+        "Consistentiecontrole"
+      ],
+      "acceptance": "Zoekresultaten alleen zijn geen bewijs dat alle bedoelde plekken correct zijn aangepast; controleer de concrete scope.",
+      "prompt_sha256": "3617d9c0cef0d7b9b9093057f58ac5a77a1c902b8ed931a10b21ac427c308434",
+      "characters": 4492,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "38",
+      "step": "Stap 13",
+      "title": "Controleer vindbaarheid en bezoekersmeting",
+      "file": "seo-meetcontrole.md",
+      "role": "SEO- en meetanalist",
+      "inputs": [
+        "seo-plan.md",
+        "release.md"
+      ],
+      "sections": [
+        "Vindbaarheid",
+        "Bezoekersmeting",
+        "Verbetering"
+      ],
+      "acceptance": "Technische bereikbaarheid, indexering en behaalde conversie blijven verschillende uitkomsten.",
+      "prompt_sha256": "4fdad1897d44932649fd4d536bbf306e345c33b02d14ab0743746062d4a79fd6",
+      "characters": 4507,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "39",
+      "step": "Stap 14",
+      "title": "Ruim dubbele code en uitleg op",
+      "file": "opruimverslag.md",
+      "role": "refactorontwikkelaar",
+      "inputs": [
+        "architectuur.md",
+        "START-HIER.md"
+      ],
+      "sections": [
+        "Overlap en afhankelijkheden",
+        "Opruiming",
+        "Regressiecontrole"
+      ],
+      "acceptance": "Geen verwijdering alleen op basis van een bestandsnaam; controleer daadwerkelijk gebruik en afhankelijkheden.",
+      "prompt_sha256": "00753a7e5bcf311374657b6c847b5a7fe262dffe97d1519d5f47ef57de67ab5d",
+      "characters": 4509,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "40",
+      "step": "Stap 7",
+      "title": "Maak de afgesproken softwarekoppeling",
+      "file": "koppeling.md",
+      "role": "integratieontwikkelaar",
+      "inputs": [
+        "bouwplan.md",
+        "flows.md"
+      ],
+      "sections": [
+        "Gegevenscontract",
+        "Implementatie en instellingen",
+        "Integratietests"
+      ],
+      "acceptance": "Bij stap 7 eerst het contract vastleggen; alleen bouwen als het bouwplan deze concrete koppeling al toestaat.",
+      "prompt_sha256": "c5a03123913050dd428973de51092883356df4f21bce635120b88e40fb099c82",
+      "characters": 4599,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "41",
+      "step": "Stap 12",
+      "title": "Bewaar je wijzigingen op GitHub",
+      "file": "github-versie.md",
+      "role": "ontwikkelaar",
+      "inputs": [
+        "releasecheck.md"
+      ],
+      "sections": [
+        "Wijziging en controles",
+        "Opslagstatus",
+        "Publicatiegevolgen"
+      ],
+      "acceptance": "Een commit, push en livepublicatie zijn afzonderlijke statussen; onbekende publicatiegevolgen staan geen push toe.",
+      "prompt_sha256": "9b73744d9dade5b8627b4884953d69bd5061c0d3fabef210b6252faa0ab76807",
+      "characters": 5059,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "42",
+      "step": "Stap 7",
+      "title": "Koppel je project aan GitHub",
+      "file": "github-koppeling.md",
+      "role": "ontwikkelaar",
+      "inputs": [],
+      "sections": [
+        "Project en repository",
+        "Koppeling en toegang",
+        "Verder werken"
+      ],
+      "acceptance": "Deze opdracht koppelt alleen: geen commit, push of publicatie en geen toegangstoken in chat of document.",
+      "prompt_sha256": "0c017884c9d4c0b7447368be1e78a5acf7aece573b43d4669b4030ad17d88c33",
+      "characters": 4565,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "s1",
+      "step": "SEO-les 1",
+      "title": "Zoekvraag & inhoud",
+      "file": "seo-plan.md",
+      "role": "SEO-contentschrijver",
+      "inputs": [
+        "propositie.md",
+        "onderzoek.md",
+        "schermen.md"
+      ],
+      "sections": [
+        "Zoekvragen",
+        "Pagina-inhoud",
+        "Controle en overdracht"
+      ],
+      "acceptance": "Geen verzonnen zoekvolumes of rankingbelofte; pagina en volgende actie sluiten op dezelfde zoekvraag aan.",
+      "prompt_sha256": "629da12f3abe034dcc43f5e6d46d7c41ca0a9b5dfd661bbf16987eb1c1cd2f47",
+      "characters": 4116,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "s2",
+      "step": "SEO-les 2",
+      "title": "Technische basis",
+      "file": "seo-bouwcontrole.md",
+      "role": "SEO-ontwikkelaar",
+      "inputs": [
+        "seo-plan.md",
+        "bouwplan.md"
+      ],
+      "sections": [
+        "SEO-inrichting",
+        "Wijzigingen",
+        "Controle"
+      ],
+      "acceptance": "Een robots-instelling is geen toegangsbeveiliging en een correcte sitemap garandeert geen indexering.",
+      "prompt_sha256": "3026de0d26340b6055f87ccd5d9b2bf790edd3bfb38d31fa56ade02446e7cacf",
+      "characters": 4538,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "s3",
+      "step": "SEO-les 3",
+      "title": "Plaats het Google-verificatiemiddel",
+      "file": "search-console.md",
+      "role": "verificatiebegeleider",
+      "inputs": [
+        "release.md"
+      ],
+      "sections": [
+        "Methode en property",
+        "Plaatsing en controle",
+        "Handmatige verificatie"
+      ],
+      "acceptance": "Zonder echt verificatiemiddel blijft plaatsing geblokkeerd; DNS-verificatie hoort bij de instellingen en niet bij deze codeopdracht.",
+      "prompt_sha256": "b7ca77395021c5bcc4546029c952f35175f10c8087dc27acc7f510dce575b8d1",
+      "characters": 4706,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "s4",
+      "step": "SEO-les 4",
+      "title": "Bouw de afgesproken Analytics-meting",
+      "file": "analytics.md",
+      "role": "analyticsontwikkelaar",
+      "inputs": [
+        "release.md",
+        "bouwplan.md"
+      ],
+      "sections": [
+        "Meetafspraak",
+        "Implementatie",
+        "Eventcontrole"
+      ],
+      "acceptance": "Een klik of mislukte aanvraag telt niet als succes; geen dubbele tags en geen persoonsgegevens in eventparameters.",
+      "prompt_sha256": "205cb4b849aa6b86e4cd02360faca85436e21a646a5f9de2b21f21bdcf845a94",
+      "characters": 4903,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    },
+    {
+      "key": "s5",
+      "step": "SEO-les 5",
+      "title": "Meten & verbeteren",
+      "file": "groeiplan.md",
+      "role": "data-analist",
+      "inputs": [
+        "seo-plan.md",
+        "release.md",
+        "analytics.md"
+      ],
+      "sections": [
+        "Data en beperkingen",
+        "Analyse",
+        "Eén volgende verbetering"
+      ],
+      "acceptance": "Bij onvoldoende gegevens lever je een meetplan met open vragen; geen verzonnen trend, oorzakelijk verband of codewijziging.",
+      "prompt_sha256": "3b8657f7ddfadfa480383886c7b488df2705d7900b9a0eb1a6ece6adb5b66103",
+      "characters": 4313,
+      "static_status": "PASS",
+      "model_execution": "NOT_TESTED"
+    }
+  ]
+}

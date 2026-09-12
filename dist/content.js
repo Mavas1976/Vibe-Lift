@@ -45,7 +45,7 @@ export const lessons = [
     "intro": "Maak eerst één projectmap voor al je bestanden. Laat daarna ChatGPT of Claude je idee uitwerken: voor wie is je website, welk probleem los je op en wat moet een bezoeker kunnen doen?",
     "goal": "Een ingerichte projectmap met een nagekeken projectbrief.",
     "input": "Je idee en een vaste plek op je computer voor het project.",
-    "output": "02-plan/projectbrief.md",
+    "output": "projectbrief.md in de projectroot",
     "sources": "P01–P03",
     "prompts": [
       1
@@ -65,7 +65,7 @@ export const lessons = [
       ],
       [
         "Lees en bewaar de projectbrief",
-        "Kloppen de doelgroep en het probleem? Staat er één duidelijke eerste taak? Laat fouten aanpassen. Bewaar de gekozen tekst als 02-plan/projectbrief.md en zet die bestandsnaam in START-HIER.md."
+        "Kloppen de doelgroep en het probleem? Staat er één duidelijke eerste taak? Laat fouten aanpassen. Bewaar de gekozen tekst als projectbrief.md en zet die bestandsnaam in START-HIER.md."
       ]
     ],
     "flow": [
@@ -114,8 +114,8 @@ export const lessons = [
     "tagline": "Controleer bronnen en praat met je doelgroep.",
     "intro": "Gebruik AI om bestaande oplossingen te vergelijken. Spreek ook zelf mensen uit je doelgroep. Zo voorkom je dat je een website bouwt op basis van alleen je eigen aannames.",
     "goal": "Een overzicht van wat je weet, met bronnen en open vragen.",
-    "input": "02-plan/projectbrief.md en vragen over je doelgroep.",
-    "output": "02-plan/onderzoek.md",
+    "input": "projectbrief.md en vragen over je doelgroep.",
+    "output": "onderzoek.md in de projectroot",
     "sources": "P04–P05",
     "prompts": [
       2
@@ -135,7 +135,7 @@ export const lessons = [
       ],
       [
         "Laat de uitkomsten ordenen",
-        "Geef je echte notities aan dezelfde AI-tool. Vraag om drie lijsten: vastgesteld, nog onzeker en gevolgen voor het plan. Bewaar bronnen en notities in 01-bronnen en de nagekeken samenvatting als 02-plan/onderzoek.md."
+        "Geef je echte notities aan dezelfde AI-tool. Vraag om drie lijsten: vastgesteld, nog onzeker en gevolgen voor het plan. Bewaar bronnen en notities in 01-bronnen en de nagekeken samenvatting als onderzoek.md."
       ]
     ],
     "flow": [
@@ -185,8 +185,8 @@ export const lessons = [
     "tagline": "Laat mensen je aanbod uitleggen.",
     "intro": "Schrijf in gewone taal wat je aanbiedt. Laat mensen uit je doelgroep de tekst of een eenvoudige schets bekijken en controleer of ze begrijpen wat ze ermee kunnen doen.",
     "goal": "Een nagekeken aanbod en een besluit op basis van echte reacties.",
-    "input": "02-plan/projectbrief.md en 02-plan/onderzoek.md.",
-    "output": "02-plan/propositie.md + 02-plan/praktijktoets.md",
+    "input": "projectbrief.md en onderzoek.md.",
+    "output": "propositie.md + praktijktoets.md in de projectroot",
     "sources": "P06–P08",
     "prompts": [
       3,
@@ -207,7 +207,7 @@ export const lessons = [
       ],
       [
         "Beslis en sla op",
-        "Laat de AI je echte reacties samenvatten. Bepaal zelf of je doorgaat, aanpast of stopt. Bewaar het aanbod in propositie.md en de opzet, reacties en beslissing in praktijktoets.md, beide in 02-plan."
+        "Laat de AI je echte reacties samenvatten. Bepaal zelf of je doorgaat, aanpast of stopt. Bewaar het aanbod in propositie.md en de opzet, reacties en beslissing in praktijktoets.md, beide in de projectroot."
       ]
     ],
     "flow": [
@@ -257,8 +257,8 @@ export const lessons = [
     "tagline": "Beschrijf ook wat er na verzenden gebeurt.",
     "intro": "Beschrijf stap voor stap wat de bezoeker doet en wat de website daarna moet tonen of opslaan. Neem ook fouten en de afhandeling door de medewerker mee.",
     "goal": "Een route die je van begin tot eind kunt nalopen.",
-    "input": "Je aanbod en de uitkomst van de praktijktoets in 02-plan.",
-    "output": "02-plan/flows.md",
+    "input": "Je aanbod en de uitkomst van de praktijktoets in de projectroot.",
+    "output": "flows.md in de projectroot",
     "sources": "P09–P10",
     "prompts": [
       5
@@ -278,7 +278,7 @@ export const lessons = [
       ],
       [
         "Beschrijf wie het resultaat ontvangt",
-        "Een aanvraag moet ergens aankomen. Leg vast waar de medewerker die terugvindt en wat die daarna doet. Bewaar de route, het schema en de foutgevallen als 02-plan/flows.md."
+        "Een aanvraag moet ergens aankomen. Leg vast waar de medewerker die terugvindt en wat die daarna doet. Bewaar de route, het schema en de foutgevallen als flows.md."
       ]
     ],
     "flow": [
@@ -328,8 +328,8 @@ export const lessons = [
     "tagline": "Schrijf de echte tekst vóór je ontwerpt.",
     "intro": "Maak voor elke stap in de bezoekersroute duidelijk welke pagina nodig is. Schrijf meteen de echte tekst, inclusief knoppen, invulvelden en foutmeldingen.",
     "goal": "Een paginalijst met de teksten die je in Stitch gaat gebruiken.",
-    "input": "02-plan/flows.md, je aanbod en je onderzoek.",
-    "output": "02-plan/schermen.md + 02-plan/teksten.md + 02-plan/seo-plan.md",
+    "input": "flows.md, je aanbod en je onderzoek.",
+    "output": "schermen.md met teksten en SEO-basis in de projectroot",
     "sources": "P11–P12",
     "prompts": [
       6,
@@ -350,7 +350,7 @@ export const lessons = [
       ],
       [
         "Lees de hele route na en sla op",
-        "Doe alsof je de bezoeker bent. Heb je genoeg informatie om de volgende stap te zetten? Bewaar de paginalijst, teksten en het SEO-plan in 02-plan als schermen.md, teksten.md en seo-plan.md."
+        "Doe alsof je de bezoeker bent. Heb je genoeg informatie om de volgende stap te zetten? Bewaar de paginalijst, teksten en het SEO-plan in de projectroot als schermen.md met alle teksten en de SEO-basis."
       ]
     ],
     "flow": [
@@ -400,8 +400,8 @@ export const lessons = [
     "tagline": "Bewaar het gekozen ontwerp met de bijbehorende uitleg.",
     "intro": "Geef Stitch je schermenlijst en echte teksten. Laat eerst de belangrijkste route ontwerpen voor een computer en telefoon. Kies daarna één versie om te bouwen.",
     "goal": "Een gekozen ontwerp met bestanden en duidelijke ontwerpafspraken.",
-    "input": "02-plan/schermen.md, teksten.md en voorbeelden van de gewenste stijl.",
-    "output": "03-ontwerp/ met exports en ontwerpafspraken.md",
+    "input": "schermen.md en voorbeelden van de gewenste stijl.",
+    "output": "ontwerp.md in de projectroot; exports in 03-ontwerp/",
     "sources": "P13–P14",
     "prompts": [
       7,
@@ -422,7 +422,7 @@ export const lessons = [
       ],
       [
         "Download en controleer je ontwerp",
-        "Bewaar de aangeboden code-export en afbeeldingen in 03-ontwerp. Pak een ZIP-bestand daar uit. Is export niet beschikbaar, bewaar dan screenshots en de schermbeschrijving. Noteer kleuren, lettertypen en gekozen bestanden in ontwerpafspraken.md. Laat Antigravity later melden wat het daarvan echt kan lezen."
+        "Bewaar de aangeboden code-export en afbeeldingen in 03-ontwerp. Pak een ZIP-bestand daar uit. Is export niet beschikbaar, bewaar dan screenshots en de schermbeschrijving. Noteer kleuren, lettertypen en gekozen bestanden in ontwerp.md in de projectroot. Laat Antigravity later melden wat het daarvan echt kan lezen."
       ]
     ],
     "flow": [
@@ -473,7 +473,7 @@ export const lessons = [
     "intro": "Open je bestaande projectmap in Antigravity. Laat eerst de documenten, het ontwerp en eventuele code analyseren. Controleer het bouwplan voordat je de eerste bouwopdracht geeft.",
     "goal": "Een nagekeken bouwplan, uitgelegde technische keuzes en een voorbereide werkomgeving.",
     "input": "De projectmap met START-HIER.md, je gekozen documenten en uitgepakte ontwerpbestanden.",
-    "output": "04-bouw/bouwplan.md + 04-bouw/architectuur.md",
+    "output": "bouwplan.md en github-koppeling.md in de projectroot; architectuur.md is optioneel",
     "sources": "P15–P17",
     "prompts": [
       9,
@@ -499,7 +499,7 @@ export const lessons = [
       ],
       [
         "Koppel GitHub en leg het startpunt vast",
-        "Volg de GitHub-uitleg hieronder en gebruik daarna de koppelopdracht. Spreek af welke bestanden naar GitHub mogen en wanneer Railway publiceert. Bewaar het plan en de technische uitleg in 04-bouw. Ga dan naar stap 8."
+        "Volg de GitHub-uitleg hieronder en gebruik daarna de koppelopdracht. Spreek af welke bestanden naar GitHub mogen en wanneer Railway publiceert. Bewaar het plan en de technische uitleg in de projectroot. Ga dan naar stap 8."
       ]
     ],
     "flow": [
@@ -550,7 +550,7 @@ export const lessons = [
     "intro": "Geef Antigravity opdracht om de eerste route uit het nagekeken bouwplan te bouwen. Test daarna zelf of de handeling het bedoelde resultaat oplevert.",
     "goal": "Eén werkende route met vastgelegde testuitkomsten.",
     "input": "De projectmap met bouwplan, ontwerp en de afgesproken verwerking van gegevens.",
-    "output": "Projectcode + 05-tests/bouwcontrole.md",
+    "output": "Projectcode + bouwcontrole.md in de projectroot",
     "sources": "P19",
     "prompts": [
       11
@@ -570,7 +570,7 @@ export const lessons = [
       ],
       [
         "Bewaar wat werkt en wat nog ontbreekt",
-        "Laat de uitgevoerde controles, fouten en nog niet aangesloten onderdelen opschrijven in 05-tests/bouwcontrole.md. Laat een gecontroleerd tussenpunt opslaan volgens de GitHub-afspraak. Ga pas verder als je de eerste route zelf kunt doorlopen."
+        "Laat de uitgevoerde controles, fouten en nog niet aangesloten onderdelen opschrijven in bouwcontrole.md. Laat een gecontroleerd tussenpunt opslaan volgens de GitHub-afspraak. Ga pas verder als je de eerste route zelf kunt doorlopen."
       ]
     ],
     "flow": [
@@ -621,7 +621,7 @@ export const lessons = [
     "intro": "Laat Antigravity een eenvoudig startbestand maken. Probeer daarna zelf je lokale website te openen, te stoppen en opnieuw te starten.",
     "goal": "De website zonder hulp starten en stoppen op je eigen computer.",
     "input": "Je werkende projectmap en de vastgelegde startwijze.",
-    "output": "START_PROJECT.bat + 06-overdracht/startinstructie.md",
+    "output": "START_PROJECT.bat + startinstructie.md in de projectroot",
     "sources": "P16, P18",
     "prompts": [
       12,
@@ -642,7 +642,7 @@ export const lessons = [
       ],
       [
         "Stop en start opnieuw",
-        "Volg de stopinstructie, bijvoorbeeld Ctrl+C in het startvenster. Open daarna het startbestand opnieuw en test dezelfde route. Bewaar de uitleg als 06-overdracht/startinstructie.md."
+        "Volg de stopinstructie, bijvoorbeeld Ctrl+C in het startvenster. Open daarna het startbestand opnieuw en test dezelfde route. Bewaar de uitleg als startinstructie.md."
       ]
     ],
     "flow": [
@@ -693,7 +693,7 @@ export const lessons = [
     "intro": "Loop de bezoekersroute zelf na op een computer en telefoon. Beschrijf fouten zo precies dat Antigravity dezelfde handeling kan herhalen en herstellen.",
     "goal": "Een foutenlijst met controles na het herstel.",
     "input": "Een startbare website, testgegevens en de bezoekersroute.",
-    "output": "05-tests/bevindingen.md",
+    "output": "testplan.md en na herstel bevindingen.md in de projectroot",
     "sources": "P20–P21",
     "prompts": [
       14,
@@ -702,7 +702,7 @@ export const lessons = [
     "actions": [
       [
         "Laat een korte testlijst maken",
-        "Gebruik de eerste AI-opdracht in Antigravity. Laat voor elke taak het startpunt, de handelingen en het verwachte resultaat opschrijven. Laat ook vastleggen welke versie je test."
+        "Gebruik de eerste AI-opdracht in Antigravity. Laat voor elke taak het startpunt, de handelingen en het verwachte resultaat opschrijven. Laat ook vastleggen welke versie je test. Bewaar dit als testplan.md in de projectroot; de echte bevindingen komen apart in bevindingen.md."
       ],
       [
         "Voer de taken zelf uit",
@@ -710,7 +710,7 @@ export const lessons = [
       ],
       [
         "Geef elke fout concreet door",
-        "Gebruik de herstelopdracht. Noteer: wat klikte je, wat verwachtte je en wat gebeurde er? Voeg een screenshot zonder persoonsgegevens toe. Laat de melding bewaren in 05-tests/bevindingen.md, met open/opgelost en wie hem oppakt."
+        "Gebruik de herstelopdracht. Noteer: wat klikte je, wat verwachtte je en wat gebeurde er? Voeg een screenshot zonder persoonsgegevens toe. Laat de melding bewaren in bevindingen.md, met open/opgelost en wie hem oppakt."
       ],
       [
         "Herhaal na herstel dezelfde handeling",
@@ -765,7 +765,7 @@ export const lessons = [
     "intro": "Test de laatste versie van de hele website. Controleer werking, teksten en mobiel gebruik. Beslis daarna of deze versie gepubliceerd mag worden.",
     "goal": "Een duidelijke beslissing: live zetten of eerst fouten oplossen.",
     "input": "De laatste websiteversie, testuitkomsten, foutenlijst en handleiding.",
-    "output": "05-tests/releasecheck.md",
+    "output": "releasecheck.md in de projectroot",
     "sources": "P22",
     "prompts": [
       16,
@@ -788,7 +788,7 @@ export const lessons = [
       ],
       [
         "Beslis of deze versie live mag",
-        "Laat releasecheck.md in 05-tests maken met geslaagde controles, open fouten en niet uitgevoerde controles. Los fouten die de hoofdtaak blokkeren eerst op. Zet pas “mag live” bij de versie die je echt hebt nagekeken."
+        "Laat releasecheck.md in de projectroot maken met geslaagde controles, open fouten en niet uitgevoerde controles. Los fouten die de hoofdtaak blokkeren eerst op. Zet pas “mag live” bij de versie die je echt hebt nagekeken."
       ]
     ],
     "flow": [
@@ -839,7 +839,7 @@ export const lessons = [
     "intro": "Laat Antigravity de goedgekeurde versie naar GitHub sturen. Publiceer die versie via Railway en test de website op het echte webadres.",
     "goal": "Een bereikbare website waarvan de belangrijkste route online is getest.",
     "input": "Een goedgekeurde releasecheck, GitHub-repository en Railway-account.",
-    "output": "06-overdracht/release.md met het echte live-adres",
+    "output": "github-versie.md en release.md in de projectroot, met versiestatus en het echte live-adres",
     "sources": "P23–P25",
     "prompts": [
       19,
@@ -860,7 +860,7 @@ export const lessons = [
       ],
       [
         "Test online en bewaar de herstelafspraak",
-        "Voer op het live-adres een testaanvraag uit en zoek de ontvangst op. Laat in 06-overdracht/release.md het adres, de versie, testuitkomst en uitleg voor terugzetten vastleggen. Deel de site nadat deze controle slaagt."
+        "Voer op het live-adres een testaanvraag uit en zoek de ontvangst op. Laat in release.md het adres, de versie, testuitkomst en uitleg voor terugzetten vastleggen. Deel de site nadat deze controle slaagt."
       ]
     ],
     "flow": [
@@ -911,7 +911,7 @@ export const lessons = [
     "intro": "Nodig een kleine groep uit je doelgroep uit. Vertel wat ze kunnen doen en vraag waar ze vastlopen. Gebruik hun reacties om je website te verbeteren.",
     "goal": "Een bruikbare uitnodiging en vastgelegde reacties van bezoekers.",
     "input": "Je geteste live-adres, doelgroep en actuele aanbod.",
-    "output": "02-plan/introductieplan.md + 05-tests/leersignalen.md",
+    "output": "introductieplan.md + leersignalen.md in de projectroot",
     "sources": "P26–P27",
     "prompts": [
       21,
@@ -932,7 +932,7 @@ export const lessons = [
       ],
       [
         "Verzamel en orden reacties",
-        "Vraag wat iemand wilde doen, waar die vastliep en wat ontbrak. Laat dezelfde AI-tool de echte reacties groeperen. Bewaar het plan in 02-plan/introductieplan.md en de reacties in 05-tests/leersignalen.md. Gebruik Analytics alleen als je die al hebt ingericht."
+        "Vraag wat iemand wilde doen, waar die vastliep en wat ontbrak. Laat dezelfde AI-tool de echte reacties groeperen. Bewaar het plan in introductieplan.md en de reacties in leersignalen.md. Gebruik Analytics alleen als je die al hebt ingericht."
       ]
     ],
     "flow": [
@@ -983,7 +983,7 @@ export const lessons = [
     "intro": "Sluit elke sessie af met een korte overdracht in je projectmap. Laat Antigravity bij de volgende sessie eerst de actuele bestanden lezen voordat het verder werkt.",
     "goal": "Een bijgewerkte projectmap met een duidelijke volgende taak.",
     "input": "De projectmap, huidige website, testuitkomsten en reacties van bezoekers.",
-    "output": "06-overdracht/overdracht.md + 06-overdracht/gebruikershandleiding.md",
+    "output": "overdracht.md + gebruikershandleiding.md in de projectroot",
     "sources": "P28",
     "prompts": [
       23,
@@ -993,7 +993,7 @@ export const lessons = [
     "actions": [
       [
         "Laat de sessie samenvatten",
-        "Gebruik de afsluitopdracht in Antigravity. Laat opschrijven wat is aangepast, welke controles zijn uitgevoerd en wat nog openstaat. Bewaar dit als 06-overdracht/overdracht.md en werk START-HIER.md bij."
+        "Gebruik de afsluitopdracht in Antigravity. Laat opschrijven wat is aangepast, welke controles zijn uitgevoerd en wat nog openstaat. Bewaar dit als overdracht.md en werk START-HIER.md bij."
       ],
       [
         "Controleer of het werk bewaard is",
@@ -1001,7 +1001,7 @@ export const lessons = [
       ],
       [
         "Laat de handleiding bijwerken",
-        "Vraag Antigravity om de echte werking voor bezoeker en beheerder te beschrijven. Loop die uitleg zelf na. Bewaar haar als 06-overdracht/gebruikershandleiding.md."
+        "Vraag Antigravity om de echte werking voor bezoeker en beheerder te beschrijven. Loop die uitleg zelf na. Bewaar haar als gebruikershandleiding.md."
       ],
       [
         "Begin de volgende sessie met lezen",
