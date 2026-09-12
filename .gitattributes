@@ -1,0 +1,2 @@
+# Preserve source and handbook bytes exactly across Windows checkouts.
+* -text

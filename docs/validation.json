@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-09-12T11:48:54.709Z",
+  "checks": 1942,
+  "rendered_routes": 61,
+  "lessons": 14,
+  "original_prompts": 28,
+  "source_sha256": "b9d113362560d98decd21cc958815cc58022b4d2e1b542acbc409c9138d44072",
+  "published_files": 9,
+  "published_bytes": 3306726,
+  "browser_qa": "Not performed; these are source, data and in-memory renderer checks, not browser UI tests.",
+  "limitations": [
+    "No real novice usability study",
+    "No browser layout, keyboard, screen-reader or contrast certification",
+    "External tool availability may change",
+    "Private hosted access is enforced by Sites, not application JavaScript"
+  ]
+}
