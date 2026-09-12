@@ -2,7 +2,7 @@
 export const stepPrompts = {
   1:{main:[1],extra:[]},2:{main:[2],extra:[]},3:{main:[3],extra:[4,29]},
   4:{main:[5],extra:[]},5:{main:[6],extra:[25]},6:{main:[7],extra:[8]},
-  7:{main:[42,9],extra:[26,10,40]},8:{main:[11],extra:[32,36]},
+  7:{main:[9,42],extra:[26,10,40]},8:{main:[11],extra:[32,36]},
   9:{main:[12],extra:[13]},10:{main:[14,15],extra:[]},
   11:{main:[17],extra:[16,30,31,33,34,18,28]},12:{main:[41,20],extra:[19]},
   13:{main:[21],extra:[22,38]},14:{main:[23],extra:[24,27,35,37,39]}
@@ -13,7 +13,7 @@ const scope=f('scope','Welk onderdeel wil je aanpakken?','Bijvoorbeeld: het aanv
 const files=f('files','Welke informatie neem je mee?','Bijvoorbeeld: projectbrief.md, schermenlijst en mijn eigen notities.',false,'Bestanden worden hier niet geüpload. Voeg ze zelf toe in de gekozen AI-tool.');
 const route=f('route','Welke route moet de gebruiker kunnen doorlopen?','Bijvoorbeeld: workshop kiezen → gegevens invullen → aanvraag ontvangen.');
 export const promptConfig = {
-  1:{tools:['chatgpt','claude'],needsGoal:true,when:'Begin met je idee. Een paar zinnen zijn genoeg.',fields:[files]},
+  1:{tools:['chatgpt','claude'],needsGoal:true,when:'Richt eerst je projectmap in via Uitleg. Werk daarna hier je idee uit.',fields:[files]},
   2:{tools:['claude','chatgpt'],needsGoal:true,when:'Onderzoek voordat je een aanbod of ontwerp vastlegt.',fields:[f('question','Wat wil je onderzoeken?','Bijvoorbeeld: hoe kleine sportclubs nu nieuwe leden inschrijven.'),f('market','Welke markt of regio?','Bijvoorbeeld: Nederland; lokale sportverenigingen.',false),files]},
   3:{tools:['chatgpt','claude'],needsGoal:true,when:'Gebruik de uitkomsten van je onderzoek.',fields:[brief]},
   4:{tools:['chatgpt','claude'],when:'Als je eerst wilt toetsen of mensen je aanbod nodig hebben.',fields:[f('assumption','Welke aanname wil je toetsen?','Bijvoorbeeld: leden willen zich zelfstandig online inschrijven.'),brief]},

@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T12:57:35.647Z",
+  "generated_at": "2026-09-12T13:20:50.955Z",
   "base_url": "http://127.0.0.1:4173",
   "assets": [
     {
@@ -13,28 +13,28 @@
     {
       "file": "app.js",
       "status": 200,
-      "bytes": 32637,
+      "bytes": 38543,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "content.js",
       "status": 200,
-      "bytes": 33492,
+      "bytes": 45984,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "index.html",
       "status": 200,
-      "bytes": 4947,
+      "bytes": 5285,
       "content_type": "text/html; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "lift.css",
       "status": 200,
-      "bytes": 30618,
+      "bytes": 31732,
       "content_type": "text/css; charset=utf-8",
       "exact_content": true
     },
@@ -46,37 +46,51 @@
       "exact_content": true
     },
     {
+      "file": "project-guide.js",
+      "status": 200,
+      "bytes": 4372,
+      "content_type": "text/javascript; charset=utf-8",
+      "exact_content": true
+    },
+    {
       "file": "prompt-config.js",
       "status": 200,
-      "bytes": 12099,
+      "bytes": 12122,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "prompt-workbench.js",
       "status": 200,
-      "bytes": 18150,
+      "bytes": 20211,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "prompts.css",
       "status": 200,
-      "bytes": 6108,
+      "bytes": 7284,
       "content_type": "text/css; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "prompts.js",
       "status": 200,
-      "bytes": 43580,
+      "bytes": 24846,
       "content_type": "text/javascript; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "responsive.css",
+      "status": 200,
+      "bytes": 3581,
+      "content_type": "text/css; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "seo.js",
       "status": 200,
-      "bytes": 18765,
+      "bytes": 22059,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -88,9 +102,16 @@
       "exact_content": true
     },
     {
+      "file": "tool-branding.js",
+      "status": 200,
+      "bytes": 434,
+      "content_type": "text/javascript; charset=utf-8",
+      "exact_content": true
+    },
+    {
       "file": "tools.js",
       "status": 200,
-      "bytes": 12564,
+      "bytes": 15178,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
@@ -125,14 +146,14 @@
     {
       "file": "downloads\\handboek.md",
       "status": 200,
-      "bytes": 224968,
+      "bytes": 99156,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "downloads\\opdrachten.md",
       "status": 200,
-      "bytes": 97993,
+      "bytes": 101032,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     },
@@ -140,42 +161,126 @@
       "file": "assets\\fonts\\dm-sans-400.ttf",
       "status": 200,
       "bytes": 48280,
-      "content_type": "application/octet-stream",
+      "content_type": "font/ttf",
       "exact_content": true
     },
     {
       "file": "assets\\fonts\\dm-sans-600.ttf",
       "status": 200,
       "bytes": 48280,
-      "content_type": "application/octet-stream",
+      "content_type": "font/ttf",
       "exact_content": true
     },
     {
       "file": "assets\\fonts\\DM-Sans-OFL.txt",
       "status": 200,
       "bytes": 4482,
-      "content_type": "application/octet-stream",
+      "content_type": "text/plain; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "assets\\fonts\\space-grotesk-500.ttf",
       "status": 200,
       "bytes": 69416,
-      "content_type": "application/octet-stream",
+      "content_type": "font/ttf",
       "exact_content": true
     },
     {
       "file": "assets\\fonts\\space-grotesk-700.ttf",
       "status": 200,
       "bytes": 69308,
-      "content_type": "application/octet-stream",
+      "content_type": "font/ttf",
       "exact_content": true
     },
     {
       "file": "assets\\fonts\\Space-Grotesk-OFL.txt",
       "status": 200,
       "bytes": 4495,
-      "content_type": "application/octet-stream",
+      "content_type": "text/plain; charset=utf-8",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\analytics.svg",
+      "status": 200,
+      "bytes": 658,
+      "content_type": "image/svg+xml",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\antigravity.png",
+      "status": 200,
+      "bytes": 16849,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\chatgpt.png",
+      "status": 200,
+      "bytes": 32397,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\claude.png",
+      "status": 200,
+      "bytes": 1198,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\docker.png",
+      "status": 200,
+      "bytes": 3077,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\github.svg",
+      "status": 200,
+      "bytes": 959,
+      "content_type": "image/svg+xml",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\node.png",
+      "status": 200,
+      "bytes": 1130,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\pagespeed.png",
+      "status": 200,
+      "bytes": 860,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\playwright.svg",
+      "status": 200,
+      "bytes": 5033,
+      "content_type": "image/svg+xml",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\railway.png",
+      "status": 200,
+      "bytes": 4816,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\searchconsole.png",
+      "status": 200,
+      "bytes": 599,
+      "content_type": "image/png",
+      "exact_content": true
+    },
+    {
+      "file": "assets\\tools\\stitch.png",
+      "status": 200,
+      "bytes": 22122,
+      "content_type": "image/png",
       "exact_content": true
     }
   ],

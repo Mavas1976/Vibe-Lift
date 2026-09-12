@@ -1,61 +1,412 @@
 export const seoLessons = [
   {
-    id:1,short:'Zoekvraag & inhoud',title:'Beantwoord de vraag achter de zoekopdracht.',intro:'SEO helpt mensen en zoekmachines begrijpen waar je pagina over gaat. Begin bij een echte vraag van je doelgroep. Een zoekwoord zonder bruikbaar antwoord levert weinig op.',tools:['chatgpt','claude'],
-    input:'Je doelgroep, aanbod, onderzoek en bestaande paginalijst.',output:'seo-plan.md met zoekvraag, pagina, titel en volgende actie.',flow:['Vraag van een bezoeker','Passende pagina','Duidelijk antwoord','Logische volgende stap'],
-    actions:[['Kies een vraag per pagina','Laat ChatGPT of Claude mogelijke zoekvragen ordenen. Controleer ze met gesprekken, echte zoekresultaten en later Search Console. Laat AI geen zoekvolume of gegarandeerde positie verzinnen.'],['Maak je inhoud concreet','Beantwoord de vraag met eigen informatie, voorbeelden, prijs, locatie of werkwijze voor zover relevant. Voeg een duidelijke hoofdkop en logische tussenkoppen toe.'],['Schrijf titel en beschrijving','Geef iedere belangrijke pagina een beschrijvende, eigen paginatitel en een korte meta-beschrijving. De beschrijving kan als samenvatting in Google verschijnen; Google kan ook andere tekst kiezen.'],['Verbind je pagina’s','Link vanuit relevante tekst naar de volgende nuttige pagina. Gebruik een herkenbare linktekst, zoals “Bekijk de keramiekworkshop”, en vermijd meerdere vrijwel identieke pagina’s voor dezelfde vraag.']],
-    settingsTitle:'Voorbeeld · Studio Maan in een zoekresultaat',settings:[['Zoekvraag','Keramiekworkshop voor beginners in Utrecht'],['Voorbeeld-URL','https://studio-maan.example/keramiekworkshop'],['Paginatitel','Keramiekworkshop voor beginners in Utrecht | Studio Maan'],['Meta-beschrijving','Maak je eerste keramiek tijdens een workshop in Utrecht. Bekijk wat je leert, de data en de prijs. Vraag daarna een plek aan.']],
-    example:'Voor deze oefening ligt de fictieve studio in Utrecht. De zoeksamenvatting is een redactioneel voorbeeld, geen bestaand Google-resultaat of belofte over de weergave.',
-    checks:['De pagina beantwoordt een concrete vraag met eigen, controleerbare inhoud.','Titel, hoofdkop en volgende actie passen bij dezelfde bedoeling.','De belangrijkste pagina’s zijn via gewone links bereikbaar.'],
-    prompt:'Maak een SEO-paginaplan voor [project] op basis van mijn doelgroep, aanbod en onderzoek. Benoem per pagina de zoekvraag, URL, paginatitel, meta-beschrijving, hoofdkop, kerninhoud, interne links en gewenste vervolgstap. Onderscheid aannames van onderzochte vragen. Verzin geen zoekvolumes, reviews of resultaten. Voorkom bijna-identieke pagina’s. Leg open vragen vast in seo-plan.md.',
-    sources:[['Google: SEO voor beginners','https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=nl'],['Google: samenvattingen in zoekresultaten','https://developers.google.com/search/docs/appearance/snippet']]
+    "id": 1,
+    "short": "Zoekvraag & inhoud",
+    "title": "Schrijf pagina’s die de zoekvraag beantwoorden",
+    "intro": "Begin hiermee bij stap 5, vóór het ontwerpen. SEO betekent je website begrijpelijk en vindbaar maken voor zoekmachines. Kies per openbare pagina één vraag die je bezoeker beantwoord wil hebben.",
+    "tools": [
+      "chatgpt",
+      "claude"
+    ],
+    "input": "Je doelgroep, aanbod, onderzoek en bestaande paginalijst.",
+    "output": "02-plan/seo-plan.md",
+    "flow": [
+      "Vraag van een bezoeker",
+      "Passende pagina",
+      "Duidelijk antwoord",
+      "Logische volgende stap"
+    ],
+    "actions": [
+      [
+        "Geef je aanbod aan ChatGPT of Claude",
+        "Voeg je projectbrief en onderzoek toe. Gebruik de promptgenerator hieronder. Vraag per pagina welke vraag de bezoeker heeft. Controleer de voorgestelde vragen met je gesprekken en zoekresultaten; AI kent jouw echte zoekcijfers niet vanzelf."
+      ],
+      [
+        "Schrijf het antwoord op die vraag",
+        "Laat dezelfde AI-tool een tekstvoorstel maken met je eigen gegevens, zoals wat je aanbiedt, voor wie, prijs en locatie. Lees alles na. Laat een duidelijke hoofdkop, tussenkoppen en volgende handeling opnemen."
+      ],
+      [
+        "Maak een paginatitel en korte beschrijving",
+        "Vraag een eigen titel en korte samenvatting per pagina. Die samenvatting heet een meta-beschrijving en kan in Google worden getoond. Google kan ook andere tekst kiezen. Gebruik het voorbeeld hiernaast als opzet."
+      ],
+      [
+        "Bewaar het plan en geef het door",
+        "Zet per pagina de zoekvraag, het webadres, titel, beschrijving, inhoud en links naar volgende pagina’s in 02-plan/seo-plan.md. Geef dit bestand bij stap 7 aan Antigravity. Werk een bestaand plan bij in plaats van een tweede te maken."
+      ]
+    ],
+    "settingsTitle": "Voorbeeld · Studio Maan in een zoekresultaat",
+    "settings": [
+      [
+        "Zoekvraag",
+        "Keramiekworkshop voor beginners in Utrecht"
+      ],
+      [
+        "Voorbeeld-URL",
+        "https://studio-maan.example/keramiekworkshop"
+      ],
+      [
+        "Paginatitel",
+        "Keramiekworkshop voor beginners in Utrecht | Studio Maan"
+      ],
+      [
+        "Meta-beschrijving",
+        "Maak je eerste keramiek tijdens een workshop in Utrecht. Bekijk wat je leert, de data en de prijs. Vraag daarna een plek aan."
+      ]
+    ],
+    "example": "Voor deze oefening ligt de fictieve studio in Utrecht. De zoeksamenvatting is een redactioneel voorbeeld, geen bestaand Google-resultaat of belofte over de weergave.",
+    "checks": [
+      "De pagina beantwoordt een concrete vraag met eigen, controleerbare inhoud.",
+      "Titel, hoofdkop en volgende actie passen bij dezelfde bedoeling.",
+      "De belangrijkste pagina’s zijn via gewone links bereikbaar."
+    ],
+    "prompt": "Maak een SEO-plan op basis van mijn doelgroep, aanbod en onderzoek. Geef per openbare pagina de vraag van de bezoeker, het webadres, titel, korte beschrijving, hoofdkop, eigen inhoud en links naar volgende pagina’s. Benoem wat nog een aanname is. Verzin geen zoekvolumes of beloofde positie in Google. Lever 02-plan/seo-plan.md.",
+    "sources": [
+      [
+        "Google: SEO voor beginners",
+        "https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=nl"
+      ],
+      [
+        "Google: samenvattingen in zoekresultaten",
+        "https://developers.google.com/search/docs/appearance/snippet"
+      ]
+    ]
   },
   {
-    id:2,short:'Technische basis',title:'Laat vindbaarheid meteen meebouwen.',intro:'Geef je SEO-plan aan Antigravity vóór de eerste bouwstap. Je hoeft deze techniek niet zelf te schrijven. Je wilt wel kunnen aanwijzen wat de agent heeft ingebouwd en gecontroleerd.',tools:['antigravity','pagespeed'],
-    input:'seo-plan.md, de pagina’s die openbaar mogen worden en het bouwplan.',output:'Een technische SEO-check met bewijs per openbare pagina.',flow:['SEO-plan','Bouwafspraken','Openbare pagina','Technische controle'],
-    actions:[['Gebruik bereikbare pagina-URL’s','Laat belangrijke openbare inhoud op eigen echte URL’s zetten. Alleen wisselen na een # in de URL is geen goede basis voor afzonderlijke zoekpagina’s. Laat essentiële inhoud en links controleerbaar renderen; bij voorkeur direct in de geleverde HTML.'],['Leg indexatie bewust vast','Laat title, meta-beschrijving en canonical instellen. Canonical is de voorkeurs-URL bij vergelijkbare pagina’s. Een openbare pagina die gevonden mag worden mag niet per ongeluk noindex bevatten. Besloten delen blijven achter echte toegangscontrole; robots.txt is geen slot.'],['Voeg sitemap en foutgedrag toe','Laat een sitemap.xml met de bedoelde canonieke, indexeerbare URL’s maken. Controleer robots.txt, interne links en echte 404-antwoorden voor ontbrekende pagina’s. Laat oude adressen bij een verhuizing passend doorverwijzen.'],['Houd de pagina licht en begrijpelijk','Gebruik passende afbeeldingsformaten en afmetingen, omschrijvende alt-tekst voor informatieve beelden en lege alt-tekst voor decoratie. Controleer mobiel, layoutverschuivingen en laden met PageSpeed Insights. Neem alleen gestructureerde gegevens op die je echte inhoud ondersteunen.']],
-    settingsTitle:'Dit hoort in het bouwplan',settings:[['Publieke pagina','/keramiekworkshop · eigen titel en uitleesbare inhoud'],['Voorkeursadres','Canonical naar de echte openbare HTTPS-URL'],['Vindbaarheid','Geen onbedoelde noindex; sitemap en robots gecontroleerd'],['Meting','Eén succesvolle aanvraag meten, pas na ontvangst en volgens de gekozen toestemming']],
-    example:'Deze besloten leeromgeving wisselt lessen met #routes. Voor openbare landingspagina’s van jouw eigen project laat je Antigravity gewone pagina-URL’s en indexeerbare inhoud bouwen. Een besloten preview hoef je niet voor Google open te zetten.',
-    checks:['Een openbare kernpagina opent rechtstreeks en de hoofdinhoud is uitleesbaar.','Sitemap, canonical en indexatie-instellingen passen bij het echte live-domein.','Mobiele werking, snelheid en de meetafspraak zijn gecontroleerd en vastgelegd.'],
-    prompt:'Verwerk SEO en meting expliciet in het bestaande bouwplan voor [project]. Gebruik seo-plan.md. Beschrijf en bouw waar passend: echte openbare pagina-URL’s, uitleesbare inhoud, unieke titles en meta-beschrijvingen, hoofdkoppen, interne links, canonical, sitemap.xml, robots.txt, juiste 404/redirects, mobiel en lichte afbeeldingen. Behoud echte toegangscontrole voor besloten delen. Plan GA4 afzonderlijk met de gekozen toestemmingsinstellingen; tel alleen bevestigde succesvolle aanvragen en voorkom dubbele events. Leg per eis het testbewijs vast en rapporteer wat nog niet is gecontroleerd. Gebruik geen verzonnen domein of meet-ID.',
-    sources:[['Google: JavaScript en SEO','https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics'],['Google: robots.txt','https://developers.google.com/search/docs/crawling-indexing/robots/intro'],['Google: een sitemap bouwen','https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap'],['Google: PageSpeed Insights','https://developers.google.com/speed/docs/insights/v5/about']]
+    "id": 2,
+    "short": "Technische basis",
+    "title": "Laat Antigravity de vindbaarheid meebouwen",
+    "intro": "Gebruik deze les bij stap 7. Jij bepaalt welke pagina’s openbaar en vindbaar mogen zijn. Antigravity verwerkt dat in het bouwplan en controleert de technische instellingen.",
+    "tools": [
+      "antigravity",
+      "pagespeed"
+    ],
+    "input": "seo-plan.md, de pagina’s die openbaar mogen worden en het bouwplan.",
+    "output": "05-tests/seo-check.md",
+    "flow": [
+      "SEO-plan",
+      "Bouwafspraken",
+      "Openbare pagina",
+      "Technische controle"
+    ],
+    "actions": [
+      [
+        "Geef het SEO-plan aan Antigravity",
+        "Open je projectmap en gebruik de promptgenerator hieronder. Laat eerst 02-plan/seo-plan.md lezen. Vraag per openbare pagina een eigen webadres dat je rechtstreeks kunt openen. Een wissel achter een # is onvoldoende voor afzonderlijke zoekpagina’s."
+      ],
+      [
+        "Laat de pagina-instellingen invullen",
+        "Vraag om een unieke titel en beschrijving per pagina. Laat ook het voorkeursadres instellen; dat heet canonical. Pagina’s die gevonden mogen worden moeten voor zoekmachines toegankelijk zijn. Privépagina’s blijven beveiligd."
+      ],
+      [
+        "Laat de paginalijst en foutpagina controleren",
+        "Vraag om sitemap.xml: een lijst met de openbare pagina-adressen. Laat ook robots.txt controleren; dat bestand geeft zoekmachines aanwijzingen maar beveiligt geen privégegevens. Vraag of een niet-bestaand adres een echte foutmelding met status 404 geeft."
+      ],
+      [
+        "Controleer de snelheid en bewaar het rapport",
+        "Open PageSpeed Insights, plak een openbaar pagina-adres en start de analyse. Geef de uitkomst aan Antigravity en vraag welke problemen eerst moeten worden opgelost. Voor een besloten testversie laat je een lokale controle doen. Bewaar echte uitkomsten en niet uitgevoerde controles in 05-tests/seo-check.md."
+      ]
+    ],
+    "settingsTitle": "Laat deze begrippen uitleggen",
+    "settings": [
+      [
+        "Paginatitel",
+        "De naam van een pagina in het browsertabblad en mogelijk in Google."
+      ],
+      [
+        "Canonical",
+        "Het voorkeursadres van een pagina."
+      ],
+      [
+        "Sitemap",
+        "Een bestand met de openbare pagina’s die zoekmachines mogen vinden."
+      ],
+      [
+        "Noindex",
+        "Een instelling die vraagt een pagina niet in zoekresultaten op te nemen."
+      ],
+      [
+        "404",
+        "Het antwoord van de website als een pagina niet bestaat."
+      ]
+    ],
+    "example": "Deze besloten leeromgeving wisselt lessen met #routes. Voor openbare landingspagina’s van jouw eigen project laat je Antigravity gewone pagina-URL’s en indexeerbare inhoud bouwen. Een besloten preview hoef je niet voor Google open te zetten.",
+    "checks": [
+      "Een openbare kernpagina opent rechtstreeks en de hoofdinhoud is uitleesbaar.",
+      "Sitemap, canonical en indexatie-instellingen passen bij het echte live-domein.",
+      "Mobiele werking, snelheid en de meetafspraak zijn gecontroleerd en vastgelegd."
+    ],
+    "prompt": "Lees 02-plan/seo-plan.md en het bestaande bouwplan. Leg uit welke technische SEO-onderdelen nodig zijn: eigen openbare pagina-adressen, leesbare inhoud, unieke titels en beschrijvingen, voorkeursadressen, sitemap, zoekmachine-instellingen, foutpagina’s, mobiel en snelheid. Behoud de toegang tot privépagina’s. Werk 04-bouw/bouwplan.md bij. Bouw alleen wat is afgesproken en waarvoor een bouwopdracht bestaat. Controleer de gemaakte onderdelen en bewaar bewijs in 05-tests/seo-check.md. Meld niet uitgevoerde controles. Voeg Analytics alleen toe als dat afzonderlijk is afgesproken.",
+    "sources": [
+      [
+        "Google: JavaScript en SEO",
+        "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics"
+      ],
+      [
+        "Google: robots.txt",
+        "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
+      ],
+      [
+        "Google: een sitemap bouwen",
+        "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      ],
+      [
+        "Google: PageSpeed Insights",
+        "https://developers.google.com/speed/docs/insights/v5/about"
+      ]
+    ]
   },
   {
-    id:3,short:'Search Console',title:'Maak je website zichtbaar voor jezelf in Google.',intro:'Met Search Console controleer je of Google je pagina’s kan vinden en indexeren. Je moet eigenaar zijn van de website, of de juiste toegang hebben. Verificatie en een sitemap geven geen garantie op opname of een hoge positie.',tools:['searchconsole','antigravity'],
-    input:'Je openbare HTTPS-adres en toegang tot je domeininstellingen of websitebestanden.',output:'Een geverifieerde property, ingediende sitemap en gecontroleerde kernpagina.',flow:['Eigendom aantonen','Sitemap indienen','Pagina inspecteren','Probleem herstellen'],
-    actions:[['Voeg je website toe','Open Search Console en kies Property toevoegen. Met toegang tot de DNS-instellingen kies je Domein en vul je alleen het domein in. Zonder DNS-toegang kies je URL-prefix met het precieze HTTPS-adres dat je wilt volgen.'],['Verifieer het eigendom','Bij Domein: kopieer de aangeboden TXT-waarde en voeg die toe bij je domeinprovider. Laat bestaande records staan, sla op en kies Verifiëren in Search Console. Bij URL-prefix kun je bijvoorbeeld het aangeboden HTML-bestand of de meta-tag door Antigravity laten plaatsen. Bewaar het verificatiemiddel ook na goedkeuring.'],['Dien de echte sitemap in','Open Sitemaps, vul het adres van de door je bouwer gemaakte sitemap in en verstuur het. Open de sitemap zelf en controleer of de bedoelde live-URL’s erin staan. Herstel een ophaalfout; “verzonden” betekent niet dat alle pagina’s geïndexeerd zijn.'],['Inspecteer een kernpagina','Plak de volledige pagina-URL in URL-inspectie. Vergelijk de indexstatus met Live URL testen. Los blokkades of fouten op en vraag daarna zo nodig indexering aan. Bekijk later Pagina’s en Prestaties; nieuwe data verschijnt niet altijd direct.']],
-    settingsTitle:'Kies de verificatie die je kunt uitvoeren',settings:[['Domeinproperty','studio-maan.example · alle protocollen en subdomeinen'],['Controle nodig','DNS-toegang bij de domeinprovider'],['URL-prefix als alternatief','https://studio-maan.example/ · alleen dit voorvoegsel'],['Na verificatie','Sitemaps → echte sitemap-URL · URL-inspectie → kernpagina']],
-    example:'De .example-adressen zijn invulvoorbeelden. Neem altijd de echte waarde uit jouw Search Console-scherm over. Bij deze besloten cursus is openbare Google-indexatie geen doel; je oefent dit op je eigen openbare website.',
-    checks:['Search Console toont dat het eigendom is geverifieerd.','De sitemap is opgehaald en bevat de juiste openbare URL’s.','Je kunt de uitkomst van URL-inspectie uitleggen: live bereikbaar is niet hetzelfde als al geïndexeerd.'],
-    prompt:'Help mij Search Console instellen voor [echte openbare website]. Vraag welke toegang ik heb en leg Domein versus URL-prefix uit. Laat mij zelf aanmelden en de echte verificatiewaarde ophalen. Plaats alleen het afgesproken verificatiebestand of de meta-tag als dat mijn gekozen methode is. Controleer sitemap, bereikbaarheid, canonical en indexatieblokkades. Begeleid URL-inspectie en leg echte uitkomsten vast. Verzin geen verificatiecode en claim geen indexatie of rangpositie zonder bewijs.',
-    sources:[['Google: site-eigendom verifiëren','https://support.google.com/webmasters/answer/9008080?hl=nl'],['Google: sitemaps beheren','https://support.google.com/webmasters/answer/7451001?hl=nl'],['Google: URL-inspectie','https://support.google.com/webmasters/answer/9012289?hl=nl']]
+    "id": 3,
+    "short": "Search Console",
+    "title": "Voeg je website toe aan Search Console",
+    "intro": "Doe dit na de livegang voor een openbare website. Search Console laat zien of Google je pagina’s kan vinden en opnemen in zoekresultaten. Je moet eerst aantonen dat je de website beheert.",
+    "tools": [
+      "searchconsole",
+      "antigravity"
+    ],
+    "input": "Je openbare HTTPS-adres en toegang tot je domeininstellingen of websitebestanden.",
+    "output": "06-overdracht/search-console.md met de instellingen en controle-uitkomsten",
+    "flow": [
+      "Eigendom aantonen",
+      "Sitemap indienen",
+      "Pagina inspecteren",
+      "Probleem herstellen"
+    ],
+    "actions": [
+      [
+        "Voeg je website toe",
+        "Open Search Console en kies Property toevoegen. Met toegang tot de DNS-instellingen kies je Domein en vul je alleen het domein in. Zonder DNS-toegang kies je URL-prefix met het precieze HTTPS-adres dat je wilt volgen."
+      ],
+      [
+        "Verifieer het eigendom",
+        "Bij Domein: kopieer de aangeboden TXT-waarde en voeg die toe bij je domeinprovider. Laat bestaande records staan, sla op en kies Verifiëren in Search Console. Bij URL-prefix kun je bijvoorbeeld het aangeboden HTML-bestand of de meta-tag door Antigravity laten plaatsen. Bewaar het verificatiemiddel ook na goedkeuring. DNS zijn de adresinstellingen bij de partij waar je domeinnaam staat. Een TXT-record is daar een tekstregel. Neem de waarde van Google exact over."
+      ],
+      [
+        "Dien de echte sitemap in",
+        "Open Sitemaps, vul het adres van de door je bouwer gemaakte sitemap in en verstuur het. Open de sitemap zelf en controleer of de bedoelde live-URL’s erin staan. Herstel een ophaalfout; “verzonden” betekent niet dat alle pagina’s geïndexeerd zijn."
+      ],
+      [
+        "Inspecteer een kernpagina",
+        "Plak de volledige pagina-URL in URL-inspectie. Vergelijk de indexstatus met Live URL testen. Los blokkades of fouten op en vraag daarna zo nodig indexering aan. Bekijk later Pagina’s en Prestaties; nieuwe data verschijnt niet altijd direct. Bewaar de gekozen verificatiemethode, sitemap en echte uitkomsten in 06-overdracht/search-console.md."
+      ]
+    ],
+    "settingsTitle": "Kies de verificatie die je kunt uitvoeren",
+    "settings": [
+      [
+        "Domeinproperty",
+        "studio-maan.example · alle protocollen en subdomeinen"
+      ],
+      [
+        "Controle nodig",
+        "DNS-toegang bij de domeinprovider"
+      ],
+      [
+        "URL-prefix als alternatief",
+        "https://studio-maan.example/ · alleen dit voorvoegsel"
+      ],
+      [
+        "Na verificatie",
+        "Sitemaps → echte sitemap-URL · URL-inspectie → kernpagina"
+      ]
+    ],
+    "example": "De .example-adressen zijn invulvoorbeelden. Neem altijd de echte waarde uit jouw Search Console-scherm over. Bij deze besloten cursus is openbare Google-indexatie geen doel; je oefent dit op je eigen openbare website.",
+    "checks": [
+      "Search Console toont dat het eigendom is geverifieerd.",
+      "De sitemap is opgehaald en bevat de juiste openbare URL’s.",
+      "Je kunt de uitkomst van URL-inspectie uitleggen: live bereikbaar is niet hetzelfde als al geïndexeerd."
+    ],
+    "prompt": "Help mij Search Console instellen voor [echte openbare website]. Vraag welke toegang ik heb en leg Domein versus URL-prefix uit. Laat mij zelf aanmelden en de echte verificatiewaarde ophalen. Plaats alleen het afgesproken verificatiebestand of de meta-tag als dat mijn gekozen methode is. Controleer sitemap, bereikbaarheid, canonical en indexatieblokkades. Begeleid URL-inspectie en leg echte uitkomsten vast. Verzin geen verificatiecode en claim geen indexatie of rangpositie zonder bewijs.",
+    "sources": [
+      [
+        "Google: site-eigendom verifiëren",
+        "https://support.google.com/webmasters/answer/9008080?hl=nl"
+      ],
+      [
+        "Google: sitemaps beheren",
+        "https://support.google.com/webmasters/answer/7451001?hl=nl"
+      ],
+      [
+        "Google: URL-inspectie",
+        "https://support.google.com/webmasters/answer/9012289?hl=nl"
+      ]
+    ]
   },
   {
-    id:4,short:'Google Analytics',title:'Meet wat ertoe doet, met de juiste instellingen.',intro:'Search Console vertelt hoe mensen je via Google vinden. Google Analytics 4 (GA4) meet gedrag op je website. Begin klein: een pagina bekijken en een aanvraag die werkelijk is ontvangen. Analytics installeren verhoogt je Google-positie niet.',tools:['analytics','antigravity'],
-    input:'Een meetdoel, je openbare website, Google-account en afspraken over gegevens en toestemming.',output:'Een GA4-webstream met gecontroleerde, beperkte meting.',flow:['Meetdoel','Property & webstream','Toestemming & tag','Echte testgebeurtenis'],
-    actions:[['Maak een property en webstream','Open Analytics. Via Beheerder → Maken → Property geef je een herkenbare naam, passende tijdzone en valuta op. Maak daarna bij Gegevensstreams een Web-stream voor je echte HTTPS-adres. Neem het G- meet-ID van die stream over.'],['Kies je metingen bewust','Open de webstream en bekijk Verbeterde meting. Behoud alleen relevante opties en controleer formulier- en sitezoekmeting extra op onbedoelde gegevens. Laat één bevestigde aanvraag als generate_lead meten. Een klik of automatisch form_submit-event bewijst nog geen ontvangst.'],['Laat tag en toestemming samen bouwen','Geef Antigravity de echte meet-ID en je meetplan. Onze eenvoudige startkeuze: laad de Analytics-tag pas na toestemming voor analytics. Laat accepteren, weigeren en intrekken werken en controleer het netwerkgedrag. Zet geen persoonsgegevens in eventnamen, parameters of URL’s. Een banner alleen bewijst geen juiste inrichting.'],['Test voordat je op cijfers stuurt','Open de live-site, geef de gekozen toestemming en voer één testaanvraag uit. Controleer Realtime en met je agent DebugView. Er moet één passende gebeurtenis zijn. Markeer generate_lead in Beheerder → Gegevensweergave → Gebeurtenissen als belangrijke gebeurtenis zodra die correct wordt gemeten. Test ook zonder toestemming.']],
-    settingsTitle:'Voorbeeldinstellingen · bespreek ze met je bouwer',settings:[['Property','Studio Maan · website'],['Tijdzone / valuta','Nederland / EUR, als dat bij je organisatie past'],['Google-tag','G-… uit jouw webstream · één installatiepad'],['Belangrijke gebeurtenis','generate_lead · alleen na bevestigde ontvangst'],['Toestemming','Startkeuze: tag geblokkeerd vóór akkoord; intrekken blijft bereikbaar'],['Eigen testverkeer','Optioneel filter voor intern verkeer: eerst in status Testen']],
-    example:'Als dezelfde tag via de code én via Tag Manager laadt, kun je dubbel tellen. Kies één installatiepad. Een intern-verkeerfilter zet je pas actief nadat je hebt gecontroleerd wie het uitsluit; uitgesloten gegevens zijn later niet terug te halen.',
-    checks:['De meet-ID hoort bij de juiste website en property.','Eén echte testhandeling geeft één correct event; een fout geeft geen succes-event.','Weigeren en intrekken zijn gecontroleerd; er gaan geen onbedoelde persoonsgegevens mee.'],
-    prompt:'Help GA4 zorgvuldig inrichten voor [website], met meet-ID [echte G-ID]. Meet page_view en generate_lead uitsluitend na bevestigde succesvolle ontvangst van een aanvraag. Spreek vooraf af welke extra events nodig zijn. Gebruik één tag-installatiepad en voorkom dubbele pageviews/events bij navigatie of herladen. Onze startkeuze is basis-toestemming: de Analytics-tag laadt niet vóór akkoord; weigeren en intrekken moeten werken. Verwerk geen persoonsgegevens in URL’s, eventnamen of parameters. Laat mij property en webstream controleren. Test Realtime, DebugView, één succes, een fout, weigeren en intrekken. Leg bewijs, beperkingen en nog benodigde keuzes vast.',
-    sources:[['Google: GA4 instellen','https://support.google.com/analytics/answer/9304153?hl=nl'],['Google: verbeterde meting','https://support.google.com/analytics/answer/9216061?hl=nl'],['Google: belangrijke gebeurtenissen','https://support.google.com/analytics/answer/12946393?hl=en'],['Google: toestemmingsmodus','https://developers.google.com/tag-platform/security/concepts/consent-mode'],['Google: intern verkeer filteren','https://support.google.com/analytics/answer/10104470?hl=nl']]
+    "id": 4,
+    "short": "Google Analytics",
+    "title": "Stel bezoekersmeting in met Google Analytics",
+    "intro": "Dit is optioneel. Google Analytics 4, afgekort GA4, laat zien wat bezoekers op je website doen. Gebruik het als je een concrete vraag hebt, bijvoorbeeld hoeveel bezoekers een aanvraag afronden. Richt eerst de meting en toestemming goed in.",
+    "tools": [
+      "analytics",
+      "antigravity"
+    ],
+    "input": "Een meetdoel, je openbare website, Google-account en afspraken over gegevens en toestemming.",
+    "output": "06-overdracht/meetplan.md + 05-tests/analytics-check.md",
+    "flow": [
+      "Meetdoel",
+      "Property & webstream",
+      "Toestemming & tag",
+      "Echte testgebeurtenis"
+    ],
+    "actions": [
+      [
+        "Maak je website aan in Analytics",
+        "Open Google Analytics en kies bij Beheerder: Maken → Property. Een property is de verzameling metingen voor je website. Vul naam, tijdzone en valuta in. Maak bij Gegevensstreams een Web-stream: de verbinding met je website. Vul je echte HTTPS-adres in en kopieer de G-ID."
+      ],
+      [
+        "Kies welke handelingen je meet",
+        "Noteer je meetdoel in 06-overdracht/meetplan.md. Begin met paginaweergaven en één echt ontvangen aanvraag. Laat de aanvraag tellen als generate_lead; dat is de naam van die meetgebeurtenis. Een klik op Versturen is nog geen ontvangen aanvraag."
+      ],
+      [
+        "Laat Antigravity de meting toevoegen",
+        "Open je projectmap. Vul hieronder de echte G-ID en je meetdoel in. Laat Antigravity het meetplan lezen. Laat de Analytics-code pas laden nadat een bezoeker toestemming geeft, en laat weigeren en intrekken werken. Gebruik één installatie zodat je niet dubbel telt. Stuur geen namen of e-mailadressen mee."
+      ],
+      [
+        "Controleer de meting zelf",
+        "Open de live-site, geef toestemming en verstuur één testaanvraag. Kijk in Analytics bij Realtime; laat Antigravity zo nodig DebugView gebruiken voor details. Je verwacht één generate_lead na ontvangst. Test ook een fout en het weigeren of intrekken van toestemming. Laat het bewijs in 05-tests/analytics-check.md bewaren. Markeer generate_lead bij Gebeurtenissen als belangrijke gebeurtenis zodra het correct werkt."
+      ]
+    ],
+    "settingsTitle": "Voorbeeldinstellingen · bespreek ze met je bouwer",
+    "settings": [
+      [
+        "Property",
+        "Studio Maan · website"
+      ],
+      [
+        "Tijdzone / valuta",
+        "Nederland / EUR, als dat bij je organisatie past"
+      ],
+      [
+        "Google-tag",
+        "G-… uit jouw webstream · één installatiepad"
+      ],
+      [
+        "Belangrijke gebeurtenis",
+        "generate_lead · alleen na bevestigde ontvangst"
+      ],
+      [
+        "Toestemming",
+        "Startkeuze: tag geblokkeerd vóór akkoord; intrekken blijft bereikbaar"
+      ],
+      [
+        "Eigen testverkeer",
+        "Optioneel filter voor intern verkeer: eerst in status Testen"
+      ]
+    ],
+    "example": "Als dezelfde tag via de code én via Tag Manager laadt, kun je dubbel tellen. Kies één installatiepad. Een intern-verkeerfilter zet je pas actief nadat je hebt gecontroleerd wie het uitsluit; uitgesloten gegevens zijn later niet terug te halen.",
+    "checks": [
+      "De meet-ID hoort bij de juiste website en property.",
+      "Eén echte testhandeling geeft één correct event; een fout geeft geen succes-event.",
+      "Weigeren en intrekken zijn gecontroleerd; er gaan geen onbedoelde persoonsgegevens mee."
+    ],
+    "prompt": "Richt GA4 in voor mijn website met de echte G-ID uit mijn input. Lees eerst 06-overdracht/meetplan.md. Meet page_view bij een paginaweergave en generate_lead alleen na bevestigde ontvangst van een aanvraag. Laad de Analytics-tag pas na toestemming voor analytics. Laat weigeren en intrekken werken. Gebruik één installatiepad en voorkom dubbel tellen. Stuur geen persoonsgegevens mee in webadressen of meetgegevens. Laat mij de juiste property en webstream controleren. Test paginaweergave, één geslaagde aanvraag, een mislukte aanvraag, weigeren en intrekken. Bewaar de echte uitkomsten in 05-tests/analytics-check.md. Benoem wat niet is getest.",
+    "sources": [
+      [
+        "Google: GA4 instellen",
+        "https://support.google.com/analytics/answer/9304153?hl=nl"
+      ],
+      [
+        "Google: verbeterde meting",
+        "https://support.google.com/analytics/answer/9216061?hl=nl"
+      ],
+      [
+        "Google: belangrijke gebeurtenissen",
+        "https://support.google.com/analytics/answer/12946393?hl=en"
+      ],
+      [
+        "Google: toestemmingsmodus",
+        "https://developers.google.com/tag-platform/security/concepts/consent-mode"
+      ],
+      [
+        "Google: intern verkeer filteren",
+        "https://support.google.com/analytics/answer/10104470?hl=nl"
+      ]
+    ]
   },
   {
-    id:5,short:'Meten & verbeteren',title:'Verbind de cijfers aan één volgende verbetering.',intro:'De eerste weken kunnen rustig zijn. Gebruik echte waarnemingen en vergelijk passende perioden. Een momentopname of een enkele gemiddelde positie vertelt niet het hele verhaal.',tools:['searchconsole','analytics','chatgpt','antigravity'],
-    input:'Geverifieerde Search Console-property, werkende Analytics-meting en voldoende eigen gegevens.',output:'Een korte meetnotitie en één onderbouwde verbetering in je bouwplan.',flow:['Vindbaarheid','Bezoek','Succesvolle actie','Gerichte verbetering'],
-    actions:[['Koppel de twee omgevingen','In Analytics: Beheerder → Productkoppelingen → Search Console-koppelingen → Koppelen. Kies de juiste geverifieerde property en webstream en rond af. Je hebt de rol Bewerker in Analytics en geverifieerd eigendom in Search Console nodig. Beide moeten dezelfde pagina’s betreffen.'],['Maak de rapporten bereikbaar','Verschijnt de Search Console-collectie niet in Analytics? Kijk bij Rapporten → Bibliotheek en publiceer de collectie als je de juiste rechten hebt. Deze gegevens komen met vertraging; Realtime is een ander rapport.'],['Lees de route van zoeken naar doen','Bekijk in Search Console Prestaties: zoekopdrachten, pagina’s, vertoningen en klikken. Bekijk in Analytics welke landingspagina’s organisch verkeer krijgen en of je belangrijke gebeurtenis plaatsvindt. Toestemming, meetwijze en vertraging maken aantallen niet één-op-één vergelijkbaar.'],['Kies en toets één verbetering','Bij relevante vertoningen maar weinig klikken: beoordeel titel en aansluiting op de zoekvraag. Bij bezoekers zonder aanvragen: onderzoek inhoud, aanbod en formulierroute. Laat Antigravity één onderbouwde wijziging uitvoeren, testen en vastleggen. Vergelijk later een passende periode en houd rekening met kleine aantallen.']],
-    settingsTitle:'Wekelijkse kijkronde · geen scorejacht',settings:[['Search Console','Welke relevante vragen en pagina’s krijgen vertoningen en klikken?'],['Analytics','Wat doen bezoekers na binnenkomst; bereiken ze het echte resultaat?'],['Kwalitatief','Wat vragen bezoekers en waar lopen ze vast?'],['Bouwplan','Eén wijziging · verwachting · datum · latere controle']],
-    example:'Voorbeeldbesluit zonder verzonnen cijfers: als echte feedback zegt dat beginners twijfelen over ervaring, verduidelijk je dat op de workshoppagina. Leg vast wat je verwacht en onderzoek later of de onduidelijkheid afneemt.',
-    checks:['Property en webstream horen bij dezelfde website; de koppeling is zichtbaar.','Je onderscheidt vindbaarheid, bezoekersgedrag en echte aanvragen.','Je vervolgstap verwijst naar echte gegevens of feedback en heeft een controlemoment.'],
-    prompt:'Analyseer mijn aangeleverde Search Console- en GA4-gegevens voor [periode] en [website], samen met de echte gebruikersfeedback. Controleer definities, meetbeperkingen, toestemming, vertraging en vergelijkbaarheid van perioden. Scheid vindbaarheid, klikken, bezoek en bevestigde aanvragen. Trek geen sterke conclusie uit te weinig gegevens en verzin niets wat ontbreekt. Kies één onderbouwde SEO- of gebruiksverbetering, met verwachting en controleplan. Voeg die toe aan het bestaande bouwplan en laat Antigravity de kleine wijziging testen en gecontroleerd via GitHub vrijgeven.',
-    sources:[['Google: Search Console koppelen aan Analytics','https://support.google.com/analytics/answer/10737381?hl=nl'],['Google: rapport Prestaties','https://support.google.com/webmasters/answer/7576553?hl=nl']]
+    "id": 5,
+    "short": "Meten & verbeteren",
+    "title": "Gebruik cijfers en reacties voor één verbetering",
+    "intro": "Bekijk welke pagina’s gevonden worden en waar bezoekers vastlopen. Vergelijk dezelfde soort perioden. Zijn er nog te weinig gegevens, verzamel dan eerst reacties en trek nog geen grote conclusies.",
+    "tools": [
+      "searchconsole",
+      "analytics",
+      "chatgpt",
+      "antigravity"
+    ],
+    "input": "Geverifieerde Search Console-property, werkende Analytics-meting en voldoende eigen gegevens.",
+    "output": "05-tests/meetnotitie.md + één volgende taak in 04-bouw/bouwplan.md",
+    "flow": [
+      "Vindbaarheid",
+      "Bezoek",
+      "Succesvolle actie",
+      "Gerichte verbetering"
+    ],
+    "actions": [
+      [
+        "Bekijk hoe mensen je vinden",
+        "Open in Search Console het rapport Prestaties. Kies de periode en noteer zoekvragen, pagina’s, vertoningen en klikken. Een vertoning betekent dat je pagina in een zoekresultaat is verschenen; een klik betekent dat iemand erop heeft geklikt."
+      ],
+      [
+        "Bekijk wat bezoekers daarna doen",
+        "Open Analytics als je het hebt ingericht. Bekijk de pagina’s waarop bezoekers binnenkomen en de gemeten aanvragen. Combineer dit met echte vragen en klachten. Aantallen in Analytics en Search Console kunnen verschillen door toestemming, meetwijze en vertraging."
+      ],
+      [
+        "Laat ChatGPT of Claude de informatie ordenen",
+        "Gebruik de promptgenerator en voeg de relevante exports en reacties toe. Vraag wat opvalt, wat onzeker is en welke ene verbetering het meeste onderzoek verdient. Laat AI geen ontbrekende cijfers invullen of oorzaken als bewezen presenteren. Bewaar het voorstel in 05-tests/meetnotitie.md."
+      ],
+      [
+        "Geef één wijziging aan Antigravity",
+        "Beoordeel het voorstel en zet de gekozen taak in 04-bouw/bouwplan.md. Laat Antigravity het plan en de meetnotitie eerst lezen. Laat de wijziging bouwen en testen volgens de eerdere stappen. Noteer wanneer je opnieuw kijkt en vergelijk dan een passende periode."
+      ]
+    ],
+    "settingsTitle": "Optioneel: beide Google-tools koppelen",
+    "settings": [
+      [
+        "Voorwaarde",
+        "Je beheert dezelfde website in beide tools, bent Bewerker in Analytics en geverifieerd eigenaar in Search Console."
+      ],
+      [
+        "Koppelen",
+        "Analytics → Beheerder → Productkoppelingen → Search Console-koppelingen → Koppelen."
+      ],
+      [
+        "Kies",
+        "De juiste Search Console-property en de webstream van dezelfde website."
+      ],
+      [
+        "Rapport ontbreekt",
+        "Bekijk Rapporten → Bibliotheek en publiceer de Search Console-collectie als je daar rechten voor hebt."
+      ],
+      [
+        "Alternatief",
+        "Je kunt de rapporten ook los bekijken. Koppelen is niet nodig om één verbetering te kiezen."
+      ]
+    ],
+    "example": "Voorbeeldbesluit zonder verzonnen cijfers: als echte feedback zegt dat beginners twijfelen over ervaring, verduidelijk je dat op de workshoppagina. Leg vast wat je verwacht en onderzoek later of de onduidelijkheid afneemt.",
+    "checks": [
+      "Je kunt echte zoekgegevens of gebruikersreacties aanwijzen achter je voorstel.",
+      "Je houdt klikken, websitebezoek en werkelijk ontvangen aanvragen uit elkaar.",
+      "De gekozen verbetering en het controlemoment staan in je bouwplan."
+    ],
+    "prompt": "Analyseer mijn echte zoekgegevens, eventuele Analytics-metingen en bezoekersreacties. Controleer periode, betekenis en beperkingen van de cijfers. Scheid vindbaarheid, klikken, bezoek en ontvangen aanvragen. Benoem onzekerheid bij kleine aantallen en verzin geen oorzaken. Stel één verbetering voor met een verwachting en controlemoment. Lever 05-tests/meetnotitie.md met een korte bouwopdracht die ik na mijn controle zelf aan Antigravity geef. Wijzig zelf geen code.",
+    "sources": [
+      [
+        "Google: Search Console koppelen aan Analytics",
+        "https://support.google.com/analytics/answer/10737381?hl=nl"
+      ],
+      [
+        "Google: rapport Prestaties",
+        "https://support.google.com/webmasters/answer/7576553?hl=nl"
+      ]
+    ]
   }
 ];
-
 export const seoInBuild = {
-  2:'Onderzoek ook welke vragen mensen in Google stellen. Bewaar aannames apart van echte zoekgegevens.',
-  5:'Maak per openbare pagina een zoekvraag, URL, paginatitel, meta-beschrijving en interne links. Bewaar dit in seo-plan.md.',
-  7:'Neem echte openbare URL’s, uitleesbare inhoud, metadata, canonical, sitemap, robots, mobiel, snelheid en meetgedrag op in het bouwplan. Bepaal vooraf welke pagina’s privé blijven.',
-  8:'Laat Antigravity de SEO-afspraken direct meebouwen. Meet een aanvraag pas na bevestigde ontvangst en volgens de gekozen toestemming.',
-  11:'Controleer openbare kernpagina’s op bereikbaarheid, inhoud, metadata, indexatie-instellingen en mobiel. Test analytics op dubbele events, fouten en toestemming.',
-  12:'Gebruik het echte live-domein in canonical en sitemap. Controleer de openbare versie en volg de SEO-cursus voor Search Console en GA4.'
+  "2": "Onderzoek ook welke vragen mensen in Google stellen. Bewaar aannames apart van echte zoekgegevens.",
+  "5": "Bewaar de vraag van je bezoeker, het pagina-adres, de titel en beschrijving in 02-plan/seo-plan.md. SEO-les 1 helpt je hierbij.",
+  "7": "Laat Antigravity 02-plan/seo-plan.md lezen. Neem vindbaarheid op in het bouwplan. Leg vast wat openbaar mag; bezoekersmeting is een aparte keuze.",
+  "8": "Laat de afgesproken paginatitels, webadressen en vindbaarheid meebouwen. Voeg bezoekersmeting alleen toe als je die hebt afgesproken.",
+  "11": "Laat de openbare pagina’s, snelheid en instellingen voor zoekmachines controleren. Heb je Analytics ingericht? Controleer dan ook de meting en toestemming.",
+  "12": "Laat Antigravity het echte live-adres verwerken in de pagina-instellingen en sitemap. Gebruik daarna SEO-les 3 voor Search Console."
 };

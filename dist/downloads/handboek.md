@@ -1,2783 +1,912 @@
 # Vibe Lift — Digitale gewichtloosheid
 
-**Bouw zo ver als je kan denken.**  
-Lezerseditie 1.2 · Gebaseerd op de werkwijze van Mark van Asten · 12 september 2026
+**Bouw zo ver als je kan denken.**
 
-Deze editie is redactioneel aangepast voor Vibe Lift. De uitleg en opdrachten zijn zelfstandig bruikbaar met je eigen AI-omgeving. De historische verantwoording beschrijft de oorspronkelijke bron; zij is geen nieuwe toets van een werkend product.
+Lezerseditie 1.4 · 12 september 2026
 
-Digitale gewichtloosheid is de vrijheid om te bouwen wat je bedenkt. Met AI coding en vibe coding geef je jouw ideeën vorm: als website, app of eigen digitale tool. Dit handboek helpt je die mogelijkheden te verkennen door je eerste website te bouwen.
+Digitale gewichtloosheid is de vrijheid om te bouwen wat je bedenkt. Hier begin je met één website. Gebruik ChatGPT of Claude voor je idee en teksten, Stitch voor het ontwerp en Antigravity voor het bouwen. Jij controleert het resultaat.
 
-Een idee wordt bruikbaar wanneer je het kunt uitleggen, laten zien en uitproberen. In mijn werkwijze verbind ik die drie dingen. Ik onderzoek voor wie ik iets maak, werk het aanbod uit, laat processen en schermen ontwerpen en geef AI gerichte opdrachten om het te bouwen. Vervolgens open ik het resultaat zelf in de browser, doorloop ik de stappen en laat ik verbeteren wat nog niet klopt.
+## Zo gebruik je de route
 
-Dit document legt uit hoe je die werkwijze kunt volgen. Je hoeft vooraf geen programmeur te zijn. Je moet wel keuzes maken, resultaten beoordelen en blijven vragen of wat er staat overeenkomt met wat je bedoelde. AI helpt bij het uitwerken en uitvoeren; jij bepaalt het doel en beoordeelt de uitkomst.
+Begin met je projectmap en volg de veertien stappen. Lees de uitleg, bekijk zo nodig het fictieve voorbeeld van Studio Maan en gebruik de Promptgenerator op de site. Vul je gegevens in, klik op Kopieer prompt en plak de tekst in de aangegeven AI-tool. Voeg daar je bestanden toe. Controleer het antwoord en bewaar het voordat je doorgaat.
 
-## Zo lees je dit document
+ChatGPT en Claude zijn alternatieven: kies er één per taak. Je hoeft niet alle extra opdrachten of tools te gebruiken. Een prompt is de opdracht die je aan AI geeft. De site voert die niet zelf uit en bewaart geen projectbestanden. Invoer in de generator is tijdelijk.
 
-**Deel A is de handleiding voor de eindgebruiker.** Je doorloopt veertien begrijpelijke stappen, met directe links, kopieerbare opdrachten en een duidelijk resultaat per stap. Dit deel is de basis van de interactieve leerroute.
+SEO-les 1 hoort bij je teksten en SEO-les 2 bij het bouwplan. Gebruik de overige SEO-lessen na publicatie, voor een openbare website. Analytics is optioneel.
 
-**Deel B is het volledige naslagwerk.** Daar staan de 28 gedetailleerde processtappen, gedragsanalyse, architectuurafspraken, kwaliteitscontroles, invulmodellen en bronnen. Die verdieping blijft beschikbaar zonder dat een beginnende lezer haar eerst hoeft te doorgronden.
+## Begin altijd met je projectmap
 
-De opdrachten in Deel A zijn opnieuw geformuleerd op basis van mijn beschreven werkwijze en aangevuld om ze uitvoerbaar te maken. Het zijn **kopieerbare werkinstructies, geen letterlijke citaten uit oude gesprekken**. Vul tekst tussen vierkante haken in voordat je een opdracht gebruikt. Een stap beschrijft hoe je het werk aanpakt; zij bewijst niet dat elke controle in alle eerdere trajecten is uitgevoerd.
+1. **Maak één map op je computer.** Open Verkenner en maak bijvoorbeeld Documenten/Projecten/mijn-website. Gebruik deze map vanaf je eerste idee. Heb je al een projectmap? Gebruik die en bewaar de bestaande bestanden.
 
-**Aanvulling: Tools en SEO.** Achter in deze editie staan toolkeuzes voor alle veertien stappen en vijf SEO-lessen met concrete instellingen voor Search Console en Analytics.
+2. **Open die map in Antigravity.** Maak of kies een project in Antigravity en voeg met Add Folder je map toe. In de editor kan dit Open Folder heten. Controleer het getoonde pad. Een project in ChatGPT of Claude is geen map op je computer.
 
-### Kies je ingang
+3. **Laat Antigravity de map inrichten.** Kopieer de startopdracht hieronder naar Antigravity. Laat de submappen en START-HIER.md maken. Er wordt nu alleen een werkmap ingericht; het bouwen van de website begint bij stap 8.
 
-| Waar sta je? | Begin hier |
-|---|---|
-| Ik heb een idee, maar nog geen duidelijk aanbod. | [Stap 1: maak je idee concreet](#stap-1-maak-je-idee-concreet). |
-| Ik weet wat ik wil maken en wil het ontwerpen. | [Stap 4: teken de route van de gebruiker](#stap-4-teken-de-route-van-de-gebruiker). |
-| Ik heb een ontwerp en wil gaan bouwen. | [Stap 7: draag alles over aan Antigravity](#stap-7-draag-alles-over-aan-antigravity). |
-| Ik wil de website op mijn eigen computer zien werken. | [Stap 9: start lokaal met een BAT-bestand](#stap-9-start-lokaal-met-een-bat-bestand). |
-| Er staat al iets, maar het werkt of voelt nog niet goed. | [Stap 10: gebruik het zelf en leg vast wat er gebeurt](#stap-10-gebruik-het-zelf-en-leg-vast-wat-er-gebeurt). |
-| Ik wil alle documentatie en architectuur vastleggen. | [Documenteer de hele site](#documenteer-de-hele-site-van-tekst-tot-architectuur). |
-| Ik wil weten hoe we hier een uitlegsite van maken. | [Bouwbrief voor de uitlegsite](#bouwbrief-voor-de-uitlegsite). |
+4. **Bewaar na elke stap je AI-output.** Download documenten uit ChatGPT of Claude en zet ze in deze map. Geen downloadknop? Kopieer de tekst naar Kladblok en sla op als .md of .txt. Bewaar ook prompts, bronlinks, afbeeldingen en exports uit Stitch of andere tools.
 
-## Deel A — De werkwijze stap voor stap
+5. **Wijs de gekozen versie aan.** Bewaar ruwe antwoorden in 01-bronnen en de nagekeken versie in de map van de stap. Zet in START-HIER.md welke bestanden gelden. Andere antwoorden blijven bewaard, maar zijn geen bouwopdracht.
 
-### Hoe je overzicht houdt
+6. **Laat eerst lezen, dan pas werken.** Laat Antigravity vóór het bouwen START-HIER.md, de gekozen documenten en bestaande code lezen. Vraag welke bestanden zijn gelezen, wat ontbreekt en wat elkaar tegenspreekt. Controleer het plan en geef daarna opdracht voor één bouwstap.
 
-Deze werkwijze helpt je opdrachten te structureren en resultaten te controleren. Houd het doel vast, onderscheid bronnen van aannames, benut bestaande onderdelen en controleer of iets werkelijk werkt.
+### Mapindeling
 
-Voor de lezer komt dat bij iedere stap neer op vijf vragen:
+- **START-HIER.md** — Doel, huidige stap, gekozen bestanden en volgende actie.
+- **01-bronnen/** — Alle AI-antwoorden en gebruikte prompts, bronlinks, gespreksnotities en oorspronkelijke downloads.
+- **02-plan/** — Nagekeken projectbrief, onderzoek, aanbod, gebruikersroute, schermen, teksten en SEO-plan.
+- **03-ontwerp/** — Stitch-exports, screenshots, afbeeldingen en ontwerpafspraken.
+- **04-bouw/** — Bouwplan en uitleg van de techniek. De code komt op de plek die Antigravity voor dit project vastlegt.
+- **05-tests/** — Uitgevoerde controles, screenshots, fouten en besluiten over publicatie.
+- **06-overdracht/** — Startinstructie, live-adres, handleiding en wat de volgende sessie moet doen.
 
-1. **Wat willen we bereiken?** Een concreet resultaat voor een herkenbare gebruiker.
-2. **Wat weten we al?** Beschikbare documenten, onderzoek, ontwerpen en werkende onderdelen.
-3. **Wat moet er gebeuren?** Een afgebakende opdracht met de juiste context.
-4. **Hoe zien we dat het klopt?** Een controle die past bij het resultaat.
-5. **Wat nemen we mee?** De bestanden, besluiten en open punten voor de volgende stap.
+Een .md-bestand is een tekstbestand met eenvoudige opmaak (Markdown). Geen downloadknop in de AI-tool? Kopieer het antwoord naar Kladblok. Kies bij Opslaan als: Alle bestanden en gebruik de volledige naam, bijvoorbeeld projectbrief.md. Controleer dat er niet .txt achter staat.
 
-Bij onderzoek gaat de controle over bewijs. Bij ontwerp over begrijpelijkheid en volledigheid. Bij bouw over werking. Bij marktintroductie over echte reacties en gebruik. Iedere controle is dus verbonden aan een handeling en een zichtbaar resultaat. De technische en historische versieverantwoording staat in Deel B, hoofdstuk 10.4.
+Bewaar oorspronkelijke AI-output met datum, tool en versie in 01-bronnen. Bewaar de nagekeken versie op de plek die de stap noemt en wijs die aan in START-HIER.md. Maak een back-up van de hele projectmap. Een project in ChatGPT of Claude is geen map op je computer.
 
-### De route in één oogopslag
+### Startopdracht voor Antigravity
 
-| Fase | Stappen | Wat je na deze fase hebt |
-|---|---|---|
-| Begrijpen | 1–3 | Een onderbouwd probleem, een gekozen doelgroep en een helder aanbod. |
-| Ontwerpen | 4–6 | Een gebruikersroute, schermen en een samenhangend ontwerp. |
-| Bouwen | 7–9 | Een eerste werkende versie die je lokaal kunt openen. |
-| Verbeteren | 10–11 | Geteste gebruikersroutes en gecontroleerde verbeteringen. |
-| Naar de markt | 12–14 | Een gepubliceerde versie, een aanpak voor eerste gebruikers en een hervatbaar werkdossier. |
-
-Je mag teruggaan. Als een scherm het aanbod niet duidelijk maakt, pas je de inhoud aan. Als een test laat zien dat een proces onlogisch is, verander je de route. De volgorde helpt je vooruit, maar nieuwe informatie mag eerdere keuzes verbeteren.
-
-### De gereedschappen die je onderweg gebruikt
-
-| Gereedschap | Waarvoor open je het? | Directe link |
-|---|---|---|
-| ChatGPT | Orden je idee, analyseer documenten en onderzoek vragen. Gebruik Search of Deep research voor actuele bronnen, als jouw account die functie heeft. | [Open ChatGPT](https://chatgpt.com/) · [Officiële uitleg](https://help.openai.com/en/articles/10500283-deep-research) |
-| Claude | Werk je projectbrief, onderzoek en teksten uit. Gebruik web search of Research voor bronnen; bekijk de beschikbaarheid in je account. | [Open Claude](https://claude.ai/) · [Officiële uitleg](https://support.claude.com/en/articles/11088861-use-research-on-claude) |
-| Stitch | Vertaal je schermen en echte inhoud naar een visueel ontwerp. Verfijn het resultaat en geef de gekozen versie door aan je bouwer. | [Open Stitch](https://stitch.withgoogle.com/) · [Officiële uitleg](https://developers.googleblog.com/stitch-a-new-way-to-design-uis/) |
-| Antigravity | Laat je agent in je project werken: plannen, bouwen, testen en wijzigingen vastleggen. Het versiebeheerpaneel laat wijzigingen, commits en push naar je repository zien. | [Open Antigravity](https://antigravity.google/) · [Officiële uitleg](https://antigravity.google/docs/features) |
-| GitHub | De online bewaarplaats voor je projectcode en versies. Antigravity kan met de gekoppelde repository werken; jij controleert de wijziging en de opgeslagen versie. | [Open GitHub](https://github.com/) · [Officiële uitleg](https://docs.github.com/en/get-started/using-github/hello-world) |
-| Railway | Laat een versie uit je GitHub-repository online draaien. Controleer vooraf instellingen, toegang, kosten en wanneer wijzigingen automatisch worden gepubliceerd. | [Open Railway](https://railway.com/) · [Officiële uitleg](https://docs.railway.com/guides/vibe-coding-deploy) |
-| Playwright | Laat Antigravity herhaalbare browsertests maken voor afgesproken gebruikersroutes. Jij kiest het verwachte resultaat en beoordeelt de uitkomst. | [Open Playwright](https://playwright.dev/) · [Officiële uitleg](https://playwright.dev/docs/codegen) |
-| PageSpeed Insights | Onderzoek een openbare pagina op prestaties. Maak onderscheid tussen een gesimuleerde meting en beschikbare gegevens van echte bezoekers. | [Open PageSpeed Insights](https://pagespeed.web.dev/) · [Officiële uitleg](https://developers.google.com/speed/docs/insights/v5/about) |
-| Search Console | Verifieer je eigen website, dien je sitemap in en bekijk indexatie, zoekopdrachten en klikken uit Google. Dit maakt je site niet automatisch beter vindbaar. | [Open Search Console](https://search.google.com/search-console/) · [Officiële uitleg](https://support.google.com/webmasters/answer/9008080?hl=nl) |
-| Google Analytics | Richt GA4 in om te leren wat bezoekers op je website doen. Kies eerst je meetdoel, gegevens en toestemmingsgedrag; controleer daarna de echte meting. | [Open Google Analytics](https://analytics.google.com/) · [Officiële uitleg](https://support.google.com/analytics/answer/9304153?hl=nl) |
-| Node.js | Alleen nodig als de projecttechniek dat vraagt. Laat Antigravity vaststellen welke versie en startwijze passen; je hoeft geen code te schrijven. | [Open Node.js](https://nodejs.org/en/download) · [Officiële uitleg](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) |
-| Docker | Alleen gebruiken als het project diensten in containers nodig heeft. Een eenvoudige website heeft dit vaak niet nodig; volg de vastgelegde projectopzet. | [Open Docker](https://www.docker.com/products/docker-desktop/) · [Officiële uitleg](https://docs.docker.com/desktop/setup/install/windows-install/) |
-
-**Hostingkeuze:** in deze werkwijze gebruiken we Railway. Je kunt ook een andere hostingprovider gebruiken; pas dan de deploymentconfiguratie en beheerinstructies aan de gekozen provider aan.
-
-Deze officiële ingangen zijn op 12 september 2026 geraadpleegd. Het zijn gereedschappen uit de beschreven keten; je hoeft ze niet allemaal te gebruiken. Laat de bouwomgeving eerst vaststellen wat jouw project nodig heeft. De actuele Antigravity-documentatie onderscheidt meerdere producten, waaronder een IDE. Kies de omgeving die bij je lokale werk past; de historische schermindeling kan afwijken van de huidige. [Officiële introductie en installatie-uitleg](https://codelabs.developers.google.com/getting-started-google-antigravity).
-
-Een AI-gesprek gebruik je bij de eerste stappen om onderzoek, documenten en opdrachten uit te werken. Bewaar de definitieve uitkomsten als bestanden. Zo gaat de context mee wanneer je van gesprek naar ontwerp en vervolgens naar de bouwomgeving gaat.
-
-## Stap 1: Maak je idee concreet
-
-**Je doel:** kunnen uitleggen voor wie je iets maakt, welk probleem je oplost en wat iemand ermee moet kunnen doen.
-
-Ik begin vaak met een brede, gesproken gedachte. Daar kunnen doelgroep, functies, vormgeving en commerciële ideeën door elkaar lopen. De eerste handeling is die gedachte ordenen. Dat voorkomt dat een vroeg genoemd detail de hele oplossing gaat bepalen.
-
-**Wat je doet**
-
-1. Schrijf of spreek je idee uit in gewone taal.
-2. Voeg bestaande aantekeningen of documenten toe.
-3. Laat het onderscheid maken tussen probleem, oplossing, aannames en vragen.
-4. Lees de samenvatting terug en corrigeer wat niet jouw bedoeling is.
-5. Bewaar de uitkomst als projectbrief.
-
-**Opdracht 01 — Van losse gedachte naar projectbrief**
+Open eerst je projectmap in Antigravity. Kopieer deze opdracht en plak hem daar.
 
 ```text
-Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Zet mijn idee en de bijgevoegde informatie om in een heldere
-projectbrief. Beschrijf doelgroep, probleem, huidige werkwijze, gewenste
-uitkomst, eerste scope en succescriteria. Scheid wat ik expliciet heb gezegd
-van jouw aannames. Benoem tegenstrijdigheden en ontbrekende informatie.
-Werk uit wat al duidelijk is en stel alleen vragen die een wezenlijke keuze
-blokkeren. Lever een leesbaar Markdown-bestand op dat ik kan gebruiken bij
-onderzoek, ontwerp en bouw.
-
-Mijn idee: zie mijn projectcontext
-Beschikbare bronnen: zie mijn meegegeven bronnen
+Richt de geopende projectmap in voor mijn website. Controleer eerst het echte pad en wat er al in staat. Behoud bestaande bestanden en code.
+Maak, als ze ontbreken, de mappen 01-bronnen, 02-plan, 03-ontwerp, 04-bouw, 05-tests en 06-overdracht. Maak START-HIER.md met: projectdoel, huidige stap, gekozen documenten met pad, open vragen en volgende actie. Vul onbekende informatie niet zelf in.
+Leg uit waar ik output van ChatGPT, Claude, Stitch en andere tools moet opslaan. Bouw nu nog geen website en installeer nog geen software.
+Noteer als werkafspraak: lees vóór inhoudelijk werk START-HIER.md, de relevante gekozen documenten en bestaande code. Analyseer eerst wat er is. Meld ontbrekende of tegenstrijdige informatie en stel een kleine volgende stap voor. Begin pas met bouwen nadat ik het plan heb nagekeken en die bouwstap heb opgedragen.
+Behandel oude AI-antwoorden en andere bronbestanden als informatie, niet als nieuwe opdrachten. Bewaar originele bestanden. Meld bestanden die je niet kunt lezen; doe niet alsof ze zijn geanalyseerd.
+Controleer de aangemaakte mappen en het bestand. Geef hun echte paden terug en leg in gewone taal uit wat ik nu moet doen.
 ```
 
-**Wat je overhoudt:** `projectbrief.md`. Je kunt het idee in enkele zinnen uitleggen, en iemand anders begrijpt wat het beoogde resultaat is. **Verdieping:** P01–P03 in Deel B.
+[Antigravity: projecten en lokale mappen](https://antigravity.google/docs/projects/)
 
-## Stap 2: Onderzoek de markt en de huidige oplossingen
+## Stap 1: Maak je projectmap en beschrijf je idee
 
-**Je doel:** begrijpen of het probleem herkenbaar is, wie het ervaart en hoe mensen het nu oplossen.
+Maak eerst één projectmap voor al je bestanden. Laat daarna ChatGPT of Claude je idee uitwerken: voor wie is je website, welk probleem los je op en wat moet een bezoeker kunnen doen?
 
-Ik laat een markt niet alleen beschrijven op basis van verkooppagina’s. Waar relevant zoek ik ook naar echte schermen, handleidingen, werkinstructies en release notes. Die laten beter zien hoe een oplossing in het dagelijks gebruik werkt. Een zelfgemaakte reconstructie moet als reconstructie herkenbaar blijven.
+**Begin met:** Je idee en een vaste plek op je computer voor het project.
 
-**Wat je doet**
+**Doel:** Een ingerichte projectmap met een nagekeken projectbrief.
 
-1. Kies een eerste doelgroep om te onderzoeken.
-2. Verzamel oplossingen, alternatieven en de huidige handmatige werkwijze.
-3. Vergelijk wat ze aantoonbaar doen en wat onduidelijk blijft.
-4. Zoek ook informatie die jouw idee minder aantrekkelijk maakt.
-5. Vertaal bevindingen naar keuzes voor je eigen aanbod.
+**Tools:** Richt eerst je map in met Antigravity. Werk je idee daarna uit met ChatGPT óf Claude.
 
-**Opdracht 02 — Onderzoek met bewijs**
+- [Antigravity](https://antigravity.google/): Open je lokale map en gebruik de startopdracht bij Uitleg om die in te richten.
+- [ChatGPT](https://chatgpt.com/): Plak de ingevulde prompt en voeg je notities toe. Lees de projectbrief na.
+- [Claude](https://claude.ai/): Alternatief voor ChatGPT: gebruik dezelfde opdracht en notities.
 
-```text
-Onderzoek het probleem en de markt voor mijn doelgroep en het beschreven probleem.
-Gebruik actuele primaire bronnen waar mogelijk. Bekijk ook openbare
-handleidingen, werkinstructies, release notes en echte schermbeelden.
-Vergelijk doelgroep, proces, functies, beperkingen en aantoonbare verschillen.
-Maak zichtbaar wat bevestigd is, wat afgeleid is en wat onbekend blijft.
-Verzin geen schermen, klantenaantallen, prijzen of productmogelijkheden.
-Geef bij iedere belangrijke conclusie de bron en datum. Zoek tegenbewijs
-voor mijn uitgangspunt. Eindig met de consequenties voor mijn propositie.
+### Wat je doet
 
-Gebruik webonderzoek met bronlinks waar beschikbaar, bijvoorbeeld in Claude of ChatGPT. Onderzoek ook de zoekvragen achter mogelijke openbare pagina’s. Scheid echte waarnemingen van aannames; verzin geen zoekvolumes.
-```
+1. **Richt je projectmap in.** Volg eerst de mapinstructie hieronder. Laat Antigravity de submappen en START-HIER.md maken. Gebruik deze map bij alle volgende stappen.
 
-**Controle:** openen de bronlinks, zijn de bedoelde afbeeldingen echt opgenomen en volgt de conclusie uit het gevonden materiaal? **Wat je overhoudt:** `onderzoek.md` met een bronnenregister. **Verdieping:** P04–P05.
+2. **Schrijf drie dingen op.** Noteer wie je wilt helpen, wat voor die persoon nu lastig is en welke handeling je website mogelijk moet maken. Bijvoorbeeld: een bezoeker kiest een workshop en vraagt een plek aan.
 
-## Stap 3: Maak van het idee een propositie
+3. **Laat ChatGPT of Claude de brief maken.** Open het tabblad Promptgenerator. Vul je idee en doelgroep in, kopieer de opdracht en plak die in één van deze tools. Voeg je notities toe. Vraag om een projectbrief van maximaal één pagina.
 
-**Je doel:** een aanbod formuleren waarvan de juiste persoon begrijpt waarom het relevant is.
+4. **Lees en bewaar de projectbrief.** Kloppen de doelgroep en het probleem? Staat er één duidelijke eerste taak? Laat fouten aanpassen. Bewaar de gekozen tekst als 02-plan/projectbrief.md en zet die bestandsnaam in START-HIER.md.
 
-Een propositie beschrijft de samenhang tussen doelgroep, probleem, oplossing en resultaat. Ik verbind die al vroeg aan de toekomstige site: welke belofte doen we, welke uitleg is nodig en welke volgende stap vragen we van een bezoeker?
+**Bewaar:** 02-plan/projectbrief.md
 
-**Opdracht 03 — Werk het aanbod uit**
+Bewaar: 02-plan/projectbrief.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
 
-```text
-Gebruik de projectbrief en het onderzoek om een volledige propositie te maken.
-Beschrijf voor wie het aanbod bedoeld is, welk probleem het oplost, de
-gewenste uitkomst, de werking, het onderscheid en de grenzen. Maak een
-korte kernboodschap en een uitgebreidere uitleg. Geef aan welk bewijs de
-belofte ondersteunt en welk bewijs nog ontbreekt. Werk een eerste aanbod,
-logische vervolgstap en mogelijke latere uitbreiding uit. Verzin geen
-resultaten, klanten, prijzen of garanties. Lever propositie.md op.
-```
+### Voorbeeld: Studio Maan (fictief)
 
-**Opdracht 04 — Toets de belangrijkste aanname**
+Een workshop boeken begint met duidelijkheid.
 
-```text
-Bepaal welke onbewezen aanname deze propositie het meest kwetsbaar maakt.
-Ontwerp een kleine praktijktoets: met wie spreken we, wat laten we zien,
-welke vraag of handeling testen we en welke uitkomst verandert onze keuze?
-Maak een gespreksleidraad en een eenvoudig resultatenoverzicht. Scheid
-interesse in het idee van werkelijk gebruik of bereidheid om te betalen.
-```
+Studio Maan is een fictieve keramiekstudio. De eigenaar krijgt losse vragen over workshops via berichten. Geïnteresseerden weten niet welke data beschikbaar zijn.
 
-**Controle:** een lezer begrijpt het probleem, het aanbod en de vervolgstap zonder uitleg van de maker. De praktijktoets kan ook tot aanpassen of stoppen leiden. **Wat je overhoudt:** een propositie en een toetsbare keuze voor het eerste aanbod. **Verdieping:** P06–P08.
+- **Voor wie:** Beginners die een creatieve workshop willen volgen.
+- **Probleem:** Data, inhoud en aanmelding zijn verspreid over berichten.
+- **Eerste resultaat:** Een bezoeker kan een workshop vinden en een plek aanvragen.
+- **Nog niet:** Online betalen, een eigen account en een uitgebreide agenda.
 
-## Stap 4: Teken de route van de gebruiker
+### Controleer voordat je verdergaat
 
-**Je doel:** weten welke stappen iemand doorloopt voordat je losse schermen gaat tekenen.
+- De projectmap en START-HIER.md bestaan en je kunt ze terugvinden.
+- De projectbrief beschrijft voor wie je bouwt en wat die persoon moet kunnen doen.
+- Onzekere punten en ideeën voor later staan apart.
 
-Denk aan een bezoeker die informatie leest, een demonstratie opent, zich aanmeldt en vervolgens zijn eerste taak uitvoert. Beschrijf ook wat er gebeurt als invoer ontbreekt, iemand teruggaat of een handeling mislukt. Bij een eenvoudige informatieve site is deze route korter dan bij een applicatie met accounts en gegevens.
+**Valkuil:** Meteen een mooie homepage laten maken. Keer eerst terug naar de gebruiker en de taak; anders ontwerp je een verpakking voor een onduidelijk idee.
 
-**Opdracht 05 — Maak processen en schema’s**
+**Begrip — Projectbrief:** Een kort document met doelgroep, probleem, gewenste uitkomst en grenzen van de eerste versie.
 
-```text
-Vertaal de propositie naar gebruikersrollen en complete gebruikersroutes.
-Beschrijf per route het startpunt, doel, stappen, beslissingen, gegevens,
-rechten en eindresultaat. Neem teruggaan, annuleren, ontbrekende gegevens,
-fouten en herstel mee. Geef ieder proces een herkenbaar ID en teken waar
-nuttig een compact schema. Scheid de volledige productvisie van wat in de
-eerste versie komt. Lever flows.md op en benoem open beslissingen.
-```
+**AI-opdrachten:** 01 (hoofdopdracht). Zie de opdrachten achter in dit handboek.
 
-**Controle:** iedere stap heeft een duidelijke vervolgstap of afronding. Voor elke rol is duidelijk wat deze wel en niet mag doen. **Wat je overhoudt:** gebruikersroutes en eenvoudige processchema’s. **Verdieping:** P09–P10.
 
-## Stap 5: Bepaal alle pagina’s en schermen
+## Stap 2: Controleer of het probleem echt bestaat
 
-**Je doel:** een overzicht hebben van alles wat ontworpen moet worden, inclusief kleinere vensters en bijzondere situaties.
+Gebruik AI om bestaande oplossingen te vergelijken. Spreek ook zelf mensen uit je doelgroep. Zo voorkom je dat je een website bouwt op basis van alleen je eigen aannames.
 
-Ik vraag nadrukkelijk om de volledige inventaris: pagina’s, schermen, menu’s, formulieren, pop-ups en panelen die opzij openen. Vervolgens bepalen we wat de eerste versie nodig heeft. Daardoor verdwijnen latere onderdelen niet uit beeld en blijft de eerste bouwopdracht behapbaar.
+**Begin met:** 02-plan/projectbrief.md en vragen over je doelgroep.
 
-**Opdracht 06 — Maak de scherminventaris**
+**Doel:** Een overzicht van wat je weet, met bronnen en open vragen.
 
-```text
-Maak op basis van de propositie en flows een volledige scherminventaris.
-Neem pagina's, navigatie, formulieren, modals, drawers en overlays mee.
-Beschrijf per scherm: ID, doel, gebruikersrol, inhoud, acties, invoer,
-validatie, vervolgstappen en gedrag op mobiel. Werk relevante toestanden
-uit: laden, leeg, gevuld, fout, succes en onvoldoende rechten.
-Koppel schermen aan processen en maak zichtbaar wat nu wordt gebouwd,
-wat later komt en waar nog een beslissing nodig is. Lever schermen.md
-plus een dekkingsmatrix op. Laat geen proces zonder scherm of afhandeling.
+**Tools:** Kies ChatGPT óf Claude en zet zoeken op internet aan. Spreek zelf je doelgroep.
 
-Maak voor openbare contentpagina’s ook seo-plan.md: de zoekvraag, gewone pagina-URL, unieke paginatitel, meta-beschrijving, hoofdkop, interne links en vervolgstap. Gebruik echte informatie uit het onderzoek.
-```
+- [Claude](https://claude.ai/): Zet web search aan. Gebruik Research bij uitgebreidere vragen als je account dit aanbiedt. Controleer de bronlinks.
+- [ChatGPT](https://chatgpt.com/): Alternatief: gebruik Search. Kies Deep research als je vraag meerdere bronnen en vergelijkingen vereist.
 
-**Controle:** je kunt elke gebruikersroute aanwijzen in de inventaris. **Wat je overhoudt:** `schermen.md`, een paginastructuur en een dekkingsmatrix. Leg daarnaast alle letterlijke paginainhoud, gedeelde teksten en taalvarianten vast volgens opdracht 25 en hoofdstuk 11.3. **Verdieping:** P11–P12.
+### Wat je doet
 
-## Stap 6: Maak het ontwerp zichtbaar in Stitch
+1. **Maak je onderzoeksvragen.** Open ChatGPT of Claude, voeg projectbrief.md toe en vraag welke informatie nog ontbreekt. Kies vragen die je plan kunnen veranderen, zoals: hoe meldt iemand zich nu aan en wat gaat daarbij mis?
 
-**Je doel:** zien hoe de inhoud en de gebruikersroutes samenkomen in een samenhangend ontwerp.
+2. **Laat bestaande oplossingen vergelijken.** Gebruik de AI-opdracht bij deze stap. Zet zoeken op internet aan; kies uitgebreid onderzoek alleen als je meerdere bronnen moet vergelijken. Vraag per aanbieder om dezelfde punten en een bronlink. Open de links en controleer de informatie.
 
-Open [Google Stitch](https://stitch.withgoogle.com/). Geef de propositie, scherminventaris en visuele uitgangspunten mee. Laat eerst een herkenbare richting uitwerken en beoordeel die. Daarna volgt de rest van de schermen. Zo kun je kleuren, typografie, witruimte en de werking van knoppen bewust beoordelen.
+3. **Spreek mensen uit je doelgroep.** Vraag naar de laatste keer dat zij dit probleem hadden. Wat deden ze, waar liepen ze vast en welke oplossing gebruikten ze? Noteer hun antwoorden, ook als ze je idee tegenspreken.
 
-**Opdracht 07 — Ontwerp je schermen in Stitch**
+4. **Laat de uitkomsten ordenen.** Geef je echte notities aan dezelfde AI-tool. Vraag om drie lijsten: vastgesteld, nog onzeker en gevolgen voor het plan. Bewaar bronnen en notities in 01-bronnen en de nagekeken samenvatting als 02-plan/onderzoek.md.
 
-```text
-Ontwerp de hieronder beschreven website of app met de meegegeven pagina's, teksten,
-gebruikersroute en stijlreferenties. Maak de echte schermontwerpen voor desktop en mobiel.
-Gebruik één samenhangende stijl voor kleuren, typografie, afstanden, knoppen en formulieren.
-Maak de belangrijkste handeling op elk scherm herkenbaar. Werk ook relevante lege,
-laad-, fout- en succesweergaven uit. Gebruik echte inhoud uit mijn input en behoud
-de gewenste functies. Verzin geen prijzen, testimonials, resultaten of keurmerken.
-Maak keuzes zichtbaar als nog informatie ontbreekt. Lever het ontwerp zodat ik de
-schermen kan beoordelen en daarna samen met de inhoud aan mijn bouwer kan geven.
-Beschrijf kort welke ontwerpafspraken ik moet meenemen.
-```
+**Vindbaarheid:** Onderzoek ook welke vragen mensen in Google stellen. Bewaar aannames apart van echte zoekgegevens.
 
-**Opdracht 08 — Stuur het ontwerp bij in Stitch**
+**Bewaar:** 02-plan/onderzoek.md
 
-```text
-Werk deze schermen verder uit binnen dezelfde visuele richting: de genoemde schermen.
-Maak de belangrijkste handeling per scherm direct herkenbaar. Verbeter
-leesbaarheid, hiërarchie, afstanden en de samenhang van knoppen en velden.
-Houd componenten consistent en werk de mobiele variant uit. Behoud de
-inhoud en functies uit de specificatie. Mijn concrete feedback: de feedback hieronder.
-```
+Bewaar: 02-plan/onderzoek.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
 
-**Controle:** kun je zonder uitleg zien waar je begint en wat je moet doen? Kloppen de schermen onderling? Bewaar beschikbare ontwerpen, exports en afbeeldingen met een herkenbare versie. Beschikbare exportopties moeten in de gebruikte Stitch-omgeving worden gecontroleerd. **Wat je overhoudt:** een beoordeeld ontwerp en visuele afspraken. **Verdieping:** P13–P14.
+### Voorbeeld: Studio Maan (fictief)
 
-## Stap 7: Draag alles over aan Antigravity
+Wat wil iemand weten vóór een aanvraag?
 
-**Je bouwroute zonder zelf Git-commando’s te typen:** geef Antigravity toegang tot de bedoelde GitHub-repository. Laat de agent de wijzigingen uitvoeren, controleren en committen. Een commit is een vastgelegde codeversie; naar GitHub sturen heet pushen. Controleer de online commitlink en spreek vóór het doorsturen af of Railway deze branch automatisch publiceert. De precieze aanmeldroute kan per installatie verschillen. Voltooi die aanmelding zelf en plak geen geheime toegangstokens in een gesprek.
+Onderzoeksopzet voor Studio Maan — dit zijn vragen, geen uitgevoerde interviews of bewezen uitkomsten.
 
-**SEO hoort al in dit bouwplan:** geef seo-plan.md uit stap 5 mee. Laat openbare URL’s, inhoud, metadata, sitemap, robots, mobiel, snelheid en meetgedrag meteen opnemen. De vijf SEO-lessen achter in dit handboek werken de instellingen later stap voor stap uit.
+- **Vraag aan bezoekers:** Denk aan de laatste workshop die je zocht. Hoe koos je en wat moest je nog navragen?
+- **Vergelijking:** Bekijk of andere studio’s datum, prijs, duur en benodigde ervaring vóór de aanvraag tonen.
+- **Aanname:** Duidelijke data verminderen losse vragen. Nog te toetsen.
+- **Besluit na onderzoek:** Welke informatie krijgt voorrang op de workshoppagina?
 
-**Je doel:** zorgen dat de bouwomgeving de inhoud, het ontwerp en de bestaande techniek samen begrijpt.
+### Controleer voordat je verdergaat
 
-Open [Antigravity](https://antigravity.google/) en de juiste projectmap. Voeg de definitieve documenten en ontwerpbestanden toe. Laat eerst controleren wat er al bestaat. Mijn overdracht draait om samenhang: de marketingsite, een eventuele demo en een bestaande inlogomgeving moeten aansluiten op dezelfde propositie en gebruikersroute.
+- Iedere feitelijke conclusie heeft een herleidbare bron.
+- Je hebt actief gezocht naar tegenbewijs.
+- Je kunt aanwijzen welke vragen nog openstaan.
 
-**Opdracht 09 — Lees eerst het project en maak het bouwplan**
+**Valkuil:** AI laten bevestigen dat je idee goed is. Vraag juist wanneer het idee niet werkt en welk bestaand alternatief al voldoende is.
 
-```text
-Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Lees de projectbrief, propositie, flows, schermspecificaties,
-ontwerpbestanden en bestaande code in deze projectmap. Maak een overzicht
-van wat aanwezig is, ontbreekt of elkaar tegenspreekt. Onderzoek eerst wat
-je kunt uitbreiden, hergebruiken of aanpassen. Onderbouw nieuwe onderdelen.
-Maak daarna een bouwplan met kleine controleerbare stappen, afhankelijkheden
-en acceptatiecriteria. Verbind iedere stap aan de relevante scherm- en
-proces-ID's. Behoud bestaande werking. Schrijf besluiten en open punten weg
-in het projectdossier. Voer de afgesproken eerste bouwstap uit zodra de
-benodigde keuzes duidelijk zijn. Werk vóór implementatie het toepasselijke
-architectuurdossier uit met systeemonderdelen, gegevensstromen, rechten, fouten en herstel.
+**Begrip — Aanname:** Iets waarvan je denkt dat het klopt, maar dat je nog moet controleren.
 
-Werk in Antigravity met de bedoelde GitHub-repository. Controleer eigenaar, repository, branch en lees-/schrijftoegang; laat mij zelf de aangeboden aanmelding afronden. Vraag geen toegangstoken in de chat. Laat de agent het technische versiebeheer uitvoeren en beschrijf hoe ik de wijziging en commitlink controleer. Spreek af welke branch Railway mag publiceren. Neem seo-plan.md op in het bouwplan: echte openbare URL’s, uitleesbare inhoud, title, meta-beschrijving, canonical, sitemap.xml, robots.txt, juiste 404/redirects, interne links, mobiel en lichte beelden. Houd besloten delen achter toegangscontrole. Plan GA4 met de juiste meet-ID en het afgesproken toestemmingsgedrag; tel succesvolle aanvragen alleen na bevestigde ontvangst en voorkom dubbele events. Leg per eis het acceptatiebewijs vast. Voer externe accountinstellingen alleen binnen de afgesproken opdracht uit.
-```
+**AI-opdrachten:** 02 (hoofdopdracht). Zie de opdrachten achter in dit handboek.
 
-**Opdracht 10 — Verbind site, demo en portaal**
 
-```text
-Controleer hoe de openbare site, demo en bestaande inlogomgeving op elkaar
-aansluiten. Gebruik de aanwezige routes, talen, vormgeving en authenticatie.
-Maak de overgang voor een bezoeker logisch en herkenbaar. Controleer CTA's,
-terugkeerlinks, taalkeuze en de relevante informatiepagina's. Voeg alleen
-bestaande of expliciet gespecificeerde functies toe. Test de hele route van
-openbare pagina tot de eerste bruikbare handeling na inloggen.
-```
+## Stap 3: Schrijf je aanbod en probeer het uit
 
-**Controle:** de agent benoemt de echte bestanden en onderdelen die hij heeft gelezen. Een bestandsnaam noemen is op zichzelf nog geen bewijs van begrip; beoordeel de gevonden verschillen en keuzes. **Wat je overhoudt:** `bouwplan.md` en een samenhangend overdrachtsdossier. **Verdieping:** P15–P17.
+Schrijf in gewone taal wat je aanbiedt. Laat mensen uit je doelgroep de tekst of een eenvoudige schets bekijken en controleer of ze begrijpen wat ze ermee kunnen doen.
 
-**Documentatiecontrole vóór de bouw:** werk opdracht 26 uit voor de gekozen kernflow. Leg de beoogde architectuur, interfaces, gegevens, toegangsgrenzen en belangrijke besluiten vast. Koppel de relevante Mermaid-schema’s. Beschrijf bestaande en geplande onderdelen afzonderlijk; zie hoofdstuk 11.4–11.6.
+**Begin met:** 02-plan/projectbrief.md en 02-plan/onderzoek.md.
 
-## Stap 8: Laat één complete route bouwen
+**Doel:** Een nagekeken aanbod en een besluit op basis van echte reacties.
 
-**Je doel:** vroeg iets hebben dat je van begin tot eind kunt gebruiken.
-
-Een complete route kan klein zijn: een bezoeker vult een formulier in, krijgt begrijpelijke feedback en de informatie komt op de bedoelde plek terecht. Bij een grotere applicatie kan het gaan om inloggen, een item aanmaken, opslaan en terugvinden. Kies een route die de belangrijkste werking zichtbaar maakt.
-
-**Opdracht 11 — Bouw de eerste werkende route**
-
-```text
-Implementeer de eerste complete gebruikersroute uit het bouwplan: de hieronder beschreven gebruikersroute.
-Werk de benodigde schermen, validatie, rechten en gegevensverwerking uit.
-Gebruik bestaande componenten en de vastgelegde ontwerpafspraken. Neem
-laden, lege resultaten, fouten en herstel mee waar ze relevant zijn.
-Maak testdata herkenbaar en vermeld iedere nog gesimuleerde koppeling.
-Controleer de route van begin tot eind. Rapporteer wat werkt, wat is getest,
-welke onderdelen nog ontbreken en hoe ik het resultaat zelf kan openen.
-
-Bouw de afgesproken SEO-basis direct mee voor openbare pagina’s. Controleer echte URL’s, uitleesbare inhoud, metadata en interne links. Houd het meetplan aan: geen succes-event bij een fout en geen dubbele gebeurtenissen; respecteer de gekozen toestemming.
-```
-
-**Controle:** de belangrijkste handeling levert het bedoelde resultaat op, ook na verversen als gegevens bewaard moeten blijven. **Wat je overhoudt:** een kleine, samenhangende eerste versie. **Verdieping:** P19.
-
-## Stap 9: Start lokaal met een BAT-bestand
-
-**Je doel:** de website of app op je eigen Windows-computer kunnen starten en in de browser bekijken.
-
-*Lokaal* betekent dat de ontwikkelversie op jouw computer draait. Het browseradres begint vaak met `http://localhost:` gevolgd door een poortnummer. Die poort wijst naar de juiste lokale dienst. De projectopzet bepaalt welk nummer wordt gebruikt.
-
-Een `.bat`-bestand is een Windows-startbestand. Je dubbelklikt erop en het voert de afgesproken startstappen uit. In mijn werkwijze hoort deze praktische handeling nadrukkelijk bij de oplevering: ik wil het resultaat zelf kunnen openen, bekijken en gebruiken.
-
-**Opdracht 12 — Maak de lokale starter**
-
-```text
-Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Maak dit project op mijn Windows-computer met één dubbelklik
-lokaal startbaar en zichtbaar in mijn browser. Inspecteer eerst de bestaande
-projectstructuur, README, package scripts, lockfiles, omgevingsconfiguratie,
-backend, eventuele Docker-opzet en het bestaande poortregister.
-
-Maak of verbeter start_local.bat in de hoofdmap. Hergebruik een bestaande
-starter waar mogelijk. Laat die vanuit zijn eigen map werken, ook als het
-pad spaties bevat. Gebruik de bij dit project horende tools en versies.
-Gebruik zo nodig een duidelijk benoemd PowerShell-hulpscript.
-
-De starter moet:
-1. Controleren welke vereisten en configuratie ontbreken en dat begrijpelijk
-   melden. Geheimen blijven buiten scripts, logs en de codebewaarplaats.
-2. Alleen de voor dit project benodigde diensten starten. Als Docker nodig
-   is, controleer beschikbaarheid en wacht begrensd op gereedheid.
-3. De afgesproken poorten gebruiken. Controleer bij een bezette poort of
-   daar dit project draait. Beëindig geen onbekende of andere processen.
-4. Backend en frontend in de juiste volgorde starten en met echte controles
-   vaststellen wanneer ze klaar zijn. Alleen een vaste wachttijd is niet genoeg.
-5. De juiste lokale URL openen zodra de toepassing beschikbaar is. Open bij
-   opnieuw starten geen dubbele servers. Maak hergebruik expliciet zichtbaar.
-6. Bij problemen de fout en de volgende herstelstap leesbaar tonen. Bewaar
-   bruikbare logs en voorkom dat een foutvenster direct verdwijnt.
-7. Een duidelijke stop- en herstartinstructie geven. Ruim alleen processen op
-   die aantoonbaar bij deze startsessie of dit project horen.
-
-Leg vast in LOKAAL_STARTEN.md: eenmalige installatie, configuratie zonder
-geheime waarden, bestandslocatie, dubbelklikroute, browser-URL, testaccount
-of testdata indien nodig, stoppen, herstarten en veelvoorkomende problemen.
-
-Controleer op Windows: eerste start, tweede start, stoppen en herstarten,
-ontbrekende vereiste, bezette poort en een dienst die niet gereed komt.
-Controleer daarnaast één echte gebruikershandeling in de geopende browser.
-Geef de werkelijk uitgevoerde controles en uitkomsten. Als je deze Windows-
-omgeving niet kunt bedienen, markeer die controles als NIET UITGEVOERD en
-lever concrete stappen waarmee ik ze zelf kan controleren.
-```
-
-**Zo gebruik je het opgeleverde startbestand**
-
-1. Open de projectmap in Windows Verkenner.
-2. Lees bij de eerste start `LOKAAL_STARTEN.md` en volg de projectspecifieke installatie-instructies.
-3. Dubbelklik op `start_local.bat`.
-4. Lees de status in het geopende venster. Wacht op de melding dat de toepassing gereed is.
-5. Bekijk de geopende browser en controleer het getoonde adres.
-6. Voer één echte handeling uit: bijvoorbeeld navigeren, invullen en opslaan.
-7. Stop het project volgens de meegeleverde instructie wanneer je klaar bent.
-
-**Als het niet werkt**
-
-| Wat je ziet | Wat je teruggeeft aan de bouwomgeving |
-|---|---|
-| Het venster verdwijnt direct. | Vraag de fout zichtbaar te houden en de starter vanuit een open opdrachtvenster te onderzoeken. |
-| De browser zegt dat de site onbereikbaar is. | Geef de URL en de laatste startmeldingen; laat proces, poort en gereedheidscontrole vergelijken. |
-| Er opent een ander project. | Laat de poorttoewijzing en de identiteit van het proces onderzoeken. |
-| De pagina verschijnt, maar gegevens laden niet. | Laat frontend, backend, instellingen en de mislukte netwerkverzoeken gezamenlijk controleren. |
-| Het werkt eenmalig, maar een tweede start geeft fouten. | Laat de tweede start en de opruiming van eigen processen reproduceren. |
-
-**Opdracht 13 — Laat mij het nu zien**
-
-```text
-Start de huidige versie via het opgeleverde lokale startbestand. Controleer
-welk project op welke URL draait. Open de browser als je die toegang hebt
-en doorloop de hieronder beschreven gebruikersroute. Geef mij het exacte lokale adres, wat ik moet
-zien, welke handeling ik kan proberen en hoe ik stop. Claim alleen dat het
-werkt als de start en de handeling daadwerkelijk zijn gecontroleerd.
-```
-
-**Wat je overhoudt:** een starter die bij jouw project past en een korte gebruikersinstructie. De opdracht hierboven laat die bestanden maken; dit handboek zelf bevat geen op jouw pc uitgevoerde starter. **Verdieping:** P16, P18 en hoofdstuk 5.2–5.3. De Windows-commandosyntaxis kan worden nagezocht bij [Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/call).
-
-## Stap 10: Gebruik het zelf en leg vast wat er gebeurt
-
-**Je doel:** fouten vinden tijdens echt gebruik en de bouwomgeving genoeg informatie geven om ze te onderzoeken.
-
-Ik wil zelf door het scherm gaan en beoordelen of knoppen, invoer en overgangen logisch werken. In mijn beschreven aanpak laat ik browserhandelingen registreren en voer ik die terug naar de ontwikkelomgeving. Het beoogde voordeel is dat ik minder uit mijn hoofd hoef te reconstrueren wat ik deed.
-
-Playwright biedt hulpmiddelen om handelingen op te nemen en testverloop te bekijken. Een opname wordt pas een herstelproces wanneer de projectinrichting registratie, analyse, wijziging en hertest met elkaar verbindt. [Test generator](https://playwright.dev/docs/codegen) · [Trace viewer](https://playwright.dev/docs/trace-viewer).
-
-**Opdracht 14 — Richt mijn testsessie in**
-
-```text
-Richt voor dit project een lokale browsersessie in waarin ik zelf een
-gebruikersroute kan doorlopen. Leg met passende hulpmiddelen de handelingen,
-relevante fouten en timing vast. Gebruik waar passend Playwright, console-
-en netwerkregistratie. Controleer vooraf of de registratie werkt en waar
-de bestanden terechtkomen. Gebruik testdata en voorkom dat wachtwoorden,
-sessiesleutels of onnodige persoonsgegevens in gedeelde registraties belanden.
-Leg uit hoe ik de sessie start en stop en hoe jij de registratie terugvindt.
-```
-
-**Opdracht 15 — Onderzoek mijn zojuist doorlopen route**
-
-```text
-Ik heb zojuist de hieronder beschreven route doorlopen. Dit viel mij op: zie mijn waarnemingen hieronder.
-Bekijk de registratie van deze sessie en vergelijk die met de bedoelde flow.
-Benoem reproduceerbare problemen met bewijs, verwacht gedrag en werkelijk
-gedrag. Onderzoek de oorzaak in de relevante lagen. Herstel de problemen
-binnen de afgesproken scope en herhaal daarna dezelfde route. Vermeld wat
-is opgelost, wat opnieuw is getest en wat nog niet kon worden vastgesteld.
-```
-
-**Controle:** een fout is pas afgerond als dezelfde route opnieuw is gecontroleerd. **Wat je overhoudt:** een registratie, onderbouwde bevindingen en een hertest. **Verdieping:** P20–P21.
-
-## Stap 11: Controleer werking én gebruiksgemak
-
-**Je doel:** weten of de oplossing klopt en prettig te gebruiken is.
-
-Ik beoordeel visuele kwaliteit apart. Een scherm kan technisch werken en toch druk, onduidelijk of onrustig aanvoelen. Daarom vraag ik aandacht voor volgorde, afstanden, knoppen, leesbaarheid en de samenhang van het geheel. Daarnaast laat ik controleren wat onder het scherm gebeurt: gegevens, rechten en foutafhandeling.
-
-**Opdracht 16 — Maak de interface rustiger en natuurlijker**
-
-```text
-Beoordeel systematisch de bestaande interface op hiërarchie, leesbaarheid, witruimte,
-knoppen, formulieren, navigatie, feedback en consistentie. Bekijk de echte
-schermen op mobiel en desktop. Leg per bevinding uit welk gebruikersprobleem
-je ziet. Maak een geprioriteerd verbeterplan en voer de afgesproken
-verbeteringen uit. Behoud de functies. Vergelijk voor en na en controleer
-dat de belangrijkste gebruikersroutes blijven werken.
-
-Controleer ook de SEO-basis uit het bouwplan: indexeerbare openbare pagina’s, juiste canonical en sitemap, metadata, mobiel en snelheid. Controleer bij aanwezige meting echte events, ontdubbeling en accepteren, weigeren en intrekken van toestemming. Rapporteer controles die nog ontbreken.
-```
-
-**Opdracht 17 — Test de hele keten**
-
-```text
-Controleer de afgesproken release tegen de proces-, scherm- en
-acceptatiecriteria. Test de relevante rollen, normale routes, foutpaden,
-rechten en gegevensverwerking. Combineer browsercontroles met controles
-van API en opslag waar die bestaan. Gebruik een passende reeks schermmaten.
-Koppel iedere bevinding en test aan een eis en versie. Scheid geslaagd,
-gefaald, geblokkeerd en niet getest. Een hoog aantal tests is geen bewijs
-van volledige dekking. Los releaseblokkers op en hertest de gewijzigde routes.
-```
-
-**Opdracht 18 — Maak testen opnieuw uitvoerbaar**
-
-```text
-Maak of verbeter run_local_test.bat voor de afgesproken lokale controles.
-Gebruik de bestaande testomgeving en voorkom verwarring met de ontwikkel-
-of productieomgeving. Controleer vereisten en testdata, geef duidelijke
-resultaten en een foutcode bij mislukking. Bewaar rapporten op een vaste plek.
-Documenteer welke dekking het script wel en niet heeft en hoe ik het gebruik.
-```
-
-**Controle:** essentiële routes zijn aantoonbaar getest; open problemen hebben een duidelijke impact en vervolgstap. **Wat je overhoudt:** een releasebesluit met testbewijs én de documentatie-releasecheck uit opdracht 28. Controleer dat pagina-inhoud, gebruikerswerking, architectuur en schema’s de te publiceren versie beschrijven. **Verdieping:** P22 en hoofdstuk 6.
-
-## Stap 12: Bereid publicatie voor en controleer de liveversie
-
-**Je doel:** de gecontroleerde versie beschikbaar maken en vaststellen dat zij ook buiten je eigen computer werkt.
-
-Voor publicatie controleer ik ook bestanden en media. Grote originele foto’s horen in een bewuste opslagopzet; de site gebruikt geschikte webvarianten. Codewijzigingen moeten terug te vinden zijn. Daarna wordt de versie volgens de gekozen hostingopzet gepubliceerd en opnieuw geopend.
-
-**Opdracht 19 — Maak bestanden en media publicatieklaar**
-
-```text
-Controleer in Antigravity welke bestanden gepubliceerd en in de
-GitHub-codeversie opgenomen worden.
-Maak passende webvarianten van afbeeldingen met behoud van de originelen.
-Controleer afmetingen, bestandsgrootte, kwaliteit en werkende verwijzingen.
-Houd geheime configuratie, lokale logs, testauthenticatie en onnodige grote
-bronbestanden buiten commits. Controleer al gevolgde bestanden afzonderlijk;
-alleen uitsluitregels aanpassen verwijdert eerder opgeslagen inhoud niet.
-Lever een overzicht van wijzigingen en resterende aandachtspunten.
-```
-
-**Opdracht 20 — Leg de versie vast en publiceer**
-
-```text
-Controleer de vrijgegeven versie van dit project en bereid de publicatie op de
-hieronder gekozen hostingomgeving voor. Gebruik de bestaande projectconfiguratie en
-actuele officiële documentatie. Controleer build, starten, variabelen, opslag en
-herstelmogelijkheid voor zover relevant. De versie moet eerst in de afgesproken
-GitHub-repository en branch staan. Benoem wat ik zelf in het hostingaccount moet instellen.
-Publiceer de bedoelde versie binnen de gegeven toegang en gekozen zichtbaarheid.
-Controleer daarna de echte live-URL, kernroute, media, formulieren, SEO-instellingen
-en eventuele login. Meld welke versie is gepubliceerd, wat werkelijk is gecontroleerd
-en wat nog ontbreekt. Een succesvolle build bewijst niet dat de website bruikbaar is.
-```
-
-**Controle:** het juiste domein toont de bedoelde versie en de belangrijkste handeling werkt daar. **Wat je overhoudt:** een live-URL en een controleerbare release. **Verdieping:** P23–P25.
-
-## Stap 13: Breng het aanbod naar de eerste gebruikers
-
-**Je doel:** zorgen dat de juiste mensen het aanbod begrijpen, proberen en daadwerkelijk gebruiken.
-
-Een live site is het begin van marktintroductie. Ik verbind de oorspronkelijke doelgroepkeuze aan positionering, vindbaarheid, benadering en activatie. De eerste gebruikservaring moet waarmaken wat de site belooft.
-
-**Opdracht 21 — Maak het introductieplan**
-
-```text
-Maak vanuit de propositie een concreet marktintroductieplan. Kies het eerste
-segment, de boodschap, de geschikte kanalen, de contactroute en de eerste
-activatiestap. Werk content, vindbaarheid, een eventuele demo en onboarding
-uit. Maak een haalbare actielijst met eigenaar, volgorde en meetpunt.
-Scheid bereik, interesse, aanmelding, actief gebruik en betaald gebruik.
-Geef aan welke signalen aanleiding zijn om aanbod of doelgroep bij te stellen.
-Bereid eventuele berichten voor; versturen gebeurt binnen expliciete opdracht.
-```
-
-**Opdracht 22 — Controleer belofte en eerste ervaring**
-
-```text
-Doorloop het traject van eerste kennismaking tot de eerste bruikbare uitkomst.
-Vergelijk de belofte op de site met demo, aanmelding, onboarding en product.
-Benoem onduidelijke verwachtingen, onnodige stappen en ontbrekende uitleg.
-Stel verbeteringen voor en bepaal welke gebeurtenissen we moeten meten om
-te zien waar mensen afhaken. Gebruik passende instellingen voor gegevens
-verzamelen en verifieer die bij de daadwerkelijke implementatie.
-```
-
-**Controle:** je weet wie je wilt bereiken, welke eerste waarde iemand moet ervaren en hoe je daarover leert. **Wat je overhoudt:** een introductieplan en concrete leerpunten. **Verdieping:** P26–P27.
-
-## Stap 14: Bewaar de stand en werk gericht verder
-
-**Je doel:** morgen kunnen doorgaan zonder het hele project opnieuw te hoeven uitleggen.
-
-Ik wil besluiten, bestanden, testresultaten en open werk buiten losse gesprekken bewaren. Dat helpt bij wisselen van sessie of tool en bij het herstellen van een probleem. Het dossier laat zien wat het product moet doen én wat er al werkelijk is uitgevoerd.
-
-**Opdracht 23 — Sluit de werksessie af**
-
-```text
-Werk het projectdossier bij. Leg vast wat is gewijzigd, welke versie geldt,
-welke controles zijn uitgevoerd, wat nog blokkeert en wat de volgende
-concrete stap is. Werk project_state.json en de relevante specificaties bij
-als die onderdeel zijn van deze opzet. Scheid gemeten tijd van schattingen.
-Controleer of wijzigingen en noodzakelijke bestanden op de afgesproken
-manier bewaard zijn. Controleer ook de wijzigingsimpact op alle teksten,
-pagina’s, handleidingen, architectuur, contracten en Mermaid-schema’s. Werk
-de geraakte onderdelen bij en leg document- en codeversie samen vast.
-Laat geheimen buiten openbare statusinformatie.
-
-Laat Antigravity de gecontroleerde wijziging committen en naar de bedoelde GitHub-repository en branch sturen volgens de vrijgaveafspraak. Bewaar de online commitlink en houd bij welke versie werkelijk live staat.
-```
-
-**Opdracht 24 — Hervat een bestaand project**
-
-```text
-Lees eerst de projectstatus, recente wijzigingen, open bevindingen en
-leidende documenten. Controleer die informatie tegen de aanwezige code
-en bestanden. Benoem verschillen. Hervat de eerstvolgende uitvoerbare
-stap binnen de afgesproken scope en controleer het resultaat. Schrijf
-nieuwe besluiten en de bijgewerkte status weer terug in het dossier.
-```
-
-**Controle:** een volgende sessie kan aanwijzen wat klaar is, wat ontbreekt en waar het bewijs staat. **Wat je overhoudt:** een actueel dossier en een concrete volgende stap. Het dossier bevat de volledige site- en architectuurdocumentatie volgens hoofdstuk 11; een statusbestand alleen is onvoldoende. **Verdieping:** P28 en hoofdstuk 7.
-
-## Documenteer de hele site, van tekst tot architectuur
-
-**Dit loopt door alle veertien stappen heen.** Bij een nieuwe site leg je eerst vast wat je wilt maken. Tijdens het bouwen werk je dat bij. Bij oplevering beschrijft het dossier wat daadwerkelijk is gebouwd, welke controles zijn gedaan en wat nog openstaat.
-
-Het dossier moet bruikbaar zijn voor iemand die de site wil gebruiken, inhoud wil aanpassen of de techniek moet onderhouden. Daarom bevat het zowel de letterlijke paginainhoud als de werking achter het scherm.
-
-| Wat je vastlegt | Wat iemand ermee moet kunnen |
-|---|---|
-| Alle pagina’s, routes en navigatie | Zien welke pagina’s bestaan en hoe je er komt. |
-| Alle teksten en talen | De precieze inhoud terugvinden, inclusief knoppen en meldingen. |
-| Schermen, formulieren en bijzondere situaties | Begrijpen wat er bij iedere handeling gebeurt. |
-| Gebruikershandleidingen per rol | De dagelijkse taken zelfstandig uitvoeren. |
-| Mermaid-schema’s | De navigatie, processen, gegevens en systeemonderdelen begrijpen. |
-| Architectuur en technische besluiten | Weten hoe de site is opgebouwd en waarom keuzes zijn gemaakt. |
-| Beheer, publicatie, testen en herstel | De site verantwoord aanpassen, controleren en onderhouden. |
-
-**Architectuur** betekent hier de samenhang van de oplossing: welke onderdelen er zijn, waarvoor ze verantwoordelijk zijn, hoe gegevens ertussen bewegen en waar bijvoorbeeld toegang en opslag worden geregeld. Een lijst met gebruikte technologieën is daarvoor niet voldoende.
-
-### Wanneer werk je welke documentatie bij?
-
-1. **Bij de propositie:** leg doel, doelgroep, eisen en grenzen vast.
-2. **Bij het ontwerp:** schrijf alle pagina’s en teksten uit en verbind ze met schermen, rollen en routes.
-3. **Vóór de bouw:** beschrijf de beoogde architectuur, gegevensafspraken en belangrijke keuzes.
-4. **Bij iedere wijziging:** pas de geraakte teksten, instructies, schema’s en technische beschrijving aan.
-5. **Vóór publicatie:** vergelijk het dossier met de gebouwde versie en registreer afwijkingen.
-6. **Na publicatie:** controleer de liveversie en werk beheer- en gebruikersinstructies bij.
-
-Een eenvoudige site mag dit in enkele bestanden bundelen. Bij een grotere applicatie splits je het op. Wat telt is dat alle toepasselijke informatie aanwezig en terug te vinden is.
-
-### Opdracht 25 — Documenteer alle pagina’s en alle teksten
-
-```text
-Documenteer de volledige site in de huidige projectmap.
-Lees eerst de bestaande documentatie en inventariseer alle routes,
-navigatie, pagina's, gedeelde componenten, contentbestanden, vertalingen,
-formulieren en berichten. Neem relevante CMS-content mee als die toegankelijk
-is; registreer ontoegankelijke inhoud als ontbrekende onderzoeksdekking.
-
-Maak een volledig paginaregister en schrijf per pagina de daadwerkelijke
-teksten uit: metadata, koppen, secties, alinea's, links, CTA's, veldlabels,
-hulpteksten, validatiefouten, bevestigingen, lege toestanden en overige
-meldingen. Neem header, footer, menu's, pop-ups, zijpanelen, alt-teksten en
-relevante e-mail- en notificatietemplates mee. Leg alle aanwezige talen vast.
-Documenteer dynamische teksten als template met variabelen en bron; kopieer
-geen privégegevens van echte gebruikers naar het documentatiedossier.
-
-Koppel iedere tekst en pagina aan een stabiel ID, route en bronlocatie.
-Scheid ontworpen, geïmplementeerd en gecontroleerd gedrag. Markeer concepten,
-placeholders en ontbrekende inhoud. Gebruik herbruikbare tekstonderdelen
-met één leidende bron en controleer de volledige samengestelde paginatekst.
-Lever leesbare Markdown-bestanden en een dekkingsmatrix op. Alleen een lijst
-paginanamen of een samenvatting van teksten is niet voldoende.
-```
-
-### Opdracht 26 — Documenteer de volledige architectuur van je project
-
-```text
-Beschrijf de architectuur en controleer de beschrijving tegen de aanwezige onderdelen. Onderzoek bestaande code, configuratie, gegevensschema's, routes,
-koppelingen, documentatie en toegankelijke runtime. Breid het bestaande
-dossier uit. Beschrijf beoogde en aangetroffen architectuur afzonderlijk.
-
-Werk uit: systeemcontext, onderdelen en verantwoordelijkheden, frontend,
-backend, gegevensopslag, bestandsopslag, interfaces, authenticatie, rechten,
-trust boundaries, bedrijfsregels, omgevingen, configuratie, deployment,
-logging, monitoring, prestaties, kosten, foutafhandeling, herstel en relevante
-afhankelijkheden. Documenteer API- en datacontracten, statussen, null-waarden,
-time-outs, retrybeleid en bescherming tegen dubbele uitvoering waar relevant.
-Leg betekenisvolle besluiten vast met reden, alternatieven en gevolgen.
-
-Maak leesbare Mermaid-schema's voor de relevante systeem-, gegevens- en
-uitvoeringsrelaties. Koppel beschrijvingen en schema's aan concrete bronnen
-en versie. Controleer scheiding van verantwoordelijkheden, centrale afhandeling
-van externe diensten en hergebruik van logica en configuratie. Onderzoek de
-volgende foutcategorieën: ongeldige invoer, gelijktijdige handelingen, uitval
-van externe diensten, gegevensintegriteit, limieten en publicatiefouten.
-Koppel risico's aan maatregelen en verificatie.
-
-Markeer niet-toepasselijke onderwerpen met reden en onbekende onderdelen als
-onbekend. Verzin geen componenten, garanties, metingen of geslaagde controles.
-Lever ARCHITECTURE.md met gekoppelde detaildocumenten, besluitenregister,
-diagramregister en open punten. Benoem wat alleen is gelezen en wat werkelijk
-is uitgevoerd. Wijzig productcode alleen binnen een afzonderlijk gegeven
-bouw- of herstelopdracht.
-
-Neem voor openbare websites het SEO-plan en meetplan op in de architectuur: echte routes en uitleesbare inhoud, metadata, sitemap/canonical/robots, mobiel en prestaties, Analytics met toestemming en meetvalidatie. Beschrijf GitHub als codebewaarplaats, Antigravity als bouwagent en Railway als gekozen hostingroute wanneer die voor dit project zijn afgesproken. Voeg geen diensten toe die het project niet nodig heeft.
-```
-
-### Opdracht 27 — Maak gebruikersdocumentatie en Mermaid-schema’s
-
-```text
-Maak of actualiseer
-/docs/APPLICATION_USER_OPERATING_MODEL.md en de bijbehorende gebruikers-
-en beheerdershandleidingen. Beschrijf de volledige toepasselijke werking:
-rollen, toegang, onboarding, dagelijkse taken, objecten, acties, formulieren,
-gegevens, statussen, berichten, instellingen en uitzonderingen.
-Koppel elke gebruikershandeling aan pagina, scherm, component en relevante
-API of gegevensopslag. Neem acceptatiecriteria en open productvragen op.
-
-Maak echte Mermaid-code voor navigatie, kernprocessen, toestanden,
-gegevensrelaties en technische interacties waar die bestaan. Geef ieder
-schema een ID, doel, status en bron. Houd schema's leesbaar en splits grote
-schema's op. Controleer syntax en gerenderde leesbaarheid als de omgeving
-dat ondersteunt. Markeer niet-uitgevoerde rendering expliciet.
-Een generiek voorbeeld mag niet als schema van de gebouwde site worden getoond.
-```
-
-### Opdracht 28 — Controleer en synchroniseer documentatie bij oplevering
-
-```text
-Beoordeel systematisch het dossier tegen de actuele siteversie. Begin bij de volledige
-inventaris van routes, teksten, talen, rollen, flows, onderdelen en koppelingen.
-Vergelijk die met documentatie, Mermaid-schema's en testbewijs. Controleer ook
-omgekeerd of ieder beschreven onderdeel werkelijk bestaat of herkenbaar als
-ontwerp of toekomstig onderdeel is gemarkeerd.
-
-Werk alle geraakte documentatie bij. Registreer afwijkingen met AUD-ID,
-bewijs, impact, prioriteit, eigenaar en hertest. Controleer verwijzingen en
-leesbaarheid. Leg documentversie, codeversie, omgeving, controledatum en niet
-onderzochte onderdelen vast. Geef per toepasselijk dossieronderdeel de status:
-VOLLEDIG, DEELS, ONTBREEKT of GEBLOKKEERD; motiveer N.V.T. afzonderlijk.
-Maak geen totaalscore die een ontbrekend essentieel onderdeel verbergt.
-Lever de bijgewerkte bestanden en een documentatie-releasecheck op.
-```
-
-**Klaar betekent:** een volgende gebruiker of bouwer kan het product begrijpen en de beschreven handelingen volgen. Voor de release is vastgelegd welke versie het dossier beschrijft en welke onderdelen nog onvoldoende zijn onderzocht. Zie hoofdstuk 11 in Deel B voor het volledige documentatiecontract.
-
-
-## Wat je zelf blijft doen
-
-Mijn aandeel zit vooral in richting geven en beoordelen. Ik breng de context in, kies wat relevant is, zie waar een scherm niet natuurlijk aanvoelt en controleer of het opgeleverde bestand echt bevat wat ik heb gevraagd. Wanneer iets ontbreekt, geef ik gerichte feedback en laat ik de uitkomst opnieuw beoordelen.
-
-| Jij doet | AI helpt met | Samen beoordeel je |
-|---|---|---|
-| Het probleem en de bedoeling uitleggen. | Ordenen, onderzoeken en opties uitwerken. | Of de probleemkeuze onderbouwd is. |
-| Het aanbod en de prioriteiten kiezen. | Propositie, processen en specificaties uitschrijven. | Of de eerste versie genoeg waarde biedt. |
-| Ontwerpen bekijken en feedback geven. | Varianten en samenhangende schermen uitwerken. | Of een gebruiker de route begrijpt. |
-| Zelf door het product gaan. | Bouwen, registreren, analyseren en herstellen. | Of de hele handeling werkt. |
-| Besluiten nemen over publicatie en marktbenadering. | Voorbereiden, uitvoeren binnen de opdracht en meten. | Of mensen de beloofde waarde ervaren. |
-
-Een terugkerende les uit mijn opdrachten is dat je het resultaat zelf moet openen. Een beschrijving van toegevoegde afbeeldingen vervangt de afbeeldingen niet. Een melding dat de site werkt vervangt de browsercontrole niet. Een reparatie wordt overtuigend wanneer dezelfde handeling opnieuw slaagt.
-
-## Begrippen in gewone taal
-
-| Begrip | Betekenis in deze handleiding |
-|---|---|
-| Propositie | Voor wie je iets maakt, welk probleem je oplost en waarom dat aanbod relevant is. |
-| Flow of gebruikersroute | De stappen die iemand doorloopt om een doel te bereiken. |
-| Prompt | De opdracht en context die je aan AI meegeeft. |
-| Prototype | Een vroege uitwerking om vorm en gebruik te beoordelen; werking kan nog beperkt zijn. |
-| Frontend | Het deel van de toepassing waarmee de gebruiker in de browser werkt. |
-| Backend | Het deel dat bijvoorbeeld gegevens verwerkt, rechten controleert en opslag aanstuurt. |
-| API | De afgesproken manier waarop softwareonderdelen gegevens en opdrachten uitwisselen. |
-| Lokaal en localhost | De ontwikkelomgeving op je eigen computer en het adres waarmee je haar bereikt. |
-| Poort | Een nummer waarmee je de juiste lokale dienst aanspreekt. |
-| BAT-bestand | Een Windows-bestand dat een reeks opdrachten uitvoert, bijvoorbeeld om je project te starten. |
-| Repository | De verzameling projectbestanden met versiegeschiedenis. |
-| Deployen | Een versie beschikbaar maken in een hostingomgeving. |
-| Hertest | Dezelfde controle opnieuw uitvoeren nadat er iets is aangepast. |
-| Markdown of MD | Een tekstbestand met eenvoudige opmaak voor koppen, tabellen, links en codeblokken. |
-
-## Bouwbrief voor de uitlegsite
-
-### Het doel van de site
-
-De bezoeker moet begrijpen hoe ik van een idee naar een bruikbare website of app werk en vervolgens zelf een volgende stap kunnen zetten. De site legt de samenhang uit en maakt de opdrachten bruikbaar. Zij hoeft geen kennis van programmeren te veronderstellen.
-
-**Voorstel voor de introductietekst**
-
-> Van een eerste idee naar iets dat je kunt gebruiken. Ik laat zien hoe ik onderzoek, propositie, ontwerp en bouwen met AI verbind. Je volgt de stappen, bekijkt welke gereedschappen ik gebruik en vindt opdrachten die je zelf kunt toepassen. Bij iedere stap controleer je wat het resultaat moet zijn.
-
-### Pagina’s en inhoud
-
-| Pagina | Wat de bezoeker hier vindt | Gewenste volgende handeling |
-|---|---|---|
-| Start | De aanpak in gewone taal en de vijf fasen. | Kies waar je staat of start bij stap 1. |
-| De werkwijze | Overzicht van de veertien stappen en hun resultaten. | Open de passende stap. |
-| Een pagina per stap | Uitleg, handelingen, gereedschap, opdracht en controle. | Kopieer de opdracht en voer de stap uit. |
-| Gereedschappen | Officiële links met uitleg waarom en wanneer je een tool gebruikt. | Open de relevante tool of installatie-uitleg. |
-| Lokaal bekijken | Extra duidelijke uitleg over de BAT-starter en probleemoplossing. | Laat de starter maken en open je project. |
-| Opdrachten | De 28 opdrachten, gegroepeerd per fase en documentatietaak. | Kopieer een opdracht met de benodigde context. |
-| De werkwijze | De vijf controlevragen en praktische voorbeelden. | Pas de controle toe op je huidige resultaat. |
-| Documentatie en architectuur | Alle site-inhoud, gebruikerswerking, schema’s, technische samenhang en opdrachten 25–28. | Maak of actualiseer het websitedossier. |
-| Naslagwerk | De verdiepende processtappen, modellen en verantwoording. | Zoek een detail of download dit MD-bestand. |
-
-### Vast patroon voor iedere stappagina
-
-1. Een titel met een handeling: bijvoorbeeld “Maak je idee concreet”.
-2. Een korte uitleg van het doel en waarom deze stap helpt.
-3. “Dit heb je nodig” met de input uit de vorige stappen.
-4. Een kort, genummerd stappenplan.
-5. “Open het gereedschap” met de officiële link, indien relevant.
-6. Een volledig leesbare opdracht met een kopieerknop.
-7. “Hieraan zie je dat het klaar is” met een concrete controle.
-8. Het bestand of resultaat dat je bewaart.
-9. Vorige stap, volgende stap en een link naar verdieping.
-
-De kopieerfunctie moet de volledige opdracht kopiëren, inclusief noodzakelijke contextvelden. Laat de bezoeker weten welke velden hij eerst moet invullen. Controleer navigatie, kopiëren, links en leesbaarheid op mobiel. Een voortgangsfunctie is een mogelijke latere uitbreiding; bepaal eerst of die nodig is en of daarvoor opslag of een account gewenst is.
-
-### Redactionele afspraken
-
-- Gebruik “ik” voor mijn werkwijze en “je” voor wat de bezoeker doet.
-- Houd de hoofdtekst toegankelijk; plaats configuratie en architectuur onder verdieping.
-- Leg een technisch woord bij eerste gebruik uit.
-- Neem projectnamen, herkenbare klantgegevens en onbewezen resultaatclaims niet over.
-- Gebruik echte, gecontroleerde voorbeelden zodra die beschikbaar zijn. Label illustraties en fictieve voorbeelden duidelijk.
-- Toon links bij de stap waar ze nodig zijn, naast het centrale gereedschappenoverzicht.
-- Laat de uitlegsite dezelfde kwaliteitscontrole doorlopen: inhoud, mobiel gebruik, knoppen, links en daadwerkelijke werking.
-
-### Opdracht om deze uitlegsite later te ontwerpen en bouwen
-
-```text
-Gebruik dit Markdown-document als inhoudelijke bron voor een Nederlandstalige
-uitlegsite over mijn werkwijze van idee tot markt met AI.
-Maak Deel A leidend voor de leesroute. Gebruik Deel B als doorzoekbare of
-geordende verdieping. Behoud de betekenis, alle 14 stappen, de 28 opdrachten,
-de tool-links en de lokale BAT-werkwijze. Maak technische details toegankelijk
-zonder ze in de introductie te stapelen. Verzin geen projecten, resultaten,
-ervaringen, klantquotes of werking die niet uit de bron blijkt.
-
-Werk eerst informatiearchitectuur, pagina-inhoud, navigatie en schermen uit.
-Maak daarna de ontwerpopdracht voor Stitch en het overdrachtsdossier voor
-Antigravity. Bouw volgens de beoordeelde richting. Gebruik rustige typografie,
-heldere hiërarchie, ruime afstanden en herkenbare vorige/volgende navigatie.
-Voorzie opdrachten van werkende kopieerknoppen. Laat mij de site lokaal
-openen via een passend start_local.bat-bestand. Controleer de stappenroute,
-links, kopieerfunctie, mobiele weergave en de download van het handboek.
-Leg uitgevoerde controles, onderbouwing en resterende punten vast. Lever ook het
-volledige documentatiedossier volgens hoofdstuk 11 op: alle pagina’s en teksten,
-gebruikerswerking, architectuur, Mermaid-bronnen en beheerinstructies. Werk
-het dossier bij iedere wijziging bij en controleer het tegen de opgeleverde versie.
-```
-
-## Aanvullende technische links
-
-Deze documentatie is bedoeld voor de bouwer die de bestaande opzet moet begrijpen. Het is geen voorschrift om alle genoemde technieken te combineren. Kies en controleer versies in het concrete project.
-
-| Onderwerp | Officiële documentatie |
-|---|---|
-| TypeScript | [Typen en taalgebruik](https://www.typescriptlang.org/docs/). |
-| React | [Werken met componenten](https://react.dev/learn). |
-| Next.js | [Frameworkdocumentatie](https://nextjs.org/docs). |
-| Vite | [Projectopzet en ontwikkelomgeving](https://vite.dev/guide/). |
-| Tailwind CSS | [Installatie en documentatie](https://tailwindcss.com/docs). |
-| Lucide | [Iconen gebruiken](https://lucide.dev/guide/). |
-| next-intl | [Meertaligheid inrichten](https://next-intl.dev/docs/getting-started). |
-| FastAPI | [Backend en API-documentatie](https://fastapi.tiangolo.com/). |
-| DuckDB | [Documentatie-ingang](https://duckdb.org/docs/). |
-
-De ingangen hierboven zijn geraadpleegd; daarmee zijn geen compatibiliteit van versies of concrete projectconfiguraties getest. De links naar Antigravity en Stitch vervangen de minder gerichte verwijzingen in de oorspronkelijke bijlage.
-
----
-
-# Deel B — Volledig procesnaslagwerk en verantwoording
-
-Dit deel bewaart de gedetailleerde methode. De veertien stappen uit Deel A vormen de leesroute; P01–P28 hieronder splitsen die route verder uit voor uitvoering en controle. De procesnummering en broncodes in dit naslagwerk staan op zichzelf.
-
-## Proceshandboek voor onderzoek, propositie, ontwerp, AI ondersteunde bouw en marktintroductie
-
-**Auteursperspectief:** Mark van Asten  
-**Versie:** 3.1  
-**Datum:** 12 september 2026  
-**Doel:** mijn werkwijze nauwkeurig vastleggen, overdraagbaar maken en gebruiken als inhoudelijke basis voor een uitlegsite.  
-**Vorm:** één zelfstandig Markdown-document, zonder herkenbare verwijzingen naar uitgevoerde projecten.  
-**Status:** reconstructie van gedocumenteerde werkwijze en beschreven handelingen, aangevuld met expliciet gemarkeerde procesverbeteringen. Geen nieuwe technische certificering van de onderliggende systemen.
-
-## Leeswijzer
-
-Dit document beschrijft zowel **hoe ik werk** als **hoe iemand die aanpak stap voor stap kan uitvoeren**. De veertien lezersstappen uit Deel A vatten deze uitvoering samen. De oorspronkelijke tien ontwikkelfasen blijven volledig herkenbaar, maar zijn uitgebreid met het gedrag tussen die fasen: vragen stellen, aanscherpen, bewijs controleren, fouten terugvoeren, opnieuw beoordelen en voortgang vastleggen.
-
-De hoofdlijn is: ik onderzoek een probleem, kies een doelgroep en aanbod, structureer de oplossing, maak haar zichtbaar in schermen en vertaal die keuzes naar gerichte bouwopdrachten. Ik beoordeel het resultaat tijdens het gebruik en laat afwijkingen onderzoeken en herstellen. Publicatie, marktbenadering en leren uit gebruik horen bij dezelfde keten.
-
-De processtappen hieronder zijn instructies voor herhaling. Ze betekenen niet dat iedere controle in ieder eerder traject aantoonbaar is uitgevoerd. Waar de geschiedenis alleen een opdracht of voornemen toont, blijft dat onderscheid staan.
-
-### Herkomstlabels
-
-| Label | Betekenis |
-|---|---|
-| **GEBRUIKERSUITSPRAAK** | Ik heb de handeling, ervaring of voorkeur zelf beschreven. Dit bewijst de mededeling, niet automatisch de technische uitvoering. |
-| **OPDRACHT** | Ik heb expliciet gevraagd om deze stap, deze dekking of dit resultaat. Voltooiing moet afzonderlijk worden vastgesteld. |
-| **DOCUMENTATIE** | Een geraadpleegd document beschrijft de inrichting of werkwijze. Onderliggende code of runtime kan nog ongecontroleerd zijn. |
-| **AFGELEID** | Een patroon dat uit meerdere uitingen of documenten wordt afgeleid. Geen vaststaande persoonlijkheidseigenschap. |
-| **AANVULLING** | Een voorgestelde verbetering die de methode uitvoerbaarder, vollediger of beter controleerbaar maakt. |
-| **ONBEKEND** | Het beschikbare materiaal is onvoldoende om de status vast te stellen. |
-
-Broncodes zoals **B01** verwijzen naar het projectneutrale bronregister in hoofdstuk 10. Een eerder AI-antwoord of een eerdere versie van dit handboek telt niet als onafhankelijk bewijs. De aangeleverde audit en de eerder gelezen kopie daarvan vormen één bronfamilie.
-
-### Inhoud van het naslagwerk
-
-1. De kern en ontwikkeling van mijn werkwijze
-2. Analyse van mijn gedrag en handelingen
-3. Het procesoverzicht en de verantwoordelijkheden
-4. De volledige werkwijze in 28 processtappen
-5. Technische inrichting en grenzen van de tooling
-6. Vaste controlelussen en beslisregels
-7. Het overdrachtsdossier en invulmodellen
-8. Vertaling naar een uitlegsite
-9. Dekkingsmatrix en aanvullingen
-10. Bronnen, onzekerheden en kwaliteitscontrole
-11. Het volledige documentatiecontract
-12. Audit en verwerking van de documentatie-uitbreiding
-
-## 1. De kern en ontwikkeling van mijn werkwijze
-
-### 1.1 Wat de aanpak bijeenhoudt
-
-Ik gebruik AI gedurende de hele ontwikkeling, maar de inhoudelijke richting komt niet vanzelf uit de tools. Mijn aandeel zit in het formuleren van het probleem, het combineren van zakelijke en technische vragen, het beoordelen van de uitkomst en het steeds concreter maken van wat goed moet zijn. Dat blijkt uit opdrachten voor onderzoek, proposities, scherminventarisaties, prompts en controles. **OPDRACHT / GEBRUIKERSUITSPRAAK — B02, B03, B06, B10, B11.**
-
-De onderscheidende samenhang is **AFGELEID**:
-
-- Ik beweeg van breed onderzoek naar een afgebakend aanbod.
-- Ik laat het aanbod vertalen naar processen, objecten, rollen en schermen.
-- Ik gebruik documenten en prompts als overdracht tussen analyse, ontwerp en bouw.
-- Ik beoordeel zowel functionele werking als visuele samenhang.
-- Ik vraag opnieuw om onderzoek of reparatie wanneer de feitelijke oplevering niet aansluit.
-- Ik probeer herhaalde handelingen te standaardiseren met scripts, statusbestanden en kwaliteitskaders.
-
-Dit is een werkwijze met terugkoppeling. Een nieuwe bevinding kan een eerdere keuze veranderen. De methode moet die verandering verwerken in alle afhankelijke documenten, schermen en code.
-
-### 1.2 Ontwikkeling over de maanden
-
-Dit overzicht laat accenten in het teruggevonden materiaal zien. Het is geen bewijs dat een handeling pas in de genoemde maand voor het eerst voorkwam.
-
-| Periode | Zichtbaar accent | Betekenis voor het proces | Status en bron |
-|---|---|---|---|
-| Januari 2026 | Propositie, inhoudsstructuur en bouwbriefing worden in samenhang gevraagd. | Het inhoudelijke model gaat vooraf aan een bouwopdracht. | OPDRACHT, teruggevonden context, B03 |
-| Februari 2026 | Doelgroepsegmentatie, eerste aanbod, gefaseerde introductie en bewijscontrole krijgen nadruk. | Marktkeuze en onderbouwing worden onderdeel van de productopzet. | OPDRACHT, B04 en B05 |
-| Maart 2026 | Ik beschrijf een gemaakt Stitch-ontwerp en vraag hoe dit naar Antigravity kan worden overgedragen; ook juridische randvoorwaarden worden onderzocht. | Het knelpunt verschuift naar de overdracht van zichtbaar ontwerp naar werkende software. | GEBRUIKERSUITSPRAAK / OPDRACHT, B06 en B07 |
-| April 2026 | Bewaren van versies, evidence trails en grenzen van de gesloten IDE worden expliciet. | Kwaliteitsinstructies worden onderscheiden van technische afdwinging; reproduceerbaarheid krijgt meer gewicht. | OPDRACHT / GEBRUIKERSUITSPRAAK, B08 en B09 |
-| Juli 2026 | Alle rollen, schermen, overlays, acties, data en testlagen moeten in een dekkingsmodel passen. | De documentatie moet een volledige productbeschrijving worden, met aantoonbare dekking. | OPDRACHT, B10 en B11 |
-| September 2026 | Ik controleer ontbrekende beelden, bekritiseer visuele drukte, beschrijf registratie tijdens klikken en vraag verbetering van te grote mediabestanden. | De aandacht ligt zichtbaar bij de feitelijke gebruikerservaring, de kwaliteit van artefacten en het beheer van de bouwketen. | OPDRACHT / GEBRUIKERSUITSPRAAK, B12–B15 |
-
-Voor mei, juni en augustus is in deze synthese geen afzonderlijke gedragsontwikkeling vastgesteld. Beschikbare leveranciersberichten of een abonnement zijn geen bewijs van mijn uitvoering.
-
-### 1.3 Vijf hoofdfasen boven de technische cyclus
-
-De eerder vastgelegde formulering **Understand → Shape → Prove → Build → Evolve** is een bruikbare samenvatting. **DOCUMENTATIE — B16.**
-
-| Hoofdfase | Vraag | Concrete uitkomst |
-|---|---|---|
-| Understand | Wat is het probleem, voor wie en in welke context? | Onderzoeksbeeld, doelgroep en prioritaire onzekerheden. |
-| Shape | Wat is de oplossing en hoe moet die werken? | Propositie, scope, proces, data, content en ontwerp. |
-| Prove | Welke onzekerheid moet eerst klein worden getoetst? | Prototype, technische proef of gebruikersfeedback met conclusie. |
-| Build | Hoe realiseren en controleren we de gekozen werking? | Gebouwde kernflows met uitvoeringsbewijs. |
-| Evolve | Wat leren we uit gebruik en marktcontact? | Gerichte verbeteringen en een volgende investeringsbeslissing. |
-
-**AANVULLING:** behandel Prove als een herhaalde activiteit. Een technische proef kan al vóór een volledig schermontwerp nodig zijn. Een markttoets kan vóór de volledige applicatie plaatsvinden. Prove is geen verplicht groot project op zichzelf.
-
-## 2. Analyse van mijn gedrag en handelingen
-
-### 2.1 Ik begin geregeld met een brede, gesproken briefing
-
-Mijn zichtbare berichten bevatten ideeën, voorbeelden, randvoorwaarden en correcties binnen één formulering. Vervolgens vraag ik om daar een bruikbaar document of een goede prompt van te maken. **GEBRUIKERSUITSPRAAK / OPDRACHT — B02, B14, B15.**
-
-**AFGELEID:** ik gebruik de assistent mede als structuurgever: losse gedachten worden geordend tot een uitvoerbare opdracht. De ruwe formulering is nog geen complete specificatie. De bedoeling, de expliciete eisen en de open keuzes moeten eerst uit elkaar worden gehaald.
-
-**Procesgevolg:** begin met een compacte reconstructie van de bedoeling. Bewaar mijn concrete eisen en verwijder alleen herhaling of onduidelijke formulering. Maak geen nieuwe productbeslissing omdat een uitgesproken zin grammaticaal onvolledig is.
-
-### 2.2 Ik werk via opeenvolgende aanscherpingen
-
-Ik vraag eerst om onderzoek of een opzet, daarna om verdieping, vervolgens om volledigheid of een ander opleverformaat. Een concrete reeks is het vragen naar schermen, het constateren dat ze niet in het resultaat zitten, het aanwijzen van aanvullende brontypen en het verzoek alles opnieuw in de bestanden te verwerken. **OPDRACHT — B12.**
-
-**AFGELEID:** een eerste resultaat dient vaak als denk- en toetsmateriaal. Mijn vervolgvragen maken de kwaliteitslat en scope explicieter. Een goede samenwerking verwerkt die correcties cumulatief: de laatste instructie vervangt niet automatisch alle eerdere eisen.
-
-**AANVULLING:** houd een eisenregister bij met status en wijzigingsreden. Zo worden aanscherpingen geen reeks losse prompts die elkaar gedeeltelijk tegenspreken.
-
-### 2.3 Ik controleer het concrete artefact
-
-Ik neem geen genoegen met een tekstuele mededeling dat screenshots zijn toegevoegd wanneer ik ze niet terugzie. Ik vraag ook of afbeeldingen beter in een PDF kunnen worden geplaatst, terwijl een spreadsheet als index behouden blijft. **OPDRACHT / GEBRUIKERSUITSPRAAK — B12.**
-
-**AFGELEID:** voor mij is de vorm van de levering onderdeel van de werking. Een verwijzing naar een afbeelding is iets anders dan een zichtbare afbeelding. Een beschreven test is iets anders dan een uitgevoerd testresultaat.
-
-**Procesgevolg:** open het eindbestand of de werkende flow en controleer de beloofde inhoud daarin. Een succesvolle export of upload bewijst alleen dat het bestand is gemaakt of opgeslagen.
-
-### 2.4 Ik wil brede dekking vóórdat onderdelen verdwijnen
-
-De opdrachten uit juli vragen om alle pagina’s, rollen, flows, modals, drawers, overlays, objecten, acties en acceptatiecriteria, inclusief onderscheid tussen eerste versie en latere uitbreiding. **OPDRACHT — B10.**
-
-**AFGELEID:** ik wil zicht op het geheel om bewuste keuzes te kunnen maken. Dat betekent niet dat alles tegelijk gebouwd moet worden. Een volledige inventarisatie en een beperkte eerste release zijn verenigbaar.
-
-**AANVULLING:** gebruik twee statussen naast elkaar: `onderzocht/ontworpen` en `in deze release/bewust later`. Dan wordt prioriteren geen stilzwijgend vergeten.
-
-### 2.5 Ik kijk naar de ervaring, ook als de functie bestaat
-
-Ik benoem visuele drukte, knoppen, afstanden, usability en een gebrek aan een natuurlijke of samenhangende uitstraling. **OPDRACHT — B13.**
-
-**AFGELEID:** mijn acceptatie heeft een functionele en een visuele laag. Een klikbare knop voldoet nog niet wanneer het scherm onduidelijk is of de interface als losse onderdelen aanvoelt.
-
-**Procesgevolg:** toets taakuitvoering en visuele kwaliteit apart. Vertaal woorden als mooi, rustig en natuurlijk naar observeerbare ontwerpcriteria; laat de agent niet alleen willekeurige kleuren of randen veranderen.
-
-### 2.6 Ik gebruik audits om verder te komen
-
-Ik vraag om audits, heraudits, concrete verbeterplannen en herstel. Ook betwist ik te stellige of flatterende uitspraken en vraag ik om realisme en bewijs. **OPDRACHT — B05, B08, B12, B13.**
-
-**AFGELEID:** controle is voor mij een middel om het product beter te maken. Het moet leiden tot een concrete beslissing, reparatie of duidelijke beperking. Meer audittekst zonder verwerking helpt niet.
-
-**AANVULLING:** sluit iedere bevinding af met eigenaar, prioriteit, actie, verificatie en status. Herhaal de audit gericht op de gewijzigde onderdelen en relevante gevolgen.
-
-### 2.7 Ik probeer feedback tijdens het werken te automatiseren
-
-Ik heb beschreven dat ik tijdens het doorklikken problemen laat vastleggen, waarna ik in de ontwikkelomgeving vraag of dezelfde problemen zijn herkend en kunnen worden opgelost. **GEBRUIKERSUITSPRAAK — B14.**
-
-**AFGELEID:** ik wil minder handmatig registreren en een kortere route van waarneming naar herstel. De beschreven koppeling is hier niet opnieuw functioneel getest.
-
-**Procesgevolg:** de registratie moet een taak, stappen, tijdstip, omgeving en verwacht resultaat bevatten. De agent vergelijkt die verwachting met de registratie; een automatische foutdetector kan mijn bedoeling niet zelfstandig bewijzen.
-
-### 2.8 Ik wil dat een werkwijze opnieuw toepasbaar wordt
-
-De bijlage beschrijft centrale poortregistratie, lokale starters, statusbestanden en synchronisatie. In deze opdracht vraag ik expliciet de methode los van projecten vast te leggen voor uitleg aan anderen. **DOCUMENTATIE / OPDRACHT — B01 en B02.**
-
-**AFGELEID:** ik probeer kennis uit losse bouwervaringen om te zetten in een herhaalbare manier van werken. De volgende stap is niet meer documenten verzamelen, maar bepalen welke actuele informatie bij elke sessie leidend is.
-
-### 2.9 Spanningen die de methode moet opvangen
-
-Dit zijn procesrisico’s, geen diagnoses of bewezen negatieve eigenschappen.
-
-| Zichtbaar patroon | Sterke kant | Mogelijk risico, AFGELEID | Procesantwoord, AANVULLING |
-|---|---|---|---|
-| Herhaald vragen om volledige dekking | Minder verborgen gaten. | De scope blijft groeien zonder releasemoment. | Volledige inventaris, beperkte release en expliciete parkeerplaats. |
-| Nieuwe ideeën toevoegen tijdens beoordeling | Snelle inhoudelijke verbetering. | Ontwerp, documenten en code lopen uiteen. | Wijzigingslog met impactanalyse. |
-| Veel verschillende opdrachten en tools | Elke taak kan passend worden uitgevoerd. | Context gaat verloren tussen omgevingen. | Eén actueel overdrachtsdossier en vaste startinstructie. |
-| Veel nadruk op audits | Afwijkingen komen aan het licht. | Opnieuw beoordelen vervangt het oplossen. | Bevinding pas sluiten na herstel en gerichte hertest. |
-| Sterke visuele kwaliteitswens | Aandacht voor echte bruikbaarheid. | Eindeloos verfijnen zonder gebruikersbewijs. | Visuele criteria combineren met echte taakobservatie. |
-| Automatisering van bouw en herstel | Minder herhaalwerk. | Een foutieve automatische wijziging krijgt te veel bereik. | Afgebakende taken, versiebeheer en gecontroleerde hertest. |
-
-### 2.10 Lessen uit beschreven frictie
-
-- **Grote mediabestanden:** ik meldde dat grote foto’s in Git terecht waren gekomen en vroeg om geschikte webvarianten, met behoud van originelen buiten commits. Dit rechtvaardigt een controle vóór de commit. Het bewijst niet wat de repository nu bevat. **B15.**
-- **Ontbrekende beelden:** ik constateerde dat de output niet de beloofde echte schermbeelden bevatte. Dit rechtvaardigt visuele verificatie van het eindbestand. **B12.**
-- **Verlies van lokale mappen:** een teruggevonden gesprek bevat mijn mededeling dat lokale projectmappen per ongeluk waren verwijderd en dat reconstructie uit chats vastliep. Dit is een gebruikersmededeling, geen hier onderzochte incidentoorzaak. De procesles is dat chats geen complete back-up van een bouwomgeving zijn. **B17.**
-- **Te sterke auditclaims:** een document kan zich volledig geverifieerd noemen terwijl de bewijsbestanden in deze sessie ontbreken. Daarom moeten beschrijving en actuele verificatie gescheiden blijven. **B01.**
-
-## 3. Het procesoverzicht en de verantwoordelijkheden
-
-### 3.1 De volledige route
-
-| Groep | Stappen | Hoofdresultaat |
-|---|---|---|
-| Kaderen en onderzoeken | P01–P05 | Duidelijke opdracht, bestaand materiaal, doelgroep en bewijsbeeld. |
-| Propositie en productmodel | P06–P10 | Aanbod, toetsplan, scope, rollen, data en processen. |
-| Content en ontwerp | P11–P14 | Paginastructuur, schermen, ontwerpafspraken en prototype. |
-| Overdracht en technische bouw | P15–P19 | Uitvoerbare opdrachten, werkplek, architectuur en werkende flows. |
-| Controleren en herstellen | P20–P22 | Vastgelegde feedback, herstel en gecontroleerde releasestatus. |
-| Publiceren en in de markt brengen | P23–P27 | Beheerde assets, versiebeheer, live product, marktcontact en leren. |
-| Continuïteit | P28 | Actuele status, overdracht, herstart en herstelbaarheid. |
-
-De nummering helpt bij documentatie. Versiebeheer via Antigravity, statusbeheer, risicoafweging en commerciële toetsing lopen ook tijdens eerdere stappen mee.
-
-```mermaid
-flowchart TD
-    A["Probleem en markt"] --> B["Propositie en productmodel"]
-    B --> C["Schermen en kleine toets"]
-    C --> D{"Voldoende basis?"}
-    D -->|Nee| B
-    D -->|Ja| E["Bouwen en controleren"]
-    E --> F{"Kernflow werkt?"}
-    F -->|Nee| G["Oorzaak en herstel"]
-    G --> E
-    F -->|Ja| H["Publiceren en gebruiken"]
-    H --> I["Marktfeedback en prioriteiten"]
-    I --> B
-```
-
-### 3.2 Wie doet wat
-
-De rollen hieronder zijn verantwoordelijkheden. Ze hoeven niet door verschillende mensen te worden ingevuld en vormen geen claim dat een volledig team aanwezig is.
-
-| Rol | Verantwoordelijkheid |
-|---|---|
-| Initiatiefnemer en producteigenaar | Probleem, doelgroep, grenzen, prioriteiten, gewenste ervaring en acceptatie bepalen. In mijn eigen werkwijze houd ik hier de regie. |
-| Onderzoekende assistent | Bronnen verzamelen, bevindingen structureren, aannames en tegenbewijs zichtbaar houden. |
-| Ontwerprol | Flows, schermen, toestanden en visuele afspraken uitwerken. |
-| Bouwende agent of ontwikkelaar | Bestaande code onderzoeken, de afgebakende wijziging maken en werking aantonen. |
-| Controlerende rol | Resultaat vergelijken met eisen en bewijs; niet alleen de bouwsamenvatting herhalen. |
-| Operationeel eigenaar | Release, kosten, ondersteuning, monitoring en herstel beheren. |
-| Beoogde gebruiker | Laten zien of het probleem en de oplossing in de praktijk aansluiten. |
-
-**AANVULLING:** als meerdere agents worden ingezet, verdeel werk op duidelijk afgebakende onderdelen, met afgesproken bestanden en overdracht. Parallel werken is een keuze bij onafhankelijk werk, geen automatisch kenmerk van elke fase. Een tweede agent is bovendien geen onafhankelijke feitenbron.
-
-### 3.3 Wat iedere stap moet opleveren
-
-Iedere processtap bevat dezelfde elementen: doel, ingang, concrete handelingen, taakverdeling, output en een doorgangscriterium. De handelingen zijn een genormaliseerde uitvoeringsinstructie. Nieuwe technische details of extra controles zijn als aanvulling aangeduid; de herkomstregel maakt duidelijk welke basis historisch zichtbaar is.
-
-Een stap kan vier uitkomsten hebben: **doorgaan**, **herstellen**, **bewust parkeren** of **stoppen**. Ontbrekende informatie mag niet stilzwijgend veranderen in een positieve uitkomst.
-
-## 4. De volledige werkwijze in 28 processtappen
-
-### P01 — De ruwe gedachte omzetten in een duidelijke opdracht
-
-**Doel:** vastleggen wat ik daadwerkelijk wil bereiken.  
-**Herkomst:** OPDRACHT / GEBRUIKERSUITSPRAAK, B02; de vaste structuur is AANVULLING.  
-**Ingang:** gesproken of geschreven idee, aanleiding en beschikbare voorbeelden.
-
-1. Schrijf het gewenste resultaat in gewone taal op.
-2. Scheid de aanleiding, doelgroep, ideeën voor functies en harde randvoorwaarden.
-3. Benoem het soort resultaat: onderzoek, propositie, ontwerp, website, webapp of uitbreiding.
-4. Haal concrete uitsluitingen uit de briefing en bewaar die letterlijk in het eisenregister.
-5. Noteer tegenstrijdige of ontbrekende beslissingen; stel alleen de vragen die de uitvoering wezenlijk veranderen.
-6. Leg het gewenste opleverformaat en gebruik vast. Een document voor een bouwagent heeft andere detailbehoeften dan introductietekst voor bezoekers.
-
-**Mijn rol:** bedoeling en grenzen corrigeren. **Assistent:** structureren en onduidelijkheden teruggeven.  
-**Output:** projectbrief met doel, scope, niet-doelen, doelgroep, output en open vragen.  
-**Doorgaan als:** iemand de opdracht kan navertellen zonder aanvullende productkeuzes te verzinnen. Anders terug naar de briefing.
-
-### P02 — Bestaand materiaal en actuele stand verzamelen
-
-**Doel:** voortbouwen op wat al bestaat.  
-**Herkomst:** DOCUMENTATIE / OPDRACHT, B01, B08, B10.  
-**Ingang:** projectbrief, bestaande documenten, ontwerpen, bestanden en eventueel repository.
-
-1. Inventariseer bronnen, proposities, ontwerpbestanden, exports, prompts, code en eerdere besluiten.
-2. Bepaal welke versie actueel is en welke bestanden alleen historisch materiaal zijn.
-3. Scheid wat bedoeld is, wat beschreven is en wat werkelijk in de code of interface zichtbaar is.
-4. Controleer bestaande herbruikbare onderdelen voordat je iets nieuws laat maken.
-5. **AANVULLING:** maak een register met bestandsnaam, versie, doel, status en afhankelijkheden.
-6. Bewaar origineel bewijs; maak afgeleiden voor extractie, samenvatting of bewerking.
-
-**Mijn rol:** aangeven welke eerdere keuzes nog gelden. **Assistent:** inventariseren en afwijkingen signaleren.  
-**Output:** bron- en artefactregister, actuele baseline en lijst conflicten.  
-**Doorgaan als:** de leidende documenten bekend zijn. Een oud chatantwoord mag een recenter vastgesteld document niet ongemerkt overrulen.
-
-### P03 — Het probleem en de huidige werkwijze onderzoeken
-
-**Doel:** begrijpen welk gebruikersprobleem de oplossing moet dragen.  
-**Herkomst:** OPDRACHT / DOCUMENTATIE, B03, B04, B16.  
-**Ingang:** projectbrief en onderzoeksbronnen.
-
-1. Beschrijf wat de gebruiker nu doet, met welke hulpmiddelen en welk gewenst resultaat.
-2. Benoem overdrachten, wachttijd, handwerk, fouten, herhaalde invoer en onduidelijke beslissingen.
-3. Maak onderscheid tussen gebruiker, beslisser, betaler, beheerder en eventueel externe partij.
-4. Vraag welke uitzonderingen veel moeite kosten en wat er misgaat als een stap faalt.
-5. **AANVULLING:** toets het probleembeeld aan gesprekken of observaties bij de beoogde doelgroep.
-6. Noteer wat feitelijk bekend is en welke veronderstellingen nog een toets nodig hebben.
-
-**Mijn rol:** zakelijke context en relevantie beoordelen. **Assistent:** probleemstructuur en vragen uitwerken.  
-**Output:** beschrijving van de huidige situatie, belangrijkste knelpunten en gewenste uitkomst.  
-**Doorgaan als:** het probleem concreter is dan een algemene wens om AI te gebruiken of een nieuwe site te hebben.
-
-### P04 — Markt en eerste doelgroep afbakenen
-
-**Doel:** kiezen voor wie ik als eerste bouw en via welke route die groep bereikbaar is.  
-**Herkomst:** OPDRACHT, B04.  
-**Ingang:** probleembeeld, marktdata, bestaand netwerk en alternatieven.
-
-1. Deel de markt op in bruikbare segmenten, bijvoorbeeld naar omvang, proces, koopmotief of werkwijze.
-2. Breng per segment gebruiker, beslisser, betaler en gebruikssituatie in kaart.
-3. Onderzoek bestaande oplossingen en redenen om wel of niet te veranderen.
-4. Beschrijf hoe het segment te bereiken is: direct contact, content, partners of een ander passend kanaal.
-5. Kies het eerste segment op basis van probleemdruk, bereikbaarheid en haalbaarheid; markeer ontbrekend bewijs.
-6. **AANVULLING:** maak expliciet welke segmenten later komen en welke aanpassing zij zouden vragen.
-
-**Mijn rol:** de focus kiezen. **Assistent:** segmentatie en vergelijkingsmateriaal leveren.  
-**Output:** doelgroepkeuze, onderbouwing en eerste benaderingshypothese.  
-**Doorgaan als:** de doelgroep voldoende specifiek is om aanbod, taal en eerste gebruikersflow op af te stemmen.
-
-### P05 — Alternatieven en werkelijke schermen onderzoeken
-
-**Doel:** leren van hoe bestaande oplossingen werken en welke gaten overblijven.  
-**Herkomst:** OPDRACHT, B12.  
-**Ingang:** spelerslijst, publieke productinformatie en toegankelijke documentatie.
-
-1. Begin bij officiële productpagina’s en beschrijvingen van de workflow.
-2. Zoek vervolgens handleidingen, werkinstructies, release notes, demo’s en ondersteunende documenten.
-3. Leg per bron datum, productversie, context en toegangsvorm vast waar beschikbaar.
-4. Verzamel echte schermafbeeldingen en koppel ze aan een handeling of processtap.
-5. Scheid werkelijk waargenomen schermen, handleidingbeelden en eigen reconstructies.
-6. Vergelijk op taak, benodigde invoer, feedback, foutafhandeling en uitkomst; kopieer geen interface zonder te begrijpen waarom die bestaat.
-7. Controleer het eindbestand visueel. Een link of afbeeldingstitel is geen ingebed schermbeeld.
-
-**Mijn rol:** ontbrekende dekking en relevante vergelijkingspunten aanwijzen. **Assistent:** bronnen en beelden verwerken.  
-**Output:** vergelijkingsmatrix en een beeldboek waar relevant, met een index naar bewijs.  
-**Doorgaan als:** duidelijk is wat echt is gezien en wat onbekend blijft. Geen extra platformtoegang aanvragen als de opdracht tot publieke bronnen beperkt is.
-
-### P06 — De propositie en het eerste aanbod formuleren
-
-**Doel:** het probleem vertalen naar een begrijpelijke en onderscheidende belofte.  
-**Herkomst:** OPDRACHT / DOCUMENTATIE, B03, B04, B16.  
-**Ingang:** doelgroepkeuze, probleembeeld en alternatievenonderzoek.
-
-1. Formuleer doelgroep, probleem, gewenste uitkomst en aanpak in één samenhangende uitleg.
-2. Benoem waarom deze aanpak aantrekkelijk is ten opzichte van de huidige situatie.
-3. Scheid de eerste betaalde of bruikbare waarde van latere uitbreidingen.
-4. Werk aanbod, verdienmodel en belangrijke leveringskosten uit; markeer aannames.
-5. Koppel iedere claim aan bewijs of benoem haar als te toetsen hypothese.
-6. Maak een korte pitch en een uitgebreidere propositie die dezelfde boodschap dragen.
-
-**Mijn rol:** kiezen wat ik wil aanbieden en beloven. **Assistent:** alternatieven formuleren en inconsistenties zichtbaar maken.  
-**Output:** propositiedocument met eerste aanbod, onderscheid, bewijs en grenzen.  
-**Doorgaan als:** een beoogde gebruiker kan begrijpen wat hij krijgt, waarom dat helpt en wat de volgende stap is.
-
-### P07 — Onzekerheden en een kleine bewijsstap bepalen
-
-**Doel:** voorkomen dat de grootste onzekerheid pas na veel bouw zichtbaar wordt.  
-**Herkomst:** DOCUMENTATIE, B16; expliciete uitvoeringsvorm is AANVULLING.  
-**Ingang:** propositie en open vragen.
-
-1. Zet de belangrijkste onzekerheden op een rij: behoefte, begrip, betaalbereidheid, data, integratie, AI-kwaliteit of gebruik.
-2. Kies welke onzekerheid het plan het sterkst kan laten mislukken.
-3. Bepaal een kleine toets: gesprek, klikbaar prototype, technische proef of test met representatieve gegevens.
-4. Leg vóór uitvoering vast welk signaal tot doorgaan, aanpassen of stoppen leidt.
-5. Voer de toets uit en bewaar de uitkomst, inclusief tegenvallende signalen.
-6. Werk propositie, scope of techniek bij op basis van het resultaat.
-
-**Mijn rol:** relevantie en gevolgen beoordelen. **Assistent/bouwer:** toets voorbereiden en resultaten vastleggen.  
-**Output:** kort toetsverslag met hypothese, methode, resultaat en besluit.  
-**Doorgaan als:** de gekozen onzekerheid voldoende is verkleind voor de volgende investering. Een mooi prototype op zichzelf bewijst geen vraag uit de markt.
-
-### P08 — De volledige scope inventariseren en de release kiezen
-
-**Doel:** niets stilzwijgend vergeten en toch gericht kunnen opleveren.  
-**Herkomst:** OPDRACHT, B10.  
-**Ingang:** propositie, productideeën en toetsresultaten.
-
-1. Inventariseer modules, rollen, pagina’s, modals, drawers, overlays, acties en gegevens.
-2. Koppel elk onderdeel aan een gebruikerstaak of verplicht productgedrag.
-3. Beschrijf wat in de eerste versie hoort, wat later komt en wat buiten scope valt.
-4. **AANVULLING:** geef eisen een stabiele code en leg afhankelijkheden vast.
-5. Maak een dekkingsmatrix die onderzoek, ontwerp, bouw en test afzonderlijk laat zien.
-6. Verwerk nieuwe wensen als expliciete scopewijziging met gevolg voor planning en acceptatie.
-
-**Mijn rol:** prioriteit en eerste release vaststellen. **Assistent:** compleet overzicht en impact leveren.  
-**Output:** scope- en releasematrix, inclusief bewust uitgestelde onderdelen.  
-**Doorgaan als:** de eerste versie een betekenisvolle taak volledig kan ondersteunen; een grote inventaris mag niet worden verward met een belofte om alles direct te bouwen.
-
-### P09 — Rollen, objecten en gegevens modelleren
-
-**Doel:** bepalen wie wat doet en welke informatie daarbij nodig is.  
-**Herkomst:** OPDRACHT / DOCUMENTATIE, B01, B10, B11.  
-**Ingang:** scope, huidige proces en productdoel.
-
-1. Benoem de gebruikersrollen en de grenzen van hun toegang.
-2. Definieer kernobjecten en belangrijke velden in gewone taal.
-3. Leg relaties vast: wie is eigenaar, wat hoort bij elkaar en wat is verplicht?
-4. Beschrijf welke gegevens worden aangemaakt, gelezen, gewijzigd, gearchiveerd of verwijderd.
-5. Noteer per gegevensgroep gevoeligheid, herkomst en gebruiksdoel.
-6. **AANVULLING:** bepaal bewaartermijn, herstelbehoefte en gedrag bij conflicterende wijzigingen waar relevant.
-
-**Mijn rol:** businesslogica en rolverdeling beoordelen. **Assistent/architect:** object- en rechtenmodel uitwerken.  
-**Output:** datamodel, begrippenlijst en rechtenmatrix.  
-**Doorgaan als:** een kernactie niet meer afhankelijk is van een onbesliste eigenaar, rol of gegevensbetekenis.
-
-### P10 — Gebruikersflows, statussen en uitzonderingen uitwerken
-
-**Doel:** beschrijven hoe een taak van begin tot resultaat loopt.  
-**Herkomst:** OPDRACHT, B10 en B11.  
-**Ingang:** rollen, objecten, scope en gewenste uitkomsten.
-
-1. Beschrijf trigger, actor, startvoorwaarden en beginpunt.
-2. Werk de stappen uit vanaf toegang en onboarding tot dagelijks gebruik en afronding waar van toepassing.
-3. Noteer per stap de gebruikersactie, systeemactie, gegevenswijziging en zichtbare feedback.
-4. Maak statussen en toegestane overgangen expliciet.
-5. Beschrijf afbreken, teruggaan, opnieuw proberen en het hervatten van onaf werk.
-6. Werk fouten uit zoals ontbrekende data, onvoldoende rechten, netwerkuitval en een mislukte koppeling.
-7. Koppel iedere stap aan een scherm of andere interactie.
-
-**Mijn rol:** de logica doorlopen en onwerkbare stappen signaleren. **Assistent:** flows en uitzonderingen documenteren.  
-**Output:** flowspecificaties met een succespad en relevante foutpaden.  
-**Doorgaan als:** duidelijk is wat de gebruiker na de laatste actie ziet en wat het systeem heeft vastgelegd.
-
-### P11 — Content, verhaal en paginastructuur maken
-
-**Doel:** de propositie vertalen naar begrijpelijke informatie en een volgende stap.  
-**Herkomst:** DOCUMENTATIE / OPDRACHT, B01, B03, B16.  
-**Ingang:** propositie, doelgroep, routes en bewijs.
-
-1. Bepaal de functie van iedere publieke pagina en ieder belangrijk applicatiescherm.
-2. Maak een sitemap met hoofdnavigatie, detailpagina’s en ondersteunende informatie.
-3. Werk de informatievolgorde uit: herkenning, uitkomst, werking, bewijs en actie.
-4. Leg per pagina titel, hoofdtekst, secties, CTA, beelden en ontbrekende inhoud vast.
-5. Gebruik waar passend de eerder beschreven verhaallijn Desire → Evidence → Understanding → Conversion; het is een hulpmiddel, geen verplichte indeling.
-6. Bepaal welke inhoud vertaald moet worden en hoe varianten consistent blijven.
-7. **AANVULLING:** maak voor iedere claim duidelijk wie haar kan onderbouwen en goedkeuren.
-8. Schrijf alle daadwerkelijke teksten uit, inclusief labels, meldingen, gedeelde onderdelen en dynamische templates; volg het contract in 11.3.
-9. Koppel pagina- en tekst-ID’s aan bronlocatie, taal, scherm en versie. Maak de volledige samengestelde paginatekst controleerbaar.
-
-**Mijn rol:** toon, relevantie en belofte beoordelen. **Assistent:** content structureren en schrijven.  
-**Output:** volledig pagina- en tekstregister, sitemap, metadata, gedeelde content, taalvarianten en open tekstvragen volgens 11.3.  
-**Doorgaan als:** iedere pagina een duidelijke taak heeft en de inhoud aansluit op de productwerking.
-
-### P12 — Alle schermen en toestanden inventariseren
-
-**Doel:** voorkomen dat het ontwerp alleen de ideale hoofdpagina’s toont.  
-**Herkomst:** OPDRACHT, B10.  
-**Ingang:** flows, rollen, content en objectmodel.
-
-1. Maak een lijst van pagina’s, modals, drawers, overlays en herbruikbare interacties.
-2. Koppel ieder scherm aan rol, route, flow en gegevens.
-3. Beschrijf per scherm doel, invoer, acties, uitvoer en doorverwijzing.
-4. Voeg lege, laad-, fout-, succes- en beperkte-toegangstoestanden toe waar relevant.
-5. Inventariseer formulieren, velden, validatie en meldingen.
-6. Benoem de mobiele weergave en gedrag bij lange teksten of veel gegevens.
-7. Controleer de schermlijst tegen de scope- en flowmatrix.
-
-**Mijn rol:** ontbrekende gebruiksmomenten signaleren. **Assistent/ontwerper:** dekking en specificaties maken.  
-**Output:** schermregister en schermspecificaties.  
-**Doorgaan als:** elk onderdeel uit de release is gekoppeld aan een interactie of een expliciet niet-visuele systeemhandeling.
-
-### P13 — Ontwerpsysteem en Stitch-ontwerp uitwerken
-
-**Doel:** een consistente visuele taal en bruikbare schermen krijgen.  
-**Herkomst:** GEBRUIKERSUITSPRAAK / DOCUMENTATIE / OPDRACHT, B01, B06, B13.  
-**Ingang:** propositie, schermregister, content en eventuele stijlafspraken.
-
-1. Formuleer de gewenste uitstraling in concrete ontwerpkeuzes.
-2. Leg kleuren, typografie, spacing, afrondingen, schaduwen en iconografie vast.
-3. Definieer componenten en hun toestanden.
-4. Gebruik de ontwerpopdracht om schermen in Stitch of de gekozen ontwerpomgeving uit te werken.
-5. Beoordeel informatiehiërarchie, drukte, afstanden, knoppen, contrast en herkenbaarheid van acties.
-6. Verwerk correcties in gedeelde componenten en tokens, niet uitsluitend in één screenshot.
-7. Exporteer beschikbare beelden en assets; noteer welke gedragsdetails niet in de export zitten.
-
-**Mijn rol:** de ervaring en visuele samenhang beoordelen. **Ontwerprol:** vertalen naar consistente specificaties.  
-**Output:** ontwerpbeelden, assets en `DESIGN_SYSTEM.md` of een gelijkwaardig onderdeel in het dossier.  
-**Doorgaan als:** de schermen samen één product vormen en hun werking uitvoerbaar is beschreven. Toolversies of exportmogelijkheden moeten bij daadwerkelijk gebruik worden gecontroleerd.
-
-### P14 — Het ontwerp langs de taak en werkelijkheid toetsen
-
-**Doel:** beoordelen of het ontwerp de gewenste taak ondersteunt.  
-**Herkomst:** OPDRACHT, B13; systematische toetsvorm is AANVULLING.  
-**Ingang:** kernschermen, flow en realistische voorbeeldinhoud.
-
-1. Loop de taak vanaf het begin door zonder ontbrekende stappen zelf aan te vullen.
-2. Controleer of iedere actie een duidelijk gevolg heeft.
-3. Test lange teksten, lege informatie en foutmeldingen.
-4. Bekijk mobiel, toetsenbordfocus, leesbaarheid en bereikbaarheid van acties.
-5. Leg visuele bevindingen los van functionele bevindingen vast.
-6. Laat waar mogelijk een beoogde gebruiker de flow proberen.
-7. Pas de flow of propositie aan als het probleem daar zit; herstel niet alleen de vorm.
-
-**Mijn rol:** taak en ervaring beoordelen. **Ontwerper/assistent:** bevindingen verwerken.  
-**Output:** bijgewerkt ontwerp met open punten en besluit.  
-**Doorgaan als:** de kernflow navolgbaar is en onbesliste productkeuzes herkenbaar zijn vóór de overdracht.
-
-### P15 — Prompts en het overdrachtspakket opstellen
-
-**Doel:** de volgende uitvoerder voldoende context en concrete grenzen geven.  
-**Herkomst:** OPDRACHT / DOCUMENTATIE, B06, B10 en B11.  
-**Ingang:** actuele propositie, scope, flows, schermspecificaties en ontwerpbestanden.
-
-1. Kies één duidelijk doel voor de opdracht: onderzoeken, ontwerpen, bouwen, controleren of herstellen.
-2. Verwijs naar de actuele bronbestanden en benoem welke beslissingen leidend zijn.
-3. Beschrijf de gewenste wijziging en welke onderdelen buiten de taak vallen.
-4. Laat de agent eerst bestaande functionaliteit en code onderzoeken.
-5. Geef de verwachte output: concrete bestanden, schermen, wijziging of rapportage.
-6. Formuleer acceptatiecriteria en verlang onderscheid tussen uitgevoerd, niet uitgevoerd en geblokkeerd.
-7. Laat onzekerheden en conflicten melden voordat de agent ze met eigen productkeuzes invult.
-8. **AANVULLING:** registreer promptversie en gebruikte documentversies bij de taak.
-
-**Mijn rol:** opdracht en prioriteit vaststellen. **Assistent:** uitvoerbare prompt en overdracht schrijven.  
-**Output:** taakprompt plus een compact pakket met de benodigde bronnen.  
-**Doorgaan als:** de bouwer de taak kan uitvoeren zonder de productlogica uit losse screenshots of oude chats te reconstrueren.
-
-### P16 — De projectomgeving en poorten voorbereiden
-
-**Doel:** weten waar de toepassing draait en conflicten tussen lokale projecten voorkomen.  
-**Herkomst:** DOCUMENTATIE, B01. De controles hieronder operationaliseren die beschreven inrichting.  
-**Ingang:** projectmap, bestaande configuratie, gekozen lokale diensten en poortregister.
-
-1. Open de juiste projectmap in Antigravity en lees de lokale instructies en projectstatus.
-2. Controleer welke processen en poorten voor dit project zijn vastgelegd.
-3. Raadpleeg de centrale registratie voordat een nieuwe lokale service wordt gestart.
-4. Reserveer of hergebruik de afgesproken ontwikkel-, backend- en testpoorten; controleer daadwerkelijke beschikbaarheid.
-5. Werk applicatieconfiguratie, browser-URL, testconfiguratie en eventuele proxyinstellingen consequent bij.
-6. **AANVULLING:** controleer ook gegevensopslag, accounts en credentials van de testomgeving. Alleen een andere poort is onvoldoende isolatie.
-7. Leg vereiste omgevingsvariabelen vast zonder geheime waarden in de documentatie te zetten.
-
-**Mijn rol:** juiste project en gewenste omgeving kiezen. **Bouwagent:** configuratie controleren en vastleggen.  
-**Output:** eenduidige lokale opzet met poorten, diensten en instellingen.  
-**Doorgaan als:** duidelijk is welke omgeving wordt geopend en bestaande projecten niet worden verstoord.
-
-### P17 — Architectuur en gegevenscontracten vastleggen
-
-**Doel:** de gewenste werking vertalen naar een passende technische verdeling.  
-**Herkomst:** DOCUMENTATIE / OPDRACHT, B01, B09–B11.  
-**Ingang:** scope, datamodel, flows, bestaande code en relevante technische onzekerheden.
-
-1. Onderzoek eerst wat de bestaande architectuur al ondersteunt.
-2. Beschrijf de verantwoordelijkheid van frontend, backend, database, bestanden en externe diensten.
-3. Bepaal per kernactie waar validatie, verwerking, autorisatie en opslag plaatsvinden.
-4. Definieer invoer, uitvoer, verplichte velden, null-waarden, fouten en statussen voor koppelingen.
-5. Leg herbruikbare typen, constanten en componentgrenzen vast.
-6. **AANVULLING:** beschrijf time-outs, retries, dubbele uitvoering en achtergrondtaken waar ze relevant zijn.
-7. Noteer welke data en bewerkingen de vertrouwde applicatielaag mogen verlaten.
-8. Kies alleen extra infrastructuur wanneer de kernflows die nodig maken.
-9. Werk alle toepasselijke architectuuronderwerpen en de zes foutcategorieën uit volgens 11.4; motiveer N.V.T. en benoem ontbrekende bronnen.
-10. Leg architectuurbesluiten vast en koppel de componenten, gegevens, omgevingen en kritieke interacties aan onderhouden Mermaid-schema’s.
-11. Houd de beoogde architectuur, aangetroffen implementatie en werkelijk uitgevoerde controles afzonderlijk zichtbaar.
-
-**Mijn rol:** productgevolgen en kostenafweging begrijpen en kiezen. **Architect/bouwagent:** technische oplossing en alternatieven uitwerken.  
-**Output:** toepasselijk architectuurdossier volgens 11.4, inclusief beoogde en aangetroffen toestand, contracten, besluiten, Mermaid-schema’s, failure modes en bewijsstatus.  
-**Doorgaan als:** de eerste kernflow technisch uitvoerbaar is en kritieke aannames zijn getoetst of expliciet begrensd.
-
-### P18 — Lokaal starten en hervatten eenvoudig maken
-
-**Doel:** de omgeving voorspelbaar openen om snel te kunnen beoordelen.  
-**Herkomst:** DOCUMENTATIE, B01; robuuste controles zijn AANVULLING.  
-**Ingang:** projectconfiguratie, afhankelijkheden, services en poortregistratie.
-
-1. Beschrijf het startcommando en maak waar passend een lokaal startscript.
-2. Controleer vereiste tooling, configuratie en afhankelijkheden vóór het starten.
-3. Start containers of andere services alleen wanneer het project ze gebruikt.
-4. Wacht op een expliciete gereedheidscontrole van de benodigde service.
-5. Start de applicatie op de geregistreerde poort.
-6. Open de juiste browserpagina wanneer de applicatie beschikbaar is.
-7. Geef een concrete foutmelding als starten mislukt; vermijd eindeloos wachten zonder diagnose.
-8. Documenteer stoppen, opnieuw starten en het herstellen van een onvolledige start.
-
-**Mijn rol:** de omgeving gebruiken en onverwacht gedrag melden. **Bouwagent:** startpad maken en uitvoeren.  
-**Output:** startscript, korte instructie en vastgelegde startcontrole.  
-**Doorgaan als:** het startpad daadwerkelijk is uitgevoerd. De aanwezigheid van `start_local.bat` is geen bewijs dat het script foutloos werkt.
-
-### P19 — Een complete kernflow implementeren
-
-**Doel:** de eerste betekenisvolle taak werkend maken.  
-**Herkomst:** DOCUMENTATIE / OPDRACHT, B01, B10 en B11. De smalle oplevervolgorde is AANVULLING.  
-**Ingang:** bouwprompt, ontwerp, gegevenscontracten en werkende ontwikkelomgeving.
-
-1. Bouw of hergebruik de gedeelde navigatie en componenten die de flow nodig heeft.
-2. Sluit invoer aan op werkelijke verwerking en opslag waar dit vereist is.
-3. Implementeer toestanden voor laden, fout, succes en ontbrekende gegevens.
-4. Voeg toegangscontroles toe op de plek waar gegevens worden gelezen of gewijzigd.
-5. Controleer of status en gegevens na herladen of opnieuw openen nog correct zijn.
-6. Label demo-inhoud, mocks en niet-aangesloten functies expliciet.
-7. Werk meertaligheid en relevante dynamische onderdelen mee af; vertaal geen losse labels terwijl foutmeldingen achterblijven.
-8. Leg wijzigingen in samenhangende versies vast en werk de dekkingsmatrix bij.
-
-**Mijn rol:** de gebouwde taak zelf doorlopen. **Bouwagent:** implementeren en technische werking aantonen.  
-**Output:** één complete werkende flow met bekende beperkingen.  
-**Doorgaan als:** het resultaat voldoet aan de afgesproken taak, niet alleen aan een visuele vergelijking met het ontwerp.
-
-### P20 — Tijdens gebruik waarnemingen vastleggen
-
-**Doel:** de route van een waargenomen probleem naar onderzoek kort maken.  
-**Herkomst:** GEBRUIKERSUITSPRAAK, B14; registratievelden en privacygrenzen zijn AANVULLING.  
-**Ingang:** een werkende testomgeving en een afgebakende gebruikerstaak.
-
-1. Leg taak, rol, beginconditie, omgeving en versie vast.
-2. Start de beschikbare browser- of testregistratie en controleer dat deze werkelijk loopt.
-3. Doorloop de taak zelf zoals een gebruiker dat zou doen.
-4. Noteer waar verwacht en werkelijk gedrag verschillen, ook wanneer er geen technische foutmelding is.
-5. Bewaar relevante consolefouten, mislukte verzoeken, zichtbare toestanden en reproduceerstappen voor zover de tooling dit ondersteunt.
-6. Stop de registratie en controleer of de benodigde informatie aanwezig is.
-7. Geef de ontwikkelagent de registratie én het verwachte resultaat.
-8. Beperk gevoelige gegevens en leg bewaartermijn en toegang tot registraties vast.
-
-**Mijn rol:** waarnemen en de bedoeling aangeven. **Agent:** registratie interpreteren en afwijkingen herleiden.  
-**Output:** reproduceerbare bevinding, niet alleen een opmerking dat een knop niet werkt.  
-**Doorgaan als:** de onderzoeker het probleem kan reconstrueren of precies kan aangeven welk gegeven ontbreekt.
-
-### P21 — Oorzaak vinden, herstellen en opnieuw controleren
-
-**Doel:** een fout gericht oplossen zonder andere werking te beschadigen.  
-**Herkomst:** OPDRACHT / GEBRUIKERSUITSPRAAK, B12–B14; vaste herstelcyclus is AANVULLING.  
-**Ingang:** bevinding, bewijs, verwachting en betrokken bestanden.
-
-1. Reproduceer de fout of stel vast waarom dat niet kan.
-2. Onderzoek of de oorzaak in specificatie, data, rechten, interface, verwerking of omgeving zit.
-3. Maak onderscheid tussen bewezen oorzaak en hypothese.
-4. Kies een gerichte wijziging die past bij de bestaande architectuur.
-5. Werk de specificatie mee bij als de oorspronkelijke productkeuze is veranderd.
-6. Voer exact de oorspronkelijke scenario’s opnieuw uit.
-7. Controleer relevante aangrenzende werking, zoals andere rollen of schermen die hetzelfde component gebruiken.
-8. Sluit de bevinding alleen met uitvoeringsbewijs; anders blijft zij open, gedeeltelijk opgelost of geblokkeerd.
-
-**Mijn rol:** controleren of de bedoelde ervaring hersteld is. **Bouwagent:** oorzaak onderzoeken, repareren en hertesten.  
-**Output:** wijziging, hertest en actuele status.  
-**Doorgaan als:** zowel de fout als het bedoelde gebruikersresultaat is gecontroleerd. Het verdwijnen van een melding is geen voldoende sluitingscriterium.
-
-### P22 — De release integraal controleren
-
-**Doel:** vaststellen welke werking aantoonbaar gereed is.  
-**Herkomst:** OPDRACHT, B11; omvang per release begrenzen is AANVULLING.  
-**Ingang:** gebouwde release, eisenmatrix en testomgeving.
-
-1. Controleer installatie/start, beschikbare lint- en typechecks en de productiebuild waar relevant.
-2. Test alle voor de release vastgestelde kernroutes, rollen en flows.
-3. Gebruik browserchecks voor interactie en een passende tweede laag voor verwerking, API of gegevensintegriteit.
-4. Controleer de keten van frontend via verwerking en opslag terug naar zichtbare feedback.
-5. Test kritieke fouten, onvoldoende rechten, lege gegevens en herstelpaden.
-6. Beoordeel mobiele weergave, toegankelijkheid, content en visuele samenhang.
-7. Controleer externe koppelingen met herkenbare omgeving en testdata.
-8. Rapporteer `PASS`, `FAIL`, `PARTIAL`, `BLOCKED` of `NOT_TESTED` met bewijs per controle.
-9. Geef een releasebesluit met expliciete open risico’s en eigenaar.
-
-Controleer vóór het releasebesluit ook opdracht 28 en 11.7–11.9: volledige site-inhoud, functionele documentatie, architectuur en diagrammen moeten de gekozen release beschrijven. Leg ontoegankelijke bronnen en afwijkingen vast; essentiële ontbrekende gebruiks- of herstelkennis blokkeert overdracht.
-
-**Mijn rol:** acceptatie en productkwaliteit beoordelen. **Controlerende rol:** controles uitvoeren en bewijs leveren.  
-**Output:** releaserapport en resterende backlog.  
-**Doorgaan als:** er geen open blokkade voor het beoogde gebruik bestaat. Een hoog gemiddeld resultaat heft een kritieke mislukte controle niet op.
-
-### P23 — Media en andere bestanden geschikt maken voor publicatie
-
-**Doel:** beeldkwaliteit behouden zonder onnodige opslag, downloadlast en repositorygroei.  
-**Herkomst:** OPDRACHT / GEBRUIKERSUITSPRAAK, B15. De vaste publicatiecontrole is AANVULLING.  
-**Ingang:** originele beelden, webassets en bestandsinventaris.
-
-1. Inventariseer welke bestanden de site daadwerkelijk gebruikt.
-2. Bewaar waardevolle originelen apart en duurzaam, buiten de gewone publicatiestroom.
-3. Maak webvarianten passend bij de weergavegrootte en functie van het beeld.
-4. Controleer scherpte, uitsnede, transparantie en mobiele weergave.
-5. Werk verwijzingen en eventueel responsive beeldgedrag bij.
-6. Laat Antigravity controleren welke bestanden versiebeheer volgt en wat bij de publicatie wordt meegenomen.
-7. Leg vast of grote bestanden alleen uit de huidige versie moeten verdwijnen of ook historische opschoning vragen.
-8. Controleer credits, gebruiksrechten en privacy bij publiceerbare media waar relevant.
-
-**Mijn rol:** visuele kwaliteit en behoud van originelen bepalen. **Bouwagent:** varianten en verwijzingen verwerken.  
-**Output:** geschikte webassets en expliciete scheiding van bron- en publicatiebestanden.  
-**Doorgaan als:** de site de bedoelde varianten gebruikt en de commit- en buildinhoud is gecontroleerd.
-
-### P24 — Versiebeheer en remote opslag controleren
-
-**Doel:** wijzigingen navolgbaar en code herstelbaar houden.  
-**Herkomst:** DOCUMENTATIE, B01; continu toepassen en herstelcontrole zijn AANVULLING.  
-**Ingang:** wijzigingen, repository en beoogde remote.
-
-1. Inspecteer de gewijzigde bestanden vóór de commit.
-2. Sluit dependencies, tijdelijke buildresultaten, geheimen, gevoelige testbestanden en niet-publiceerbare originelen uit.
-3. Laat de agent ook eerder opgeslagen bestanden controleren; nieuwe uitsluitregels verwijderen die niet automatisch.
-4. Maak een samenhangende commit met een begrijpelijke beschrijving.
-5. Controleer de juiste remote en branch voordat wijzigingen worden gepusht.
-6. Verifieer de pushstatus en leg vast welke codeversie bij een test of release hoort.
-7. Maak geschiedeniswijzigingen, verwijderacties en geheime-sleutelincidenten een afzonderlijk hersteltraject.
-8. Leg vast welke data en assets naast de codebewaarplaats een eigen back-up nodig hebben.
-
-**Mijn rol:** de beoogde publicatie of overdracht autoriseren binnen de opdracht. **Bouwagent:** wijzigingen en versiebeheer zorgvuldig uitvoeren.  
-**Output:** navolgbare codeversie en bekende remote status.  
-**Doorgaan als:** de bedoelde bestanden zijn vastgelegd; lokale commits en een geslaagde remote push blijven afzonderlijke statussen.
-
-### P25 — Publiceren en live werking verifiëren
-
-**Doel:** de bedoelde versie beschikbaar maken en daar de werking controleren.  
-**Herkomst:** DOCUMENTATIE, B01; expliciete live acceptatie en terugval zijn AANVULLING.  
-**Ingang:** releasebesluit, codeversie, hostingconfiguratie en benodigde instellingen.
-
-1. Controleer hosting, buildopdracht, startopdracht, opslag en runtimevereisten.
-2. Controleer productie-instellingen en geheimen buiten de repository.
-3. Publiceer de bedoelde versie via de vastgestelde deploymentroute.
-4. Controleer deploymentstatus, relevante logs en servicegereedheid.
-5. Open de echte live URL en doorloop de belangrijkste taak opnieuw.
-6. Controleer formulieren, koppelingen, navigatie, mobiele weergave en relevante taalvarianten.
-7. Leg de live versie, open beperkingen en herstelroute vast.
-8. Controleer bij gegevenswijzigingen ook hoe code en dataversie samen kunnen worden hersteld.
-
-**Mijn rol:** beoogde release en zichtbare uitkomst beoordelen. **Operationele rol/bouwagent:** deployment en live controles.  
-**Output:** live release met verificatie en herstelafspraken.  
-**Doorgaan als:** de productietaak werkt, niet alleen de homepage. Een healthcheck op de hoofdroute bewijst geen volledige transactieketen.
-
-### P26 — Vindbaarheid, aanbod en eerste marktcontact organiseren
-
-**Doel:** de juiste mensen naar een begrijpelijk aanbod en eerste waarde leiden.  
-**Herkomst:** OPDRACHT / DOCUMENTATIE, B04, B16 en B18. De vaste uitvoering hieronder is deels AANVULLING.  
-**Ingang:** eerste segment, propositie, live product en kanaalkeuze.
-
-1. Kies één concrete actie voor de bezoeker: gesprek, aanvraag, proefstart of aankoop.
-2. Zorg dat pagina’s en bewijs aansluiten op de vragen en bezwaren van het segment.
-3. Controleer relevante SEO-basis: bereikbare inhoud, paginatitels, hoofdstructuur, canonieke URL’s, sitemap, robotsinstellingen en interne links.
-4. Leg meetpunten vast voor relevante aanvragen, starts en het eerste succesmoment; test de registratie.
-5. Maak het eerste benaderings- en contentplan met eigenaar, boodschap, kanaal en opvolging.
-6. Voer toegestane marktcontacten en pilots uit, en leg reactie en bezwaar vast.
-7. Verbind de belofte op de website aan onboarding en gebruik; herstel breuken tussen beide.
-8. Noteer prijs- en betaalbereidheidshypotheses totdat echte uitkomsten beschikbaar zijn.
-
-**Mijn rol:** aanbod, kanaal en gesprekken sturen. **Assistent:** onderzoek, content en analyse; verzending alleen binnen gegeven toestemming.  
-**Output:** eerste markttoets, werkende meetpunten en opvolgacties.  
-**Doorgaan als:** er praktijkinformatie over begrip en waarde is; verkeer alleen bewijst geen productvraag.
-
-### P27 — Gebruik, kosten en feedback naar verbeteringen vertalen
-
-**Doel:** bepalen welke volgende investering daadwerkelijk zin heeft.  
-**Herkomst:** DOCUMENTATIE, B16; operationele meetcyclus is AANVULLING.  
-**Ingang:** gebruiksdata, gesprekken, bugs, supportvragen en kosten.
-
-1. Verzamel signalen over taakafronding, herhaald gebruik en redenen om af te haken.
-2. Leg problemen naast de oorspronkelijke propositie en aannames.
-3. Onderzoek of een afwijking voortkomt uit doelgroep, boodschap, onboarding, productwerking of techniek.
-4. Volg kosten die relevant zijn voor levering: hosting, opslag, koppelingen, AI-verbruik en ondersteuning.
-5. Prioriteer een concrete verbetering op waarde, risico, afhankelijkheden en benodigde inspanning.
-6. Leg vooraf vast welk effect de wijziging moet hebben.
-7. Bouw, controleer en meet opnieuw zonder eerdere lessen te verliezen.
-8. Breid doelgroep of aanbod pas uit wanneer de kernwaarde daarvoor voldoende basis biedt.
-
-**Mijn rol:** kiezen wat eerst komt. **Assistent/operationele rol:** signalen structureren en opties onderbouwen.  
-**Output:** prioriteiten met meetbaar of observeerbaar doel.  
-**Doorgaan als:** duidelijk is waarom de volgende wijziging nodig is; anders eerst de onzekerheid onderzoeken.
-
-### P28 — Status, overdracht en herstelbaarheid borgen
-
-**Doel:** het werk kunnen hervatten zonder afhankelijk te zijn van het geheugen van één sessie.  
-**Herkomst:** DOCUMENTATIE, B01; herstelgerichte uitbreiding mede gebaseerd op GEBRUIKERSUITSPRAAK B17.  
-**Ingang:** wijzigingen, controles, open besluiten en actuele omgeving.
-
-1. Werk recente wijzigingen, blokkades en eerstvolgende stappen bij.
-2. Leg vast welke document-, code- en testversie leidend is.
-3. Vermeld wat werkelijk werkt en wat alleen ontworpen, gesimuleerd of beschreven is.
-4. Registreer gemeten tijd en kosten apart van schattingen.
-5. Synchroniseer de gekozen statusvelden naar een intern overzicht wanneer die inrichting aanwezig is.
-6. Scheid interne technische status van publiek deelbare informatie.
-7. Controleer dat belangrijke code, data, originelen en instellingen herstelbaar zijn via hun eigen opslagroute.
-8. Begin de volgende sessie met deze status en controleer of zij nog overeenkomt met de werkelijke omgeving.
-
-Werk bij iedere relevante wijziging het volledige toepasselijke dossier uit hoofdstuk 11 bij. Vergelijk de documentatie met de gewijzigde code en inhoud en leg beide versies samen vast. De volgende uitvoerder moet naast status ook teksten, werking, architectuur, diagrammen en beheerinstructies kunnen terugvinden.
-
-**Mijn rol:** prioriteit en overdraagbaarheid beoordelen. **Agent:** status en documentatie bijwerken.  
-**Output:** hervatbare projectstaat, bekende back-upstatus en concrete vervolgstap.  
-**Doorgaan als:** de volgende uitvoerder kan starten zonder oude chats volledig te reconstrueren. Een statusbestand is geen back-up van de bestanden die het beschrijft.
-
-## 5. Technische inrichting en grenzen van de tooling
-
-### 5.1 Toolrollen uit de aangeleverde opzet
-
-Onderstaande producten en bestanden staan in B01 of in de genoemde gebruikerscontext. Dit is een beschrijving van hun rol in de vastgelegde aanpak, geen advies dat de genoemde versies vandaag de juiste keuze zijn en geen nieuwe controle dat alles geïnstalleerd is.
-
-| Onderdeel | Rol in de werkwijze | Verificatie die bij uitvoering nodig is |
-|---|---|---|
-| Word, Markdown en tekstbestanden | Propositie, bronmateriaal en specificaties vastleggen. | De juiste versie lezen; tabellen en relaties behouden bij extractie. |
-| Python-extracties en registraties | Inhoud uit documenten halen en registers samenstellen. | Bron en afgeleide vergelijken; ontbrekende inhoud signaleren. |
-| Stitch | Propositie en ontwerpopdracht naar visuele schermen vertalen. | Export en ontbrekend gedrag controleren. |
-| Antigravity | Projectcontext lezen, code wijzigen en lokale taken uitvoeren binnen beschikbare mogelijkheden. | Juiste workspace, rechten, instructies en werkelijke uitvoer controleren. |
-| MCP-servers en plugins | Toegang tot aanvullende diensten of tools. | Vaststellen welke koppeling werkelijk bestaat, welke rechten gelden en welke actie zij mag uitvoeren. |
-| TypeScript | Gedeelde typen en programmeercontracten. | Typechecks plus runtimevalidatie voor externe invoer. |
-| React, Next.js en Vite | Interfaces en toepassingsstructuur; B01 noemt ook Next.js 15 en React 19. | Bestaande stack en projectversies inspecteren; geen standaardmigratie afleiden. |
-| Tailwind, Lucide en vertaalhulpmiddelen | Ontwerptokens, iconen en meertalige interface. | Consistentie, toegankelijkheid en vertaaldekking controleren. |
-| FastAPI, DuckDB en Turborepo | In B01 genoemde backend-, analyse- en codeorganisatieopties. | Alleen toepassen waar de taak en bestaande architectuur dit vragen. |
-| Docker Desktop en containers | Benodigde lokale services starten. | Werkelijke gereedheid, volumes en testisolatie controleren. |
-| Windows batchscripts en PowerShell | Herhaalbare lokale start en testtaken. | Script uitvoeren, fouten en stopgedrag controleren. |
-| Playwright | Browserinteractie, E2E-controles en testbewijs. | Versie, omgeving, scenario’s en resultaten vastleggen. |
-| Antigravity en GitHub | De agent bewaart gecontroleerde codeversies in de gekoppelde repository. | Zelf de wijziging, doelbranch en commitlink op GitHub controleren; de agent doet het technische werk. |
-| Railway | Applicatie of website beschikbaar maken. | Juiste configuratie, build, runtime en live werking controleren. |
-| Analytics en cookiemanager | Meten van websitegebruik met toepasselijke instellingen. | Werkelijk netwerkgedrag en instellingen controleren; de aanwezigheid ervan bewijst geen compliance. |
-
-### 5.2 Centrale poortregistratie
-
-**DOCUMENTATIE — B01:** de bron beschrijft een centraal poortregister met lokale afspraken voor ontwikkel-, backend- en testdiensten. De concrete bestandsnaam is in deze lezerseditie weggelaten.
-
-Het procesdoel is consistentie tussen service, browser, proxy en testconfiguratie. De exacte projecttoewijzingen zijn uit dit handboek verwijderd. De nummerreeksen zijn lokale afspraken, geen door Antigravity of het web opgelegde standaard.
-
-**AANVULLING:** reserveer een poort pas na controle op werkelijk gebruik en registreer eigenaar, dienst, omgeving en status. Wanneer meerdere processen kunnen reserveren, moet die reservering technisch op conflicten worden gecontroleerd. Een JSON-bestand voorkomt op zichzelf geen gelijktijdige dubbele reservering.
-
-### 5.3 Startscripts en servicegereedheid
-
-**DOCUMENTATIE — B01:** namen als `start_local.bat`, `start.bat` en `run_local_test.bat` worden genoemd. De beschreven starter kan Docker activeren, containers starten, wachten, de browser openen en een ontwikkelcommando starten.
-
-**AANVULLING:** maak starten controleerbaar als een keten van voorwaarden. Een vaste timeout bewijst alleen dat tijd is verstreken. Gereedheid moet blijken uit een geschikte controle. Meld welk onderdeel faalt en voorkom dat een script zonder noodzaak vreemde processen beëindigt of bestaande data verwijdert.
-
-### 5.4 Browserauthenticatie en testbestanden
-
-**DOCUMENTATIE — B01:** `global.auth.setup.ts` en `storageState.json` worden genoemd als manier om testauthenticatie te hergebruiken. Ook noemt de bron checks op kleine mobiele schermen tot grote desktops.
-
-**AANVULLING:** behandel opgeslagen browserauthenticatie als gevoelig. Gebruik testaccounts, passende toegang en uitsluiting uit openbare commits. Controleer of verlopen sessies, uitloggen en verkeerde rollen apart worden getest. Hergebruik van een sessie mag defecte loginlogica niet verbergen.
-
-Een specifieke schermbreedte of veel viewports is geen bewijs van volledige responsiviteit. Toets de inhoud en interactie op de gekozen relevante formaten, inclusief toetsenbordbediening en leesbaarheid.
-
-### 5.5 Projectstatus en synchronisatie
-
-**DOCUMENTATIE — B01:** `project_state.json` bevat onder meer `recent_changes`, `current_blockers`, `next_steps` en velden voor bestede en geschatte tijd. Een `sync_portfolio.py` verwerkt de projectstatus naar een centraal overzicht.
-
-**AANVULLING:** gebruik tijdvelden niet als objectief bewijs van besparing zonder meting en vergelijkingsbasis. Een ingeschatte traditionele inspanning is een schatting. Houd intern en publiek deelbare velden apart, zodat geen blokkades, credentials, klantgegevens of vertrouwelijke codepaden automatisch naar een openbare site gaan.
-
-Synchronisatie moet een herkenbare uitkomst hebben. Als zij mislukt, blijft de lokale status bewaard en wordt zichtbaar dat het centrale overzicht achterloopt. Automatisch synchroniseren is niet hetzelfde als toestemming voor openbaar publiceren.
-
-### 5.6 Wat werkinstructies wel en niet doen
-
-**OPDRACHT / DOCUMENTATIE — B05, B08, B09 en B19:** De werkinstructies worden gebruikt om feiten, aannames, uitvoering en onzekerheid uit elkaar te houden; bestaande onderdelen eerst te onderzoeken; de juiste taaksoort te kiezen; en verificatie onderdeel van de oplevering te maken.
-
-| Laag | Wat daar thuishoort |
-|---|---|
-| Instructies en skills | Werkwijze, grenzen, rapportage, brongebruik en controle-eisen. |
-| Agentomgeving | Werkelijk beschikbare tools, toegangsrechten en uitvoerbare acties. |
-| Applicatiecode en runtime | Validatie, autorisatie, logging, retrybeleid, kostenlimieten en technische stopmechanismen. |
-| Menselijke productregie | Doel, prioriteit, acceptatie en keuzes met grote gevolgen. |
-
-Een prompt kan geen verborgen IDE-engine aanpassen. In een teruggevonden gesprek heb ik deze grens zelf expliciet gemaakt. Token-level controls, decoding hooks en een eigen stream-kill-switch mogen niet als geïnstalleerde IDE-functionaliteit worden beschreven zonder die feitelijke mogelijkheid. **GEBRUIKERSUITSPRAAK — B09.**
-
-**AANVULLING:** gebruik bij lange opdrachten afgebakende deelresultaten en een compacte actuele status. Als output herhaalt of ontspoort, hervat vanaf de vastgelegde taak en stand; stuur niet eindeloos dezelfde lange tekst terug de keten in.
-
-### 5.7 AI in het bouwproces en AI in het product
-
-Dit zijn twee verschillende toepassingen. Een website kan met AI worden gebouwd zonder zelf een AI-functie aan te bieden. Een product met AI vraagt daarnaast om kwaliteitstoetsing van de gegenereerde of geclassificeerde uitkomst.
-
-**DOCUMENTATIE — B16; uitwerking AANVULLING:** beschrijf per productfunctie welke invoer het model krijgt, welke uitkomst bruikbaar is, welke fouten onaanvaardbaar zijn en wanneer menselijke beoordeling nodig is. Gebruik representatieve testgevallen, inclusief onbekende of ontbrekende informatie. Bewaar model-, prompt- en gegevensversie bij evaluaties waar relevant.
-
-Bronverwijzingen, confidence-aanduidingen en een menselijke reviewmogelijkheid maken een AI-uitkomst niet automatisch juist. Controleer afzonderlijk of verwijzingen kloppen, onzekerheid terecht is aangegeven en de reviewer de benodigde informatie werkelijk krijgt.
-
-### 5.8 Juridische, privacy- en beveiligingsvragen
-
-**OPDRACHT — B07:** ik heb gevraagd de propositie én technische oplossing te toetsen op toepasselijke juridische en datagerelateerde grenzen, zonder verzonnen regels. Dat gedrag hoort al bij onderzoek en ontwerp, niet pas bij publicatie.
-
-**AANVULLING:** leg per relevante verwerking het doel, de gegevens, betrokken partijen, toegang, externe doorgifte en verwijdering vast. Beoordeel gegevensrechten en gebruiksvoorwaarden vóór het overnemen van externe data. Laat bij de uitvoering de dan toepasselijke regels en contracten verifiëren. Dit handboek geeft geen juridisch oordeel over een concreet product.
-
-Beveiliging wordt vertaald naar aantoonbaar gedrag: server-side toegangscontroles, gescheiden accounts, veilige omgang met geheimen, beperkte logging en gecontroleerde afhankelijkheden. Een certificerings- of complianceclaim vraagt eigen bewijs; een cookiebanner of instructiebestand is daarvoor onvoldoende.
-
-### 5.9 Deploymentconfiguratie en technische claims
-
-**DOCUMENTATIE — B01:** de bron noemt `railway.json`, een NIXPACKS-buildroute, healthchecks en herstartbeleid. Deze configuraties zijn hier niet als actuele platformstandaard bevestigd.
-
-**AANVULLING:** leid de deployroute af uit de werkelijke repository en hostinginstellingen. Controleer of de applicatie statisch kan worden gepubliceerd of een server, worker of database nodig heeft. Een homepagecheck, succesvolle build of automatisch herstartbeleid bewijst niet dat de gebruikersflow en gegevensintegriteit werken.
-
-## 6. Vaste controlelussen en beslisregels
-
-### 6.1 De lus van aanscherping
-
-1. Ik formuleer een opdracht met een verwacht resultaat.
-2. De assistent levert een concreet tussenresultaat.
-3. Ik vergelijk dat resultaat met mijn bedoeling en eerdere eisen.
-4. Ik wijs ontbrekende onderdelen, verkeerde interpretaties of een onbruikbaar formaat aan.
-5. De assistent verwerkt de correctie in het product én de leidende specificatie.
-6. De gewijzigde output wordt opnieuw gecontroleerd.
-
-**AFGELEID uit B10, B12 en B13:** dit is een terugkerende structuur in de samenwerking. De verbetering zit in het cumulatief bewaren van beslissingen. Een correctie op een spreadsheet moet ook doorwerken in het bijbehorende beeldboek als beide dezelfde inhoud presenteren.
-
-### 6.2 De lus van scherm naar herstel
-
-```mermaid
-flowchart TD
-    A["Taak zelf doorlopen"] --> B["Afwijking vastleggen"]
-    B --> C{"Reproduceerbaar?"}
-    C -->|Nee| D["Context of bewijs aanvullen"]
-    D --> B
-    C -->|Ja| E["Oorzaak onderzoeken"]
-    E --> F["Gericht herstellen"]
-    F --> G["Oorspronkelijke taak hertesten"]
-    G --> H{"Bedoelde resultaat bereikt?"}
-    H -->|Nee| E
-    H -->|Ja| I["Bewijs en status bijwerken"]
-```
-
-De lus moet ook werken voor een verkeerde UX-keuze zonder consolefout. Niet elk probleem is een technische exception; een gebruiker kan vastlopen in een technisch werkend proces.
-
-### 6.3 De lus van ontbrekend bewijs
-
-1. Identificeer de claim of het beloofde artefact.
-2. Controleer wat het eindresultaat werkelijk bevat.
-3. Zoek de oorspronkelijke bron of uitvoeringsregistratie.
-4. Voeg het ontbrekende bewijs toe wanneer het beschikbaar is.
-5. Als het niet beschikbaar is, corrigeer de claim en behoud de onzekerheid.
-6. Werk alle afhankelijke conclusies bij.
-
-Deze lus voorkomt dat een herhaalde AI-bewering als bevestiging wordt behandeld. Een tweede samenvatting van dezelfde bron is geen tweede bewijsbron.
-
-### 6.4 Wijzigingen door het hele product laten werken
-
-**AANVULLING:** beoordeel bij een nieuwe keuze de gevolgen voor propositie, scope, rollen, flows, schermen, content, data, code, tests, documentatie en marktbelofte. Niet ieder onderdeel verandert, maar de afweging wordt expliciet.
-
-| Wijziging | Minimaal controleren |
-|---|---|
-| Andere doelgroep | Taal, aanbod, onboarding, kanaal en belangrijkste taak. |
-| Andere processtap | Statusovergangen, schermen, datavelden, notificaties en tests. |
-| Andere knop of component | Andere schermen die dit component gebruiken en toetsenbordgedrag. |
-| Ander dataveld | Validatie, opslag, bestaande data, exports en API-contracten. |
-| Andere koppeling | Authenticatie, fouten, kosten, testdata en fallback. |
-| Andere hosting of startwijze | Configuratie, poorten, build, live controle en herstel. |
-
-### 6.5 Wanneer verdergaan en wanneer stoppen
-
-| Situatie | Besluit |
-|---|---|
-| De taak is uitgevoerd en passend gecontroleerd. | Ga door en bewaar het bewijs. |
-| Het resultaat wijkt af van de vastgestelde bedoeling. | Herstel of herzie expliciet de beslissing. |
-| Benodigde toegang of bron ontbreekt. | Label als geblokkeerd; verzin geen positief resultaat. |
-| Nieuwe wens is waardevol maar niet nodig voor de release. | Parkeer met reden en afhankelijkheden. |
-| De kernhypothese wordt door praktijkinformatie ontkracht. | Pas doelgroep, aanbod of oplossing aan; overweeg stoppen. |
-| Een controle is niet van toepassing op deze oplossing. | Leg de inhoudelijke reden vast. |
-
-### 6.6 Passende diepgang per type product
-
-| Type | Nadruk | Alleen toevoegen wanneer nodig |
-|---|---|---|
-| Informatieve website | Propositie, content, visuele samenhang, vindbaarheid, contactroute en media. | Accounts, database, ingewikkelde agentinrichting. |
-| Webapp met gebruikersdata | Rollen, complete flows, opslag, validatie, rechten, herstel en support. | Achtergrondworkers en aparte services zonder taakbehoefte. |
-| Product met AI of externe verwerking | Datacontracten, evaluaties, herkomst, kosten en gedrag bij uitval. | Automatisch beslissen zonder voldoende betrouwbaarheid en begrenzing. |
-| Uitgebreid platform | Modulair ontwerp, afhankelijkheden, centrale status en integratietests. | Organisatorische of technische lagen die nog geen probleem oplossen. |
-
-Volledigheid betekent alle relevante onderdelen behandelen. Zij betekent niet ieder technisch patroon op ieder project toepassen.
-
-## 7. Het overdrachtsdossier en invulmodellen
-
-### 7.1 Eén actueel dossier
-
-**OPDRACHT — B10 en B11; compacte indeling AANVULLING:** de actuele productkennis moet buiten losse chats terug te vinden zijn. Voor een kleine website kunnen de onderstaande onderwerpen in enkele bestanden worden gebundeld. Een grotere applicatie kan ze opsplitsen.
-
-| Bestand of onderdeel | Minimale inhoud | Bijwerken wanneer |
-|---|---|---|
-| `PROJECT_BRIEF.md` | Doel, doelgroep, probleem, grenzen en eerste versie. | Richting of scope wijzigt. |
-| `RESEARCH.md` | Vragen, bronnen, bevindingen, tegenbewijs en onzekerheden. | Nieuwe informatie een keuze beïnvloedt. |
-| `PROPOSITION.md` | Belofte, aanbod, onderscheid, bewijs en marktbenadering. | Aanbod of boodschap verandert. |
-| `SCOPE_AND_COVERAGE.md` | Eisen, modules, releasekeuze en dekking. | Iets wordt toegevoegd, gebouwd, getest of uitgesteld. |
-| `USER_FLOWS.md` | Rollen, stappen, statussen, uitzonderingen en uitkomsten. | Gedrag of rolverdeling verandert. |
-| `DATA_MODEL.md` | Objecten, velden, relaties, rechten en gegevensdoelen. | Gegevens of toegang veranderen. |
-| `CONTENT.md` | Sitemap, teksten, CTA’s, beeldgebruik, SEO en vertalingen. | Pagina-inhoud verandert. |
-| `SCREEN_SPECS.md` | Schermen, overlays, acties, toestanden en flowkoppelingen. | Interactie of scherm verandert. |
-| `DESIGN_SYSTEM.md` | Tokens, componenten en responsive afspraken. | Gedeelde vormgeving verandert. |
-| `ARCHITECTURE.md` | Componenten, diensten, contracten en technische keuzes. | Technische verdeling verandert. |
-| `LOCAL_SETUP.md` | Afhankelijkheden, configuratie, poorten, starten en stoppen. | De omgeving verandert. |
-| `DECISIONS.md` | Keuze, reden, alternatieven, datum en gevolgen. | Een wezenlijke beslissing wordt genomen. |
-| `QA_AND_RELEASE.md` | Testscope, bewijs, bugs, releasebesluit en live controle. | Er wordt getest, hersteld of gepubliceerd. |
-| `OPERATIONS.md` | Kosten, support, monitoring, back-up en herstel. | Operationele afspraken veranderen. |
-| `GROWTH_AND_FEEDBACK.md` | Marktacties, meetpunten, reacties en verbeteringen. | Er nieuwe markt- of gebruiksinformatie is. |
-| `project_state.json` of gelijkwaardig | Actuele stand, versie, blokkades en eerstvolgende stap. | Iedere betekenisvolle sessie eindigt. |
-
-Hoofdstuk 11 maakt de toepasselijke inhoud van dit dossier verplicht binnen de werkwijze, met volledige site-inhoud, gebruikers- en beheerdocumentatie en architectuur. Bestandsnamen mogen worden hergebruikt; registreer één leidende locatie per onderwerp.
-
-Deze bestandsindeling is een voorstel, geen claim dat alle genoemde bestanden al in de lokale omgeving aanwezig zijn. Hergebruik bestaande namen als die hetzelfde doel goed vervullen.
-
-### 7.2 Invulmodel voor een projectbrief
-
-```markdown
-# Projectbrief
-
-## Aanleiding
-[Waarom dit initiatief nu relevant is.]
-
-## Gebruiker en probleem
-- Gebruiker:
-- Beslisser en betaler:
-- Huidige werkwijze:
-- Concreet probleem:
-- Gewenste uitkomst:
-
-## Eerste versie
-- Volledige taak die deze versie ondersteunt:
-- Binnen scope:
-- Buiten scope:
-- Bewust later:
-
-## Bewijs en onzekerheid
-- Bekende feiten met bron:
-- Aannames:
-- Grootste onzekerheid:
-- Eerstvolgende kleine toets:
-
-## Uitvoering
-- Gewenste oplevering:
-- Leidende bestanden en versies:
-- Randvoorwaarden:
-- Acceptatiecriteria:
-- Eigenaar van open beslissingen:
-```
-
-### 7.3 Invulmodel voor bewijs en onderzoek
-
-| ID | Onderzoeksvraag | Bevinding | Bron en locatie | Datum of versie | Claimtype | Gevolg voor keuze | Open punt |
-|---|---|---|---|---|---|---|---|
-| BRON-01 | [Vraag] | [Wat is aangetroffen] | [Bestand, sectie of URL] | [Bekend of onbekend] | [Observatie, claim of afleiding] | [Besluit of hypothese] | [Benodigde controle] |
-
-Bij beelden komt daar de classificatie **echt scherm**, **handleidingbeeld**, **marketingvisual** of **reconstructie** bij. Bewaar het bronbeeld naast een eventuele uitsnede of annotatie. Een uitsnede mag de betekenis niet veranderen.
-
-### 7.4 Invulmodel voor een flow en scherm
-
-```markdown
-# FLOW-01
-
-Doel:
-Actor en rechten:
-Startvoorwaarden:
-Beginpunt:
-Succescriterium:
-
-| Stap | Scherm | Gebruikersactie | Systeemactie | Data of status | Feedback | Foutpad |
-|---|---|---|---|---|---|---|
-| 1 | [Scherm-ID] | [Actie] | [Verwerking] | [Wijziging] | [Wat zichtbaar is] | [Afhandeling] |
-
-## Schermspecificatie
-- Scherm-ID en route:
-- Gerelateerde eisen en flows:
-- Doel en rol:
-- Inhoud en gegevensbron:
-- Primaire en secundaire acties:
-- Invoervelden en validatie:
-- Laden, leeg, fout, succes en beperkte toegang:
-- Mobiel en toetsenbordgedrag:
-- Componenten en ontwerptokens:
-- Open beslissingen:
-- Acceptatiecriteria:
-```
-
-### 7.5 Invulmodel voor dekkingscontrole
-
-| Eis-ID | Gebruikersdoel | Flow | Scherm of systeemstap | Data/API | Ontwerpstatus | Bouwstatus | Test en bewijs | Release |
-|---|---|---|---|---|---|---|---|---|
-| EIS-01 | [Doel] | [FLOW-ID] | [ID] | [Contract/object] | [Status] | [Status] | [Test-ID/resultaat] | [Nu/later] |
-
-Een ontbrekende koppeling is een vraag die moet worden opgelost. Bewust niet-visueel gedrag krijgt een systeemstap, zodat het niet uit de matrix valt. Bewust uitgestelde functionaliteit blijft zichtbaar met reden.
-
-### 7.6 Invulmodel voor een bouwopdracht
-
-```markdown
-# Bouwopdracht
-
-## Resultaat
-Realiseer [afgebakende gebruikerstaak] voor [rol].
-
-## Leidende context
-Lees [bestanden en versies]. Gebruik de vastgestelde scope en ontwerpafspraken.
-Inspecteer eerst de huidige repository en hergebruik passende onderdelen.
-
-## Grenzen
-- Wijzigingsscope:
-- Buiten scope:
-- Te behouden werking:
-- Geheimen, data en toegangsgrenzen:
-
-## Uitvoering
-1. Beschrijf de bestaande relevante werking en ontbrekende beslissingen.
-2. Maak de gerichte wijziging binnen de bestaande architectuur.
-3. Verwerk de benodigde fout-, laad-, lege en succesgevallen.
-4. Controleer de keten tot het bedoelde gebruikersresultaat.
-5. Werk relevante documentatie en projectstatus bij.
-
-## Acceptatie
-- [Observeerbaar criterium]
-- [Gegevens- of rechtencriterium waar relevant]
-- [Foutscenario waar relevant]
-
-## Oplevering
-Rapporteer bestanden, wijzigingen, werkelijk uitgevoerde controles,
-resultaten, beperkingen en open punten. Noem niet-uitgevoerde controles
-niet geslaagd. Geef aan welke onderdelen nog mocks of demo zijn.
-```
-
-Dit model maakt de opdracht concreet zonder een specifieke frameworkversie, modelnaam of toolmogelijkheid te verzinnen. Voeg de geldende projectafspraken en relevante bronbestanden toe.
-
-### 7.7 Invulmodel voor een bevinding en hertest
-
-```markdown
-# BEV-01
-
-Type: inhoud / UX / functioneel / data / toegang / omgeving / performance
-Prioriteit:
-Versie en omgeving:
-Rol en beginconditie:
-Route of component:
-
-## Reproductie
-1. [Stap]
-2. [Stap]
-
-Verwacht resultaat:
-Werkelijk resultaat:
-Bewijs:
-Impact:
-Vermoedelijke oorzaak:
-Bewezen oorzaak, indien vastgesteld:
-Gerichte herstelactie:
-Betrokken bestanden en afhankelijkheden:
-
-## Hertest
-Oorspronkelijk scenario:
-Aangrenzende controles:
-Uitgevoerd door en datum:
-Resultaat:
-Bewijs:
-Resterende beperking:
-Status: OPEN / IN_BEHANDELING / PARTIAL / BLOCKED / CLOSED
-```
-
-### 7.8 Invulmodel voor een markttoets
-
-```markdown
-# Markttoets
-
-Segment:
-Probleemhypothese:
-Aanbod en boodschap:
-Kanaal:
-Gewenste eerste actie:
-Eerste betekenisvolle gebruikersuitkomst:
-Vooraf gekozen beoordelingscriterium:
-
-## Uitkomst
-Werkelijk uitgevoerde contacten of observaties:
-Reacties en bezwaren:
-Starts en taakafrondingen, indien gemeten:
-Betaalbereidheid of betaling, niet met elkaar verwarren:
-Kosten en inspanning, gemeten of geschat:
-Wat de hypothese ondersteunt:
-Wat haar tegenspreekt:
-Besluit en eerstvolgende stap:
-```
-
-### 7.9 Invulmodel voor sessiestatus
-
-Dit is een **voorgesteld gegevensmodel**, geen kopie van een bestaande configuratie. `null` betekent onbekend of niet gemeten, niet nul.
-
-```json
-{
-  "updated_at": null,
-  "current_phase": null,
-  "current_objective": null,
-  "code_revision": null,
-  "leading_documents": [],
-  "recent_changes": [],
-  "verified_results": [],
-  "not_tested": [],
-  "current_blockers": [],
-  "open_decisions": [],
-  "next_steps": [],
-  "measured_time_minutes": null,
-  "estimated_time_minutes": null,
-  "measured_cost": null,
-  "backup_status": "UNKNOWN",
-  "public_summary": null
-}
-```
-
-### 7.10 Vaste sessieroutine
-
-**Begin:** lees status en relevante besluiten, controleer versie en omgeving, kies één concreet resultaat en bepaal hoe je het controleert.
-
-**Tijdens:** houd nieuwe eisen en afwijkingen bij, werk in samenhangende wijzigingen en controleer de uitkomst in het daadwerkelijke product of bestand.
-
-**Einde:** leg vast wat veranderd en gecontroleerd is, wat niet is uitgevoerd, wat blokkeert en wat de volgende stap is. Controleer commit- en opslagstatus waar relevant. Publiceer of verstuur niets alleen omdat een statusroutine dat noemt; de opdracht en gegeven toestemming blijven bepalend.
-
-## 8. Vertaling naar een uitlegsite
-
-### 8.1 Het verhaal voor bezoekers
-
-De site moet de samenhang laten zien: van probleem naar propositie, van propositie naar proces en schermen, van schermen naar bouw en van gebruik naar verbetering. De bezoeker moet steeds begrijpen wat hij zelf moet doen en wat hij aan een assistent of bouwagent kan overlaten.
-
-De publieke uitleg kan in de ik-vorm worden geschreven. De interne bronregistratie en onzekerheidsanalyse blijven onderdeel van dit masterdocument. Publieke tekst mag geen sterker uitvoeringsbewijs suggereren dan hier is vastgesteld.
-
-### 8.2 Een bruikbare indeling
-
-| Pagina | Leerdoel | Materiaal uit dit document |
-|---|---|---|
-| Mijn aanpak | De hele route en de rol van eigen regie begrijpen. | Hoofdstuk 1 en 3. |
-| Van idee naar duidelijke opdracht | Een ruwe gedachte structureren en materiaal verzamelen. | P01–P02 en projectbrief. |
-| Onderzoek en doelgroep | Probleem, markt en alternatieven afbakenen. | P03–P05 en bewijsregister. |
-| Propositie en eerste versie | Belofte, scope en kleine toets uitwerken. | P06–P08 en markttoets. |
-| Processen en gegevens | Rollen, objecten, flows en uitzonderingen beschrijven. | P09–P10 en flowmodel. |
-| Schermen en ontwerp | Content, alle toestanden en visuele samenhang maken. | P11–P14 en schermspecificatie. |
-| Prompts en overdracht | Een uitvoerbare opdracht schrijven zonder contextverlies. | P15 en bouwopdracht. |
-| Bouwen met Antigravity | Werkplek, architectuur, starten en implementatie begrijpen. | P16–P19 en hoofdstuk 5. |
-| Testen en verbeteren | Zelf doorlopen, bewijs verzamelen en gericht repareren. | P20–P22 en hoofdstuk 6. |
-| Publiceren | Media, versiebeheer en live acceptatie regelen. | P23–P25. |
-| In de markt en doorontwikkelen | Eerste gebruikers, vindbaarheid en feedback verbinden. | P26–P27. |
-| Overzicht houden | Status, overdracht en herstelbaarheid organiseren. | P28 en sessieroutine. |
-| Werkbladen | De invulmodellen zelfstandig gebruiken. | Hoofdstuk 7. |
-
-### 8.3 Vast patroon per uitlegpagina
-
-1. **Waarom deze stap:** het probleem dat je ermee voorkomt of oplost.
-2. **Wat je nodig hebt:** de concrete input uit de vorige stap.
-3. **Wat jij doet:** keuzes, observaties en beoordeling.
-4. **Wat de assistent doet:** structureren, ontwerpen, bouwen of controleren.
-5. **Wat je krijgt:** herkenbare output of een invulmodel.
-6. **Hoe je controleert:** het criterium voordat je verdergaat.
-7. **Als het niet klopt:** naar welke eerdere stap je teruggaat.
-
-Technische verdieping kan uitklapbaar worden gemaakt. Een bezoeker die een eenvoudige site wil bouwen hoeft niet eerst een uitgebreid platformmodel te doorgronden.
-
-### 8.4 Beelden en voorbeelden
-
-Gebruik compacte procesdiagrammen, geannoteerde neutrale schermen, een voorbeeld van een volledige bouwopdracht en een visuele fout-herstelcyclus. Laat waar mogelijk één fictieve oefentaak door de stappen heen lopen. Label die als oefening; maak er geen fictieve succesclaim of klantcase van.
-
-Bij latere screenshots van de werkplek moeten projectnamen, paden, accounts, URL’s, persoonsgegevens en gevoelige gegevens worden verwijderd. Controleer ook bestandsnamen, browserbalken, metadata en verborgen inhoud.
-
-### 8.5 Direct bruikbare introductietekst
-
-> Ik werk van een idee naar een digitaal product in duidelijke stappen. Eerst onderzoek ik voor wie ik iets maak en welk probleem ik wil oplossen. Daarna werk ik de propositie, het proces en de schermen uit. Met die basis stuur ik de bouw aan in Antigravity. Ik doorloop het resultaat zelf, laat fouten onderzoeken en verbeter de oplossing. In deze uitleg laat ik zien hoe ik die stappen met elkaar verbind en welke controles nodig zijn om verder te gaan.
-
-### 8.6 Eerste oefenroute
-
-**AANVULLING:** laat een beginner één kleine taak kiezen met enkele schermen en een duidelijk eindresultaat. Laat hem eerst de projectbrief invullen, daarna een flow en schermspecificatie maken, vervolgens de taak bouwen en controleren. Breid pas uit nadat de hele route eenmaal is doorlopen. Zo leert iemand de samenhang zonder direct alle technische varianten te hoeven implementeren.
-
-## 9. Dekkingsmatrix en aanvullingen
-
-### 9.1 Alle tien fasen van de aangeleverde audit
-
-| Oorspronkelijke fase | Waar verwerkt | Verdieping in deze versie |
-|---|---|---|
-| 1 Propositie en domeinstructurering | P01–P11 | Probleem, doelgroep, bewijs, aanbod, scope, rollen, data en processen uit elkaar gehaald. |
-| 2 UX en wireframing | P11–P14 | Content, alle schermtypen, toestanden, componenten en gebruikersvalidatie. |
-| 3 Antigravity-ingestie en poortallocatie | P15–P16; 5.1–5.2 | Actuele context, taakprompt, registratiestatus en omgevingsisolatie. |
-| 4 IT-architectuur en data contracts | P09–P10, P17; 5.1, 5.7–5.8 | Verantwoordelijkheden, contracten, externe invoer, AI-evaluatie en datagrenzen. |
-| 5 Full-stack implementatie | P19 | Volledige kernflow, werkelijk gedrag, meertaligheid, states en mockstatus. |
-| 6 Lokale starters | P18; 5.3 | Gereedheid, foutmelding, stoppen en hervatten. |
-| 7 Kwaliteitscontrole en E2E | P20–P22; 5.4, 5.6; hoofdstuk 6 | Eigen waarneming, tweede testlaag, herstel, bewijs en releasebesluit. |
-| 8 State tracking en synchronisatie | P28; 5.5; 7.9–7.10 | Versies, beperkingen, gemeten versus geschatte tijd, publiek versus intern en herstelbaarheid. |
-| 9 Versies via Antigravity en GitHub | P23–P24 | Continue versiecontrole, assetbeleid, gevolgde bestanden en afzonderlijke pushstatus. |
-| 10 Deployment en hosting | P25; 5.9 | Live kernflow, configuratie, herstel en het verschil tussen healthcheck en echte werking. |
-
-### 9.2 Overige inhoudelijke elementen uit de bijlage
-
-| Element | Verwerking |
-|---|---|
-| Word/tekst, Python-extracties en registers | P02 en 5.1. |
-| Stitch-export, design tokens en Tailwind-mapping | P13, P15 en 5.1. |
-| Storytelling en georganiseerd beeldmateriaal | P11 en P23. |
-| MCP en plugins | 5.1 en 5.6; werkelijk beschikbare koppelingen blijven een controlepunt. |
-| `types.ts`, `constants.ts` en `lib/` als voorbeelden van hergebruik | Vertaald naar typen, constanten en componentgrenzen in P17; bestandsnamen niet verplicht gesteld. |
-| Dynamische calculators, audioweergave en CTA-drawers | Functionele interacties vallen onder P12 en P19; geen generieke featureplicht. |
-| Meertaligheid en vertaalbestanden | P11, P19, P22 en 5.1. |
-| Analytics, consentinstellingen en cookiemanager | P26 en 5.1/5.8; complianceclaim begrensd. |
-| Docker, batchscripts en PowerShell | P18 en 5.1/5.3. |
-| Opgeslagen browserauthenticatie | 5.4. |
-| Kleine mobiele schermen tot grote desktopweergave | P13–P14, P22 en 5.4. |
-| Testconfiguratie en connectorchecks | P17, P22 en 5.4; aantallen tests niet als kwaliteitsscore overgenomen. |
-| Centrale dashboard- en synchronisatierol | P28 en 5.2/5.5. |
-| Tijdregistratie en veronderstelde besparing | P27–P28 en 5.5; meten en schatten gescheiden. |
-| Hostingconfiguratie, pre-rendering, CDN, healthchecks en herstartbeleid | P25 en 5.9. |
-| Projectnamen, accountnamen, specifieke projectpaden, aantallen nodes en uren per project | Bewust niet overgenomen: niet nodig voor de methode en strijdig met de projectneutrale opdracht. |
-
-### 9.3 Dekking van het eerdere handboek
-
-| Eerder hoofdstuk | Dekking in deze versie |
-|---|---|
-| 1 Samenhangende cyclus | Hoofdstuk 1, 3 en 6. |
-| 2 Onderzoek | P03–P05. |
-| 3 Propositie | P06–P08. |
-| 4 Processen en schema’s | P09–P12. |
-| 5 Schermen en samenhang | P12–P14. |
-| 6 Prompts | P15 en 7.6. |
-| 7 Technische werkplek | P16–P18 en hoofdstuk 5. |
-| 8 Implementatie en browserfeedback | P19–P21. |
-| 9 Kwaliteit | P22 en hoofdstuk 6. |
-| 10 Publiceren | P23–P25. |
-| 11 Marktintroductie | P26–P27. |
-| 12 Werkpakket | P28 en hoofdstuk 7. |
-| 13 Uitlegsite | Hoofdstuk 8. |
-| 14 Aanscherpingen | Hoofdstuk 2.9–2.10, aanvullingen per processtap en 9.4. |
-
-### 9.4 De belangrijkste uitbreidingen
-
-1. **Gedrag is expliciet gemaakt.** De rol van gesproken briefings, stapsgewijze aanscherping, eigen beoordeling en concrete correcties is toegevoegd.
-2. **De periode is onderbouwd beschreven.** Teruggevonden accenten per maand zijn gescheiden van een veronderstelde volledige ontwikkelingsgeschiedenis.
-3. **Processtappen zijn uitvoerbaar gemaakt.** Elke stap heeft ingang, handelingen, rolverdeling, output en een doorgangscriterium.
-4. **Volledigheid en releasekeuze zijn gescheiden.** Een onderdeel kan volledig geïnventariseerd zijn en bewust later worden gebouwd.
-5. **Schermcontrole en gegevenscontrole zijn verbonden.** Het doel is de keten tot het werkelijke resultaat, niet alleen zichtbare UI.
-6. **Herstel heeft een vaste structuur.** Waarneming, reproductie, oorzaak, reparatie, hertest en status vormen één lus.
-7. **Technische grenzen zijn verduidelijkt.** Promptinstructies, beschikbare IDE-mogelijkheden en eigen runtimecontroles zijn afzonderlijke lagen.
-8. **Statusbeheer is verbreed naar continuïteit.** Code, data, originelen en configuratie krijgen afzonderlijke aandacht voor herstel.
-9. **Commerciële stappen zijn concreter.** Eerste marktcontact, SEO, meetpunten, activatie, betaalbereidheid en feedback zijn opgenomen zonder verkoopresultaten te verzinnen.
-10. **De uitlegsite kan op dit dossier voortbouwen.** Pagina’s, leerdoelen, formats en neutrale voorbeelden zijn beschreven.
-
-## 10. Bronnen, onzekerheden en kwaliteitscontrole
-
-### 10.1 Onderzoeksafbakening
-
-De onderzoeksvraag is hoe mijn werkwijze en zichtbare handelingen van idee tot markt in processtappen kunnen worden gereconstrueerd. De analyse gebruikt de volledige aangeleverde audit, de inhoud van het eerder gemaakte handboek, teruggevonden gespreksfragmenten en relevante eerder gelezen documenten. Er is gericht gezocht naar onderzoek, propositie, Stitch-overdracht, scope, prompts, QA, status, techniek, commerciële stappen en tegenvoorbeelden.
-
-Deze analyse heeft **geen nieuwe inspectie van de lokale Windows-projectomgeving**, geen volledige export van alle gesprekken en geen nieuwe runtime- of productietests uitgevoerd. Volledigheid geldt voor de inhoudelijke dekking van de beschikbare bijlage en het eerdere handboek, plus de teruggevonden relevante handelingen. Zij is geen garantie dat iedere handeling uit alle eerdere maanden is teruggevonden.
-
-Voor versie 3.0 zijn daarnaast officiële ingangen voor ontwerp, bouw, lokale installatie, browserregistratie en hosting geraadpleegd. De nieuwe bijlage met `(1)` in de bestandsnaam is byte voor byte gelijk aan de eerdere bijlage en telt daarom niet als onafhankelijke bevestiging. Deel A vertaalt de werkwijze naar eindgebruikersstappen en opnieuw geformuleerde opdrachten; dit zijn geen historische woordelijke citaten.
-
-De oorspronkelijke bron reconstrueert een werkwijze en beschrijft de bijbehorende kwaliteitscontroles. Zij is geen nieuwe forensische code-audit en kent geen nieuwe technische kwaliteitsscore toe aan de beschreven producten.
-
-### 10.2 Projectneutraal bronregister
-
-Projectnamen en herkenbare verwijzingen zijn weggelaten. Het register geeft datum, bronsoort, onderwerp en bewijsgrens. De gespreksfragmenten die via contextretrieval zijn teruggevonden, zijn minder volledig dan een integraal origineel transcript; zij worden niet als zelfstandig technisch uitvoeringsbewijs gebruikt.
-
-| Code | Bron en datum | Geraadpleegde inhoud | Wat dit ondersteunt | Grens |
-|---|---|---|---|---|
-| B01 | Bijlage over ontwikkelcyclus en architectuur, 12 september 2026 | Volledige bijlage, hoofdstukken 1–4. | Beschreven tienfasenproces, tooling, bestanden en configuratiepatronen. | Onderliggende pc, code en tests niet opnieuw onderzocht. Eerder teruggevonden kopie is dezelfde bronfamilie. |
-| B02 | Huidige opdrachten, 12 september 2026 | Verzoek tot reconstructie, aanvulling, gedragsanalyse en MD-output. | Doel, volledige procesbeschrijving, projectneutraliteit en beoogde uitlegsite. | Opdracht, geen bewijs van eerdere uitvoering. |
-| B03 | Teruggevonden context, 16 januari 2026; eerdere propositiecontext uit januari | Opdrachten voor samenhangende propositie, inhoudsstructuur, branding en bouwbriefing. | Inhoudelijk voorwerk en samenhang van product en site. | Fragmentarische context; geen repo-inspectie. |
-| B04 | Beschikbare eerdere gesprekscontext, 23 februari 2026 | Doelgroepsegmentatie, eerste aanbod, gefaseerde introductie, marketing/sales/activatie. | Gevraagde commerciële voorbereiding en productfocus. | Plannen bewijzen geen gerealiseerde verkoop of activatie. |
-| B05 | Teruggevonden gebruikersfragmenten, 28 februari 2026 | Audit op bronvalidatie en traceerbaarheid; correctie op te stellige inschattingen. | Vraag om bewijs en realistische claims. | Geen onafhankelijke controle van de destijds beoordeelde code. |
-| B06 | Teruggevonden gebruikersfragment, 4 maart 2026 | Mededeling dat een ontwerp in Stitch is gemaakt en vraag naar implementatie in Antigravity. | Beschreven gebruik van Stitch en expliciete overdrachtsvraag. | Export of werkende implementatie niet in deze bron onderzocht. |
-| B07 | Teruggevonden opdracht, 20 maart 2026 | Verzoek om juridische toets van propositie en techniek, inclusief datarechten en regelgeving. | Randvoorwaarden als onderdeel van de werkwijze. | Geen juridisch oordeel of uitvoeringsbewijs. |
-| B08 | Teruggevonden opdrachten, 2 april 2026 | Heraudit, behoud van versies, evidence trail, hashes, lineage en afwijkingenregister. | Gewenste reproduceerbaarheid en behoud van bewijs. | Uitvoering en volledigheid van die audit niet opnieuw gecontroleerd. |
-| B09 | Teruggevonden gebruikersfragmenten, 2 april 2026 | Grenzen van lokale controle over een gesloten IDE; focus op LLM-IDE-development. | Scheiding tussen promptkader en technische afdwinging. | Geen actuele featurecontrole van Antigravity. |
-| B10 | Teruggevonden opdrachten, 9 juli 2026 | Alle rollen, flows, schermen, overlays, objecten, acties, releases en coverage matrix. | Volledigheidswens en document als leidende productspecificatie. | Het verzoek bewijst niet dat ieder scherm is gerealiseerd. |
-| B11 | Teruggevonden opdrachten, 9 en 11 juli 2026 | Volledige appcontrole, Playwright, tweede testlaag, API/data/rechten en bewijslabels. | Gewenste ketentests en afzonderlijke testlagen. | Testuitkomsten en toenmalige dekking niet opnieuw uitgevoerd. |
-| B12 | Zichtbare en teruggevonden gebruikerscorrecties, 11 september 2026 | Ontbrekende screenshots, handleidingen, release notes en verwerking in spreadsheet/PDF. | Eigen artefactcontrole, aanvullende bronkeuze en opnieuw laten opleveren. | AI-claims over aantallen toegevoegde afbeeldingen niet als bewijs gebruikt. |
-| B13 | Zichtbare en teruggevonden gebruikersopdracht, 11 september 2026 | Visuele drukte, knoppen, afstanden, usability en samenhang. | Visuele kwaliteit als afzonderlijk acceptatieaspect. | Geen nieuwe visuele audit van het betrokken product. |
-| B14 | Zichtbare eerdere gebruikersmededeling, 11 september 2026 | Registratie tijdens doorklikken en terugvoeren naar de ontwikkelomgeving voor herstel. | Zelf beschreven feedbackmechanisme en gewenste werkwijze. | Technische werking van de registratie niet opnieuw getest. |
-| B15 | Eerder in deze conversatie beschikbare context, 11–12 september 2026 | Grote foto’s in Git en opdracht om webvarianten te maken en originelen buiten commits te houden. | Beschreven frictie en gewenste assetwerkwijze. | Actuele repository-inhoud en herstelstatus onbekend. |
-| B16 | Eerder volledig gelezen strategie- en propositiedocument, 17 juli 2026 | Werkwijze in vijf fasen, productmanagement vóór technologie, AI-evaluatie en doorontwikkeling. | Vastgelegde methodiek en commercieel ontwerp. | Positionering en voorschrift, geen onafhankelijke bevestiging van alle handelingen. |
-| B17 | Teruggevonden gebruikersmededeling, 10 september 2026 | Verwijderde lokale mappen en problemen met reconstructie uit chats. | Belang van herstelbaarheid als procesles. | Oorzaak, omvang en herstelstatus niet onderzocht. |
-| B18 | Beschikbare context rond SEO- en marktintroductieopdrachten, september 2026; aanvullende documentverwijzingen via retrieval | Vindbaarheid, indexatie, content, analytics en marketingplannen. | Onderwerpen voor de voorgestelde commerciële uitvoeringsstappen. | Onderliggende SEO-documenten niet in deze ronde integraal gelezen; specifieke implementatieclaims worden er niet op gebaseerd. |
-| B19 | Interne instructies voor brononderzoek en kwaliteitscontrole, gelezen in deze conversatie | Bronstatus, anti-hallucinatie, verificatie, afbakening en reconstructiediscipline. | Methode voor deze analyse. | Instructiekader, geen productcertificering. |
-| B20 | Eerdere versie van dit handboek, 12 september 2026 | Veertien hoofdstukken in Word; inhoud en hoofdstukstructuur gecontroleerd. | Basis voor uitbreiding en inhoudelijke dekkingscontrole. | Eigen eerdere synthese, geen onafhankelijke bron. |
-| B21 | Aanvullende huidige gebruikersopdrachten, 12 september 2026 | Tool-links, belangrijke bouwopdrachten, BAT voor lokaal bekijken en een leesbaar document als websitebasis. | De aanvullingen en lezersroute in Deel A. | Opdracht, geen bewijs van uitvoering op de lokale pc. |
-| B22 | Teruggevonden gebruikerscontext, 27 februari 2026 | Stitch-opdracht met merkrichtlijnen, gebruik van aanwezige ontwerpbestanden en propositie; aansluiting van marketingsite op bestaande demo/login en talen. | Contextgestuurde ontwerpopdracht en overdracht met behoud van bestaande routes. | Fragmenten, geen nieuwe inspectie van ontwerp of code. |
-| B23 | Officiële webdocumentatie, geraadpleegd 12 september 2026 | De direct gelinkte product-, download- en documentatiepagina’s in Deel A. | Tool-ingangen en de beschreven algemene rol van die gereedschappen. | Geen accountinspectie, featuretest of toets van lokale compatibiliteit. |
-| B24 | Aanvullende huidige gebruikersopdrachten na versie 3.0 | Volledige site-documentatie, alle teksten, pagina’s, Mermaid en architectuur opnemen en controleren. | Documentatiecontract en verwerking in de ontwikkelcyclus. | Opdracht; geen bewijs van eerdere naleving. |
-| B25 | Interne instructies voor documentatie, architectuur en kwaliteitscontrole, gelezen bij deze aanvulling | Documentaire audit, architectuureisen, zes failure modes en volledige product-/operationele documentatie. | Normenkader voor hoofdstuk 11 en audit in hoofdstuk 12. | Historische methodeverantwoording; geen certificering. |
-
-### 10.3 Omgang met stellige claims uit de bijlage
-
-| Formulering in de bron | Waarom niet ongewijzigd overgenomen | Formulering of verwerking in dit handboek |
-|---|---|---|
-| Volledig empirisch geverifieerd op schijf | Deze sessie heeft de genoemde schijf niet onderzocht. | De bijlage beschrijft en claimt de inrichting; actuele verificatie is afzonderlijk. |
-| Elk initiatief begint vóór iedere regel code met gevalideerde strategie | Universele claim zonder volledige gebeurtenisgeschiedenis. | Inhoudelijk voorwerk is een gedocumenteerd patroon en gewenste werkwijze. |
-| In alle projecten direct en foutloos starten | Aanwezigheid van scripts bewijst geen foutloos gedrag. | Starter uitvoeren en de gereedheid en foutpaden controleren. |
-| Geen code gaat live zonder volledige validatie | Geen volledige reeks release- en testbewijzen beschikbaar. | Vastgestelde releasecriteria toepassen; historische naleving blijft onbekend. |
-| Privacy compliance door analytics en consentinrichting | Technische aanwezigheid is geen volledige juridische of functionele beoordeling. | Instellingen en werkelijke verwerking afzonderlijk controleren. |
-| Schone versiegeschiedenis en remote back-up voor elk project | Actuele repository- en pushstatus zijn niet onderzocht; grote bestanden zijn bovendien als frictie beschreven. | Controleer versiegeschiedenis, gevolgde bestanden en remote status per geval. |
-| Exacte uren en besparing per project | Registratie en vergelijkingsbasis zijn niet onafhankelijk bevestigd en zijn niet nodig voor de projectneutrale methode. | Gemeten tijd, schatting en hypothetische vergelijking gescheiden houden. |
-| Grote aantallen tests of actieve onderdelen bewijzen kwaliteit | Een aantal zegt niets over relevante dekking en geslaagde uitvoering. | Testresultaat koppelen aan eis, scenario, versie en omgeving. |
-
-Dit zijn begrenzingen van wat deze analyse kan vaststellen. Zij betekenen niet dat de beschreven inrichting onwaar is.
-
-### 10.4 Verantwoording van deze lezerseditie
-
-Deze versie is bewerkt voor Vibe Lift. Editie 1.2 voegt toolkeuzes, de Antigravity–GitHub–Railway-route en een SEO-cursus toe. Formuleringen, opdrachten en verwijzingen naar de interne analysemethode zijn aangepast voor de lezer. De procesindeling en inhoudelijke controlecriteria blijven beschikbaar. De download is daardoor geen ongewijzigde kopie van het oorspronkelijke document.
-
-De historische reconstructie en haar beperkingen blijven als achtergrond herkenbaar. Er is bij deze redactionele bewerking geen nieuwe inspectie van onderliggende producten, installatie of technische certificering uitgevoerd. Beoordeel in je eigen project welke controles werkelijk zijn uitgevoerd en welk bewijs daarbij hoort.
-
-### 10.5 Falsificatiecheck en alternatieve verklaringen
-
-**Hypothese 1:** de zichtbare opdrachten vormen een structurele werkwijze van inhoud naar ontwerp naar bouw.
-
-- **Ondersteuning:** verschillende perioden bevatten diezelfde inhoudelijke verbinding en een expliciete Stitch-overdrachtsvraag.
-- **Alternatieve verklaring:** de opdrachten beschrijven vooral de gewenste werkwijze, terwijl de dagelijkse uitvoering vaker anders verloopt.
-- **Wat dit zou beslissen:** een volledig tijdspoor van documenten, commits, ontwerpversies en tests per traject.
-- **Conclusie:** redelijk onderbouwd als gedocumenteerde aanpak; niet bewezen als universeel gevolgde volgorde.
-
-**Hypothese 2:** ik gebruik audits en correcties als vast onderdeel van de verbetering.
-
-- **Ondersteuning:** herhaalde opdrachten om dekking en bewijs te vergroten, zichtbare correcties op ontbrekende beelden en beschreven terugvoer van browserfeedback.
-- **Alternatieve verklaring:** de teruggevonden gesprekken bevatten relatief veel probleemgevallen en geven daardoor een vertekend beeld van al het werk.
-- **Wat dit zou beslissen:** representatieve steekproef van volledige sessies, inclusief probleemloze opleveringen en de daadwerkelijke verwerking van bevindingen.
-- **Conclusie:** sterk zichtbaar in de aangehaalde interacties; de frequentie over alle sessies is onbekend.
-
-**Hypothese 3:** technische standaardisering maakt de aanpak beter hervatbaar.
-
-- **Ondersteuning:** de bijlage beschrijft poortregister, starters, statusbestanden en synchronisatie.
-- **Alternatieve verklaring:** de standaard bestaat deels als documentatie en is niet overal betrouwbaar geïmplementeerd.
-- **Wat dit zou beslissen:** start- en herstelproeven op de betreffende omgevingen, met statusvergelijking.
-- **Conclusie:** het ontwerpdoel is duidelijk; de feitelijke dekkingsgraad en betrouwbaarheid zijn hier niet vastgesteld.
-
-### 10.6 Grenzen van de gedragsanalyse
-
-De analyse gaat over zichtbaar werkgedrag: formuleren, structureren, vergelijken, corrigeren, controleren en organiseren. Zij geeft geen psychologische diagnose en maakt geen uitspraken over persoonlijkheid, algemene intelligentie, uitzonderlijke prestaties of productiviteit ten opzichte van anderen.
-
-De bronnen ondersteunen ook geen percentages voor tijdsbesparing, foutreductie of commerciële slagingskans. Die worden daarom niet toegevoegd. Waar een terugkerend patroon is benoemd, staat expliciet dat het om een afleiding gaat.
-
-### 10.7 Open punten die alleen uitvoeringsbewijs kan oplossen
-
-- Welke starters, registries, plugins en synchronisaties zijn nu werkelijk actief en werkend?
-- Welke kernflows zijn voor welke codeversie getest, met welke uitkomst?
-- Is de beschreven browserfeedback gekoppeld aan reproduceerbare registraties en controleerbaar herstel?
-- Welke stappen in marktintroductie, onboarding en meting zijn daadwerkelijk uitgevoerd?
-- Hoe wordt back-up van code, data, originelen en configuratie getest?
-- Welke tijd- en kostenvelden zijn werkelijk gemeten en welke geschat?
-- Welke verschillen bestaan tussen de beschreven standaard en de huidige dagelijkse praktijk?
-
-Deze vragen blokkeren het proceshandboek niet. Ze begrenzen alleen claims over historische of actuele uitvoering.
-
-### 10.8 Controle van deze oplevering
-
-De inhoudelijke controle richt zich op de volledige opname van de tien oorspronkelijke fasen, het behoud van de onderwerpen uit het eerdere handboek, de koppeling van gedragsuitspraken aan bronnen, het labelen van afleidingen en aanvullingen en de afwezigheid van projectverwijzingen.
-
-De bestandscontrole richt zich op een zelfstandig leesbaar UTF-8 Markdown-bestand, alle 28 processtappen met hun vaste velden, complete tabellen en codeblokken, geldige interne broncodes en een doorlopende hoofdstukstructuur. De diagrammen beschrijven het proces; er zijn geen screenshots of reconstructies van echte projectinterfaces toegevoegd.
-
-**Eindstatus:** het handboek beschrijft de volledige gedekte methode en de voorgestelde aanscherpingen. De niet-uitgevoerde technische en historische verificaties blijven zichtbaar in dit hoofdstuk. Nieuwe praktijkinformatie kan worden verwerkt zonder de herkomst van eerdere keuzes te verliezen.
-
-
-### 10.9 Dekkingscontrole van de leesbare editie
-
-| Lezersstap uit Deel A | Gedetailleerde uitvoering in Deel B |
-|---|---|
-| 1. Idee concreet maken | P01–P03 |
-| 2. Markt en oplossingen onderzoeken | P04–P05 |
-| 3. Propositie en praktijktoets | P06–P08 |
-| 4. Gebruikersroutes en schema’s | P09–P10 |
-| 5. Pagina’s en schermen | P11–P12 |
-| 6. Ontwerpen in Stitch | P13–P14 |
-| 7. Overdracht naar Antigravity | P15–P17 |
-| 8. Eerste complete route | P19 |
-| 9. Lokaal starten en bekijken | P16, P18; 5.2–5.3 |
-| 10. Zelf gebruiken en registreren | P20–P21 |
-| 11. Werking en gebruiksgemak controleren | P22; hoofdstuk 6 |
-| 12. Bestanden, versiebeheer en publicatie | P23–P25 |
-| 13. Marktintroductie en eerste gebruik | P26–P27 |
-| 14. Status bewaren en hervatten | P28; hoofdstuk 7 |
-
-Versie 3.0 behoudt het volledige procesnaslagwerk en voegt een zelfstandig leesbare handleiding toe. Nieuw zijn de officiële tool-links, 24 concrete opdrachten, de uitgewerkte BAT-startprocedure, een begrippenlijst en een bouwbrief voor de uitlegsite. De algemene kwaliteitsaanvullingen in de opdrachten blijven voorschriften voor uitvoering. Ze zijn geen claim dat de onderliggende Windows-scripts of projecten in deze sessie zijn gebouwd of getest.
-
-## 11. Het volledige documentatiecontract
-
-### 11.1 Doel, status en toepasselijkheid
-
-**OPDRACHT — B24:** site-inhoud, gebruikerswerking, Mermaid-schema’s en architectuur zijn verplichte onderdelen van deze werkwijze. **AANVULLING:** de onderstaande dossierindeling, formats en controlemomenten operationaliseren die opdracht met eisen voor inhoud, gebruikerswerking, architectuur en controle, bron B25. Het zijn vastgelegde uitvoeringsvereisten; geen claims dat al deze documenten in eerdere projecten aanwezig waren.
-
-Dit contract verdiept P11–P12, P15–P17, P22 en P28. Het geldt voor de ontwikkeling én voor het bijwerken van een bestaande site. De documentatie van een specifieke applicatie wordt op basis van haar eigen bronnen ingevuld. Deze handleiding levert daarvoor het proces en de modellen.
-
-Gebruik drie afzonderlijke dimensies per onderdeel:
-
-| Dimensie | Waarden | Betekenis |
-|---|---|---|
-| Productstatus | Beoogd, geïmplementeerd, uitgefaseerd | Wat is ontworpen of aanwezig? |
-| Bewijsstatus | Documentatie, code gelezen, runtime gecontroleerd, onbekend | Waarop berust de beschrijving? |
-| Documentatiestatus | Volledig, deels, ontbreekt, geblokkeerd | Is het toepasselijke onderwerp voldoende beschreven? |
-
-`N.V.T.` vereist een inhoudelijke reden. “Geen toegang tot het CMS” betekent geblokkeerde onderzoeksdekking; “deze statische site heeft geen CMS” kan een onderbouwde reden voor niet-toepasselijkheid zijn. Ontbrekende informatie wordt niet stilzwijgend weggelaten.
-
-### 11.2 Het dossier en de leidende bronnen
-
-Bestaande bestandsnamen blijven bruikbaar. Leg in `docs/README.md` vast welk bestand leidend is voor elk onderwerp, wie het bijhoudt en hoe het samenhangt met de andere bestanden. De voorgestelde indeling hieronder breidt hoofdstuk 7.1 uit. Een kleine site kan onderwerpen bundelen, zolang de index elk toepasselijk onderwerp terugvindbaar maakt. Het hoofddocument over gebruikerswerking behoudt de herkenbare naam `APPLICATION_USER_OPERATING_MODEL.md`.
-
-| Dossieronderdeel | Verplichte inhoud | Bijwerken bij |
-|---|---|---|
-| `docs/README.md` | Leesroutes voor gebruiker, redacteur, bouwer en beheerder; documenteigenaren, versies en bronhiërarchie. | Nieuwe of gewijzigde documentstructuur. |
-| `SITE_MAP_AND_ROUTES.md` | Alle routetypen en pagina’s, navigatie, toegang, redirects, foutpagina’s, talen en publicatiestatus. | Wijziging van route of navigatie. |
-| `CONTENT.md` en zo nodig `content/` | Alle letterlijke teksten, gedeelde teksten, media, metadata, vertalingen en dynamische templates. | Iedere relevante inhoudswijziging. |
-| `SCREEN_SPECS.md` | Pagina’s, schermen, overlays, componenten, toestanden, acties en responsive gedrag. | Wijziging van interactie of scherm. |
-| `APPLICATION_USER_OPERATING_MODEL.md` | Volledige productwerking volgens 11.5. | Wijziging van gebruikerswerking. |
-| `ROLE_BASED_USER_MANUAL.md` | Stapsgewijze instructies per bestaande rol, inclusief fouten en herstel. | Wijziging van dagelijkse taken of rechten. |
-| `DESIGN_SYSTEM.md` | Vormgevingsregels, componentvarianten, toegankelijk gedrag en contentregels. | Wijziging van gedeeld ontwerp. |
-| `ARCHITECTURE.md` | Context, onderdelen, grenzen, verantwoordelijkheden, omgevingen en afhankelijkheden. | Wijziging van technische samenhang. |
-| `DATA_MODEL.md` en `API_CONTRACTS.md` | Objecten, relaties, gegevenslevenscyclus, interfaces, validatie, rechten en foutcontracten. | Wijziging van opslag, schema of interface. |
-| `DECISIONS.md` of `adr/` | Architectuurbesluiten met opties, onderbouwing, gevolgen en status. | Wezenlijke technische beslissing. |
-| `DIAGRAMS.md` of `diagrams/` | Bewerkbare Mermaid-bronnen met register, relaties en validatiestatus. | Wijziging van de afgebeelde werkelijkheid. |
-| `SECURITY_AND_DATA_HANDLING.md` | Toegangsmodel, trust boundaries, geheimenbeheer, gegevensdoelen en relevante open toetsvragen. | Wijziging van toegang of verwerking. |
-| `LOCAL_SETUP.md` / `LOKAAL_STARTEN.md` | Vereisten, configuratie, BAT-starter, poorten, stoppen en probleemoplossing. | Wijziging van lokale uitvoering. |
-| `DEPLOYMENT_AND_RECOVERY.md` | Build, publicatie, configuratie, migraties, terugzetten en herstel. | Wijziging van release- of herstelroute. |
-| `OPERATIONS.md` | Monitoring, signalen, beheer, support, kosten, back-up en verantwoordelijkheden. | Wijziging van dagelijkse exploitatie. |
-| `SCOPE_AND_COVERAGE.md` | Eisen gekoppeld aan inhoud, werking, componenten, documentatie en controles. | Iedere relevante scope- of statuswijziging. |
-| `QA_AND_RELEASE.md` | Acceptatiecriteria, uitgevoerde tests, bewijs, documentatiecheck en releasebesluit. | Test, hertest of release. |
-| `CHANGELOG.md` en projectstatus | Wat veranderde, waarom, welke versie geldt en wat nog openstaat. | Iedere betekenisvolle wijziging. |
-
-**Geen parallelle waarheden:** als dezelfde tekst in code en documentatie staat, wijs één leidende bron aan. Genereer waar mogelijk de andere weergave uit die bron of controleer beide bij dezelfde wijziging. Verwijs voor gedeelde componenten naar één canonieke beschrijving en leg de uitzonderingen per pagina vast.
-
-### 11.3 Alle pagina’s, routes en teksten
-
-Inventariseer zowel wat gebruikers via navigatie bereiken als directe routes, dynamische detailpagina’s, afgeschermde schermen, taalvarianten en systeemschermen. Maak onderscheid tussen een routetemplate en de werkelijk gepubliceerde contentinstanties. Exporteer bij publiek beheerde content de beschikbare pagina-inventaris; bij privérecords documenteer je template en varianten zonder persoonsgegevens te kopiëren.
-
-**Paginaregister**
-
-| Veld | Wat je vastlegt |
-|---|---|
-| Pagina-ID en route | Stabiel ID, URL of routepatroon, parameters en taal. |
-| Doel en toegang | Gebruikerstaak, doelgroep/rol en relevante toegangsvoorwaarde. |
-| Navigatie | Waarvandaan bereikbaar, broodkruimels waar aanwezig, vervolg, terugweg en redirects. |
-| Inhoud | Geordende secties en verwijzingen naar volledige teksten en gedeelde componenten. |
-| Acties en data | Formulieren, CTA’s, variabelen, gegevensbron en gekoppelde processen. |
-| Zoek- en deelweergave | Titel, beschrijving, canonical, indexeerkeuze en relevante social metadata. |
-| Media | Bestand of bron-ID, variant, positie, alt-tekst, bijschrift en bekende gebruiksrechten. |
-| Toestanden | Laden, leeg, fout, succes, beperkte toegang en relevante varianten. |
-| Bewijs | Bronbestand, content-ID of gecontroleerde runtime-locatie, versie en datum. |
-| Status | Ontwerp/bouwstatus, documentatiedekking, eigenaar en open punten. |
-
-**Tekstregister:** leg iedere relevante tekst letterlijk vast met tekst-ID, pagina-/component-ID, taal, plaats, bronlocatie en status. Neem ook placeholders in invoervelden, foutmeldingen, bevestigingen, tooltips, toegankelijkheidslabels, menu’s, cookie-interface indien aanwezig, 404-teksten en e-mail-/notificatietemplates mee. Een samenvatting zoals “hier staat de uitleg” is geen volledige tekstregistratie.
-
-Voor dynamische tekst leg je het template, de variabelen, invulbron, conditionele varianten en fallback vast. Voor vertalingen registreer je bron- en doeltaal, ontbrekende sleutels, meervoudsvormen en relevante datum-/getalnotatie. Bij gesynchroniseerde content controleer je dat de vertaling bij dezelfde inhoudsversie hoort.
-
-**Invulmodel voor één pagina**
-
-```markdown
-# PAG-001 — [Paginanaam]
-Route: [route of patroon]
-Rol/toegang: [publiek of bestaande rol]
-Doel: [taak]
-Productstatus: [beoogd / geïmplementeerd / uitgefaseerd]
-Bron en versie: [bestand/content-ID + versie]
-Controle: [methode, datum, uitkomst of niet uitgevoerd]
-
-## Metadata
-Paginatitel: [exacte tekst]
-Beschrijving: [exacte tekst]
-Indexeerkeuze en reden: [keuze]
-
-## Secties in weergavevolgorde
-### TXT-001 — [sectienaam]
-Kop: [exacte tekst]
-Hoofdtekst: [volledige tekst]
-Actie: [exact knoplabel + bestemming of handeling]
-Media: [asset-ID + alt-tekst + bijschrift]
-
-## Gedeelde inhoud
-[canonieke header/footer/component-ID's + relevante variant]
-
-## Varianten en toestanden
-[volledige teksten per taal en relevante toestand, of exacte bronverwijzing]
-
-## Koppelingen
-[FLOW-ID, SCREEN-ID, component, API/data indien relevant, TEST-ID]
-
-## Open punten
-[ontbrekende inhoud, beslissing, eigenaar en vervolgstap]
-```
-
-Dit is een invulmodel. Vervang de velden tijdens uitvoering door werkelijke inhoud en controleer de samengestelde pagina, inclusief gedeelde teksten. Laat ongekende waarden herkenbaar open.
-
-### 11.4 Architectuur: het volledige toepasselijke beeld
-
-De architectuur moet zowel de gebruikerstaak als de technische verdeling verklaren. Leg per hoofdstuk vast wat beoogd is, wat in code/configuratie is aangetroffen en wat operationeel is gecontroleerd. Een ontwerpdiagram is geen bewijs van de productie-inrichting.
-
-| Architectuuronderwerp | Minimale documentatie | Aandachtspunt |
-|---|---|---|
-| Context en scope | Doelen, gebruikers, externe systemen, systeemgrens, randvoorwaarden en uitgesloten onderdelen. | context en scope. |
-| Bestaande oplossing | Inventaris van herbruikbare onderdelen, overlap, te wijzigen delen en gemotiveerde nieuwe onderdelen. | Build gate: extend → reuse → modify → create. |
-| Onderdelen en verantwoordelijkheden | Frontend, backend, modules, componenten, services, opslag en hun onderlinge relaties. | architectuur en scheiding van logica. |
-| Bedrijfsregels | Waar regels worden beheerd, wie ze toepast en hoe duplicatie wordt voorkomen. | architectuurhandhaving. |
-| Interfaces en integraties | Centrale adapters/gateway waar relevant; eigenaar, richting, contract, authenticatie, fouten en versiebeleid. | externe calls en data contracts. |
-| Data en bestanden | Schema’s, relaties, eigenaarschap, classificatie, opslaglocaties, bron/herkomst, wijzigen, exporteren en verwijderen. | data contracts en security. |
-| Toegang en trust boundaries | Identiteit, sessie, autorisatie per actie, organisatiegrenzen indien aanwezig en validatie aan grenzen. | trust boundaries; security. |
-| Configuratie en afhankelijkheden | Vereiste versies, lockfiles, configuratiebronnen, geheime waarden buiten documentatie en updatebeleid. | hergebruik en centrale configuratie. |
-| Omgevingen en deployment | Lokale, test- en productieopzet; build/start, poorten, domeinen, persistente data, migraties en rollback. | deployment failure modes. |
-| Uitvoering en toestanden | Kritieke sequenties, transacties, achtergrondtaken, retries, time-outs en dubbele uitvoering. | state/idempotency. |
-| Observability | Gebeurtenissen/logs, correlation-ID’s waar relevant, metingen, signalen, eigenaar en reactie. | observability. |
-| Prestaties en capaciteit | Vastgestelde eisen, meetmethode, limieten, verwachte belasting en gedrag bij overschrijding. | resource limits. |
-| Kosten | Kostendragers, meting waar beschikbaar, budgetten, limieten en reactie op afwijkingen. | kosten. |
-| Fouten en herstel | Foutcategorieën, fallback, veilige herhaling, back-up, herstelstappen en bewijs van herstelproeven. | failure mode analyse. |
-| AI-functies, indien aanwezig | Prompt-/modelversies, gegevensgrenzen, evaluatie, menselijke afhandeling, variatie en kostenbeheersing. | evaluatie en outputstabiliteit. |
-| Besluiten en technische schuld | Alternatieven, gemaakte afweging, gevolg, eigenaar en heroverwegingsmoment. | Beoordeling van architectuurbesluiten. |
-| Verificatie | Eis → architectuurmaatregel → implementatie → controle → bewijs, plus open afwijkingen. | verificatie en dossiercontrole. |
-
-**Zes verplichte vragen bij de toepasselijke architectuuronderdelen**
-
-1. **Invoer:** wat gebeurt bij ontbrekende, ongeldige, te grote of ongewenste invoer?
-2. **Gelijktijdigheid:** wat gebeurt bij dubbele of overlappende handelingen?
-3. **Externe afhankelijkheden:** wat gebeurt bij uitval, vertraging of limieten van een gekoppelde dienst?
-4. **Gegevensintegriteit:** hoe worden inconsistente gegevens, gedeeltelijke wijzigingen en schemaverschillen afgehandeld?
-5. **Middelen en kosten:** welke grenzen gelden voor geheugen, opslag, verwerking, verzoeken en eventueel modelgebruik?
-6. **Publicatie:** hoe blijven gegevens en werking correct bij een nieuwe versie, migratie of terugzetactie?
-
-Leg per toepasselijk risico impact, maatregel, eigenaar en verificatie vast. “Niet opnieuw proberen” kan een geldige retrykeuze zijn als herhaling onveilig is; beschrijf dat expliciet. Voor veranderlijke AI-uitkomsten documenteer je de verwachte variatie in plaats van determinisme te beloven.
-
-**Architectuurbesluit — invulmodel**
-
-```markdown
-# ADR-001 — [Besluit]
-Status: [voorgesteld / vastgesteld / vervangen]
-Datum en eigenaar: [invullen]
-Aanleiding en eisen: [probleem + REQ-ID's]
-Bronnen: [bestaande implementatie, onderzoek, relevante configuratie]
-Opties: [hergebruik / aanpassen / nieuwe oplossing + voor- en nadelen]
-Keuze en reden: [besluit]
-Gevolgen: [gebruikerswerking, data, security, prestaties, kosten, beheer]
-Failure modes en maatregelen: [relevante risico's]
-Geraakte onderdelen: [componenten, contracten, pagina's, diagrammen]
-Verificatie: [controle + bewijs of open toets]
-Heroverwegen wanneer: [concrete aanleiding]
-Vervangt/vervangen door: [ADR-ID of n.v.t.]
-```
-
-### 11.5 Functionele en operationele productdocumentatie
-
-Gebruik het model voor gebruikers- en beheerdocumentatie als inhoudelijke checklist. De gekozen omvang van het product bepaalt welke onderdelen bestaan; ontbrekende productfuncties worden niet verzonnen om het format te vullen. Voor een volledige applicatie documenteer je alle toepasselijke onderwerpen hieronder, inclusief de beheer- en gebruiksdetails.
-
-| Onderwerp over gebruikerswerking | Wat het dossier uitlegt |
-|---|---|
-| 1. Samenvatting | Doel, gebruikers en hoofdwerking. |
-| 2. Productscope | Bestaand, gedeeltelijk, placeholder, gepland en onbekend. |
-| 3. Applicatietype en domeinmodel | Soort product en betekenis van zijn objecten. |
-| 4. Rollen en rechten | Wat iedere rol ziet en mag; controles op verboden acties. |
-| 5. Hoofdobjecten en relaties | Betekenis, velden, eigenaar en gegevensgevoeligheid. |
-| 6. End-to-end werking | Van toegang tot afgeronde gebruikerstaak, met Mermaid. |
-| 7. Toegang en activatie | Bestaande registratie-, login- en uitnodigingsroutes. |
-| 8. Onboarding | Eerste stappen en eerste bruikbare uitkomst per rol. |
-| 9. Startscherm/dashboard | Inhoud, acties, data en bijzondere toestanden. |
-| 10. Kernfeatures en modules | Concrete functies en hun operationele werking. |
-| 11. Kernobjectbeheer | Aanmaken, bekijken, wijzigen, koppelen, archiveren en verwijderen van bestaande objecten. |
-| 12. Procesflows | Stappen, beslissingen, overdrachten en uitzonderingen. |
-| 13. Dagelijkse gebruiksflow | Dagelijkse taken, volgorde en afronding per rol. |
-| 14. Statussen, voortgang en feedback | Overgangen, voorwaarden, business rules, triggers en zichtbare terugkoppeling. |
-| 15. Communicatie | Berichten, triggers, ontvangers, kanalen en voorkeuren. |
-| 16. Formulieren | Velden, verplichtheid, validatie, opslag en feedback. |
-| 17. Instellingen en beheer | Wie wat kan wijzigen en met welk gevolg. |
-| 18. Errors en edge cases | Fouten, lege situaties, grenzen en herstel. |
-| 19. Data per workflow | Welke gegevens in welke stap worden vastgelegd. |
-| 20. Actie naar implementatie | Gebruikersactie gekoppeld aan route, component, API en data. |
-| 21. Productgaps en UX-risico’s | Afwijking, impact, prioriteit en eigenaar. |
-| 22. Acceptatiecriteria | Normale en afwijkende scenario’s per kernflow. |
-| 23. Overdracht en volgende acties | Open beslissingen en concrete vervolgwerkzaamheden. |
-
-Een gebruikershandleiding beschrijft per taak het doel, de vereisten, de zichtbare knoppen en stappen, de verwachte uitkomst en probleemoplossing. Technische logica kan daarna als verdieping worden gekoppeld. Zo blijven gebruiksinstructies leesbaar.
-
-### 11.6 Mermaid als onderhouden documentatie
-
-Bewaar Mermaid-code als bewerkbare bron in Markdown-codeblokken of `.mmd`-bestanden. Een afbeelding kan een aanvullende export zijn. Koppel ieder diagram aan dezelfde versie en begrippen als de tekst.
-
-| Diagramtype | Welke vraag beantwoordt het? | Toepassing |
-|---|---|---|
-| Sitemap/navigatie, flowchart | Waar kan iemand heen en via welke route? | Sites met meerdere pagina’s of routes. |
-| Procesflow, flowchart | Welke stappen en beslissingen doorloopt iemand? | Iedere relevante kernflow. |
-| Toestanden, state diagram | Welke statussen en overgangen bestaan? | Objecten of processen met betekenisvolle toestanden. |
-| Gegevensmodel, ER-diagram | Welke gegevensobjecten horen bij elkaar? | Een eigen relevant gegevensmodel. |
-| Systeemcontext, flowchart | Welke gebruikers en externe systemen raken de oplossing? | Architectuuroverzicht. |
-| Component-/deploymentdiagram | Welke onderdelen draaien waar en communiceren met elkaar? | Technische en operationele verdeling. |
-| Sequence diagram | In welke volgorde werken gebruiker en onderdelen samen? | Kritieke interacties, inclusief relevante foutpaden. |
-| Trust-boundarydiagram | Waar verandert vertrouwen of gegevensverantwoordelijkheid? | Relevante toegang en externe gegevensverwerking. |
-
-**Diagramregister:** `diagram-ID`, titel, doel, bronpad, gekoppelde pagina/flow/component, versie, productstatus, bewijsstatus, eigenaar, laatste controle en renderstatus. Gebruik dezelfde ID’s als het overige dossier. Niet iedere categorie vraagt een apart diagram: combineren mag als het leesbaar blijft en geen relatie verloren gaat.
-
-**Voorbeeld: de documentatielus in deze werkwijze.** Dit schema beschrijft het voorgeschreven proces, geen aangetroffen projectarchitectuur.
-
-```mermaid
-flowchart TD
-    W[Wijziging] --> I[Impact bepalen]
-    I --> C[Inhoud en gebruik bijwerken]
-    I --> A[Architectuur en contracten bijwerken]
-    C --> V[Versie vergelijken]
-    A --> V
-    V --> K{Komt het overeen?}
-    K -->|Nee| H[Afwijking herstellen of markeren]
-    H --> I
-    K -->|Ja| D[Dossier bij release vastleggen]
-```
-
-**Voorbeeld: documentstatus in deze werkwijze.** Een gewijzigde implementatie maakt de eerdere controle opnieuw relevant.
-
-```mermaid
-stateDiagram-v2
-    [*] --> Concept
-    Concept --> Uitgewerkt: Bronnen verwerkt
-    Uitgewerkt --> Gecontroleerd: Vergelijking uitgevoerd
-    Gecontroleerd --> Herziening: Relevante wijziging
-    Herziening --> Uitgewerkt: Documentatie bijgewerkt
-    Gecontroleerd --> Gearchiveerd: Versie vervangen
-    Gearchiveerd --> [*]
-```
-
-Controleer zowel syntax als inhoud: kloppen relaties, beslispaden, richting, namen en eindtoestanden? Render schema’s in de beoogde omgeving en controleer afbreking en leesbaarheid. Als rendering niet is uitgevoerd, krijgt het schema geen claim “visueel gecontroleerd”. Grote schema’s worden opgesplitst met expliciete verwijzingen tussen de delen.
-
-### 11.7 Traceerbaarheid en volledigheid
-
-De dekkingsmatrix verbindt de bedoeling aan de gebouwde en gedocumenteerde uitkomst. Gebruik bijvoorbeeld deze kolommen:
-
-| Eis | Pagina/tekst | Rol/flow/scherm | Component/API/data | Besluit/diagram | Handleiding | Test/bewijs | Status/eigenaar |
-|---|---|---|---|---|---|---|---|
-| [REQ-ID] | [PAG-/TXT-ID] | [ROL-/FLOW-/SCREEN-ID] | [bronlocaties] | [ADR-/DIA-ID] | [sectie] | [TC-ID + versie] | [status + eigenaar] |
-
-Voer de vergelijking in beide richtingen uit:
-
-- **Van product naar dossier:** staat iedere aangetroffen route, tekstbron, functie, rol, interface en relevante component erin?
-- **Van dossier naar product:** is iedere beschreven werking aanwezig, of duidelijk als beoogd, verwijderd of onbekend gemarkeerd?
-- **Van claim naar bewijs:** volgt de beschreven werking uit gelezen code of een uitgevoerde controle? Benoem het verschil.
-
-Leg de werkelijk onderzochte populatie vast. “Alle routes” mag niet betekenen “alleen routes in het hoofdmenu”. Vermeld ontoegankelijke bronnen. Maak documentatie- en testdekking afzonderlijk zichtbaar; beschrijven is geen uitvoeren.
-
-### 11.8 Vaste controles in de ontwikkelcyclus
-
-| Moment | Documentatiecontrole | Verder als |
-|---|---|---|
-| Voor schermontwerp, P11–P12 | Pagina’s, inhoud, rollen, routes en relevante toestanden hebben een specificatie. | Inhoud en interactie zijn voldoende bepaald voor het te ontwerpen deel. |
-| Voor implementatie, P15–P17 | Architectuur, contracten, diagrammen en belangrijke besluiten zijn beschikbaar voor de gekozen kernflow. | Blokkerende technische keuzes zijn opgelost of expliciet begrensd. |
-| Bij een wijziging, P19–P21 | Impact op teksten, werking, data, architectuur, schema’s en instructies is beoordeeld. | De getroffen documentatie is bijgewerkt of een gemotiveerde open afwijking is vastgelegd. |
-| Voor release, P22–P25 | Dossier en versie zijn vergeleken; kritieke gebruiks-, toegangs-, publicatie- en herstelkennis is aanwezig. | Geen blokkerende documentatiegap; overige afwijkingen hebben impact, eigenaar en vervolgstap. |
-| Bij overdracht, P28 | De volgende uitvoerder kan de juiste versie, documenten, startwijze en open punten vinden. | Het dossier is hervatbaar en gekoppeld aan de juiste release. |
-
-### 11.9 Definition of Done voor het dossier
-
-- Het documentenregister benoemt de leidende bestanden, verantwoordelijken en versie.
-- Alle toepasselijke pagina’s, routetypen, talen en tekstbronnen zijn geïnventariseerd; toegangsgaten zijn zichtbaar.
-- De daadwerkelijke teksten en dynamische templates zijn volledig beschikbaar of aantoonbaar gekoppeld aan een toegankelijke canonieke bron.
-- Schermen, rollen, formulieren, processen en toestanden hebben een actuele beschrijving.
-- De toepasselijke architectuuronderwerpen uit 11.4 zijn beschreven met bronnen en open punten.
-- Relevante Mermaid-schema’s hebben bewerkbare bron, uitleg en een expliciete validatiestatus.
-- Ontwerp, implementatie en operationele verificatie blijven onderscheiden.
-- Betekenisvolle besluiten hebben rationale, alternatieven en gevolgen.
-- Gebruikers-, beheer-, lokale start-, publicatie- en herstelinstructies zijn passend uitgewerkt.
-- De traceerbaarheidsmatrix bevat geen onverklaarde gaten in de onderzochte scope.
-- De releasecheck noemt codeversie, documentversie, omgeving, datum en werkelijk uitgevoerde controles.
-- Bekende afwijkingen zijn beoordeeld op impact en hebben een eigenaar en vervolgstap.
-
-Deze eisen zijn onderdeel van de oplevering van een site. Het aanmaken van lege bestanden of alleen invullen van een inhoudsopgave voldoet niet.
-
-## 12. Documentatiecontrole en verwerking van de documentatie-uitbreiding
-
-### 12.1 Scope en conclusie
-
-| Onderdeel | Binnen deze audit | Bewijsgrens |
-|---|---|---|
-| Object | Versie 3.0 van dit proceshandboek, aangepast naar 3.1. | De documenten zijn onderzocht; een afzonderlijke site of repository niet. |
-| Normenkader | Huidige gebruikersopdracht, de afgesproken eisen voor bronnen, architectuur, gebruikerswerking en controle. | Afbakening en redactionele aanpassingen staan in 10.4. |
-| Observatie | Bestaande teksten, processtappen, dossiermodellen en verwijzingen. | Controleerbaar in de genoemde hoofdstukken. |
-| Afleiding | Gevolgen van onvolledige afspraken voor overdracht en actualiteit. | Kwaliteitsrisico van de werkwijze; geen aangetoond productie-incident. |
-| Buiten scope | Actuele productarchitectuur, codeveiligheid, juridische naleving en werking op Windows. | Niet onderzocht en niet gecertificeerd. |
-
-**Conclusie:** documentatie en architectuur waren aanwezig, maar vormden nog geen volledig uitvoerbaar oplevercontract. De aanvulling maakt inhoud, werking, diagrammen, architectuur en beheer gezamenlijk onderdeel van ontwerp, wijziging en release. De bevindingen hieronder zijn in het handboek verwerkt. Uitvoering van dit contract in een afzonderlijk bouwproject vereist eigen bewijs.
-
-**Aanpak:** bestaande passages vergelijken met de gevraagde volledigheid; tegenbewijs zoeken in P11, P17, P22, P28 en hoofdstuk 7; ontbrekende uitwerking aanvullen; de gewijzigde tekst, verwijzingen en scope controleren. De beoordeling richt zich op documentatie, gebruikerswerking en architectuur.
-
-### 12.2 Sterke punten en tegenbewijs
-
-- **STERK — bestaande procesketen:** 28 processtappen verbinden inhoud, ontwerp, bouw, gebruik, publicatie en onderhoud. Er was geen noodzaak een losstaand nieuw ontwikkelproces te bedenken.
-- **STERK — architectuurbasis:** P17 beschreef al verantwoordelijkheden, contracten, validatie en grenzen. De bevinding betreft onvoldoende uitwerking, niet afwezigheid van architectuur.
-- **STERK — documentatiebasis:** hoofdstuk 7 bevatte al `CONTENT.md`, `ARCHITECTURE.md`, `DECISIONS.md` en beheerbestanden. Een nieuwe bestandslijst alleen zou het tekort niet oplossen.
-- **STERK — bewijsdiscipline:** ontwerp, opdrachten en uitvoering werden al onderscheiden. Die scheiding blijft ook gelden voor de nieuwe volledigheidscriteria.
-
-Deze observaties ontkrachten de hypothese “documentatie ontbrak volledig”. Zij ontkrachten niet het resterende tekort: er ontbrak één concrete, toetsbare afspraak voor alle site-inhoud en de volledige toepasselijke architectuur.
-
-### 12.3 Bevindingen en herstel
-
-| ID | Component en bewijs in 3.0 | Bevinding | Severity en impact | Herstel in 3.1 | Effort/status |
-|---|---|---|---|---|---|
-| AUD-DOC-001 | P11; hoofdstuk 7.1 `CONTENT.md` | Inhoud was genoemd, maar volledige letterlijke teksten, dynamische varianten en bronkoppeling waren onvoldoende voorgeschreven. | MIDDEN; documentatie kan een samenvatting blijven waarmee de site niet exact te reconstrueren is. | Opdracht 25; 11.2–11.3; aangescherpt P11. | M; verwerkt. |
-| AUD-ARC-001 | P17; hoofdstuk 5 en 7.1 | Architectuurafspraken hadden geen volledig dossiercontract voor context, uitvoering, beheer, besluiten en bronstatus. | MIDDEN; belangrijke technische keuzes en herstelkennis kunnen buiten de overdracht vallen. | Opdracht 26; 11.4; aangescherpt P17. | M; verwerkt. |
-| AUD-DOC-002 | Procesdiagrammen in hoofdstuk 3/6; modellen in hoofdstuk 7 | Mermaid kwam voor als procesillustratie, maar een onderhouden register van diagrammen van de site ontbrak. | MIDDEN; illustraties kunnen worden aangezien voor actuele systeemdocumentatie. | Opdracht 27; 11.6 met ID, bron, versie en renderstatus. | S; verwerkt. |
-| AUD-DOC-003 | P28; hoofdstuk 6.4 en 7.10 | Bijwerken was voorgeschreven, maar volledige koppeling aan wijzigings- en releasecriteria ontbrak. | MIDDEN; het dossier kan achterlopen terwijl een release toch wordt afgerond. | Opdracht 28; 11.7–11.9; aangescherpt P22 en P28. | M; verwerkt. |
-| AUD-DOC-004 | Scherm- en flowmodellen, hoofdstuk 7 | De volledige inhoud over gebruikers- en beheerderswerking voor dagelijkse werking, objectbeheer en beheerhandleidingen was niet als één checklist opgenomen. | MIDDEN; een volgende gebruiker of beheerder kan noodzakelijke taakcontext missen. | 11.2 en 11.5; gebruikers- en beheerdersdocumentatie expliciet toegevoegd. | M; verwerkt. |
-
-Impact is een **afgeleid procesrisico**, geen waargenomen defect van een live applicatie. Geen kritieke of hoge productiebevindingen zijn vastgesteld in deze documentaudit.
-
-### 12.4 Tien auditdimensies en prioriteiten
-
-De scores hieronder zijn **kwalitatieve beoordelingen van de documentatie-eisen**, niet van een gebouwde site. Schaal: 0 = afwezig; 3 = vooral genoemd; 5 = deels uitgewerkt; 7 = operationeel beschreven; 9 = met concrete criteria en koppelingen uitgewerkt; 10 = binnen scope volledig onafhankelijk bevestigd. Tussenwaarden drukken de mate van uitwerking uit. Er wordt geen fraudekans, certificering of gemeten kwaliteitspercentage berekend.
-
-| Dimensie | Voor → na /10 | Onderbouwing van de wijziging | Hoogste bevinding / prioriteit |
-|---|---|---|---|
-| Correctheid | 7 → 9 | Ontwerp, implementatie en bewijsstatus nu per dossieronderdeel onderscheiden. | MIDDEN; opgelost in contract. |
-| Architectuur | 5 → 9 | Volledig toepasselijk inhoudsmodel, failure modes, besluiten en bronkoppeling. | MIDDEN; AUD-ARC-001. |
-| Security | 6 → 8 | Rechten, trust boundaries en gegevensgrenzen nu onderdeel van het documentatiecontract. | Geen afzonderlijk securitydefect vastgesteld. |
-| Performance | 5 → 8 | Eisen, meetmethode, capaciteit en grenzen als te documenteren onderwerpen. | Geen gemeten performancebevinding. |
-| Kosten | 6 → 8 | Kostendragers, limieten en reactie op afwijkingen gekoppeld aan architectuur en beheer. | Geen kostenmeting uitgevoerd. |
-| Datakwaliteit | 7 → 9 | Schema’s, validatie, levenscyclus en koppeling aan workflows expliciet. | Geen database onderzocht. |
-| Compliance | 6 → 8 | Toepasselijkheid, gegevensdoelen, open toetsvragen en claimgrenzen zichtbaar. | Geen juridisch nalevingsoordeel. |
-| Observability | 5 → 8 | Logs, correlatie, metingen, signalen en eigenaar expliciet opgenomen. | Geen monitoring getest. |
-| Documentatie | 5 → 9 | Volledige content, productwerking, architectuur, diagramregister en actualisatiecriteria. | MIDDEN; AUD-DOC-001–004. |
-| Testbaarheid | 7 → 9 | Bidirectionele dekking en dossier-releasecheck met uitvoeringstatus. | Geen applicatietests uitgevoerd. |
-
-Dezelfde documentaire oorzaak wordt niet opnieuw als bevinding in iedere dimensie geteld. Er zijn **vijf unieke bevindingen**, alle MIDDEN. Geen samengestelde eindscore: de scope omvat een procesdocument en een gemiddelde zou de ontbrekende uitvoeringscontrole verhullen.
-
-### 12.5 Besluitreview en resterende toepassing
-
-| Besluit | Alternatief | Reden en gevolg |
-|---|---|---|
-| Uitbreiden van de bestaande 14 lezersstappen en 28 processtappen. | Een nieuwe aparte ontwikkelroute. | Houdt de werkwijze herkenbaar en documentatie verbonden met uitvoering. |
-| Eén dossierindex met inhoudelijke verplichtingen. | Voor ieder project dezelfde grote hoeveelheid losse bestanden. | Behoudt volledigheid met passende omvang voor kleine sites. |
-| Ontwerp en aangetroffen architectuur afzonderlijk markeren. | Eén schema als altijd actuele waarheid. | Voorkomt dat een ontwerp als uitvoeringsbewijs wordt gelezen. |
-| Eén canonieke tekstbron met controle van afgeleide documentatie. | Alle teksten handmatig op meerdere plekken beheren. | Beperkt uiteenlopende versies; synchronisatie blijft controleplichtig. |
-| Mermaid-bron en validatiestatus bewaren. | Alleen screenshots van diagrammen. | Maakt wijziging en inhoudelijke vergelijking mogelijk. |
-
-**Toepassing bij een volgend project, in volgorde:** inventariseer het bestaande dossier; maak het volledige pagina- en tekstregister; werk de toepasselijke architectuur uit; koppel productwerking en diagrammen; voer de documentatie-releasecheck uit. Dit zijn vervolgstappen voor het bouwproject, geen nog ontbrekende hoofdstukken van deze handleiding.
-
-### 12.6 Verificatie en beperkingen
-
-De documentcontrole omvat hoofdstukstructuur, 14 lezersstappen, 28 kopieerbare opdrachten, 28 processtappen, broncodes, tabellen, codeblokken, interne links en verwijzingen naar het documentatiecontract. Bestaande onderwerpen blijven behouden; relevante stappen zijn inhoudelijk aangescherpt.
-
-**Falsificatie 1:** het oorspronkelijke document zou de nieuwe eisen al volledig kunnen dekken. De vergelijking met de bestaande passages bevestigt een basis, maar niet de expliciete inhoud en criteria uit hoofdstuk 11.
-
-**Falsificatie 2:** een uitgebreid dossier zou ten onrechte als bewijs van een correcte site worden behandeld. Daarom zijn productstatus, bewijsstatus en documentatiedekking afzonderlijk gemaakt en blijven runtimecontroles buiten deze audit.
-
-De nieuwe Mermaid-voorbeelden zijn tekstueel gecontroleerd; zij zijn in deze sessie niet gerenderd. De syntaxis- en visuele rendercontrole blijven voor deze voorbeelden dus **NIET UITGEVOERD**. Er zijn geen lokale Windows-tests, repository-audits of livecontroles uitgevoerd. De aanwezige externe links zijn overgenomen uit de vorige editie en in deze documentaudit niet opnieuw bezocht.
-
-**Eindstatus:** de vijf vastgestelde documentatiegaps zijn verwerkt in versie 3.1. Dit is een aangevuld en gecontroleerd werkwijzedocument op basis van de beschreven werkwijze, geen certificaat voor een onderliggende site of ontwikkelomgeving.
-
-<!-- VIBE_LIFT_COURSE_SUPPLEMENT -->
-
-# Vibe Lift · Tools en SEO
-
-Deze aanvulling hoort bij lezerseditie 1.2. Gebruik Antigravity met toegang tot je GitHub-repository; de agent voert de technische versiehandelingen uit. Jij controleert de wijziging, de online versie en de vrijgave.
-
-## Tools bij iedere stap
-
-### Stap 1 · Maak je idee concreet
-
-Kies ChatGPT óf Claude; je hebt voor deze stap één gesprekspartner nodig.
-
-- [ChatGPT](https://chatgpt.com/): Voeg je notities toe en laat één korte projectbrief maken.
-- [Claude](https://claude.ai/): Alternatief: laat je aannames en de grens van de eerste versie aanscherpen.
-
-**Neem mee:** Bewaar projectbrief.md. Geef dezelfde brief bij de volgende stap mee.
-
-### Stap 2 · Onderzoek het probleem
-
-Gebruik een onderzoeksfunctie met bronnen. Spreek daarnaast zelf potentiële gebruikers.
-
-- [Claude](https://claude.ai/): Zet web search of Research aan en vergelijk bestaande oplossingen met bronlinks.
-- [ChatGPT](https://chatgpt.com/): Alternatief: kies Search of Deep research en geef doelgroep, vragen en gewenste bronnen mee.
-
-**Neem mee:** Bewaar onderzoek.md met bron, datum, bevinding en onzekerheid. Verzonnen zoekvolumes of interviews horen er niet in.
-
-**SEO in deze stap:** Onderzoek ook welke vragen mensen in Google stellen. Bewaar aannames apart van echte zoekgegevens.
-
-### Stap 3 · Scherp je aanbod aan
-
-AI helpt het aanbod en de toets voorbereiden. De praktijktoets voer jij uit.
+**Tools:** Gebruik ChatGPT of Claude voor het aanbod. Jij voert de praktijktoets uit.
 
 - [ChatGPT](https://chatgpt.com/): Maak een korte belofte en interview- of testvragen op basis van je onderzoek.
 - [Claude](https://claude.ai/): Alternatief: orden de echte reacties en benoem wat je wel en niet kunt concluderen.
 
-**Neem mee:** Bewaar propositie.md en praktijktoets.md met waarnemingen en je besluit.
+### Wat je doet
 
-### Stap 4 · Teken de gebruikersroute
+1. **Laat je aanbod opschrijven.** Voeg je projectbrief en onderzoek toe aan ChatGPT of Claude. Gebruik de hoofdopdracht en vraag om een korte tekst: voor wie, welk resultaat en wat de eerste versie wel en nog niet doet.
 
-Laat AI je route uitschrijven en teken ook wat er bij een fout gebeurt.
+2. **Kies wat je wilt controleren.** Kies één onzeker punt, bijvoorbeeld of “Vraag een plek aan” duidelijk maakt dat er nog geen definitieve reservering is. Schrijf vooraf op bij welke reacties je de tekst moet aanpassen.
 
-- [Claude](https://claude.ai/): Maak een stroomschema van handelingen, verwerking en bevestiging; laat het ook in gewone taal uitleggen.
-- [ChatGPT](https://chatgpt.com/): Alternatief: laat dezelfde route controleren op ontbrekende stappen en uitzonderingen.
+3. **Laat echte mensen de tekst bekijken.** Vraag wat zij denken dat het aanbod inhoudt en wat er na de knop gebeurt. Help niet meteen als iemand twijfelt. Noteer de reactie en het punt waar de verwarring ontstaat.
 
-**Neem mee:** Bewaar het schema en de uitleg als flows.md voor Stitch en Antigravity.
+4. **Beslis en sla op.** Laat de AI je echte reacties samenvatten. Bepaal zelf of je doorgaat, aanpast of stopt. Bewaar het aanbod in propositie.md en de opzet, reacties en beslissing in praktijktoets.md, beide in 02-plan.
 
-### Stap 5 · Bepaal pagina’s en teksten
+**Bewaar:** 02-plan/propositie.md + 02-plan/praktijktoets.md
 
-Werk met echte teksten en neem vindbaarheid nu al mee.
+Bewaar: 02-plan/propositie.md + 02-plan/praktijktoets.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
 
-- [ChatGPT](https://chatgpt.com/): Maak een schermenlijst, knoppen, foutteksten en een SEO-paginaplan met URL, zoekvraag en titel.
-- [Claude](https://claude.ai/): Alternatief: herschrijf de teksten voor beginners en controleer of elke pagina één duidelijke vraag beantwoordt.
+### Voorbeeld: Studio Maan (fictief)
 
-**Neem mee:** Bewaar schermen.md, teksten.md en seo-plan.md. Eén zoekvraag krijgt één passende hoofdcontentpagina.
+“Jouw eerste keramiekworkshop, helder geregeld.”
 
-**SEO in deze stap:** Maak per openbare pagina een zoekvraag, URL, paginatitel, meta-beschrijving en interne links. Bewaar dit in seo-plan.md.
+Voorbeeldopzet: laat vijf potentiële bezoekers een eenvoudige workshopkaart bekijken en vertellen wat ze verwachten na “Vraag een plek aan”. Dit is een voorgestelde kleine toets, geen onderzoek dat iets zegt over de hele doelgroep.
 
-### Stap 6 · Geef je idee een gezicht
+- **Te toetsen:** Begrijpt de bezoeker dat een aanvraag nog geen definitieve reservering is?
+- **Vooraf afgesproken:** Als meerdere deelnemers een gegarandeerde plek verwachten, herschrijven we de uitleg en toetsen we opnieuw.
+- **Vastleggen:** Letterlijke reacties, misverstanden en relevante verschillen tussen deelnemers.
+- **Besluit:** Pas invullen nadat de toets daadwerkelijk is uitgevoerd.
 
-Open Stitch met je schermen, teksten en stijlreferenties.
+### Controleer voordat je verdergaat
 
-- [Stitch](https://stitch.withgoogle.com/): Maak en verfijn het schermontwerp, inclusief mobiel. Controleer welke export jouw versie aanbiedt.
-- [ChatGPT](https://chatgpt.com/): Maak vooraf de ontwerpbrief; beschrijf daarna concrete feedback op leesbaarheid en volgorde.
+- De belofte past bij wat je eerste versie kan waarmaken.
+- Je hebt echte waarnemingen vastgelegd, ook negatieve.
+- Het besluit volgt uit de toets en benoemt beperkingen.
 
-**Neem mee:** Geef de gekozen export, afbeeldingen, tekst en ontwerpafspraken aan Antigravity. Een screenshot alleen beschrijft de werking onvoldoende.
+**Valkuil:** Een enthousiast AI-antwoord of vijf beleefde complimenten als bewijs dat er vraag naar je aanbod is zien. Kijk naar begrip en werkelijk gedrag, en blijf duidelijk over de kleine steekproef.
 
-### Stap 7 · Zet de bouw goed klaar
+**Begrip — Propositie:** Je aanbod in gewone taal: voor wie het is, welke waarde het biedt en waarom iemand ervoor zou kiezen.
 
-Antigravity is je bouwpartner. Koppel de bedoelde GitHub-repository en laat de agent de technische inrichting uitvoeren.
+**AI-opdrachten:** 03 (hoofdopdracht), 04 (alleen als nodig), 29 (alleen als nodig). Zie de opdrachten achter in dit handboek.
 
-- [Antigravity](https://antigravity.google/): Lees het dossier, controleer repositorytoegang en maak kleine bouwstappen met SEO en meting als vaste eisen.
-- [GitHub](https://github.com/): Maak of kies je repository en controleer de eigenaar, naam en zichtbaarheid. Deel de repositorylink met je agent.
-- [Railway](https://railway.com/): Controleer vooraf of de gekozen techniek hier kan draaien en welke kosten en startinstellingen nodig zijn.
 
-**Neem mee:** Bewaar bouwplan.md en architectuur.md, inclusief SEO, meetplan, repository, publicatiebranch en vrijgaveafspraak.
+## Stap 4: Schrijf de route van je bezoeker uit
 
-**SEO in deze stap:** Neem echte openbare URL’s, uitleesbare inhoud, metadata, canonical, sitemap, robots, mobiel, snelheid en meetgedrag op in het bouwplan. Bepaal vooraf welke pagina’s privé blijven.
+Beschrijf stap voor stap wat de bezoeker doet en wat de website daarna moet tonen of opslaan. Neem ook fouten en de afhandeling door de medewerker mee.
 
-### Stap 8 · Bouw één complete route
+**Begin met:** Je aanbod en de uitkomst van de praktijktoets in 02-plan.
 
-Laat Antigravity bouwen en uitleggen wat aantoonbaar werkt.
+**Doel:** Een route die je van begin tot eind kunt nalopen.
 
-- [Antigravity](https://antigravity.google/): Bouw de kernroute, gewone pagina-URL’s waar SEO nodig is, metadata en het afgesproken meetgedrag.
-- [GitHub](https://github.com/): Laat een gecontroleerd werkend tussenpunt vastleggen. Controleer of de commit ook naar GitHub is verzonden.
+**Tools:** Gebruik ChatGPT of Claude om handelingen en foutgevallen uit te schrijven.
 
-**Neem mee:** Bewaar testbewijs en de versielink. Laat geen ongecontroleerde wijziging naar een branch sturen die direct live publiceert.
+- [ChatGPT](https://chatgpt.com/): Schrijf de route uit en laat controleren wat na elke handeling gebeurt.
+- [Claude](https://claude.ai/): Alternatief: gebruik dezelfde opdracht en documenten.
 
-**SEO in deze stap:** Laat Antigravity de SEO-afspraken direct meebouwen. Meet een aanvraag pas na bevestigde ontvangst en volgens de gekozen toestemming.
+### Wat je doet
 
-### Stap 9 · Start je project zelf
+1. **Geef de taak aan ChatGPT of Claude.** Voeg je aanbod toe. Vul bij de AI-opdracht de eerste gebruikerstaak in, bijvoorbeeld een workshopplek aanvragen. Vraag om een genummerde route in gewone taal.
 
-Laat de agent de starter maken; probeer starten en stoppen daarna zelf.
+2. **Controleer elke overgang.** Lees per stap: wat ziet de bezoeker, wat doet die en wat gebeurt er daarna? Laat AI de route ook als schema met pijlen tonen. Elke knop moet ergens naartoe leiden of iets uitvoeren.
+
+3. **Voeg fouten toe.** Vraag wat er gebeurt bij een leeg veld, een volle datum en een storing. Beschrijf de melding en hoe iemand verder kan. Neem ook teruggaan en opnieuw proberen mee.
+
+4. **Beschrijf wie het resultaat ontvangt.** Een aanvraag moet ergens aankomen. Leg vast waar de medewerker die terugvindt en wat die daarna doet. Bewaar de route, het schema en de foutgevallen als 02-plan/flows.md.
+
+**Bewaar:** 02-plan/flows.md
+
+Bewaar: 02-plan/flows.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+Van bezoeker naar ontvangen aanvraag.
+
+De hoofdroute van Studio Maan eindigt niet bij de verzendknop. De studio moet de aanvraag daadwerkelijk kunnen terugvinden en opvolgen.
+
+- **Normale route:** Een bezoeker kiest een workshop, vult naam en e-mail in en verstuurt de aanvraag.
+- **Uitkomst:** De aanvraag is ontvangen; de bezoeker leest wanneer de studio reageert.
+- **Uitzondering:** Bij een volle datum kiest de bezoeker een andere datum.
+- **Bij storing:** Geen succesmelding; ingevulde gegevens blijven waar mogelijk beschikbaar en opnieuw proberen is duidelijk.
+
+### Controleer voordat je verdergaat
+
+- Iedere pijl beschrijft een begrijpelijke overgang.
+- Er zijn routes voor ongeldige invoer, geen resultaat en storing.
+- De gebruiker én eigenaar kunnen de uitkomst controleren.
+
+**Valkuil:** Alleen “homepage → formulier → succes” tekenen. Voeg toe wat er met de informatie gebeurt; zo voorkom je een mooie demo zonder echte werking.
+
+**Begrip — Flow:** Een schema van handelingen en reacties. Het laat zien hoe iemand van een beginpunt naar een resultaat komt.
+
+**AI-opdrachten:** 05 (hoofdopdracht). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 5: Bepaal je pagina’s en schrijf de teksten
+
+Maak voor elke stap in de bezoekersroute duidelijk welke pagina nodig is. Schrijf meteen de echte tekst, inclusief knoppen, invulvelden en foutmeldingen.
+
+**Begin met:** 02-plan/flows.md, je aanbod en je onderzoek.
+
+**Doel:** Een paginalijst met de teksten die je in Stitch gaat gebruiken.
+
+**Tools:** Gebruik ChatGPT of Claude voor pagina’s, echte teksten en het SEO-plan.
+
+- [ChatGPT](https://chatgpt.com/): Maak schermen.md, teksten.md en seo-plan.md met de hoofdopdracht.
+- [Claude](https://claude.ai/): Alternatief: gebruik dezelfde input en controleer de teksten zelf.
+
+### Wat je doet
+
+1. **Laat de benodigde schermen opsommen.** Voeg je bezoekersroute en aanbod toe aan ChatGPT of Claude. Gebruik de AI-opdracht. Vraag per scherm: naam, doel, informatie, hoofdknop en bestemming. Nummer de schermen, bijvoorbeeld SCH-01.
+
+2. **Laat alle zichtbare tekst schrijven.** Vraag om koppen, uitleg, knoppen, veldnamen en meldingen bij laden, fouten en succes. Laat korte zinnen schrijven voor je doelgroep. Vervang verzonnen prijzen, data en beloften door je eigen informatie.
+
+3. **Beschrijf welke vraag elke openbare pagina beantwoordt.** Maak met dezelfde AI een SEO-plan: per pagina de vraag van de bezoeker, het webadres, de paginatitel en een korte beschrijving voor zoekmachines. Gebruik zo nodig SEO-les 1.
+
+4. **Lees de hele route na en sla op.** Doe alsof je de bezoeker bent. Heb je genoeg informatie om de volgende stap te zetten? Bewaar de paginalijst, teksten en het SEO-plan in 02-plan als schermen.md, teksten.md en seo-plan.md.
+
+**Vindbaarheid:** Bewaar de vraag van je bezoeker, het pagina-adres, de titel en beschrijving in 02-plan/seo-plan.md. SEO-les 1 helpt je hierbij.
+
+**Bewaar:** 02-plan/schermen.md + 02-plan/teksten.md + 02-plan/seo-plan.md
+
+Bewaar: 02-plan/schermen.md + 02-plan/teksten.md + 02-plan/seo-plan.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+Drie schermen. Eén begrijpelijke aanvraag.
+
+Studio Maan begint klein. De schermenlijst legt vast wat op de pagina staat én wat na een handeling verandert.
+
+- **SCH-01 · Workshop:** Wat je maakt, voor wie, duur, prijs en beschikbare data. Actie: “Kies je datum”.
+- **SCH-02 · Aanvragen:** Gekozen datum, naam, e-mail en uitleg over de opvolging. Actie: “Vraag een plek aan”.
+- **SCH-03 · Ontvangst:** “Je aanvraag is ontvangen. De studio laat je weten of je plek definitief is.”
+- **Fouttekst:** “Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.nl.”
+
+### Controleer voordat je verdergaat
+
+- Alle schermen zijn aan een gebruikershandeling gekoppeld.
+- Ook fout-, laad-, lege en succesmeldingen zijn beschreven waar van toepassing.
+- Knopteksten vertellen wat er echt gebeurt.
+
+**Valkuil:** Het ontwerp vullen met tijdelijke tekst zoals “Lorem ipsum”. Werk met echte inhoud; de lengte en betekenis bepalen mede het ontwerp.
+
+**Begrip — Schermtoestand:** Hoe een scherm eruitziet op een bepaald moment, bijvoorbeeld tijdens laden, bij een fout of na succes.
+
+**AI-opdrachten:** 06 (hoofdopdracht), 25 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 6: Maak het schermontwerp in Stitch
+
+Geef Stitch je schermenlijst en echte teksten. Laat eerst de belangrijkste route ontwerpen voor een computer en telefoon. Kies daarna één versie om te bouwen.
+
+**Begin met:** 02-plan/schermen.md, teksten.md en voorbeelden van de gewenste stijl.
+
+**Doel:** Een gekozen ontwerp met bestanden en duidelijke ontwerpafspraken.
+
+**Tools:** Plak de ontwerpopdracht rechtstreeks in Stitch. Je hoeft die niet eerst door een andere AI te laten herschrijven.
+
+- [Stitch](https://stitch.withgoogle.com/): Maak het ontwerp voor computer en telefoon. Bewaar de gekozen exports in 03-ontwerp.
+- [Antigravity](https://antigravity.google/): Bij stap 7: lees de export en de ontwerpafspraken. Bouw nu nog niets.
+
+### Wat je doet
+
+1. **Maak je ontwerpopdracht klaar.** Open de Promptgenerator en plak je schermenlijst en teksten in de invulvelden. Beschrijf kleuren, uitstraling en voorbeelden die je passend vindt. Leg per voorbeeld uit wat je wilt overnemen.
+
+2. **Plak de opdracht in Stitch.** Open Stitch via de toollink. Plak de volledige opdracht en voeg eventuele voorbeeldafbeeldingen toe. Vraag dezelfde route voor een breed scherm en een telefoon, ook bij fouten en na verzenden.
+
+3. **Geef concrete feedback.** Bekijk of je de hoofdknop meteen vindt en of tekst en invulvelden goed leesbaar zijn. Vraag bijvoorbeeld: zet datum en prijs boven de aanvraagknop. Laat alleen de genoemde onderdelen aanpassen.
+
+4. **Download en controleer je ontwerp.** Bewaar de aangeboden code-export en afbeeldingen in 03-ontwerp. Pak een ZIP-bestand daar uit. Is export niet beschikbaar, bewaar dan screenshots en de schermbeschrijving. Noteer kleuren, lettertypen en gekozen bestanden in ontwerpafspraken.md. Laat Antigravity later melden wat het daarvan echt kan lezen.
+
+**Bewaar:** 03-ontwerp/ met exports en ontwerpafspraken.md
+
+Bewaar: 03-ontwerp/ met exports en ontwerpafspraken.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+De rust van een keramiekatelier.
+
+Voor Studio Maan kiezen we als voorbeeld warm wit, donkerbruine tekst en een zacht kleiaccent. Foto’s ondersteunen de keuze voor een workshop; informatie en knoppen blijven leidend.
+
+- **Sfeer:** Warm, open en eenvoudig.
+- **Hoofdactie:** Eén herkenbare knopstijl voor de volgende stap.
+- **Mobiel:** Workshopinformatie eerst, datumkeuze daarna, zonder horizontaal scrollen.
+- **Gerichte feedback:** “Zet datum en prijs dichter bij de aanvraagknop; die informatie is nu te verspreid.”
+
+### Controleer voordat je verdergaat
+
+- Het ontwerp gebruikt de afgesproken inhoud en functies.
+- De hoofdactie is herkenbaar en de tekst leesbaar.
+- Ontwerpbestanden en feedback hebben een herkenbare versie.
+
+**Valkuil:** Een stijlreferentie volledig kopiëren of alleen op sfeer beoordelen. Neem bruikbare ontwerpprincipes over en toets ze aan je eigen inhoud en doelgroep.
+
+**Begrip — Component:** Een herbruikbaar onderdeel, zoals een knop, kaart of invoerveld, dat overal op dezelfde manier werkt.
+
+**AI-opdrachten:** 07 (hoofdopdracht), 08 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 7: Laat Antigravity eerst lezen en een plan maken
+
+Open je bestaande projectmap in Antigravity. Laat eerst de documenten, het ontwerp en eventuele code analyseren. Controleer het bouwplan voordat je de eerste bouwopdracht geeft.
+
+**Begin met:** De projectmap met START-HIER.md, je gekozen documenten en uitgepakte ontwerpbestanden.
+
+**Doel:** Een nagekeken bouwplan, uitgelegde technische keuzes en een voorbereide werkomgeving.
+
+**Tools:** Open dezelfde projectmap in Antigravity. Laat eerst lezen en plannen; regel daarna GitHub.
+
+- [Antigravity](https://antigravity.google/): Lees START-HIER.md en de gekozen bestanden. Maak het bouwplan en leg uit wat ontbreekt.
+- [GitHub](https://github.com/): Maak of kies de online map voor je code en versies. Geef Antigravity de repositorylink.
+- [Railway](https://railway.com/): Laat bij het plan controleren hoe jouw site hier kan draaien en wat daarvoor nodig is.
+
+### Wat je doet
+
+1. **Controleer de map en de gekozen bestanden.** Open dezelfde projectmap als in stap 1. Controleer of alle uitkomsten van stap 1 tot en met 6 erin staan. Werk START-HIER.md bij: welke bestanden zijn nagekeken en welk ontwerp moet worden gebouwd?
+
+2. **Laat eerst lezen en analyseren.** Gebruik de eerste AI-opdracht van deze stap in Antigravity. Laat een lijst maken van gelezen bestanden, bestaande onderdelen, ontbrekende informatie en tegenstrijdigheden. Kan een export niet worden gelezen? Lever een leesbare versie aan voordat het betreffende onderdeel wordt gebouwd.
+
+3. **Controleer het plan in gewone taal.** Vraag hoe de eerste bezoekersroute gaat werken, waar aanvragen aankomen en welke programma’s of diensten nodig zijn. Laat ook het SEO-plan meenemen. Begrijp je een keuze niet, laat die dan uitleggen voordat je het plan goedkeurt.
+
+4. **Laat de werkomgeving klaarzetten.** Geef na je controle opdracht om alleen de afgesproken voorbereiding uit te voeren. Laat Antigravity de codeplek en startwijze vastleggen, bestaande code behouden en ontbrekende programma’s benoemen. Vraag welke kosten of toegang nodig zijn voordat je die zelf regelt.
+
+5. **Koppel GitHub en leg het startpunt vast.** Volg de GitHub-uitleg hieronder en gebruik daarna de koppelopdracht. Spreek af welke bestanden naar GitHub mogen en wanneer Railway publiceert. Bewaar het plan en de technische uitleg in 04-bouw. Ga dan naar stap 8.
+
+**Vindbaarheid:** Laat Antigravity 02-plan/seo-plan.md lezen. Neem vindbaarheid op in het bouwplan. Leg vast wat openbaar mag; bezoekersmeting is een aparte keuze.
+
+**Bewaar:** 04-bouw/bouwplan.md + 04-bouw/architectuur.md
+
+Bewaar: 04-bouw/bouwplan.md + 04-bouw/architectuur.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+Eerst begrijpen waar een aanvraag terechtkomt.
+
+Voor Studio Maan moet de bouwer vastleggen hoe een formulier bij de studio aankomt. Een eventuele formulierdienst is een bewuste keuze met eigen instellingen en toegang.
+
+- **Al aanwezig:** Projectbrief, schermteksten en goedgekeurd ontwerp.
+- **Te besluiten:** Via welke geschikte dienst of eigen server ontvangt de studio aanvragen?
+- **Te beschrijven:** Welke gegevens gaan mee, wie kan ze lezen en wat gebeurt er bij een fout?
+- **Eerste bouwstap:** Een lokaal startbare workshoproute met een expliciet testpad.
+
+### Controleer voordat je verdergaat
+
+- Antigravity heeft genoemd welke bestanden het heeft gelezen en welke nog niet.
+- Je begrijpt de eerste bouwstap, de benodigde diensten en waar gegevens aankomen.
+- Het nagekeken plan, de codeplek, startwijze en GitHub-afspraken staan in de projectmap.
+
+**Valkuil:** Een bouwagent een heel platform laten verzinnen. Benoem bestaande onderdelen, kies alleen noodzakelijke techniek en laat nieuwe onderdelen onderbouwen.
+
+**Begrip — Architectuur:** Het overzicht van de onderdelen van je project, hoe ze samenwerken en welke afspraken daarbij gelden.
+
+**AI-opdrachten:** 09 (hoofdopdracht), 42 (hoofdopdracht), 26 (alleen als nodig), 10 (alleen als nodig), 40 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 8: Laat één bezoekersroute helemaal werken
+
+Geef Antigravity opdracht om de eerste route uit het nagekeken bouwplan te bouwen. Test daarna zelf of de handeling het bedoelde resultaat oplevert.
+
+**Begin met:** De projectmap met bouwplan, ontwerp en de afgesproken verwerking van gegevens.
+
+**Doel:** Eén werkende route met vastgelegde testuitkomsten.
+
+**Tools:** Laat Antigravity één route bouwen. Controleer daarna zelf de werking.
+
+- [Antigravity](https://antigravity.google/): Bouw volgens het gecontroleerde plan. Start de website en test succes én fouten.
+- [GitHub](https://github.com/): Laat alleen de afgesproken bestanden en gecontroleerde versie hier bewaren.
+
+### Wat je doet
+
+1. **Geef één bouwopdracht.** Open je project in Antigravity. Gebruik de AI-opdracht en benoem precies welke route het nu moet bouwen. Laat eerst de gekozen bestanden lezen en daarna de schermen, verwerking en meldingen verbinden volgens het plan.
+
+2. **Laat de website openen.** Vraag Antigravity de website lokaal te starten en het echte browseradres te geven. Voer de route uit met herkenbare testgegevens. Controleer of de aanvraag op de afgesproken plek aankomt.
+
+3. **Probeer ook een fout.** Laat een verplicht veld leeg en probeer een ongeldig e-mailadres. Vraag Antigravity een mislukte verzending te testen. Er mag dan geen melding verschijnen dat de aanvraag is ontvangen.
+
+4. **Bewaar wat werkt en wat nog ontbreekt.** Laat de uitgevoerde controles, fouten en nog niet aangesloten onderdelen opschrijven in 05-tests/bouwcontrole.md. Laat een gecontroleerd tussenpunt opslaan volgens de GitHub-afspraak. Ga pas verder als je de eerste route zelf kunt doorlopen.
+
+**Vindbaarheid:** Laat de afgesproken paginatitels, webadressen en vindbaarheid meebouwen. Voeg bezoekersmeting alleen toe als je die hebt afgesproken.
+
+**Bewaar:** Projectcode + 05-tests/bouwcontrole.md
+
+Bewaar: Projectcode + 05-tests/bouwcontrole.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+De aanvraag gaat daadwerkelijk naar de studio.
+
+Testvoorbeeld voor de te bouwen Studio Maan-site. De voorbeeldschermen in deze leeromgeving versturen zelf geen aanvragen.
+
+- **Handeling:** Selecteer een datum en verstuur een aanvraag met testgegevens.
+- **Zichtbaar resultaat:** Na succesvolle verwerking verschijnt een ontvangstmelding.
+- **Controle eigenaar:** De studio vindt precies die aanvraag in de afgesproken omgeving terug.
+- **Foutscenario:** Bij een onderbroken verbinding blijft duidelijk dat ontvangst niet is bevestigd.
+
+### Controleer voordat je verdergaat
+
+- De volledige route is uitgevoerd met testgegevens.
+- Het resultaat is controleerbaar op de juiste plek aangekomen.
+- Fouten en nog nagebootste onderdelen zijn expliciet vastgelegd.
+
+**Valkuil:** Een knop die een “Bedankt”-scherm opent al als werkend formulier beschouwen. Controleer de echte verwerking voordat je succes claimt.
+
+**Begrip — Frontend & backend:** De frontend is wat je bezoeker ziet en bedient. Een backend verwerkt bijvoorbeeld gegevens op een server. Niet iedere website heeft een eigen backend nodig.
+
+**AI-opdrachten:** 11 (hoofdopdracht), 32 (alleen als nodig), 36 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 9: Open en sluit je website zelf
+
+Laat Antigravity een eenvoudig startbestand maken. Probeer daarna zelf je lokale website te openen, te stoppen en opnieuw te starten.
+
+**Begin met:** Je werkende projectmap en de vastgelegde startwijze.
+
+**Doel:** De website zonder hulp starten en stoppen op je eigen computer.
+
+**Tools:** Laat Antigravity een startbestand maken. Probeer starten en stoppen zelf.
 
 - [Antigravity](https://antigravity.google/): Maak een begrijpelijke starter op basis van de echte projectopzet. Leg fouten en het lokale adres uit.
 - [Node.js](https://nodejs.org/en/download): Alleen als nodig: de omgeving die het JavaScript-project uitvoert. Laat installatie en versie controleren.
 
-**Neem mee:** Bewaar START_PROJECT.bat en startinstructie.md. Dit is je lokale oefenomgeving.
+### Wat je doet
 
-### Stap 10 · Test als een echte gebruiker
+1. **Vraag Antigravity om een startbestand.** Gebruik de AI-opdracht. Laat eerst de bestaande startwijze controleren. Op Windows laat je START_PROJECT.bat in de hoofdmap maken. Gebruik op een Mac of Linux de startwijze die past bij dat systeem.
 
-Jij probeert de website; Antigravity helpt bevindingen onderzoeken en herhalen.
+2. **Start de website zelf.** Stop de eerdere testsessie volgens de uitleg van Antigravity. Dubbelklik op START_PROJECT.bat. Laat het venster open en open het adres dat het toont in je browser.
 
-- [Antigravity](https://antigravity.google/): Geef exacte stappen, verwachting en waarneming. Laat herstellen en hertesten.
-- [Playwright](https://playwright.dev/): Laat je agent de belangrijkste browserroute automatisch herhalen, inclusief fouten en mobiel formaat.
+3. **Geef een foutmelding volledig door.** Start de website niet? Kopieer de foutmelding naar Antigravity. Laat controleren of een programma ontbreekt of het gebruikte adres al bezet is. Laat andere programma’s niet zomaar afsluiten.
 
-**Neem mee:** Bewaar bevindingen.md met versie, bewijs en hercontrole. Een geslaagde test dekt alleen wat echt is getest.
+4. **Stop en start opnieuw.** Volg de stopinstructie, bijvoorbeeld Ctrl+C in het startvenster. Open daarna het startbestand opnieuw en test dezelfde route. Bewaar de uitleg als 06-overdracht/startinstructie.md.
 
-### Stap 11 · Controleer de hele keten
+**Bewaar:** START_PROJECT.bat + 06-overdracht/startinstructie.md
 
-Controleer werking én vindbaarheid voordat je een versie vrijgeeft.
+Bewaar: START_PROJECT.bat + 06-overdracht/startinstructie.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
 
-- [Antigravity](https://antigravity.google/): Controleer kernroute, toegang, metadata, sitemap, indexeerbaarheid en toestemming voor meting.
-- [Playwright](https://playwright.dev/): Herhaal de afgesproken tests op de laatste versie.
-- [PageSpeed Insights](https://pagespeed.web.dev/): Meet een openbare testpagina. Bij een besloten preview laat je de agent lokaal een prestatiecontrole uitvoeren.
+### Voorbeeld: Studio Maan (fictief)
 
-**Neem mee:** Bewaar releasecheck.md met open punten, meetresultaten en het besluit. Een hoge snelheidsscore is geen SEO-garantie.
+Dubbelklikken, openen, testen.
 
-**SEO in deze stap:** Controleer openbare kernpagina’s op bereikbaarheid, inhoud, metadata, indexatie-instellingen en mobiel. Test analytics op dubbele events, fouten en toestemming.
+Studio Maan krijgt een Windows-starter die het bestaande startcommando gebruikt. De werkelijke poort en programma’s hangen af van de gekozen techniek.
 
-### Stap 12 · Zet je website live
+- **Starten:** Open START_PROJECT.bat in de projectmap.
+- **Openen:** Gebruik het lokale adres dat de starter daadwerkelijk toont.
+- **Controleren:** Dezelfde workshoproute is bereikbaar met dezelfde testinstellingen.
+- **Stoppen:** Volg de stopinstructie van het project; bijvoorbeeld Ctrl+C in het servervenster.
 
-Van gecontroleerde code naar online: Antigravity → GitHub → Railway.
+### Controleer voordat je verdergaat
+
+- Je kunt starten zonder dat de agent iets voor je uitvoert.
+- De starter meldt problemen begrijpelijk en bevat geen geheimen.
+- Je hebt ook stoppen en opnieuw starten geprobeerd.
+
+**Valkuil:** Een localhost-link als een live website delen. Die verwijst naar de computer van degene die de link opent; publicatie volgt bij stap 12.
+
+**Begrip — Lokaal / localhost:** De website draait op je eigen computer. Een lokale server maakt haar in je browser bereikbaar terwijl je eraan werkt.
+
+**AI-opdrachten:** 12 (hoofdopdracht), 13 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 10: Test je website en laat fouten herstellen
+
+Loop de bezoekersroute zelf na op een computer en telefoon. Beschrijf fouten zo precies dat Antigravity dezelfde handeling kan herhalen en herstellen.
+
+**Begin met:** Een startbare website, testgegevens en de bezoekersroute.
+
+**Doel:** Een foutenlijst met controles na het herstel.
+
+**Tools:** Jij test; Antigravity onderzoekt en herstelt de fouten die je doorgeeft.
+
+- [Antigravity](https://antigravity.google/): Geef de stappen, verwachte uitkomst en foutmelding door. Laat repareren en opnieuw testen.
+- [Playwright](https://playwright.dev/): Laat Antigravity hiermee vaak gebruikte browserroutes automatisch testen. Je hoeft deze tool niet zelf te bedienen.
+
+### Wat je doet
+
+1. **Laat een korte testlijst maken.** Gebruik de eerste AI-opdracht in Antigravity. Laat voor elke taak het startpunt, de handelingen en het verwachte resultaat opschrijven. Laat ook vastleggen welke versie je test.
+
+2. **Voer de taken zelf uit.** Probeer de normale route, lege velden, ongeldige invoer, teruggaan en dubbel klikken. Test op je telefoon of laat Antigravity eerst een telefoonformaat tonen. Controleer daarna waar het resultaat terechtkomt.
+
+3. **Geef elke fout concreet door.** Gebruik de herstelopdracht. Noteer: wat klikte je, wat verwachtte je en wat gebeurde er? Voeg een screenshot zonder persoonsgegevens toe. Laat de melding bewaren in 05-tests/bevindingen.md, met open/opgelost en wie hem oppakt.
+
+4. **Herhaal na herstel dezelfde handeling.** Laat Antigravity de oorzaak zoeken, herstellen en testen. Probeer de handeling daarna zelf opnieuw. Vraag alleen voor vaak herhaalde routes om een automatische Playwright-test. Sluit een fout pas als de hercontrole slaagt.
+
+**Bewaar:** 05-tests/bevindingen.md
+
+Bewaar: 05-tests/bevindingen.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+“Er gebeurt niets” wordt een oplosbare bevinding.
+
+Fictieve voorbeeldbevinding voor Studio Maan; geen gemeten fout in een bestaande website.
+
+- **BEV-001 · Stappen:** Open het aanvraagformulier, laat e-mail leeg en kies “Vraag een plek aan”.
+- **Verwacht / werkelijk:** Verwacht: melding bij e-mail. Waargenomen in dit voorbeeld: geen zichtbare reactie.
+- **Eigenaar / status:** Bouwer / open. Ernst: hoog, omdat de bezoeker niet weet hoe verder.
+- **Hertest:** Herhaal na herstel dezelfde invoer; de melding is zichtbaar, begrijpelijk en bereikbaar met het toetsenbord.
+
+### Controleer voordat je verdergaat
+
+- Iemand anders kan je bevinding herhalen.
+- Elke bevinding heeft een eigenaar en status.
+- Een herstel is met dezelfde route opnieuw gecontroleerd.
+
+**Valkuil:** Alleen “maak het beter” teruggeven. Beschrijf de handeling, de verwachting en de waarneming; daarmee kan de bouwer de oorzaak gericht vinden.
+
+**Begrip — Hertest:** Dezelfde handeling opnieuw uitvoeren nadat een fout is opgelost, om te zien of het herstel werkt.
+
+**AI-opdrachten:** 14 (hoofdopdracht), 15 (hoofdopdracht). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 11: Controleer of je website live mag
+
+Test de laatste versie van de hele website. Controleer werking, teksten en mobiel gebruik. Beslis daarna of deze versie gepubliceerd mag worden.
+
+**Begin met:** De laatste websiteversie, testuitkomsten, foutenlijst en handleiding.
+
+**Doel:** Een duidelijke beslissing: live zetten of eerst fouten oplossen.
+
+**Tools:** Laat Antigravity de laatste versie controleren. Beslis daarna of de site live mag.
+
+- [Antigravity](https://antigravity.google/): Controleer werking, teksten, toegang en de afgesproken vindbaarheid. Noteer ook wat niet is getest.
+- [Playwright](https://playwright.dev/): Laat Antigravity de afgesproken automatische tests herhalen op de laatste versie.
+- [PageSpeed Insights](https://pagespeed.web.dev/): Plak een openbaar pagina-adres en start de analyse. Geef het rapport aan Antigravity.
+
+### Wat je doet
+
+1. **Laat de hele website controleren.** Gebruik de hoofdopdracht in Antigravity. Laat alle belangrijke routes nalopen, ook ontvangst van formulieren en toegang tot besloten pagina’s. Vraag per controle om wat is gedaan en wat de uitkomst was.
+
+2. **Controleer teksten en bediening zelf.** Open elke pagina. Klopt de inhoud, begrijp je de knoppen en werkt de route op een telefoon? Probeer ook alleen het toetsenbord. Noteer ontbrekende uitleg en fouten in de bestaande foutenlijst.
+
+3. **Laat vindbaarheid en eventuele meting controleren.** Geef Antigravity het SEO-plan. Laat paginatitels, openbare webadressen, sitemap en snelheid controleren. Gebruik PageSpeed Insights als de pagina openbaar bereikbaar is. Gebruik je Analytics, test dan ook weigeren, toestaan en één geslaagde aanvraag.
+
+4. **Beslis of deze versie live mag.** Laat releasecheck.md in 05-tests maken met geslaagde controles, open fouten en niet uitgevoerde controles. Los fouten die de hoofdtaak blokkeren eerst op. Zet pas “mag live” bij de versie die je echt hebt nagekeken.
+
+**Vindbaarheid:** Laat de openbare pagina’s, snelheid en instellingen voor zoekmachines controleren. Heb je Analytics ingericht? Controleer dan ook de meting en toestemming.
+
+**Bewaar:** 05-tests/releasecheck.md
+
+Bewaar: 05-tests/releasecheck.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+Een ontvangstbelofte die de hele keten waarmaakt.
+
+Voor Studio Maan controleer je zowel het mobiele formulier als de ontvangst en opvolging door de studio.
+
+- **Kernroute:** Workshop kiezen → aanvraag versturen → ontvangst controleren.
+- **Aanvullend:** Toetsenbordbediening, kleine schermen, foutmeldingen en dubbel klikken.
+- **Blokkade:** Aanvragen raken kwijt of er wordt succes gemeld zonder ontvangst.
+- **Besluit:** Alleen goedkeuren voor publicatie als de afgesproken controles controleerbaar slagen en open beperkingen aanvaard zijn.
+
+### Controleer voordat je verdergaat
+
+- De actuele versie is getest, niet alleen een eerdere versie.
+- Blokkerende fouten zijn opgelost en hertest.
+- Documentatie, werking en bekende beperkingen komen overeen.
+
+**Valkuil:** Een groen testresultaat als garantie zien. Noteer wat werkelijk is getest en wat niet; automatische controles vervangen geen volledige beoordeling.
+
+**Begrip — Release:** Een herkenbare versie die je gereedmaakt om te publiceren, met vastgelegde inhoud en controles.
+
+**AI-opdrachten:** 17 (hoofdopdracht), 16 (alleen als nodig), 30 (alleen als nodig), 31 (alleen als nodig), 33 (alleen als nodig), 34 (alleen als nodig), 18 (alleen als nodig), 28 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 12: Publiceer je website via Railway
+
+Laat Antigravity de goedgekeurde versie naar GitHub sturen. Publiceer die versie via Railway en test de website op het echte webadres.
+
+**Begin met:** Een goedgekeurde releasecheck, GitHub-repository en Railway-account.
+
+**Doel:** Een bereikbare website waarvan de belangrijkste route online is getest.
+
+**Tools:** Antigravity bewaart de versie op GitHub. Railway publiceert die versie.
 
 - [Antigravity](https://antigravity.google/): Laat de vrijgegeven versie committen en naar de afgesproken repository en branch sturen.
 - [GitHub](https://github.com/): Controleer de laatste commit, gewijzigde bestanden en eventuele publicatiestatus.
 - [Railway](https://railway.com/): Koppel de repository, controleer instellingen en publiceer. Open de echte live-URL na een geslaagde deployment.
 
-**Neem mee:** Leg versie, URL, toegang en herstelroute vast. Voor een openbare site volgen Search Console en Analytics in de SEO-cursus.
+### Wat je doet
 
-**SEO in deze stap:** Gebruik het echte live-domein in canonical en sitemap. Controleer de openbare versie en volg de SEO-cursus voor Search Console en GA4.
+1. **Controleer wat online mag.** Laat Antigravity afbeeldingen, links en publicatiebestanden nalopen. Spreek af wie de website mag zien. Laat controleren hoe die toegang is geregeld; een moeilijk te raden webadres is geen toegangsbeveiliging.
 
-### Stap 13 · Nodig je eerste gebruikers uit
+2. **Laat de goedgekeurde versie naar GitHub sturen.** Gebruik de eerste AI-opdracht. Vul de repositorylink, branch en publicatieafspraak in. Antigravity legt een versie vast en stuurt die naar GitHub. Open de teruggegeven versielink en controleer of het om jouw wijziging gaat.
 
-Maak je eerste uitnodiging en onderzoek de echte reactie.
+3. **Publiceer met de Railway-uitleg hieronder.** Kies in Railway de juiste repository en branch. Laat Antigravity uitleggen welke instellingen jouw project nodig heeft. Wacht tot Railway meldt dat het publiceren is geslaagd en open daarna het getoonde webadres.
 
-- [Claude](https://claude.ai/): Schrijf een eerlijk concept op basis van wat live werkt. Jij bepaalt wie het ontvangt en verstuurt het.
-- [ChatGPT](https://chatgpt.com/): Alternatief: groepeer echte feedback en bereid vervolgvragen voor.
-- [Google Analytics](https://analytics.google.com/): Als je meting is ingericht: bekijk of bezoekers de bedoelde handeling afronden.
+4. **Test online en bewaar de herstelafspraak.** Voer op het live-adres een testaanvraag uit en zoek de ontvangst op. Laat in 06-overdracht/release.md het adres, de versie, testuitkomst en uitleg voor terugzetten vastleggen. Deel de site nadat deze controle slaagt.
 
-**Neem mee:** Bewaar introductieplan.md en leersignalen.md. Start de SEO-cursus voor de concrete meetinstellingen.
+**Vindbaarheid:** Laat Antigravity het echte live-adres verwerken in de pagina-instellingen en sitemap. Gebruik daarna SEO-les 3 voor Search Console.
 
-### Stap 14 · Blijf rustig doorbouwen
+**Bewaar:** 06-overdracht/release.md met het echte live-adres
 
-Gebruik je actuele project en echte signalen als vertrekpunt voor de volgende sessie.
+Bewaar: 06-overdracht/release.md met het echte live-adres. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+Eerst bereikbaar, dan bewust delen.
+
+Studio Maan kan eerst met een besloten groep controleren of de gepubliceerde aanvraagroute werkt. Openbare toegang is een aparte bewuste keuze.
+
+- **Vóór publicatie:** Afbeeldingen, instellingen, toegangsrechten en ontvangst van aanvragen controleren.
+- **Na publicatie:** De echte live-URL openen en een herkenbare testaanvraag terugvinden.
+- **Herstelafspraak:** De eigenaar weet welke vorige versie werkt en wie deze kan terugzetten.
+- **Vastleggen:** Versie, datum, URL, testresultaat, toegang en open punten.
+
+### Controleer voordat je verdergaat
+
+- De publicatie meldt daadwerkelijk succes.
+- Je hebt de belangrijkste bezoekersroute op de echte live-URL gecontroleerd.
+- Toegang en de herstelroute zijn expliciet vastgelegd.
+
+**Valkuil:** Alleen controleren of de homepage opent. Juist instellingen, formulierverwerking en toegangsrechten kunnen online anders werken dan lokaal.
+
+**Begrip — Hosting & deploy:** Hosting is de omgeving waar je website online draait. Deployen is het plaatsen van een bepaalde versie in die omgeving.
+
+**AI-opdrachten:** 41 (hoofdopdracht), 20 (hoofdopdracht), 19 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 13: Laat de eerste mensen je website gebruiken
+
+Nodig een kleine groep uit je doelgroep uit. Vertel wat ze kunnen doen en vraag waar ze vastlopen. Gebruik hun reacties om je website te verbeteren.
+
+**Begin met:** Je geteste live-adres, doelgroep en actuele aanbod.
+
+**Doel:** Een bruikbare uitnodiging en vastgelegde reacties van bezoekers.
+
+**Tools:** Laat Claude of ChatGPT een uitnodiging schrijven en echte reacties ordenen.
+
+- [Claude](https://claude.ai/): Schrijf een kort uitnodigingsbericht met de hoofdopdracht. Jij verstuurt het zelf.
+- [ChatGPT](https://chatgpt.com/): Alternatief: maak het bericht of groepeer echte feedback.
+- [Google Analytics](https://analytics.google.com/): Alleen als ingericht: bekijk of bezoekers de gewenste handeling afronden.
+
+### Wat je doet
+
+1. **Kies wie je uitnodigt.** Kies een kleine groep die past bij je doelgroep en een kanaal waar je hen kunt bereiken. Schrijf op welke taak je hen wilt laten proberen.
+
+2. **Laat Claude of ChatGPT de uitnodiging schrijven.** Gebruik de hoofdopdracht. Voeg het aanbod en wat nu echt werkt toe. Vraag een kort bericht met het juiste webadres, de gewenste handeling en een vraag om feedback. Lees het na en verstuur het zelf.
+
+3. **Controleer de eerste ervaring.** Open de link uit je uitnodiging alsof je een nieuwe bezoeker bent. Kom je op de juiste pagina en kun je de beloofde handeling uitvoeren? Herstel fouten voordat je meer mensen uitnodigt.
+
+4. **Verzamel en orden reacties.** Vraag wat iemand wilde doen, waar die vastliep en wat ontbrak. Laat dezelfde AI-tool de echte reacties groeperen. Bewaar het plan in 02-plan/introductieplan.md en de reacties in 05-tests/leersignalen.md. Gebruik Analytics alleen als je die al hebt ingericht.
+
+**Bewaar:** 02-plan/introductieplan.md + 05-tests/leersignalen.md
+
+Bewaar: 02-plan/introductieplan.md + 05-tests/leersignalen.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+Een kleine uitnodiging voor een echte workshop.
+
+Concept voor Studio Maan. Dit is voorbeeldtekst; de leeromgeving verstuurt geen berichten.
+
+- **Boodschap:** “We hebben onze workshopinformatie op één plek gezet. Bekijk een datum en vraag een plek aan. We bevestigen daarna persoonlijk.”
+- **Kanaal:** Een passend bestaand kanaal van de studio, met toestemming waar nodig.
+- **Te leren:** Welke informatie missen bezoekers vóór ze een aanvraag doen?
+- **Vervolg:** Bundel terugkerende vragen en kies de belangrijkste verbetering.
+
+### Controleer voordat je verdergaat
+
+- De uitnodiging belooft alleen bestaande werking.
+- De link en eerste route zijn gecontroleerd.
+- Je weet welke feedback je verzamelt en hoe je ermee beslist.
+
+**Valkuil:** Grote aantallen bezoekers nastreven terwijl de eerste ervaring onduidelijk is. Leer eerst van een kleine groep en herstel de grootste obstakels.
+
+**Begrip — Leersignaal:** Een concrete waarneming die helpt beslissen wat je moet behouden, verbeteren of opnieuw onderzoeken.
+
+**AI-opdrachten:** 21 (hoofdopdracht), 22 (alleen als nodig), 38 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+
+## Stap 14: Bewaar je werk en pak het later weer op
+
+Sluit elke sessie af met een korte overdracht in je projectmap. Laat Antigravity bij de volgende sessie eerst de actuele bestanden lezen voordat het verder werkt.
+
+**Begin met:** De projectmap, huidige website, testuitkomsten en reacties van bezoekers.
+
+**Doel:** Een bijgewerkte projectmap met een duidelijke volgende taak.
+
+**Tools:** Laat Antigravity de overdracht bijwerken. Begin de volgende sessie met dezelfde projectmap.
 
 - [Antigravity](https://antigravity.google/): Werk overdracht en handleiding bij, leg de gecontroleerde versie vast en maak één volgende bouwtaak.
 - [GitHub](https://github.com/): Controleer de online versielink; broncode alleen is geen back-up van formulieren of databases.
 - [Search Console](https://search.google.com/search-console/): Gebruik echte zoekvragen en indexatieproblemen om een passende verbetering te kiezen.
 
-**Neem mee:** Bewaar overdracht.md en ga verder met de korte SEO-cursus: gevonden worden, meten en verbeteren.
+### Wat je doet
 
-## Antigravity, GitHub en Railway
+1. **Laat de sessie samenvatten.** Gebruik de afsluitopdracht in Antigravity. Laat opschrijven wat is aangepast, welke controles zijn uitgevoerd en wat nog openstaat. Bewaar dit als 06-overdracht/overdracht.md en werk START-HIER.md bij.
 
-1. **Kies je codebewaarplaats.** Maak op GitHub een repository of gebruik je bestaande repository. Kies bewust wie de code mag zien en kopieer de link. Een repository is de map met je code en versiegeschiedenis.
+2. **Controleer of het werk bewaard is.** Laat de gecontroleerde code volgens je GitHub-afspraak opslaan en controleer de versielink. Controleer ook of AI-antwoorden en ontwerpbestanden in je projectmap staan. Maak een back-up van die hele map; GitHub bevat alleen wat je ernaartoe hebt gestuurd.
+
+3. **Laat de handleiding bijwerken.** Vraag Antigravity om de echte werking voor bezoeker en beheerder te beschrijven. Loop die uitleg zelf na. Bewaar haar als 06-overdracht/gebruikershandleiding.md.
+
+4. **Begin de volgende sessie met lezen.** Open dezelfde projectmap. Gebruik de hervatopdracht en laat START-HIER.md, de overdracht en relevante bestanden lezen. Vraag een korte stand van zaken. Kies daarna één verbetering uit de echte fouten of feedback en geef daarvoor een opdracht.
+
+**Bewaar:** 06-overdracht/overdracht.md + 06-overdracht/gebruikershandleiding.md
+
+Bewaar: 06-overdracht/overdracht.md + 06-overdracht/gebruikershandleiding.md. Bewaar oorspronkelijke AI-output in 01-bronnen en werk START-HIER.md bij.
+
+### Voorbeeld: Studio Maan (fictief)
+
+Volgende keer weer verder waar je echt gebleven was.
+
+Voorbeeld van een overdracht voor Studio Maan. De concrete versie en controles vul je in op basis van je eigen project.
+
+- **Gereed:** De afgesproken aanvraagroute; verwijs naar versie en testbewijs.
+- **Open:** Bezoekers vragen mogelijk om informatie over groepsworkshops; eerst signalen verzamelen.
+- **Volgende actie:** De terugkerende vragen beoordelen en beslissen of een extra informatieblok nodig is.
+- **Startpunt:** Projectmap, startinstructie, live-URL, open bevindingen en verantwoordelijke.
+
+### Controleer voordat je verdergaat
+
+- Een nieuwe sessie kan starten zonder het verhaal te reconstrueren.
+- De handleiding beschrijft de actuele werking.
+- De volgende actie heeft een duidelijk doel en een eigenaar.
+
+**Valkuil:** Alle projectkennis alleen in een chat laten staan. Bewaar besluiten, werking en open werk in het projectdossier, dicht bij de versie waarop ze betrekking hebben.
+
+**Begrip — Versiebeheer:** Een geschiedenis van wijzigingen waarmee je kunt zien wat is aangepast en naar een eerdere bronversie kunt teruggaan.
+
+**AI-opdrachten:** 23 (hoofdopdracht), 24 (alleen als nodig), 27 (alleen als nodig), 35 (alleen als nodig), 37 (alleen als nodig), 39 (alleen als nodig). Zie de opdrachten achter in dit handboek.
+
+## Gereedschappen
+
+### ChatGPT
+
+Orden je idee, analyseer documenten en onderzoek vragen. Gebruik Search of Deep research voor actuele bronnen, als jouw account die functie heeft.
+
+[Open ChatGPT](https://chatgpt.com/) · [Officiële uitleg](https://help.openai.com/en/articles/10500283-deep-research)
+
+### Claude
+
+Werk je projectbrief, onderzoek en teksten uit. Gebruik web search of Research voor bronnen; bekijk de beschikbaarheid in je account.
+
+[Open Claude](https://claude.ai/) · [Officiële uitleg](https://support.claude.com/en/articles/11088861-use-research-on-claude)
+
+### Stitch
+
+Vertaal je schermen en echte inhoud naar een visueel ontwerp. Verfijn het resultaat en geef de gekozen versie door aan je bouwer.
+
+[Open Stitch](https://stitch.withgoogle.com/) · [Officiële uitleg](https://developers.googleblog.com/stitch-a-new-way-to-design-uis/)
+
+### Antigravity
+
+Open je lokale projectmap. Laat eerst bestanden lezen en een plan maken. Geef daarna opdrachten om te bouwen, te testen en gecontroleerde versies op GitHub te bewaren.
+
+[Open Antigravity](https://antigravity.google/) · [Officiële uitleg](https://antigravity.google/docs/features)
+
+### GitHub
+
+Bewaar hier de code en de versiegeschiedenis die je vanuit Antigravity verstuurt. Je lokale projectmap bevat daarnaast je onderzoek, AI-output en ontwerpen.
+
+[Open GitHub](https://github.com/) · [Officiële uitleg](https://docs.github.com/en/get-started/using-github/hello-world)
+
+### Railway
+
+Laat een versie uit je GitHub-repository online draaien. Controleer vooraf instellingen, toegang, kosten en wanneer wijzigingen automatisch worden gepubliceerd.
+
+[Open Railway](https://railway.com/) · [Officiële uitleg](https://docs.railway.com/guides/vibe-coding-deploy)
+
+### Playwright
+
+Laat Antigravity herhaalbare browsertests maken voor afgesproken gebruikersroutes. Jij kiest het verwachte resultaat en beoordeelt de uitkomst.
+
+[Open Playwright](https://playwright.dev/) · [Officiële uitleg](https://playwright.dev/docs/codegen)
+
+### PageSpeed Insights
+
+Plak een openbaar webadres en start de analyse van snelheid en mobiel gebruik. Geef het rapport aan Antigravity om concrete problemen te onderzoeken.
+
+[Open PageSpeed Insights](https://pagespeed.web.dev/) · [Officiële uitleg](https://developers.google.com/speed/docs/insights/v5/about)
+
+### Search Console
+
+Bekijk of Google je pagina’s kan vinden en welke zoekvragen bezoekers opleveren. Volg SEO-les 3 om je website toe te voegen en je eigendom aan te tonen.
+
+[Open Search Console](https://search.google.com/search-console/) · [Officiële uitleg](https://support.google.com/webmasters/answer/9008080?hl=nl)
+
+### Google Analytics
+
+Bekijk hoe bezoekers je website gebruiken. Spreek eerst af wat je wilt meten. Volg SEO-les 4 om Analytics in te richten en te controleren.
+
+[Open Google Analytics](https://analytics.google.com/) · [Officiële uitleg](https://support.google.com/analytics/answer/9304153?hl=nl)
+
+### Node.js
+
+Alleen nodig als de projecttechniek dat vraagt. Laat Antigravity vaststellen welke versie en startwijze passen; je hoeft geen code te schrijven.
+
+[Open Node.js](https://nodejs.org/en/download) · [Officiële uitleg](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)
+
+### Docker
+
+Laat Antigravity controleren of dit programma nodig is. Docker kan de bijbehorende diensten in een afgescheiden omgeving draaien. Installeer het alleen als het bouwplan dat vraagt.
+
+[Open Docker](https://www.docker.com/products/docker-desktop/) · [Officiële uitleg](https://docs.docker.com/desktop/setup/install/windows-install/)
+
+## Antigravity koppelen aan GitHub
+
+1. **Kies je codebewaarplaats.** Maak op GitHub met New repository een online map voor de projectcode, of kies de bestaande repository. Kies wie de code mag zien en kopieer de repositorylink. De codebewaarplaats vervangt je lokale projectmap niet.
+
 2. **Geef Antigravity toegang.** Open het juiste project in Antigravity en geef de repositorylink. Laat de agent controleren of die repository bereikbaar is en schrijven is toegestaan. Voltooi de aangeboden GitHub-aanmelding zelf; plak geen toegangstokens in een chat. De precieze aanmeldroute kan per installatie verschillen.
-3. **Controleer de wijziging.** Vraag om een korte samenvatting, de gewijzigde bestanden en uitgevoerde tests. Bekijk het Review-/versiebeheerpaneel. Laat alleen het bedoelde werk meenemen; sleutels, testgegevens en grote originelen blijven buiten de codebewaarplaats.
+
+3. **Controleer de wijziging.** Vraag Antigravity om de gewijzigde bestanden, een korte uitleg en de testuitkomsten. Bekijk de wijzigingen in het versiebeheerpaneel. Spreek af wat naar GitHub mag. Houd privébronnen, geheime sleutels en onnodige grote originelen erbuiten; bewaar ze wel veilig in je eigen projectmap.
+
 4. **Laat vastleggen en verzenden.** Geef Antigravity opdracht de gecontroleerde wijziging te committen en naar de afgesproken GitHub-branch te pushen. Commit betekent een versie vastleggen; push betekent die versie naar GitHub sturen. Je hoeft de commando’s niet zelf uit te voeren. Controleer de commitlink op GitHub.
+
 5. **Spreek af wanneer iets live gaat.** Railway kan nieuwe commits op een gekoppelde branch automatisch publiceren. Kies bij de inrichting een aparte werkbranch of een bewuste vrijgavestap, zodat een tussentijdse wijziging niet onverwacht live komt. Je kunt automatische publicatie bij de dienstinstellingen uitschakelen met Disable en later bewust Deploy Latest Commit kiezen. Controleer repository, branch én publicatiestatus.
 
-[Antigravity: versiebeheer](https://antigravity.google/docs/features) · [Railway: publiceren](https://docs.railway.com/guides/vibe-coding-deploy)
+## Railway instellen
 
-## Korte SEO-cursus
+1. Open Railway, meld je aan en kies New Project → Deploy from GitHub repo. Verleen toegang tot de bedoelde repository.
 
-Voor je eigen openbare website. Deze besloten leeromgeving wordt hierdoor niet openbaar of gekoppeld aan Analytics. De voorbeelden zijn fictief; vervang .example-adressen, meet-ID’s en invulvelden door je eigen gegevens.
+2. Kies repository en branch. Laat Antigravity de projectmap en benodigde bouw- en startinstellingen controleren. Neem de echte projectinstellingen over.
 
-### SEO-les 1 · Beantwoord de vraag achter de zoekopdracht.
+3. Zet geheime waarden bij Variables. Controleer kosten, toegang en wanneer Railway automatisch publiceert.
 
-SEO helpt mensen en zoekmachines begrijpen waar je pagina over gaat. Begin bij een echte vraag van je doelgroep. Een zoekwoord zonder bruikbaar antwoord levert weinig op.
+4. Wacht op een geslaagde publicatie. Ga bij de dienst naar Settings → Networking en maak een adres of koppel je eigen domein. Gebruik alleen de DNS-waarden die Railway toont.
 
-**Tools:** [ChatGPT](https://chatgpt.com/) · [Claude](https://claude.ai/)
+5. Open het echte adres, test de belangrijkste route en zoek het resultaat op. Bewaar de versie en uitleg voor terugzetten in 06-overdracht/release.md. Een codeversie terugzetten herstelt niet vanzelf de database.
+
+[Railway: publiceren vanuit GitHub](https://docs.railway.com/guides/vibe-coding-deploy)
+
+## SEO-cursus
+
+### SEO-les 1: Schrijf pagina’s die de zoekvraag beantwoorden
+
+Begin hiermee bij stap 5, vóór het ontwerpen. SEO betekent je website begrijpelijk en vindbaar maken voor zoekmachines. Kies per openbare pagina één vraag die je bezoeker beantwoord wil hebben.
 
 **Begin met:** Je doelgroep, aanbod, onderzoek en bestaande paginalijst.
 
-1. **Kies een vraag per pagina.** Laat ChatGPT of Claude mogelijke zoekvragen ordenen. Controleer ze met gesprekken, echte zoekresultaten en later Search Console. Laat AI geen zoekvolume of gegarandeerde positie verzinnen.
-2. **Maak je inhoud concreet.** Beantwoord de vraag met eigen informatie, voorbeelden, prijs, locatie of werkwijze voor zover relevant. Voeg een duidelijke hoofdkop en logische tussenkoppen toe.
-3. **Schrijf titel en beschrijving.** Geef iedere belangrijke pagina een beschrijvende, eigen paginatitel en een korte meta-beschrijving. De beschrijving kan als samenvatting in Google verschijnen; Google kan ook andere tekst kiezen.
-4. **Verbind je pagina’s.** Link vanuit relevante tekst naar de volgende nuttige pagina. Gebruik een herkenbare linktekst, zoals “Bekijk de keramiekworkshop”, en vermijd meerdere vrijwel identieke pagina’s voor dezelfde vraag.
+**Tools:** [ChatGPT](https://chatgpt.com/), [Claude](https://claude.ai/)
+
+1. **Geef je aanbod aan ChatGPT of Claude.** Voeg je projectbrief en onderzoek toe. Gebruik de promptgenerator hieronder. Vraag per pagina welke vraag de bezoeker heeft. Controleer de voorgestelde vragen met je gesprekken en zoekresultaten; AI kent jouw echte zoekcijfers niet vanzelf.
+
+2. **Schrijf het antwoord op die vraag.** Laat dezelfde AI-tool een tekstvoorstel maken met je eigen gegevens, zoals wat je aanbiedt, voor wie, prijs en locatie. Lees alles na. Laat een duidelijke hoofdkop, tussenkoppen en volgende handeling opnemen.
+
+3. **Maak een paginatitel en korte beschrijving.** Vraag een eigen titel en korte samenvatting per pagina. Die samenvatting heet een meta-beschrijving en kan in Google worden getoond. Google kan ook andere tekst kiezen. Gebruik het voorbeeld hiernaast als opzet.
+
+4. **Bewaar het plan en geef het door.** Zet per pagina de zoekvraag, het webadres, titel, beschrijving, inhoud en links naar volgende pagina’s in 02-plan/seo-plan.md. Geef dit bestand bij stap 7 aan Antigravity. Werk een bestaand plan bij in plaats van een tweede te maken.
 
 **Voorbeeld · Studio Maan in een zoekresultaat**
 
@@ -2788,84 +917,87 @@ SEO helpt mensen en zoekmachines begrijpen waar je pagina over gaat. Begin bij e
 
 Voor deze oefening ligt de fictieve studio in Utrecht. De zoeksamenvatting is een redactioneel voorbeeld, geen bestaand Google-resultaat of belofte over de weergave.
 
-**Samenhang:** Vraag van een bezoeker → Passende pagina → Duidelijk antwoord → Logische volgende stap
+**Bewaar:** 02-plan/seo-plan.md
 
-**Neem mee:** seo-plan.md met zoekvraag, pagina, titel en volgende actie.
-
-**SEO-opdracht 1**
-
-```text
-Maak een SEO-paginaplan voor [project] op basis van mijn doelgroep, aanbod en onderzoek. Benoem per pagina de zoekvraag, URL, paginatitel, meta-beschrijving, hoofdkop, kerninhoud, interne links en gewenste vervolgstap. Onderscheid aannames van onderzochte vragen. Verzin geen zoekvolumes, reviews of resultaten. Voorkom bijna-identieke pagina’s. Leg open vragen vast in seo-plan.md.
-```
-
-**Controle**
+**Controle:**
 
 - De pagina beantwoordt een concrete vraag met eigen, controleerbare inhoud.
 - Titel, hoofdkop en volgende actie passen bij dezelfde bedoeling.
 - De belangrijkste pagina’s zijn via gewone links bereikbaar.
 
-**Officiële uitleg**
+**Opdracht voor deze les:**
+
+```text
+Maak een SEO-plan op basis van mijn doelgroep, aanbod en onderzoek. Geef per openbare pagina de vraag van de bezoeker, het webadres, titel, korte beschrijving, hoofdkop, eigen inhoud en links naar volgende pagina’s. Benoem wat nog een aanname is. Verzin geen zoekvolumes of beloofde positie in Google. Lever 02-plan/seo-plan.md.
+```
+
+**Officiële uitleg:**
 
 - [Google: SEO voor beginners](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=nl)
 - [Google: samenvattingen in zoekresultaten](https://developers.google.com/search/docs/appearance/snippet)
 
-### SEO-les 2 · Laat vindbaarheid meteen meebouwen.
+### SEO-les 2: Laat Antigravity de vindbaarheid meebouwen
 
-Geef je SEO-plan aan Antigravity vóór de eerste bouwstap. Je hoeft deze techniek niet zelf te schrijven. Je wilt wel kunnen aanwijzen wat de agent heeft ingebouwd en gecontroleerd.
-
-**Tools:** [Antigravity](https://antigravity.google/) · [PageSpeed Insights](https://pagespeed.web.dev/)
+Gebruik deze les bij stap 7. Jij bepaalt welke pagina’s openbaar en vindbaar mogen zijn. Antigravity verwerkt dat in het bouwplan en controleert de technische instellingen.
 
 **Begin met:** seo-plan.md, de pagina’s die openbaar mogen worden en het bouwplan.
 
-1. **Gebruik bereikbare pagina-URL’s.** Laat belangrijke openbare inhoud op eigen echte URL’s zetten. Alleen wisselen na een # in de URL is geen goede basis voor afzonderlijke zoekpagina’s. Laat essentiële inhoud en links controleerbaar renderen; bij voorkeur direct in de geleverde HTML.
-2. **Leg indexatie bewust vast.** Laat title, meta-beschrijving en canonical instellen. Canonical is de voorkeurs-URL bij vergelijkbare pagina’s. Een openbare pagina die gevonden mag worden mag niet per ongeluk noindex bevatten. Besloten delen blijven achter echte toegangscontrole; robots.txt is geen slot.
-3. **Voeg sitemap en foutgedrag toe.** Laat een sitemap.xml met de bedoelde canonieke, indexeerbare URL’s maken. Controleer robots.txt, interne links en echte 404-antwoorden voor ontbrekende pagina’s. Laat oude adressen bij een verhuizing passend doorverwijzen.
-4. **Houd de pagina licht en begrijpelijk.** Gebruik passende afbeeldingsformaten en afmetingen, omschrijvende alt-tekst voor informatieve beelden en lege alt-tekst voor decoratie. Controleer mobiel, layoutverschuivingen en laden met PageSpeed Insights. Neem alleen gestructureerde gegevens op die je echte inhoud ondersteunen.
+**Tools:** [Antigravity](https://antigravity.google/), [PageSpeed Insights](https://pagespeed.web.dev/)
 
-**Dit hoort in het bouwplan**
+1. **Geef het SEO-plan aan Antigravity.** Open je projectmap en gebruik de promptgenerator hieronder. Laat eerst 02-plan/seo-plan.md lezen. Vraag per openbare pagina een eigen webadres dat je rechtstreeks kunt openen. Een wissel achter een # is onvoldoende voor afzonderlijke zoekpagina’s.
 
-- Publieke pagina: /keramiekworkshop · eigen titel en uitleesbare inhoud
-- Voorkeursadres: Canonical naar de echte openbare HTTPS-URL
-- Vindbaarheid: Geen onbedoelde noindex; sitemap en robots gecontroleerd
-- Meting: Eén succesvolle aanvraag meten, pas na ontvangst en volgens de gekozen toestemming
+2. **Laat de pagina-instellingen invullen.** Vraag om een unieke titel en beschrijving per pagina. Laat ook het voorkeursadres instellen; dat heet canonical. Pagina’s die gevonden mogen worden moeten voor zoekmachines toegankelijk zijn. Privépagina’s blijven beveiligd.
+
+3. **Laat de paginalijst en foutpagina controleren.** Vraag om sitemap.xml: een lijst met de openbare pagina-adressen. Laat ook robots.txt controleren; dat bestand geeft zoekmachines aanwijzingen maar beveiligt geen privégegevens. Vraag of een niet-bestaand adres een echte foutmelding met status 404 geeft.
+
+4. **Controleer de snelheid en bewaar het rapport.** Open PageSpeed Insights, plak een openbaar pagina-adres en start de analyse. Geef de uitkomst aan Antigravity en vraag welke problemen eerst moeten worden opgelost. Voor een besloten testversie laat je een lokale controle doen. Bewaar echte uitkomsten en niet uitgevoerde controles in 05-tests/seo-check.md.
+
+**Laat deze begrippen uitleggen**
+
+- Paginatitel: De naam van een pagina in het browsertabblad en mogelijk in Google.
+- Canonical: Het voorkeursadres van een pagina.
+- Sitemap: Een bestand met de openbare pagina’s die zoekmachines mogen vinden.
+- Noindex: Een instelling die vraagt een pagina niet in zoekresultaten op te nemen.
+- 404: Het antwoord van de website als een pagina niet bestaat.
 
 Deze besloten leeromgeving wisselt lessen met #routes. Voor openbare landingspagina’s van jouw eigen project laat je Antigravity gewone pagina-URL’s en indexeerbare inhoud bouwen. Een besloten preview hoef je niet voor Google open te zetten.
 
-**Samenhang:** SEO-plan → Bouwafspraken → Openbare pagina → Technische controle
+**Bewaar:** 05-tests/seo-check.md
 
-**Neem mee:** Een technische SEO-check met bewijs per openbare pagina.
-
-**SEO-opdracht 2**
-
-```text
-Verwerk SEO en meting expliciet in het bestaande bouwplan voor [project]. Gebruik seo-plan.md. Beschrijf en bouw waar passend: echte openbare pagina-URL’s, uitleesbare inhoud, unieke titles en meta-beschrijvingen, hoofdkoppen, interne links, canonical, sitemap.xml, robots.txt, juiste 404/redirects, mobiel en lichte afbeeldingen. Behoud echte toegangscontrole voor besloten delen. Plan GA4 afzonderlijk met de gekozen toestemmingsinstellingen; tel alleen bevestigde succesvolle aanvragen en voorkom dubbele events. Leg per eis het testbewijs vast en rapporteer wat nog niet is gecontroleerd. Gebruik geen verzonnen domein of meet-ID.
-```
-
-**Controle**
+**Controle:**
 
 - Een openbare kernpagina opent rechtstreeks en de hoofdinhoud is uitleesbaar.
 - Sitemap, canonical en indexatie-instellingen passen bij het echte live-domein.
 - Mobiele werking, snelheid en de meetafspraak zijn gecontroleerd en vastgelegd.
 
-**Officiële uitleg**
+**Opdracht voor deze les:**
+
+```text
+Lees 02-plan/seo-plan.md en het bestaande bouwplan. Leg uit welke technische SEO-onderdelen nodig zijn: eigen openbare pagina-adressen, leesbare inhoud, unieke titels en beschrijvingen, voorkeursadressen, sitemap, zoekmachine-instellingen, foutpagina’s, mobiel en snelheid. Behoud de toegang tot privépagina’s. Werk 04-bouw/bouwplan.md bij. Bouw alleen wat is afgesproken en waarvoor een bouwopdracht bestaat. Controleer de gemaakte onderdelen en bewaar bewijs in 05-tests/seo-check.md. Meld niet uitgevoerde controles. Voeg Analytics alleen toe als dat afzonderlijk is afgesproken.
+```
+
+**Officiële uitleg:**
 
 - [Google: JavaScript en SEO](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics)
 - [Google: robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
 - [Google: een sitemap bouwen](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
 - [Google: PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about)
 
-### SEO-les 3 · Maak je website zichtbaar voor jezelf in Google.
+### SEO-les 3: Voeg je website toe aan Search Console
 
-Met Search Console controleer je of Google je pagina’s kan vinden en indexeren. Je moet eigenaar zijn van de website, of de juiste toegang hebben. Verificatie en een sitemap geven geen garantie op opname of een hoge positie.
-
-**Tools:** [Search Console](https://search.google.com/search-console/) · [Antigravity](https://antigravity.google/)
+Doe dit na de livegang voor een openbare website. Search Console laat zien of Google je pagina’s kan vinden en opnemen in zoekresultaten. Je moet eerst aantonen dat je de website beheert.
 
 **Begin met:** Je openbare HTTPS-adres en toegang tot je domeininstellingen of websitebestanden.
 
+**Tools:** [Search Console](https://search.google.com/search-console/), [Antigravity](https://antigravity.google/)
+
 1. **Voeg je website toe.** Open Search Console en kies Property toevoegen. Met toegang tot de DNS-instellingen kies je Domein en vul je alleen het domein in. Zonder DNS-toegang kies je URL-prefix met het precieze HTTPS-adres dat je wilt volgen.
-2. **Verifieer het eigendom.** Bij Domein: kopieer de aangeboden TXT-waarde en voeg die toe bij je domeinprovider. Laat bestaande records staan, sla op en kies Verifiëren in Search Console. Bij URL-prefix kun je bijvoorbeeld het aangeboden HTML-bestand of de meta-tag door Antigravity laten plaatsen. Bewaar het verificatiemiddel ook na goedkeuring.
+
+2. **Verifieer het eigendom.** Bij Domein: kopieer de aangeboden TXT-waarde en voeg die toe bij je domeinprovider. Laat bestaande records staan, sla op en kies Verifiëren in Search Console. Bij URL-prefix kun je bijvoorbeeld het aangeboden HTML-bestand of de meta-tag door Antigravity laten plaatsen. Bewaar het verificatiemiddel ook na goedkeuring. DNS zijn de adresinstellingen bij de partij waar je domeinnaam staat. Een TXT-record is daar een tekstregel. Neem de waarde van Google exact over.
+
 3. **Dien de echte sitemap in.** Open Sitemaps, vul het adres van de door je bouwer gemaakte sitemap in en verstuur het. Open de sitemap zelf en controleer of de bedoelde live-URL’s erin staan. Herstel een ophaalfout; “verzonden” betekent niet dat alle pagina’s geïndexeerd zijn.
-4. **Inspecteer een kernpagina.** Plak de volledige pagina-URL in URL-inspectie. Vergelijk de indexstatus met Live URL testen. Los blokkades of fouten op en vraag daarna zo nodig indexering aan. Bekijk later Pagina’s en Prestaties; nieuwe data verschijnt niet altijd direct.
+
+4. **Inspecteer een kernpagina.** Plak de volledige pagina-URL in URL-inspectie. Vergelijk de indexstatus met Live URL testen. Los blokkades of fouten op en vraag daarna zo nodig indexering aan. Bekijk later Pagina’s en Prestaties; nieuwe data verschijnt niet altijd direct. Bewaar de gekozen verificatiemethode, sitemap en echte uitkomsten in 06-overdracht/search-console.md.
 
 **Kies de verificatie die je kunt uitvoeren**
 
@@ -2876,40 +1008,41 @@ Met Search Console controleer je of Google je pagina’s kan vinden en indexeren
 
 De .example-adressen zijn invulvoorbeelden. Neem altijd de echte waarde uit jouw Search Console-scherm over. Bij deze besloten cursus is openbare Google-indexatie geen doel; je oefent dit op je eigen openbare website.
 
-**Samenhang:** Eigendom aantonen → Sitemap indienen → Pagina inspecteren → Probleem herstellen
+**Bewaar:** 06-overdracht/search-console.md met de instellingen en controle-uitkomsten
 
-**Neem mee:** Een geverifieerde property, ingediende sitemap en gecontroleerde kernpagina.
-
-**SEO-opdracht 3**
-
-```text
-Help mij Search Console instellen voor [echte openbare website]. Vraag welke toegang ik heb en leg Domein versus URL-prefix uit. Laat mij zelf aanmelden en de echte verificatiewaarde ophalen. Plaats alleen het afgesproken verificatiebestand of de meta-tag als dat mijn gekozen methode is. Controleer sitemap, bereikbaarheid, canonical en indexatieblokkades. Begeleid URL-inspectie en leg echte uitkomsten vast. Verzin geen verificatiecode en claim geen indexatie of rangpositie zonder bewijs.
-```
-
-**Controle**
+**Controle:**
 
 - Search Console toont dat het eigendom is geverifieerd.
 - De sitemap is opgehaald en bevat de juiste openbare URL’s.
 - Je kunt de uitkomst van URL-inspectie uitleggen: live bereikbaar is niet hetzelfde als al geïndexeerd.
 
-**Officiële uitleg**
+**Opdracht voor deze les:**
+
+```text
+Help mij Search Console instellen voor [echte openbare website]. Vraag welke toegang ik heb en leg Domein versus URL-prefix uit. Laat mij zelf aanmelden en de echte verificatiewaarde ophalen. Plaats alleen het afgesproken verificatiebestand of de meta-tag als dat mijn gekozen methode is. Controleer sitemap, bereikbaarheid, canonical en indexatieblokkades. Begeleid URL-inspectie en leg echte uitkomsten vast. Verzin geen verificatiecode en claim geen indexatie of rangpositie zonder bewijs.
+```
+
+**Officiële uitleg:**
 
 - [Google: site-eigendom verifiëren](https://support.google.com/webmasters/answer/9008080?hl=nl)
 - [Google: sitemaps beheren](https://support.google.com/webmasters/answer/7451001?hl=nl)
 - [Google: URL-inspectie](https://support.google.com/webmasters/answer/9012289?hl=nl)
 
-### SEO-les 4 · Meet wat ertoe doet, met de juiste instellingen.
+### SEO-les 4: Stel bezoekersmeting in met Google Analytics
 
-Search Console vertelt hoe mensen je via Google vinden. Google Analytics 4 (GA4) meet gedrag op je website. Begin klein: een pagina bekijken en een aanvraag die werkelijk is ontvangen. Analytics installeren verhoogt je Google-positie niet.
-
-**Tools:** [Google Analytics](https://analytics.google.com/) · [Antigravity](https://antigravity.google/)
+Dit is optioneel. Google Analytics 4, afgekort GA4, laat zien wat bezoekers op je website doen. Gebruik het als je een concrete vraag hebt, bijvoorbeeld hoeveel bezoekers een aanvraag afronden. Richt eerst de meting en toestemming goed in.
 
 **Begin met:** Een meetdoel, je openbare website, Google-account en afspraken over gegevens en toestemming.
 
-1. **Maak een property en webstream.** Open Analytics. Via Beheerder → Maken → Property geef je een herkenbare naam, passende tijdzone en valuta op. Maak daarna bij Gegevensstreams een Web-stream voor je echte HTTPS-adres. Neem het G- meet-ID van die stream over.
-2. **Kies je metingen bewust.** Open de webstream en bekijk Verbeterde meting. Behoud alleen relevante opties en controleer formulier- en sitezoekmeting extra op onbedoelde gegevens. Laat één bevestigde aanvraag als generate_lead meten. Een klik of automatisch form_submit-event bewijst nog geen ontvangst.
-3. **Laat tag en toestemming samen bouwen.** Geef Antigravity de echte meet-ID en je meetplan. Onze eenvoudige startkeuze: laad de Analytics-tag pas na toestemming voor analytics. Laat accepteren, weigeren en intrekken werken en controleer het netwerkgedrag. Zet geen persoonsgegevens in eventnamen, parameters of URL’s. Een banner alleen bewijst geen juiste inrichting.
-4. **Test voordat je op cijfers stuurt.** Open de live-site, geef de gekozen toestemming en voer één testaanvraag uit. Controleer Realtime en met je agent DebugView. Er moet één passende gebeurtenis zijn. Markeer generate_lead in Beheerder → Gegevensweergave → Gebeurtenissen als belangrijke gebeurtenis zodra die correct wordt gemeten. Test ook zonder toestemming.
+**Tools:** [Google Analytics](https://analytics.google.com/), [Antigravity](https://antigravity.google/)
+
+1. **Maak je website aan in Analytics.** Open Google Analytics en kies bij Beheerder: Maken → Property. Een property is de verzameling metingen voor je website. Vul naam, tijdzone en valuta in. Maak bij Gegevensstreams een Web-stream: de verbinding met je website. Vul je echte HTTPS-adres in en kopieer de G-ID.
+
+2. **Kies welke handelingen je meet.** Noteer je meetdoel in 06-overdracht/meetplan.md. Begin met paginaweergaven en één echt ontvangen aanvraag. Laat de aanvraag tellen als generate_lead; dat is de naam van die meetgebeurtenis. Een klik op Versturen is nog geen ontvangen aanvraag.
+
+3. **Laat Antigravity de meting toevoegen.** Open je projectmap. Vul hieronder de echte G-ID en je meetdoel in. Laat Antigravity het meetplan lezen. Laat de Analytics-code pas laden nadat een bezoeker toestemming geeft, en laat weigeren en intrekken werken. Gebruik één installatie zodat je niet dubbel telt. Stuur geen namen of e-mailadressen mee.
+
+4. **Controleer de meting zelf.** Open de live-site, geef toestemming en verstuur één testaanvraag. Kijk in Analytics bij Realtime; laat Antigravity zo nodig DebugView gebruiken voor details. Je verwacht één generate_lead na ontvangst. Test ook een fout en het weigeren of intrekken van toestemming. Laat het bewijs in 05-tests/analytics-check.md bewaren. Markeer generate_lead bij Gebeurtenissen als belangrijke gebeurtenis zodra het correct werkt.
 
 **Voorbeeldinstellingen · bespreek ze met je bouwer**
 
@@ -2922,23 +1055,21 @@ Search Console vertelt hoe mensen je via Google vinden. Google Analytics 4 (GA4)
 
 Als dezelfde tag via de code én via Tag Manager laadt, kun je dubbel tellen. Kies één installatiepad. Een intern-verkeerfilter zet je pas actief nadat je hebt gecontroleerd wie het uitsluit; uitgesloten gegevens zijn later niet terug te halen.
 
-**Samenhang:** Meetdoel → Property & webstream → Toestemming & tag → Echte testgebeurtenis
+**Bewaar:** 06-overdracht/meetplan.md + 05-tests/analytics-check.md
 
-**Neem mee:** Een GA4-webstream met gecontroleerde, beperkte meting.
-
-**SEO-opdracht 4**
-
-```text
-Help GA4 zorgvuldig inrichten voor [website], met meet-ID [echte G-ID]. Meet page_view en generate_lead uitsluitend na bevestigde succesvolle ontvangst van een aanvraag. Spreek vooraf af welke extra events nodig zijn. Gebruik één tag-installatiepad en voorkom dubbele pageviews/events bij navigatie of herladen. Onze startkeuze is basis-toestemming: de Analytics-tag laadt niet vóór akkoord; weigeren en intrekken moeten werken. Verwerk geen persoonsgegevens in URL’s, eventnamen of parameters. Laat mij property en webstream controleren. Test Realtime, DebugView, één succes, een fout, weigeren en intrekken. Leg bewijs, beperkingen en nog benodigde keuzes vast.
-```
-
-**Controle**
+**Controle:**
 
 - De meet-ID hoort bij de juiste website en property.
 - Eén echte testhandeling geeft één correct event; een fout geeft geen succes-event.
 - Weigeren en intrekken zijn gecontroleerd; er gaan geen onbedoelde persoonsgegevens mee.
 
-**Officiële uitleg**
+**Opdracht voor deze les:**
+
+```text
+Richt GA4 in voor mijn website met de echte G-ID uit mijn input. Lees eerst 06-overdracht/meetplan.md. Meet page_view bij een paginaweergave en generate_lead alleen na bevestigde ontvangst van een aanvraag. Laad de Analytics-tag pas na toestemming voor analytics. Laat weigeren en intrekken werken. Gebruik één installatiepad en voorkom dubbel tellen. Stuur geen persoonsgegevens mee in webadressen of meetgegevens. Laat mij de juiste property en webstream controleren. Test paginaweergave, één geslaagde aanvraag, een mislukte aanvraag, weigeren en intrekken. Bewaar de echte uitkomsten in 05-tests/analytics-check.md. Benoem wat niet is getest.
+```
+
+**Officiële uitleg:**
 
 - [Google: GA4 instellen](https://support.google.com/analytics/answer/9304153?hl=nl)
 - [Google: verbeterde meting](https://support.google.com/analytics/answer/9216061?hl=nl)
@@ -2946,53 +1077,408 @@ Help GA4 zorgvuldig inrichten voor [website], met meet-ID [echte G-ID]. Meet pag
 - [Google: toestemmingsmodus](https://developers.google.com/tag-platform/security/concepts/consent-mode)
 - [Google: intern verkeer filteren](https://support.google.com/analytics/answer/10104470?hl=nl)
 
-### SEO-les 5 · Verbind de cijfers aan één volgende verbetering.
+### SEO-les 5: Gebruik cijfers en reacties voor één verbetering
 
-De eerste weken kunnen rustig zijn. Gebruik echte waarnemingen en vergelijk passende perioden. Een momentopname of een enkele gemiddelde positie vertelt niet het hele verhaal.
-
-**Tools:** [Search Console](https://search.google.com/search-console/) · [Google Analytics](https://analytics.google.com/) · [ChatGPT](https://chatgpt.com/) · [Antigravity](https://antigravity.google/)
+Bekijk welke pagina’s gevonden worden en waar bezoekers vastlopen. Vergelijk dezelfde soort perioden. Zijn er nog te weinig gegevens, verzamel dan eerst reacties en trek nog geen grote conclusies.
 
 **Begin met:** Geverifieerde Search Console-property, werkende Analytics-meting en voldoende eigen gegevens.
 
-1. **Koppel de twee omgevingen.** In Analytics: Beheerder → Productkoppelingen → Search Console-koppelingen → Koppelen. Kies de juiste geverifieerde property en webstream en rond af. Je hebt de rol Bewerker in Analytics en geverifieerd eigendom in Search Console nodig. Beide moeten dezelfde pagina’s betreffen.
-2. **Maak de rapporten bereikbaar.** Verschijnt de Search Console-collectie niet in Analytics? Kijk bij Rapporten → Bibliotheek en publiceer de collectie als je de juiste rechten hebt. Deze gegevens komen met vertraging; Realtime is een ander rapport.
-3. **Lees de route van zoeken naar doen.** Bekijk in Search Console Prestaties: zoekopdrachten, pagina’s, vertoningen en klikken. Bekijk in Analytics welke landingspagina’s organisch verkeer krijgen en of je belangrijke gebeurtenis plaatsvindt. Toestemming, meetwijze en vertraging maken aantallen niet één-op-één vergelijkbaar.
-4. **Kies en toets één verbetering.** Bij relevante vertoningen maar weinig klikken: beoordeel titel en aansluiting op de zoekvraag. Bij bezoekers zonder aanvragen: onderzoek inhoud, aanbod en formulierroute. Laat Antigravity één onderbouwde wijziging uitvoeren, testen en vastleggen. Vergelijk later een passende periode en houd rekening met kleine aantallen.
+**Tools:** [Search Console](https://search.google.com/search-console/), [Google Analytics](https://analytics.google.com/), [ChatGPT](https://chatgpt.com/), [Antigravity](https://antigravity.google/)
 
-**Wekelijkse kijkronde · geen scorejacht**
+1. **Bekijk hoe mensen je vinden.** Open in Search Console het rapport Prestaties. Kies de periode en noteer zoekvragen, pagina’s, vertoningen en klikken. Een vertoning betekent dat je pagina in een zoekresultaat is verschenen; een klik betekent dat iemand erop heeft geklikt.
 
-- Search Console: Welke relevante vragen en pagina’s krijgen vertoningen en klikken?
-- Analytics: Wat doen bezoekers na binnenkomst; bereiken ze het echte resultaat?
-- Kwalitatief: Wat vragen bezoekers en waar lopen ze vast?
-- Bouwplan: Eén wijziging · verwachting · datum · latere controle
+2. **Bekijk wat bezoekers daarna doen.** Open Analytics als je het hebt ingericht. Bekijk de pagina’s waarop bezoekers binnenkomen en de gemeten aanvragen. Combineer dit met echte vragen en klachten. Aantallen in Analytics en Search Console kunnen verschillen door toestemming, meetwijze en vertraging.
+
+3. **Laat ChatGPT of Claude de informatie ordenen.** Gebruik de promptgenerator en voeg de relevante exports en reacties toe. Vraag wat opvalt, wat onzeker is en welke ene verbetering het meeste onderzoek verdient. Laat AI geen ontbrekende cijfers invullen of oorzaken als bewezen presenteren. Bewaar het voorstel in 05-tests/meetnotitie.md.
+
+4. **Geef één wijziging aan Antigravity.** Beoordeel het voorstel en zet de gekozen taak in 04-bouw/bouwplan.md. Laat Antigravity het plan en de meetnotitie eerst lezen. Laat de wijziging bouwen en testen volgens de eerdere stappen. Noteer wanneer je opnieuw kijkt en vergelijk dan een passende periode.
+
+**Optioneel: beide Google-tools koppelen**
+
+- Voorwaarde: Je beheert dezelfde website in beide tools, bent Bewerker in Analytics en geverifieerd eigenaar in Search Console.
+- Koppelen: Analytics → Beheerder → Productkoppelingen → Search Console-koppelingen → Koppelen.
+- Kies: De juiste Search Console-property en de webstream van dezelfde website.
+- Rapport ontbreekt: Bekijk Rapporten → Bibliotheek en publiceer de Search Console-collectie als je daar rechten voor hebt.
+- Alternatief: Je kunt de rapporten ook los bekijken. Koppelen is niet nodig om één verbetering te kiezen.
 
 Voorbeeldbesluit zonder verzonnen cijfers: als echte feedback zegt dat beginners twijfelen over ervaring, verduidelijk je dat op de workshoppagina. Leg vast wat je verwacht en onderzoek later of de onduidelijkheid afneemt.
 
-**Samenhang:** Vindbaarheid → Bezoek → Succesvolle actie → Gerichte verbetering
+**Bewaar:** 05-tests/meetnotitie.md + één volgende taak in 04-bouw/bouwplan.md
 
-**Neem mee:** Een korte meetnotitie en één onderbouwde verbetering in je bouwplan.
+**Controle:**
 
-**SEO-opdracht 5**
+- Je kunt echte zoekgegevens of gebruikersreacties aanwijzen achter je voorstel.
+- Je houdt klikken, websitebezoek en werkelijk ontvangen aanvragen uit elkaar.
+- De gekozen verbetering en het controlemoment staan in je bouwplan.
+
+**Opdracht voor deze les:**
 
 ```text
-Analyseer mijn aangeleverde Search Console- en GA4-gegevens voor [periode] en [website], samen met de echte gebruikersfeedback. Controleer definities, meetbeperkingen, toestemming, vertraging en vergelijkbaarheid van perioden. Scheid vindbaarheid, klikken, bezoek en bevestigde aanvragen. Trek geen sterke conclusie uit te weinig gegevens en verzin niets wat ontbreekt. Kies één onderbouwde SEO- of gebruiksverbetering, met verwachting en controleplan. Voeg die toe aan het bestaande bouwplan en laat Antigravity de kleine wijziging testen en gecontroleerd via GitHub vrijgeven.
+Analyseer mijn echte zoekgegevens, eventuele Analytics-metingen en bezoekersreacties. Controleer periode, betekenis en beperkingen van de cijfers. Scheid vindbaarheid, klikken, bezoek en ontvangen aanvragen. Benoem onzekerheid bij kleine aantallen en verzin geen oorzaken. Stel één verbetering voor met een verwachting en controlemoment. Lever 05-tests/meetnotitie.md met een korte bouwopdracht die ik na mijn controle zelf aan Antigravity geef. Wijzig zelf geen code.
 ```
 
-**Controle**
-
-- Property en webstream horen bij dezelfde website; de koppeling is zichtbaar.
-- Je onderscheidt vindbaarheid, bezoekersgedrag en echte aanvragen.
-- Je vervolgstap verwijst naar echte gegevens of feedback en heeft een controlemoment.
-
-**Officiële uitleg**
+**Officiële uitleg:**
 
 - [Google: Search Console koppelen aan Analytics](https://support.google.com/analytics/answer/10737381?hl=nl)
 - [Google: rapport Prestaties](https://support.google.com/webmasters/answer/7576553?hl=nl)
 
-Documentatie geraadpleegd op 12 september 2026. Schermnamen en beschikbare functies kunnen per account, taal en versie verschillen.
+## Algemene AI-opdrachten
+
+Dit zijn de basisopdrachten. De Promptgenerator voegt je projectgegevens, stapinput en werkafspraken toe. Gebruik opdrachten.md voor volledige invulbare opdrachten. Voeg genoemde bestanden ook echt toe in de AI-tool of open je projectmap in Antigravity.
+
+### Opdracht 01 — Maak je projectbrief
+
+```text
+Schrijf op basis van mijn idee en notities een projectbrief van maximaal één pagina. Beschrijf: voor wie is de website, wat gaat nu lastig, wat moet de bezoeker kunnen doen en wanneer is de eerste versie klaar? Zet ideeën voor later apart. Benoem aannames en ontbrekende informatie. Verzin geen feiten. Lever 02-plan/projectbrief.md.
+```
+
+**Resultaat:** Een projectbrief die je kunt nalezen en opslaan in 02-plan.
+
+### Opdracht 02 — Onderzoek je probleem met bronnen
+
+```text
+Lees mijn projectbrief en onderzoek de genoemde vragen. Gebruik zoeken op internet als dat beschikbaar is en meld het als dat niet kan. Vergelijk bestaande oplossingen op dezelfde punten. Geef per belangrijke conclusie een bronlink en datum. Controleer ook wat mijn idee tegenspreekt. Maak interviewvragen voor echte gebruikers; verzin geen gesprekken, cijfers of zoekvolumes. Orden mijn meegegeven reacties apart van je webonderzoek. Lever 02-plan/onderzoek.md met vastgesteld, nog onzeker en gevolgen voor het plan.
+```
+
+**Resultaat:** Een onderzoeksoverzicht met bronlinks, open vragen en interviewvragen.
+
+### Opdracht 03 — Schrijf een duidelijk aanbod
+
+```text
+Gebruik mijn projectbrief en onderzoek. Schrijf een kort aanbod: voor wie, welk probleem, welke uitkomst en wat de eerste versie wel en nog niet doet. Gebruik gewone taal en beloof alleen wat ik kan onderbouwen. Zet ontbrekende prijzen of informatie als open vraag neer. Lever 02-plan/propositie.md.
+```
+
+**Resultaat:** Een korte aanbodtekst die past bij de eerste versie.
+
+### Opdracht 04 — Bereid een kleine praktijktoets voor
+
+```text
+Kies met mijn input één belangrijke aanname die nog onzeker is. Schrijf op wie ik spreek, wat ik laat zien, wat ik vraag en bij welke uitkomst ik het plan aanpas. Maak een invulblad voor echte reacties. Vul geen verzonnen resultaten in. Verwerk aangeleverde reacties herkenbaar en benoem de beperkingen van een kleine groep. Lever 02-plan/praktijktoets.md.
+```
+
+**Resultaat:** Een testopzet en invulblad; reacties voeg je toe na de echte toets.
+
+### Opdracht 05 — Schrijf de bezoekersroute uit
+
+```text
+Gebruik mijn aanbod en beschrijf één complete bezoekersroute. Noteer per stap: wat iemand ziet, doet, invult en terugkrijgt. Beschrijf ook waar de informatie wordt verwerkt en wie het resultaat ontvangt. Neem teruggaan, ongeldige invoer, ontbrekende toegang en een storing mee als die van toepassing zijn. Maak een eenvoudig schema met pijlen en leg het in gewone taal uit. Lever 02-plan/flows.md.
+```
+
+**Resultaat:** Een bezoekersroute met foutgevallen en afhandeling door de medewerker.
+
+### Opdracht 06 — Maak je schermenlijst en teksten
+
+```text
+Gebruik mijn aanbod en bezoekersroute. Beschrijf elk nodig scherm met nummer, doel, inhoud, hoofdknop en vervolgstap. Schrijf alle zichtbare teksten: koppen, uitleg, veldnamen, knoppen en meldingen bij laden, fouten en succes. Gebruik gewone taal voor mijn doelgroep en werk mobiel gebruik uit. Verzin geen prijzen of beloften. Lever 02-plan/schermen.md en 02-plan/teksten.md. Maak voor openbare pagina’s ook 02-plan/seo-plan.md met zoekvraag, webadres, paginatitel, korte beschrijving en links naar volgende pagina’s.
+```
+
+**Resultaat:** Schermen.md, teksten.md en seo-plan.md in 02-plan.
+
+### Opdracht 07 — Ontwerp je schermen in Stitch
+
+```text
+Maak de schermen uit mijn input voor een computer en telefoon. Gebruik mijn echte teksten, bezoekersroute en stijlvoorbeelden. Gebruik dezelfde kleuren, lettertypen, knoppen en invulvelden op alle schermen. Maak de hoofdactie duidelijk en werk ook laden, fouten en succes uit. Verzin geen prijzen, klantreacties of resultaten. Geef aan wat ontbreekt. Lever de ontwerpen en beschikbare exportbestanden, met een korte uitleg van de ontwerpafspraken voor mijn bouwer.
+```
+
+**Resultaat:** Schermontwerpen, beschikbare exports en ontwerpafspraken voor 03-ontwerp.
+
+### Opdracht 08 — Verbeter het ontwerp in Stitch
+
+```text
+Pas de genoemde schermen aan op basis van mijn concrete feedback. Behoud de afgesproken inhoud, functies en stijl. Controleer leesbaarheid, de hoofdknop en het ontwerp voor de telefoon. Laat kort zien wat je hebt gewijzigd en welke nieuwe bestanden ik moet bewaren in 03-ontwerp.
+```
+
+**Resultaat:** Een aangepaste ontwerpversie met een korte lijst wijzigingen.
+
+### Opdracht 09 — Lees de projectmap en maak het bouwplan
+
+```text
+Lees START-HIER.md, de gekozen documenten in 02-plan, de ontwerpen in 03-ontwerp en eventuele bestaande code. Geef een overzicht van echt gelezen bestanden, ontbrekende informatie en tegenstrijdigheden. Hergebruik bestaande onderdelen. Leg uit hoe de eerste bezoekersroute werkt, waar gegevens aankomen en wie toegang krijgt. Neem seo-plan.md mee. Beschrijf benodigde programma’s, diensten, mogelijke kosten, codeplek en startwijze. Leg GitHub en de publicatieafspraak vast; voeg geen onnodige diensten toe. Maak 04-bouw/bouwplan.md en 04-bouw/architectuur.md met kleine stappen en per stap een controle. Bouw of installeer nu nog niets. Laat mij eerst het plan controleren.
+```
+
+**Resultaat:** Een leesverslag, bouwplan en technische uitleg; bouwen volgt na je controle.
+
+### Opdracht 10 — Laat website, demo en inloggen aansluiten
+
+```text
+Controleer de genoemde route tussen website, demo en inloggen. Beschrijf waar iemand binnenkomt, wat die ziet en hoe die verdergaat. Benoem kapotte links, ontbrekende uitleg en onjuiste toegang. Herstel de afgesproken onderdelen en test de route opnieuw. Noteer de uitkomst in 05-tests.
+```
+
+**Resultaat:** Een gecontroleerde route tussen de bestaande onderdelen.
+
+### Opdracht 11 — Bouw de eerste complete bezoekersroute
+
+```text
+Bouw alleen de genoemde route uit het nagekeken bouwplan. Gebruik de gekozen teksten en ontwerpen. Verbind schermen, invoer, verwerking en meldingen. Bouw de afgesproken SEO-basis mee. Voeg meting alleen toe als die is afgesproken en de instellingen bekend zijn. Start de site en test met testgegevens: één succes, ongeldige invoer en een mislukte verwerking. Controleer waar het resultaat aankomt. Benoem simulaties en niet aangesloten onderdelen. Bewaar controles in 05-tests/bouwcontrole.md en geef het echte lokale adres.
+```
+
+**Resultaat:** Een werkende route, lokaal adres en overzicht van uitgevoerde controles.
+
+### Opdracht 12 — Maak een eenvoudig startbestand
+
+```text
+Controleer eerst hoe dit project nu start en welke programma’s het nodig heeft. Maak of verbeter START_PROJECT.bat in de hoofdmap voor Windows. Gebruik de bestaande startwijze. Toon duidelijke fouten en het echte lokale adres. Stop geen andere processen en zet geen wachtwoorden in het bestand. Test starten, stoppen en opnieuw starten. Beschrijf het gebruik in 06-overdracht/startinstructie.md. Gebruik een passend alternatief als mijn computer geen Windows gebruikt.
+```
+
+**Resultaat:** Een getest startbestand met korte start- en stopinstructies.
+
+### Opdracht 13 — Open de huidige website lokaal
+
+```text
+Lees de startinstructie en controleer de projectmap. Start de bestaande website met de afgesproken werkwijze. Geef het echte lokale adres en hoe ik weer stop. Als starten mislukt, onderzoek de melding en leg uit wat nodig is. Verander geen andere programma’s of gegevens om dit te omzeilen.
+```
+
+**Resultaat:** Een lokaal geopende website of een concrete uitleg van de startfout.
+
+### Opdracht 14 — Bereid mijn test voor
+
+```text
+Lees de gekozen bezoekersroute en de huidige projectversie. Maak een korte testlijst met per taak het startpunt, handelingen en verwacht resultaat. Neem fouten en mobiel gebruik mee. Zet geschikte testgegevens klaar zonder echte persoonsgegevens. Bewaar de lijst in 05-tests/bevindingen.md en geef mij de volgorde om zelf te testen.
+```
+
+**Resultaat:** Een testlijst die je zelf kunt uitvoeren.
+
+### Opdracht 15 — Herstel de fout die ik heb gevonden
+
+```text
+Herhaal mijn handelingen en vergelijk het resultaat met mijn verwachting. Onderzoek de oorzaak voordat je iets wijzigt. Herstel de afgesproken fout en herhaal dezelfde test, ook waar de wijziging andere onderdelen kan raken. Werk 05-tests/bevindingen.md bij met oorzaak, herstel, testuitkomst en open punten. Geef aan wat ik zelf opnieuw moet proberen.
+```
+
+**Resultaat:** Een gerichte reparatie met hercontrole en bijgewerkte foutenlijst.
+
+### Opdracht 16 — Maak de pagina’s duidelijker
+
+```text
+Bekijk de huidige schermen voor een computer en telefoon. Zoek onduidelijke knoppen, kleine tekst, overbodige herhaling en verwarrende volgorde. Geef per probleem een concrete aanpassing en voer de afgesproken wijzigingen uit. Behoud de functies en stijl. Test de belangrijkste route opnieuw.
+```
+
+**Resultaat:** Duidelijkere schermen met behoud van de werking.
+
+### Opdracht 17 — Controleer de hele website vóór publicatie
+
+```text
+Controleer de actuele versie aan de hand van bezoekersroutes, teksten, ontwerp en bouwplan. Test normale handelingen, fouten, toegangsrechten en echte verwerking van gegevens. Controleer mobiel, toetsenbord en de afgesproken SEO-basis. Test Analytics alleen als het is ingericht, ook bij weigeren en mislukte aanvragen. Noteer per controle: geslaagd, mislukt of niet getest, met bewijs. Los afgesproken blokkerende fouten op en test opnieuw. Lever 05-tests/releasecheck.md met de versie, open punten en wat ik moet beoordelen voordat deze live mag.
+```
+
+**Resultaat:** Een releasecheck met echte testuitkomsten en nog op te lossen fouten.
+
+### Opdracht 18 — Maak een herhaalbare testopdracht
+
+```text
+Gebruik de bestaande testomgeving. Maak voor de afgesproken controles een eenvoudige teststarter, op Windows bijvoorbeeld run_local_test.bat. Controleer vereisten en testgegevens. Laat fouten duidelijk zien en geef bij een mislukte test ook een foutcode terug. Bewaar rapporten in 05-tests. Leg uit hoe ik de tests start en wat ze wel en niet controleren.
+```
+
+**Resultaat:** Een teststarter, uitleg en testresultaten in 05-tests.
+
+### Opdracht 19 — Maak de bestanden geschikt voor publicatie
+
+```text
+Controleer welke bestanden bij de website en in GitHub horen. Maak kleinere webversies van te grote afbeeldingen en behoud de originelen. Test kwaliteit en links. Houd geheime waarden, lokale logs en privébronnen buiten de publicatie. Controleer ook wat al in de versiegeschiedenis staat. Geef een lijst van aangepaste bestanden en open punten.
+```
+
+**Resultaat:** Geschikte webbestanden en een gecontroleerde publicatielijst.
+
+### Opdracht 20 — Zet de goedgekeurde versie op Railway
+
+```text
+Lees de releasecheck en controleer of de juiste versie op de afgesproken GitHub-branch staat. Controleer de bestaande Railway-inrichting met actuele officiële documentatie: projectmap, bouwen, starten, instellingen en opslag waar nodig. Leg precies uit wat ik zelf moet invullen en waar. Publiceer binnen de afgesproken toegang en controleer het echte live-adres, de bezoekersroute en ontvangst van testgegevens. Bewaar adres, versie, uitkomsten en uitleg om terug te zetten in 06-overdracht/release.md. Meld wat niet is gecontroleerd.
+```
+
+**Resultaat:** Een geteste liveversie en release.md met adres en herstelafspraak.
+
+### Opdracht 21 — Maak een uitnodiging voor je eerste bezoekers
+
+```text
+Gebruik mijn aanbod en de functies die nu echt live werken. Maak een kort plan met doelgroep, geschikt kanaal, uitnodiging, gewenste handeling en feedbackvraag. Geef een conceptbericht met het echte webadres als ik dat heb aangeleverd. Verzin geen resultaten. Ik kies de ontvangers en verstuur het bericht zelf. Lever 02-plan/introductieplan.md.
+```
+
+**Resultaat:** Een kort introductieplan en een bericht dat je zelf kunt versturen.
+
+### Opdracht 22 — Controleer de eerste ervaring
+
+```text
+Vergelijk de belofte uit mijn uitnodiging en website met de route die een nieuwe bezoeker doorloopt. Benoem ontbrekende uitleg, onnodige stappen en beloften die niet worden waargemaakt. Geef concrete verbeteringen. Gebruik alleen aangeleverde inhoud of werkelijk bekeken pagina’s en meld wat je niet kon controleren. Lever 05-tests/leersignalen.md.
+```
+
+**Resultaat:** Een lijst met verschillen tussen belofte en werkelijke eerste ervaring.
+
+### Opdracht 23 — Bewaar je werk aan het einde van de sessie
+
+```text
+Werk 06-overdracht/overdracht.md en START-HIER.md bij. Noteer gewijzigde bestanden, huidige versie, uitgevoerde controles, open fouten en één volgende taak. Werk de geraakte handleiding bij. Bewaar de gecontroleerde code volgens de afgesproken GitHub- en publicatieroute en controleer de versielink. Houd bij wat lokaal, op GitHub en live staat. Benoem welke bronnen of gegevens apart geback-upt moeten worden.
+```
+
+**Resultaat:** Een bijgewerkte overdracht met opgeslagen werk en een volgende taak.
+
+### Opdracht 24 — Lees het project en hervat je werk
+
+```text
+Lees eerst START-HIER.md, 06-overdracht/overdracht.md, open fouten en de gekozen documenten. Vergelijk die met de huidige code en bestanden. Geef een korte stand van zaken: gereed, open, verschillen en volgende taak. Als er geen nagekeken plan voor die taak is, leg het eerst voor. Voer daarna alleen de opgedragen wijziging uit en controleer de uitkomst. Werk de overdracht bij.
+```
+
+**Resultaat:** De actuele stand van het project en een gecontroleerde vervolgstap.
+
+### Opdracht 25 — Leg de gebouwde pagina’s en teksten vast
+
+```text
+Lees de bestaande documentatie en de huidige site. Leg alle pagina’s en zichtbare teksten vast, ook menu’s, formulieren, fouten en bevestigingen. Neem aanwezige talen en dynamische tekstvoorbeelden mee zonder privégegevens. Verwijs naar de echte pagina en het bronbestand. Benoem wat ontworpen, gebouwd of getest is en welke inhoud je niet kon lezen. Werk 02-plan/schermen.md en 02-plan/teksten.md bij.
+```
+
+**Resultaat:** Een actuele paginalijst en volledige tekstinventaris.
+
+### Opdracht 26 — Leg uit hoe de website technisch werkt
+
+```text
+Lees bestaande code, instellingen en documentatie. Beschrijf in gewone taal welke onderdelen bestaan, hoe ze samenwerken, waar gegevens worden verwerkt en wie toegang heeft. Neem starten, publiceren, kosten, fouten en herstel mee voor zover van toepassing. Beschrijf de afgesproken SEO- en meetinrichting. Voeg een leesbaar schema toe waar dat helpt. Verwijs naar bestanden en maak onderscheid tussen plannen en echte werking. Werk 04-bouw/architectuur.md bij; wijzig met deze opdracht geen productcode.
+```
+
+**Resultaat:** Een technische uitleg die aansluit op de huidige bestanden.
+
+### Opdracht 27 — Schrijf de gebruikershandleiding
+
+```text
+Bekijk de actuele website en de bestaande uitleg. Beschrijf voor bezoeker en beheerder de taken stap voor stap: waar openen, wat invullen, welke knop, welk resultaat en wat te doen bij een fout. Verbind uitleg aan echte schermen. Voeg eenvoudige schema’s toe als dat helpt en controleer of ze leesbaar zijn. Noteer wat je niet kon testen. Lever 06-overdracht/gebruikershandleiding.md.
+```
+
+**Resultaat:** Een handleiding waarmee bezoeker en beheerder de website kunnen gebruiken.
+
+### Opdracht 28 — Controleer of de handleiding nog klopt
+
+```text
+Vergelijk de huidige website met de paginalijst, teksten, technische uitleg, handleiding en schema’s. Controleer beide richtingen: mist er uitleg en beschrijft de uitleg iets dat niet meer bestaat? Werk fouten bij met verwijzing naar de huidige versie. Benoem ontoegankelijke of niet gecontroleerde onderdelen. Bewaar de uitkomst in 05-tests/documentatiecheck.md.
+```
+
+**Resultaat:** Bijgewerkte documentatie en een overzicht van de uitgevoerde vergelijking.
+
+### Opdracht 29 — Beperk de website tot de eerste versie
+
+```text
+Vergelijk het aanbod met de bestaande website. Deel functies in: nu nodig, later of nog te beslissen. Leg uit wat van elkaar afhankelijk is. Stel een klein wijzigingsplan voor. Voer alleen de afgesproken aanpassingen uit en behoud gegevens, toegang en foutafhandeling. Test daarna de gekozen bezoekersroutes.
+```
+
+**Resultaat:** Een kleinere eerste versie met gecontroleerde werking.
+
+### Opdracht 30 — Verbeter het gebruik op een telefoon
+
+```text
+Bekijk de huidige mobiele route. Controleer volgorde, tekst, knoppen, menu, invulvelden, schermtoetsenbord, teruggaan en fouten. Pas de afgesproken problemen aan binnen dezelfde stijl. Behoud ingevulde gegevens waar nodig. Test mobiel en computer en benoem of je een echt toestel of een nagebootst telefoonformaat gebruikte.
+```
+
+**Resultaat:** Verbeterde mobiele bediening met testuitkomsten.
+
+### Opdracht 31 — Controleer de talen van je website
+
+```text
+Controleer de opgegeven talen op alle pagina’s, knoppen, formulieren en meldingen. Herstel ontbrekende of onjuiste vertalingen. Controleer taalwisselen, teruggaan en de standaardtaal. Voeg geen nieuwe talen toe. Test de belangrijkste route in elke afgesproken taal.
+```
+
+**Resultaat:** Een consistente website in de afgesproken talen.
+
+### Opdracht 32 — Controleer waar gegevens naartoe gaan
+
+```text
+Volg de genoemde gegevens vanaf invoer tot verwerking, opslag en weergave. Vergelijk wat verwacht wordt met wat echt gebeurt. Controleer lege waarden, fouten, rechten en dubbel verzenden. Herstel het afgesproken probleem en test de hele route opnieuw. Gebruik testgegevens.
+```
+
+**Resultaat:** Een gecontroleerde gegevensroute en gerichte reparaties.
+
+### Opdracht 33 — Onderzoek traagheid en kosten
+
+```text
+Onderzoek de genoemde trage handeling. Meet eerst in de bedoelde omgeving en leg omstandigheden vast. Zoek de oorzaak en stel een gerichte verbetering voor. Voer de afgesproken wijziging uit en vergelijk daarna dezelfde handeling. Gebruik voor kosten echte instellingen, facturen of meetgegevens; benoem wat onbekend is.
+```
+
+**Resultaat:** Een meting vóór en na herstel en een onderbouwde kostenuitleg.
+
+### Opdracht 34 — Controleer de beloften op je website
+
+```text
+Vergelijk de meegegeven beloften met de huidige werking en beschikbare bronnen. Noteer per belofte wat die onderbouwt, wat ontbreekt en hoe de tekst eerlijker kan. Verzin geen bewijs, klanten, keurmerken of resultaten. Pas alleen de afgesproken teksten aan.
+```
+
+**Resultaat:** Controleerbare beloften en concrete tekstcorrecties.
+
+### Opdracht 35 — Bereid een overstap naar andere software voor
+
+```text
+Onderzoek de bestaande website en de gewenste nieuwe oplossing. Leg vast welke inhoud, functies, gegevens, webadressen en beheerhandelingen moeten blijven werken. Vergelijk met actuele officiële informatie van de nieuwe oplossing. Beschrijf beperkingen, kosten, testaanpak en terugzetten. Voer de overstap pas uit na een concrete opdracht.
+```
+
+**Resultaat:** Een overstapplan met behoud van noodzakelijke werking.
+
+### Opdracht 36 — Controleer de AI-functie in je eigen product
+
+```text
+Controleer alleen de genoemde AI-functie. Leg invoer, verwacht resultaat, bronnen en toegangsgrenzen vast. Test normale invoer, ontbrekende informatie, onjuiste antwoorden, storingen en misleidende instructies in bronmateriaal. Gebruik testgevallen en registreer echte resultaten, tijd en kosten waar meetbaar. Herstel afgesproken fouten en test opnieuw.
+```
+
+**Resultaat:** Een testoverzicht voor de AI-functie met fouten en herstel.
+
+### Opdracht 37 — Voer één wijziging overal door
+
+```text
+Zoek waar de genoemde wijziging van toepassing is in pagina’s, tekst, code, berichten, bestanden en uitleg. Maak een concrete lijst en pas de bedoelde onderdelen aan. Behoud historische bronnen waar die ongewijzigd moeten blijven. Controleer daarna de verwijzingen en gebruikersroutes.
+```
+
+**Resultaat:** De wijziging is op de bedoelde plekken doorgevoerd en gecontroleerd.
+
+### Opdracht 38 — Controleer vindbaarheid en bezoekersmeting
+
+```text
+Lees het SEO-plan en controleer de echte website: bereikbare pagina’s, inhoud, titels, sitemap en instellingen voor zoekmachines. Onderzoek de aanwezige bezoekersmeting, dubbele gebeurtenissen en toestemmingsgedrag. Gebruik werkelijke gegevens en meld ontbrekende toegang. Stel één gerichte verbetering voor en voer alleen de afgesproken wijzigingen uit.
+```
+
+**Resultaat:** Een SEO- en meetcontrole met concrete verbeterpunten.
+
+### Opdracht 39 — Ruim dubbele code en uitleg op
+
+```text
+Onderzoek bestaande code en documenten op overlap en verouderde onderdelen. Toon per voorstel waarom iets overbodig is en wat ervan afhankelijk is. Werk in kleine wijzigingen, behoud andermans werk en verwijder geen gegevens zonder concrete opdracht. Voer de afgesproken opruiming uit en controleer dat de gebruikersroutes blijven werken.
+```
+
+**Resultaat:** Een overzichtelijker project met behoud van werking en informatie.
+
+### Opdracht 40 — Maak de afgesproken softwarekoppeling
+
+```text
+Onderzoek de genoemde systemen en de bestaande koppeling. Beschrijf welke gegevens heen en terug gaan, wie toegang heeft en wat gebeurt bij fouten of dubbel verzenden. Hergebruik bestaande onderdelen. Bouw alleen de afgesproken verbinding, test met testgegevens en documenteer de instellingen zonder geheime sleutels. Meld ontbrekende toegang en gesimuleerde onderdelen.
+```
+
+**Resultaat:** Een gecontroleerde koppeling met uitleg voor gebruik en beheer.
+
+### Opdracht 41 — Bewaar je wijzigingen op GitHub
+
+```text
+Controleer de wijzigingen in dit project. Voer de passende controles uit en maak
+een commit van alleen het hieronder omschreven werk. Push die commit naar de opgegeven
+GitHub-repository en branch. Neem geen geheime waarden, lokale logs of onnodige grote
+bronbestanden mee. Behoud andermans wijzigingen en overschrijf geen geschiedenis.
+Respecteer de onderstaande afspraak over automatische publicatie. Bij onbekende
+publicatiegevolgen: bereid de commit voor en vraag gericht wat nog moet worden besloten.
+Controleer na de push dat de commit op GitHub staat. Geef de versielink en een korte
+samenvatting van de wijziging en werkelijk uitgevoerde controles.
+```
+
+**Resultaat:** De bedoelde wijziging staat op de juiste GitHub-branch, met een controleerbare versielink.
+
+### Opdracht 42 — Koppel je project aan GitHub
+
+```text
+Verbind de geopende projectmap met de hieronder opgegeven GitHub-repository.
+Controleer eerst de bestaande koppeling, branch en onopgeslagen wijzigingen.
+Hergebruik de juiste bestaande koppeling. Overschrijf geen bestaande bestanden of werk.
+Laat mij de aanmelding bij GitHub afronden als toegang ontbreekt; vraag niet om een
+toegangstoken in de chat. Controleer de repository, huidige branch en toegang.
+Leg uit waar we verder werken. Deze opdracht koppelt het project; committen, pushen
+en publiceren volgen in een afzonderlijke opdracht.
+```
+
+**Resultaat:** Je bouwer werkt in de juiste projectmap met de bedoelde repository.
+
+Menu’s en mogelijkheden kunnen per account, taal en versie verschillen. Volg de getoonde instellingen en gebruik de officiële uitleg bij de les. De voorbeelden van Studio Maan zijn fictief.
 <!-- VIBE_LIFT_PERSONAL_PROMPTS -->
 
-# Je eigen AI-opdracht maken · editie 1.3
+# Je eigen AI-opdracht maken · editie 1.4
 
 De website heeft 42 opdrachten bij de veertien stappen en vijf opdrachten bij de SEO-cursus. Vul je projectcontext en de benodigde stapinput in. De knop kopieert de volledige opdracht met jouw invoer. Kies de juiste AI-tool en voeg bestanden daar zelf toe. Instellingen blijven gewone instructies.
 
@@ -3006,7 +1492,7 @@ Je invoer blijft alleen in hetzelfde tabblad en kan worden gewist. Bij geweigerd
 - Stap 4: 05.
 - Stap 5: 06, 25.
 - Stap 6: 07, 08.
-- Stap 7: 42, 09, 26, 10, 40.
+- Stap 7: 09, 42, 26, 10, 40.
 - Stap 8: 11, 32, 36.
 - Stap 9: 12, 13.
 - Stap 10: 14, 15.

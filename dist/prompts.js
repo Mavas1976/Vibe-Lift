@@ -1,284 +1,284 @@
-// Canonical public prompt texts. Sync downloads with node scripts/sync-prompts.mjs.
+// Canonical public tasks. Downloads are generated from these texts.
 export const prompts = [
   {
     "id": 1,
-    "title": "Van losse gedachte naar projectbrief",
-    "role": "Productstrateeg",
-    "text": "Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Zet mijn idee en de bijgevoegde informatie om in een heldere\nprojectbrief. Beschrijf doelgroep, probleem, huidige werkwijze, gewenste\nuitkomst, eerste scope en succescriteria. Scheid wat ik expliciet heb gezegd\nvan jouw aannames. Benoem tegenstrijdigheden en ontbrekende informatie.\nWerk uit wat al duidelijk is en stel alleen vragen die een wezenlijke keuze\nblokkeren. Lever een leesbaar Markdown-bestand op dat ik kan gebruiken bij\nonderzoek, ontwerp en bouw.\n\nMijn idee: zie mijn projectcontext\nBeschikbare bronnen: zie mijn meegegeven bronnen",
-    "result": "Een afgebakende projectbrief met doelgroep, probleem, scope en open keuzes."
+    "title": "Maak je projectbrief",
+    "role": "projectbegeleider",
+    "text": "Schrijf op basis van mijn idee en notities een projectbrief van maximaal één pagina. Beschrijf: voor wie is de website, wat gaat nu lastig, wat moet de bezoeker kunnen doen en wanneer is de eerste versie klaar? Zet ideeën voor later apart. Benoem aannames en ontbrekende informatie. Verzin geen feiten. Lever 02-plan/projectbrief.md.",
+    "result": "Een projectbrief die je kunt nalezen en opslaan in 02-plan."
   },
   {
     "id": 2,
-    "title": "Onderzoek met bewijs",
-    "role": "Onderzoeker",
-    "text": "Onderzoek het probleem en de markt voor mijn doelgroep en het beschreven probleem.\nGebruik actuele primaire bronnen waar mogelijk. Bekijk ook openbare\nhandleidingen, werkinstructies, release notes en echte schermbeelden.\nVergelijk doelgroep, proces, functies, beperkingen en aantoonbare verschillen.\nMaak zichtbaar wat bevestigd is, wat afgeleid is en wat onbekend blijft.\nVerzin geen schermen, klantenaantallen, prijzen of productmogelijkheden.\nGeef bij iedere belangrijke conclusie de bron en datum. Zoek tegenbewijs\nvoor mijn uitgangspunt. Eindig met de consequenties voor mijn propositie.\n\nGebruik webonderzoek met bronlinks waar beschikbaar, bijvoorbeeld in Claude of ChatGPT. Onderzoek ook de zoekvragen achter mogelijke openbare pagina’s. Scheid echte waarnemingen van aannames; verzin geen zoekvolumes.",
-    "result": "Onderzoek met herleidbare bronnen en herkenbaar onderscheid tussen echte en gereconstrueerde schermen."
+    "title": "Onderzoek je probleem met bronnen",
+    "role": "projectbegeleider",
+    "text": "Lees mijn projectbrief en onderzoek de genoemde vragen. Gebruik zoeken op internet als dat beschikbaar is en meld het als dat niet kan. Vergelijk bestaande oplossingen op dezelfde punten. Geef per belangrijke conclusie een bronlink en datum. Controleer ook wat mijn idee tegenspreekt. Maak interviewvragen voor echte gebruikers; verzin geen gesprekken, cijfers of zoekvolumes. Orden mijn meegegeven reacties apart van je webonderzoek. Lever 02-plan/onderzoek.md met vastgesteld, nog onzeker en gevolgen voor het plan.",
+    "result": "Een onderzoeksoverzicht met bronlinks, open vragen en interviewvragen."
   },
   {
     "id": 3,
-    "title": "Werk het aanbod uit",
-    "role": "Propositiestrateeg",
-    "text": "Gebruik de projectbrief en het onderzoek om een volledige propositie te maken.\nBeschrijf voor wie het aanbod bedoeld is, welk probleem het oplost, de\ngewenste uitkomst, de werking, het onderscheid en de grenzen. Maak een\nkorte kernboodschap en een uitgebreidere uitleg. Geef aan welk bewijs de\nbelofte ondersteunt en welk bewijs nog ontbreekt. Werk een eerste aanbod,\nlogische vervolgstap en mogelijke latere uitbreiding uit. Verzin geen\nresultaten, klanten, prijzen of garanties. Lever propositie.md op.",
-    "result": "Een aanbod waarvan iedere feitelijke productbelofte is onderbouwd of als ambitie gemarkeerd."
+    "title": "Schrijf een duidelijk aanbod",
+    "role": "projectbegeleider",
+    "text": "Gebruik mijn projectbrief en onderzoek. Schrijf een kort aanbod: voor wie, welk probleem, welke uitkomst en wat de eerste versie wel en nog niet doet. Gebruik gewone taal en beloof alleen wat ik kan onderbouwen. Zet ontbrekende prijzen of informatie als open vraag neer. Lever 02-plan/propositie.md.",
+    "result": "Een korte aanbodtekst die past bij de eerste versie."
   },
   {
     "id": 4,
-    "title": "Toets de belangrijkste aanname",
-    "role": "Productonderzoeker",
-    "text": "Bepaal welke onbewezen aanname deze propositie het meest kwetsbaar maakt.\nOntwerp een kleine praktijktoets: met wie spreken we, wat laten we zien,\nwelke vraag of handeling testen we en welke uitkomst verandert onze keuze?\nMaak een gespreksleidraad en een eenvoudig resultatenoverzicht. Scheid\ninteresse in het idee van werkelijk gebruik of bereidheid om te betalen.",
-    "result": "Een kleine toets met vooraf bepaalde besliscriteria; nog geen verzonnen klantresultaten."
+    "title": "Bereid een kleine praktijktoets voor",
+    "role": "projectbegeleider",
+    "text": "Kies met mijn input één belangrijke aanname die nog onzeker is. Schrijf op wie ik spreek, wat ik laat zien, wat ik vraag en bij welke uitkomst ik het plan aanpas. Maak een invulblad voor echte reacties. Vul geen verzonnen resultaten in. Verwerk aangeleverde reacties herkenbaar en benoem de beperkingen van een kleine groep. Lever 02-plan/praktijktoets.md.",
+    "result": "Een testopzet en invulblad; reacties voeg je toe na de echte toets."
   },
   {
     "id": 5,
-    "title": "Maak processen en schema’s",
-    "role": "Functioneel ontwerper",
-    "text": "Vertaal de propositie naar gebruikersrollen en complete gebruikersroutes.\nBeschrijf per route het startpunt, doel, stappen, beslissingen, gegevens,\nrechten en eindresultaat. Neem teruggaan, annuleren, ontbrekende gegevens,\nfouten en herstel mee. Geef ieder proces een herkenbaar ID en teken waar\nnuttig een compact schema. Scheid de volledige productvisie van wat in de\neerste versie komt. Lever flows.md op en benoem open beslissingen.",
-    "result": "Flows met start, einde, uitzonderingen, rechten en herkenbare IDs."
+    "title": "Schrijf de bezoekersroute uit",
+    "role": "projectbegeleider",
+    "text": "Gebruik mijn aanbod en beschrijf één complete bezoekersroute. Noteer per stap: wat iemand ziet, doet, invult en terugkrijgt. Beschrijf ook waar de informatie wordt verwerkt en wie het resultaat ontvangt. Neem teruggaan, ongeldige invoer, ontbrekende toegang en een storing mee als die van toepassing zijn. Maak een eenvoudig schema met pijlen en leg het in gewone taal uit. Lever 02-plan/flows.md.",
+    "result": "Een bezoekersroute met foutgevallen en afhandeling door de medewerker."
   },
   {
     "id": 6,
-    "title": "Maak de scherminventaris",
-    "role": "UX-ontwerper",
-    "text": "Maak op basis van de propositie en flows een volledige scherminventaris.\nNeem pagina's, navigatie, formulieren, modals, drawers en overlays mee.\nBeschrijf per scherm: ID, doel, gebruikersrol, inhoud, acties, invoer,\nvalidatie, vervolgstappen en gedrag op mobiel. Werk relevante toestanden\nuit: laden, leeg, gevuld, fout, succes en onvoldoende rechten.\nKoppel schermen aan processen en maak zichtbaar wat nu wordt gebouwd,\nwat later komt en waar nog een beslissing nodig is. Lever schermen.md\nplus een dekkingsmatrix op. Laat geen proces zonder scherm of afhandeling.\n\nMaak voor openbare contentpagina’s ook seo-plan.md: de zoekvraag, gewone pagina-URL, unieke paginatitel, meta-beschrijving, hoofdkop, interne links en vervolgstap. Gebruik echte informatie uit het onderzoek.",
-    "result": "Schermen en toestanden die aantoonbaar aansluiten op de flows."
+    "title": "Maak je schermenlijst en teksten",
+    "role": "projectbegeleider",
+    "text": "Gebruik mijn aanbod en bezoekersroute. Beschrijf elk nodig scherm met nummer, doel, inhoud, hoofdknop en vervolgstap. Schrijf alle zichtbare teksten: koppen, uitleg, veldnamen, knoppen en meldingen bij laden, fouten en succes. Gebruik gewone taal voor mijn doelgroep en werk mobiel gebruik uit. Verzin geen prijzen of beloften. Lever 02-plan/schermen.md en 02-plan/teksten.md. Maak voor openbare pagina’s ook 02-plan/seo-plan.md met zoekvraag, webadres, paginatitel, korte beschrijving en links naar volgende pagina’s.",
+    "result": "Schermen.md, teksten.md en seo-plan.md in 02-plan."
   },
   {
     "id": 7,
     "title": "Ontwerp je schermen in Stitch",
-    "role": "UX-ontwerper",
-    "text": "Ontwerp de hieronder beschreven website of app met de meegegeven pagina's, teksten,\ngebruikersroute en stijlreferenties. Maak de echte schermontwerpen voor desktop en mobiel.\nGebruik één samenhangende stijl voor kleuren, typografie, afstanden, knoppen en formulieren.\nMaak de belangrijkste handeling op elk scherm herkenbaar. Werk ook relevante lege,\nlaad-, fout- en succesweergaven uit. Gebruik echte inhoud uit mijn input en behoud\nde gewenste functies. Verzin geen prijzen, testimonials, resultaten of keurmerken.\nMaak keuzes zichtbaar als nog informatie ontbreekt. Lever het ontwerp zodat ik de\nschermen kan beoordelen en daarna samen met de inhoud aan mijn bouwer kan geven.\nBeschrijf kort welke ontwerpafspraken ik moet meenemen.",
-    "result": "Beoordeelbare schermen voor desktop en mobiel, plus de afspraken voor je bouwer."
+    "role": "projectbegeleider",
+    "text": "Maak de schermen uit mijn input voor een computer en telefoon. Gebruik mijn echte teksten, bezoekersroute en stijlvoorbeelden. Gebruik dezelfde kleuren, lettertypen, knoppen en invulvelden op alle schermen. Maak de hoofdactie duidelijk en werk ook laden, fouten en succes uit. Verzin geen prijzen, klantreacties of resultaten. Geef aan wat ontbreekt. Lever de ontwerpen en beschikbare exportbestanden, met een korte uitleg van de ontwerpafspraken voor mijn bouwer.",
+    "result": "Schermontwerpen, beschikbare exports en ontwerpafspraken voor 03-ontwerp."
   },
   {
     "id": 8,
-    "title": "Stuur het ontwerp bij in Stitch",
-    "role": "Productontwerper",
-    "text": "Werk deze schermen verder uit binnen dezelfde visuele richting: de genoemde schermen.\nMaak de belangrijkste handeling per scherm direct herkenbaar. Verbeter\nleesbaarheid, hiërarchie, afstanden en de samenhang van knoppen en velden.\nHoud componenten consistent en werk de mobiele variant uit. Behoud de\ninhoud en functies uit de specificatie. Mijn concrete feedback: de feedback hieronder.",
-    "result": "Concrete ontwerpverbeteringen binnen één samenhangende visuele richting."
+    "title": "Verbeter het ontwerp in Stitch",
+    "role": "projectbegeleider",
+    "text": "Pas de genoemde schermen aan op basis van mijn concrete feedback. Behoud de afgesproken inhoud, functies en stijl. Controleer leesbaarheid, de hoofdknop en het ontwerp voor de telefoon. Laat kort zien wat je hebt gewijzigd en welke nieuwe bestanden ik moet bewaren in 03-ontwerp.",
+    "result": "Een aangepaste ontwerpversie met een korte lijst wijzigingen."
   },
   {
     "id": 9,
-    "title": "Lees eerst het project en maak het bouwplan",
-    "role": "Softwarearchitect",
-    "text": "Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Lees de projectbrief, propositie, flows, schermspecificaties,\nontwerpbestanden en bestaande code in deze projectmap. Maak een overzicht\nvan wat aanwezig is, ontbreekt of elkaar tegenspreekt. Onderzoek eerst wat\nje kunt uitbreiden, hergebruiken of aanpassen. Onderbouw nieuwe onderdelen.\nMaak daarna een bouwplan met kleine controleerbare stappen, afhankelijkheden\nen acceptatiecriteria. Verbind iedere stap aan de relevante scherm- en\nproces-ID's. Behoud bestaande werking. Schrijf besluiten en open punten weg\nin het projectdossier. Voer de afgesproken eerste bouwstap uit zodra de\nbenodigde keuzes duidelijk zijn. Werk vóór implementatie het toepasselijke\narchitectuurdossier uit met systeemonderdelen, gegevensstromen, rechten, fouten en herstel.\n\nWerk in Antigravity met de bedoelde GitHub-repository. Controleer eigenaar, repository, branch en lees-/schrijftoegang; laat mij zelf de aangeboden aanmelding afronden. Vraag geen toegangstoken in de chat. Laat de agent het technische versiebeheer uitvoeren en beschrijf hoe ik de wijziging en commitlink controleer. Spreek af welke branch Railway mag publiceren. Neem seo-plan.md op in het bouwplan: echte openbare URL’s, uitleesbare inhoud, title, meta-beschrijving, canonical, sitemap.xml, robots.txt, juiste 404/redirects, interne links, mobiel en lichte beelden. Houd besloten delen achter toegangscontrole. Plan GA4 met de juiste meet-ID en het afgesproken toestemmingsgedrag; tel succesvolle aanvragen alleen na bevestigde ontvangst en voorkom dubbele events. Leg per eis het acceptatiebewijs vast. Voer externe accountinstellingen alleen binnen de afgesproken opdracht uit.",
-    "result": "Een plan dat begint bij de werkelijk aanwezige code en eindigt met een gecontroleerde eerste bouwstap."
+    "title": "Lees de projectmap en maak het bouwplan",
+    "role": "bouwbegeleider",
+    "text": "Lees START-HIER.md, de gekozen documenten in 02-plan, de ontwerpen in 03-ontwerp en eventuele bestaande code. Geef een overzicht van echt gelezen bestanden, ontbrekende informatie en tegenstrijdigheden. Hergebruik bestaande onderdelen. Leg uit hoe de eerste bezoekersroute werkt, waar gegevens aankomen en wie toegang krijgt. Neem seo-plan.md mee. Beschrijf benodigde programma’s, diensten, mogelijke kosten, codeplek en startwijze. Leg GitHub en de publicatieafspraak vast; voeg geen onnodige diensten toe. Maak 04-bouw/bouwplan.md en 04-bouw/architectuur.md met kleine stappen en per stap een controle. Bouw of installeer nu nog niets. Laat mij eerst het plan controleren.",
+    "result": "Een leesverslag, bouwplan en technische uitleg; bouwen volgt na je controle."
   },
   {
     "id": 10,
-    "title": "Verbind site, demo en portaal",
-    "role": "Frontend- en integratieontwikkelaar",
-    "text": "Controleer hoe de openbare site, demo en bestaande inlogomgeving op elkaar\naansluiten. Gebruik de aanwezige routes, talen, vormgeving en authenticatie.\nMaak de overgang voor een bezoeker logisch en herkenbaar. Controleer CTA's,\nterugkeerlinks, taalkeuze en de relevante informatiepagina's. Voeg alleen\nbestaande of expliciet gespecificeerde functies toe. Test de hele route van\nopenbare pagina tot de eerste bruikbare handeling na inloggen.",
-    "result": "Een gecontroleerde route van openbare pagina naar de bedoelde producthandeling."
+    "title": "Laat website, demo en inloggen aansluiten",
+    "role": "bouwbegeleider",
+    "text": "Controleer de genoemde route tussen website, demo en inloggen. Beschrijf waar iemand binnenkomt, wat die ziet en hoe die verdergaat. Benoem kapotte links, ontbrekende uitleg en onjuiste toegang. Herstel de afgesproken onderdelen en test de route opnieuw. Noteer de uitkomst in 05-tests.",
+    "result": "Een gecontroleerde route tussen de bestaande onderdelen."
   },
   {
     "id": 11,
-    "title": "Bouw de eerste werkende route",
-    "role": "Fullstackontwikkelaar",
-    "text": "Implementeer de eerste complete gebruikersroute uit het bouwplan: de hieronder beschreven gebruikersroute.\nWerk de benodigde schermen, validatie, rechten en gegevensverwerking uit.\nGebruik bestaande componenten en de vastgelegde ontwerpafspraken. Neem\nladen, lege resultaten, fouten en herstel mee waar ze relevant zijn.\nMaak testdata herkenbaar en vermeld iedere nog gesimuleerde koppeling.\nControleer de route van begin tot eind. Rapporteer wat werkt, wat is getest,\nwelke onderdelen nog ontbreken en hoe ik het resultaat zelf kan openen.\n\nBouw de afgesproken SEO-basis direct mee voor openbare pagina’s. Controleer echte URL’s, uitleesbare inhoud, metadata en interne links. Houd het meetplan aan: geen succes-event bij een fout en geen dubbele gebeurtenissen; respecteer de gekozen toestemming.",
-    "result": "Een complete werkende gebruikersroute met bewijs en zichtbare resterende beperkingen."
+    "title": "Bouw de eerste complete bezoekersroute",
+    "role": "bouwbegeleider",
+    "text": "Bouw alleen de genoemde route uit het nagekeken bouwplan. Gebruik de gekozen teksten en ontwerpen. Verbind schermen, invoer, verwerking en meldingen. Bouw de afgesproken SEO-basis mee. Voeg meting alleen toe als die is afgesproken en de instellingen bekend zijn. Start de site en test met testgegevens: één succes, ongeldige invoer en een mislukte verwerking. Controleer waar het resultaat aankomt. Benoem simulaties en niet aangesloten onderdelen. Bewaar controles in 05-tests/bouwcontrole.md en geef het echte lokale adres.",
+    "result": "Een werkende route, lokaal adres en overzicht van uitgevoerde controles."
   },
   {
     "id": 12,
-    "title": "Maak de lokale starter",
-    "role": "Ontwikkelaar voor de lokale omgeving",
-    "text": "Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Maak dit project op mijn Windows-computer met één dubbelklik\nlokaal startbaar en zichtbaar in mijn browser. Inspecteer eerst de bestaande\nprojectstructuur, README, package scripts, lockfiles, omgevingsconfiguratie,\nbackend, eventuele Docker-opzet en het bestaande poortregister.\n\nMaak of verbeter start_local.bat in de hoofdmap. Hergebruik een bestaande\nstarter waar mogelijk. Laat die vanuit zijn eigen map werken, ook als het\npad spaties bevat. Gebruik de bij dit project horende tools en versies.\nGebruik zo nodig een duidelijk benoemd PowerShell-hulpscript.\n\nDe starter moet:\n1. Controleren welke vereisten en configuratie ontbreken en dat begrijpelijk\n   melden. Geheimen blijven buiten scripts, logs en de codebewaarplaats.\n2. Alleen de voor dit project benodigde diensten starten. Als Docker nodig\n   is, controleer beschikbaarheid en wacht begrensd op gereedheid.\n3. De afgesproken poorten gebruiken. Controleer bij een bezette poort of\n   daar dit project draait. Beëindig geen onbekende of andere processen.\n4. Backend en frontend in de juiste volgorde starten en met echte controles\n   vaststellen wanneer ze klaar zijn. Alleen een vaste wachttijd is niet genoeg.\n5. De juiste lokale URL openen zodra de toepassing beschikbaar is. Open bij\n   opnieuw starten geen dubbele servers. Maak hergebruik expliciet zichtbaar.\n6. Bij problemen de fout en de volgende herstelstap leesbaar tonen. Bewaar\n   bruikbare logs en voorkom dat een foutvenster direct verdwijnt.\n7. Een duidelijke stop- en herstartinstructie geven. Ruim alleen processen op\n   die aantoonbaar bij deze startsessie of dit project horen.\n\nLeg vast in LOKAAL_STARTEN.md: eenmalige installatie, configuratie zonder\ngeheime waarden, bestandslocatie, dubbelklikroute, browser-URL, testaccount\nof testdata indien nodig, stoppen, herstarten en veelvoorkomende problemen.\n\nControleer op Windows: eerste start, tweede start, stoppen en herstarten,\nontbrekende vereiste, bezette poort en een dienst die niet gereed komt.\nControleer daarnaast één echte gebruikershandeling in de geopende browser.\nGeef de werkelijk uitgevoerde controles en uitkomsten. Als je deze Windows-\nomgeving niet kunt bedienen, markeer die controles als NIET UITGEVOERD en\nlever concrete stappen waarmee ik ze zelf kan controleren.",
-    "result": "Een bruikbare starter, begrensde foutafhandeling en werkelijk uitgevoerde Windows-controles."
+    "title": "Maak een eenvoudig startbestand",
+    "role": "bouwbegeleider",
+    "text": "Controleer eerst hoe dit project nu start en welke programma’s het nodig heeft. Maak of verbeter START_PROJECT.bat in de hoofdmap voor Windows. Gebruik de bestaande startwijze. Toon duidelijke fouten en het echte lokale adres. Stop geen andere processen en zet geen wachtwoorden in het bestand. Test starten, stoppen en opnieuw starten. Beschrijf het gebruik in 06-overdracht/startinstructie.md. Gebruik een passend alternatief als mijn computer geen Windows gebruikt.",
+    "result": "Een getest startbestand met korte start- en stopinstructies."
   },
   {
     "id": 13,
-    "title": "Laat mij het nu zien",
-    "role": "Ontwikkelaar voor de lokale omgeving",
-    "text": "Start de huidige versie via het opgeleverde lokale startbestand. Controleer\nwelk project op welke URL draait. Open de browser als je die toegang hebt\nen doorloop de hieronder beschreven gebruikersroute. Geef mij het exacte lokale adres, wat ik moet\nzien, welke handeling ik kan proberen en hoe ik stop. Claim alleen dat het\nwerkt als de start en de handeling daadwerkelijk zijn gecontroleerd.",
-    "result": "De juiste lokale versie plus een echt gecontroleerde gebruikershandeling."
+    "title": "Open de huidige website lokaal",
+    "role": "bouwbegeleider",
+    "text": "Lees de startinstructie en controleer de projectmap. Start de bestaande website met de afgesproken werkwijze. Geef het echte lokale adres en hoe ik weer stop. Als starten mislukt, onderzoek de melding en leg uit wat nodig is. Verander geen andere programma’s of gegevens om dit te omzeilen.",
+    "result": "Een lokaal geopende website of een concrete uitleg van de startfout."
   },
   {
     "id": 14,
-    "title": "Richt mijn testsessie in",
-    "role": "Testautomatiseringsspecialist",
-    "text": "Richt voor dit project een lokale browsersessie in waarin ik zelf een\ngebruikersroute kan doorlopen. Leg met passende hulpmiddelen de handelingen,\nrelevante fouten en timing vast. Gebruik waar passend Playwright, console-\nen netwerkregistratie. Controleer vooraf of de registratie werkt en waar\nde bestanden terechtkomen. Gebruik testdata en voorkom dat wachtwoorden,\nsessiesleutels of onnodige persoonsgegevens in gedeelde registraties belanden.\nLeg uit hoe ik de sessie start en stop en hoe jij de registratie terugvindt.",
-    "result": "Een aantoonbaar werkende registratie van de afgesproken lokale testsessie."
+    "title": "Bereid mijn test voor",
+    "role": "bouwbegeleider",
+    "text": "Lees de gekozen bezoekersroute en de huidige projectversie. Maak een korte testlijst met per taak het startpunt, handelingen en verwacht resultaat. Neem fouten en mobiel gebruik mee. Zet geschikte testgegevens klaar zonder echte persoonsgegevens. Bewaar de lijst in 05-tests/bevindingen.md en geef mij de volgorde om zelf te testen.",
+    "result": "Een testlijst die je zelf kunt uitvoeren."
   },
   {
     "id": 15,
-    "title": "Onderzoek mijn zojuist doorlopen route",
-    "role": "Debugger",
-    "text": "Ik heb zojuist de hieronder beschreven route doorlopen. Dit viel mij op: zie mijn waarnemingen hieronder.\nBekijk de registratie van deze sessie en vergelijk die met de bedoelde flow.\nBenoem reproduceerbare problemen met bewijs, verwacht gedrag en werkelijk\ngedrag. Onderzoek de oorzaak in de relevante lagen. Herstel de problemen\nbinnen de afgesproken scope en herhaal daarna dezelfde route. Vermeld wat\nis opgelost, wat opnieuw is getest en wat nog niet kon worden vastgesteld.",
-    "result": "Reproductie, oorzaak, herstel en hertest van dezelfde fout."
+    "title": "Herstel de fout die ik heb gevonden",
+    "role": "bouwbegeleider",
+    "text": "Herhaal mijn handelingen en vergelijk het resultaat met mijn verwachting. Onderzoek de oorzaak voordat je iets wijzigt. Herstel de afgesproken fout en herhaal dezelfde test, ook waar de wijziging andere onderdelen kan raken. Werk 05-tests/bevindingen.md bij met oorzaak, herstel, testuitkomst en open punten. Geef aan wat ik zelf opnieuw moet proberen.",
+    "result": "Een gerichte reparatie met hercontrole en bijgewerkte foutenlijst."
   },
   {
     "id": 16,
-    "title": "Maak de interface rustiger en natuurlijker",
-    "role": "Productontwerper en frontendontwikkelaar",
-    "text": "Beoordeel systematisch de bestaande interface op hiërarchie, leesbaarheid, witruimte,\nknoppen, formulieren, navigatie, feedback en consistentie. Bekijk de echte\nschermen op mobiel en desktop. Leg per bevinding uit welk gebruikersprobleem\nje ziet. Maak een geprioriteerd verbeterplan en voer de afgesproken\nverbeteringen uit. Behoud de functies. Vergelijk voor en na en controleer\ndat de belangrijkste gebruikersroutes blijven werken.\n\nControleer ook de SEO-basis uit het bouwplan: indexeerbare openbare pagina’s, juiste canonical en sitemap, metadata, mobiel en snelheid. Controleer bij aanwezige meting echte events, ontdubbeling en accepteren, weigeren en intrekken van toestemming. Rapporteer controles die nog ontbreken.",
-    "result": "Zichtbare verbeteringen met vergelijkbare voor- en na-beelden en behoud van werking."
+    "title": "Maak de pagina’s duidelijker",
+    "role": "bouwbegeleider",
+    "text": "Bekijk de huidige schermen voor een computer en telefoon. Zoek onduidelijke knoppen, kleine tekst, overbodige herhaling en verwarrende volgorde. Geef per probleem een concrete aanpassing en voer de afgesproken wijzigingen uit. Behoud de functies en stijl. Test de belangrijkste route opnieuw.",
+    "result": "Duidelijkere schermen met behoud van de werking."
   },
   {
     "id": 17,
-    "title": "Test de hele keten",
-    "role": "QA-engineer",
-    "text": "Controleer de afgesproken release tegen de proces-, scherm- en\nacceptatiecriteria. Test de relevante rollen, normale routes, foutpaden,\nrechten en gegevensverwerking. Combineer browsercontroles met controles\nvan API en opslag waar die bestaan. Gebruik een passende reeks schermmaten.\nKoppel iedere bevinding en test aan een eis en versie. Scheid geslaagd,\ngefaald, geblokkeerd en niet getest. Een hoog aantal tests is geen bewijs\nvan volledige dekking. Los releaseblokkers op en hertest de gewijzigde routes.",
-    "result": "Een testmatrix met echte uitkomsten voor browser, API en opslag waar aanwezig."
+    "title": "Controleer de hele website vóór publicatie",
+    "role": "bouwbegeleider",
+    "text": "Controleer de actuele versie aan de hand van bezoekersroutes, teksten, ontwerp en bouwplan. Test normale handelingen, fouten, toegangsrechten en echte verwerking van gegevens. Controleer mobiel, toetsenbord en de afgesproken SEO-basis. Test Analytics alleen als het is ingericht, ook bij weigeren en mislukte aanvragen. Noteer per controle: geslaagd, mislukt of niet getest, met bewijs. Los afgesproken blokkerende fouten op en test opnieuw. Lever 05-tests/releasecheck.md met de versie, open punten en wat ik moet beoordelen voordat deze live mag.",
+    "result": "Een releasecheck met echte testuitkomsten en nog op te lossen fouten."
   },
   {
     "id": 18,
-    "title": "Maak testen opnieuw uitvoerbaar",
-    "role": "Testautomatiseringsspecialist",
-    "text": "Maak of verbeter run_local_test.bat voor de afgesproken lokale controles.\nGebruik de bestaande testomgeving en voorkom verwarring met de ontwikkel-\nof productieomgeving. Controleer vereisten en testdata, geef duidelijke\nresultaten en een foutcode bij mislukking. Bewaar rapporten op een vaste plek.\nDocumenteer welke dekking het script wel en niet heeft en hoe ik het gebruik.",
-    "result": "Een herhaalbare lokale testopdracht met betrouwbare exitcode en rapporten."
+    "title": "Maak een herhaalbare testopdracht",
+    "role": "bouwbegeleider",
+    "text": "Gebruik de bestaande testomgeving. Maak voor de afgesproken controles een eenvoudige teststarter, op Windows bijvoorbeeld run_local_test.bat. Controleer vereisten en testgegevens. Laat fouten duidelijk zien en geef bij een mislukte test ook een foutcode terug. Bewaar rapporten in 05-tests. Leg uit hoe ik de tests start en wat ze wel en niet controleren.",
+    "result": "Een teststarter, uitleg en testresultaten in 05-tests."
   },
   {
     "id": 19,
-    "title": "Maak bestanden en media publicatieklaar",
-    "role": "Ontwikkelaar voor webmedia en versiebeheer",
-    "text": "Controleer in Antigravity welke bestanden gepubliceerd en in de\nGitHub-codeversie opgenomen worden.\nMaak passende webvarianten van afbeeldingen met behoud van de originelen.\nControleer afmetingen, bestandsgrootte, kwaliteit en werkende verwijzingen.\nHoud geheime configuratie, lokale logs, testauthenticatie en onnodige grote\nbronbestanden buiten commits. Controleer al gevolgde bestanden afzonderlijk;\nalleen uitsluitregels aanpassen verwijdert eerder opgeslagen inhoud niet.\nLever een overzicht van wijzigingen en resterende aandachtspunten.",
-    "result": "Passende afgeleide mediabestanden en een gecontroleerde lijst van te publiceren bestanden."
+    "title": "Maak de bestanden geschikt voor publicatie",
+    "role": "bouwbegeleider",
+    "text": "Controleer welke bestanden bij de website en in GitHub horen. Maak kleinere webversies van te grote afbeeldingen en behoud de originelen. Test kwaliteit en links. Houd geheime waarden, lokale logs en privébronnen buiten de publicatie. Controleer ook wat al in de versiegeschiedenis staat. Geef een lijst van aangepaste bestanden en open punten.",
+    "result": "Geschikte webbestanden en een gecontroleerde publicatielijst."
   },
   {
     "id": 20,
-    "title": "Publiceer de vrijgegeven versie op Railway",
-    "role": "Release-engineer",
-    "text": "Controleer de vrijgegeven versie van dit project en bereid de publicatie op de\nhieronder gekozen hostingomgeving voor. Gebruik de bestaande projectconfiguratie en\nactuele officiële documentatie. Controleer build, starten, variabelen, opslag en\nherstelmogelijkheid voor zover relevant. De versie moet eerst in de afgesproken\nGitHub-repository en branch staan. Benoem wat ik zelf in het hostingaccount moet instellen.\nPubliceer de bedoelde versie binnen de gegeven toegang en gekozen zichtbaarheid.\nControleer daarna de echte live-URL, kernroute, media, formulieren, SEO-instellingen\nen eventuele login. Meld welke versie is gepubliceerd, wat werkelijk is gecontroleerd\nen wat nog ontbreekt. Een succesvolle build bewijst niet dat de website bruikbaar is.",
-    "result": "Een herleidbare versie op de gekozen omgeving, gecontroleerd via de echte live-URL."
+    "title": "Zet de goedgekeurde versie op Railway",
+    "role": "bouwbegeleider",
+    "text": "Lees de releasecheck en controleer of de juiste versie op de afgesproken GitHub-branch staat. Controleer de bestaande Railway-inrichting met actuele officiële documentatie: projectmap, bouwen, starten, instellingen en opslag waar nodig. Leg precies uit wat ik zelf moet invullen en waar. Publiceer binnen de afgesproken toegang en controleer het echte live-adres, de bezoekersroute en ontvangst van testgegevens. Bewaar adres, versie, uitkomsten en uitleg om terug te zetten in 06-overdracht/release.md. Meld wat niet is gecontroleerd.",
+    "result": "Een geteste liveversie en release.md met adres en herstelafspraak."
   },
   {
     "id": 21,
-    "title": "Maak het introductieplan",
-    "role": "Marktintroductiestrateeg",
-    "text": "Maak vanuit de propositie een concreet marktintroductieplan. Kies het eerste\nsegment, de boodschap, de geschikte kanalen, de contactroute en de eerste\nactivatiestap. Werk content, vindbaarheid, een eventuele demo en onboarding\nuit. Maak een haalbare actielijst met eigenaar, volgorde en meetpunt.\nScheid bereik, interesse, aanmelding, actief gebruik en betaald gebruik.\nGeef aan welke signalen aanleiding zijn om aanbod of doelgroep bij te stellen.\nBereid eventuele berichten voor; versturen gebeurt binnen expliciete opdracht.",
-    "result": "Een uitvoerbaar introductieplan; daadwerkelijke marktresultaten blijven afzonderlijk te bewijzen."
+    "title": "Maak een uitnodiging voor je eerste bezoekers",
+    "role": "projectbegeleider",
+    "text": "Gebruik mijn aanbod en de functies die nu echt live werken. Maak een kort plan met doelgroep, geschikt kanaal, uitnodiging, gewenste handeling en feedbackvraag. Geef een conceptbericht met het echte webadres als ik dat heb aangeleverd. Verzin geen resultaten. Ik kies de ontvangers en verstuur het bericht zelf. Lever 02-plan/introductieplan.md.",
+    "result": "Een kort introductieplan en een bericht dat je zelf kunt versturen."
   },
   {
     "id": 22,
-    "title": "Controleer belofte en eerste ervaring",
-    "role": "Productonderzoeker",
-    "text": "Doorloop het traject van eerste kennismaking tot de eerste bruikbare uitkomst.\nVergelijk de belofte op de site met demo, aanmelding, onboarding en product.\nBenoem onduidelijke verwachtingen, onnodige stappen en ontbrekende uitleg.\nStel verbeteringen voor en bepaal welke gebeurtenissen we moeten meten om\nte zien waar mensen afhaken. Gebruik passende instellingen voor gegevens\nverzamelen en verifieer die bij de daadwerkelijke implementatie.",
-    "result": "Een vergelijking van belofte, onboarding en eerste waarde met meetbare vervolgvragen."
+    "title": "Controleer de eerste ervaring",
+    "role": "projectbegeleider",
+    "text": "Vergelijk de belofte uit mijn uitnodiging en website met de route die een nieuwe bezoeker doorloopt. Benoem ontbrekende uitleg, onnodige stappen en beloften die niet worden waargemaakt. Geef concrete verbeteringen. Gebruik alleen aangeleverde inhoud of werkelijk bekeken pagina’s en meld wat je niet kon controleren. Lever 05-tests/leersignalen.md.",
+    "result": "Een lijst met verschillen tussen belofte en werkelijke eerste ervaring."
   },
   {
     "id": 23,
-    "title": "Sluit de werksessie af",
-    "role": "Technisch projectleider",
-    "text": "Werk het projectdossier bij. Leg vast wat is gewijzigd, welke versie geldt,\nwelke controles zijn uitgevoerd, wat nog blokkeert en wat de volgende\nconcrete stap is. Werk project_state.json en de relevante specificaties bij\nals die onderdeel zijn van deze opzet. Scheid gemeten tijd van schattingen.\nControleer of wijzigingen en noodzakelijke bestanden op de afgesproken\nmanier bewaard zijn. Controleer ook de wijzigingsimpact op alle teksten,\npagina’s, handleidingen, architectuur, contracten en Mermaid-schema’s. Werk\nde geraakte onderdelen bij en leg document- en codeversie samen vast.\nLaat geheimen buiten openbare statusinformatie.\n\nLaat Antigravity de gecontroleerde wijziging committen en naar de bedoelde GitHub-repository en branch sturen volgens de vrijgaveafspraak. Bewaar de online commitlink en houd bij welke versie werkelijk live staat.",
-    "result": "Een hervatbare status met code-, document- en verificatieversie."
+    "title": "Bewaar je werk aan het einde van de sessie",
+    "role": "bouwbegeleider",
+    "text": "Werk 06-overdracht/overdracht.md en START-HIER.md bij. Noteer gewijzigde bestanden, huidige versie, uitgevoerde controles, open fouten en één volgende taak. Werk de geraakte handleiding bij. Bewaar de gecontroleerde code volgens de afgesproken GitHub- en publicatieroute en controleer de versielink. Houd bij wat lokaal, op GitHub en live staat. Benoem welke bronnen of gegevens apart geback-upt moeten worden.",
+    "result": "Een bijgewerkte overdracht met opgeslagen werk en een volgende taak."
   },
   {
     "id": 24,
-    "title": "Hervat een bestaand project",
-    "role": "Technisch projectleider",
-    "text": "Lees eerst de projectstatus, recente wijzigingen, open bevindingen en\nleidende documenten. Controleer die informatie tegen de aanwezige code\nen bestanden. Benoem verschillen. Hervat de eerstvolgende uitvoerbare\nstap binnen de afgesproken scope en controleer het resultaat. Schrijf\nnieuwe besluiten en de bijgewerkte status weer terug in het dossier.",
-    "result": "Een gecontroleerde actuele stand en de volgende afgebakende uitvoerbare stap."
+    "title": "Lees het project en hervat je werk",
+    "role": "bouwbegeleider",
+    "text": "Lees eerst START-HIER.md, 06-overdracht/overdracht.md, open fouten en de gekozen documenten. Vergelijk die met de huidige code en bestanden. Geef een korte stand van zaken: gereed, open, verschillen en volgende taak. Als er geen nagekeken plan voor die taak is, leg het eerst voor. Voer daarna alleen de opgedragen wijziging uit en controleer de uitkomst. Werk de overdracht bij.",
+    "result": "De actuele stand van het project en een gecontroleerde vervolgstap."
   },
   {
     "id": 25,
-    "title": "Documenteer alle pagina’s en alle teksten",
-    "role": "Technisch schrijver",
-    "text": "Documenteer de volledige site in de huidige projectmap.\nLees eerst de bestaande documentatie en inventariseer alle routes,\nnavigatie, pagina's, gedeelde componenten, contentbestanden, vertalingen,\nformulieren en berichten. Neem relevante CMS-content mee als die toegankelijk\nis; registreer ontoegankelijke inhoud als ontbrekende onderzoeksdekking.\n\nMaak een volledig paginaregister en schrijf per pagina de daadwerkelijke\nteksten uit: metadata, koppen, secties, alinea's, links, CTA's, veldlabels,\nhulpteksten, validatiefouten, bevestigingen, lege toestanden en overige\nmeldingen. Neem header, footer, menu's, pop-ups, zijpanelen, alt-teksten en\nrelevante e-mail- en notificatietemplates mee. Leg alle aanwezige talen vast.\nDocumenteer dynamische teksten als template met variabelen en bron; kopieer\ngeen privégegevens van echte gebruikers naar het documentatiedossier.\n\nKoppel iedere tekst en pagina aan een stabiel ID, route en bronlocatie.\nScheid ontworpen, geïmplementeerd en gecontroleerd gedrag. Markeer concepten,\nplaceholders en ontbrekende inhoud. Gebruik herbruikbare tekstonderdelen\nmet één leidende bron en controleer de volledige samengestelde paginatekst.\nLever leesbare Markdown-bestanden en een dekkingsmatrix op. Alleen een lijst\npaginanamen of een samenvatting van teksten is niet voldoende.",
-    "result": "Alle toepasselijke paginacontent en teksten, inclusief dynamische varianten en bronverwijzingen."
+    "title": "Leg de gebouwde pagina’s en teksten vast",
+    "role": "bouwbegeleider",
+    "text": "Lees de bestaande documentatie en de huidige site. Leg alle pagina’s en zichtbare teksten vast, ook menu’s, formulieren, fouten en bevestigingen. Neem aanwezige talen en dynamische tekstvoorbeelden mee zonder privégegevens. Verwijs naar de echte pagina en het bronbestand. Benoem wat ontworpen, gebouwd of getest is en welke inhoud je niet kon lezen. Werk 02-plan/schermen.md en 02-plan/teksten.md bij.",
+    "result": "Een actuele paginalijst en volledige tekstinventaris."
   },
   {
     "id": 26,
-    "title": "Leg vast hoe je toepassing technisch werkt",
-    "role": "Softwarearchitect",
-    "text": "Beschrijf de architectuur en controleer de beschrijving tegen de aanwezige onderdelen. Onderzoek bestaande code, configuratie, gegevensschema's, routes,\nkoppelingen, documentatie en toegankelijke runtime. Breid het bestaande\ndossier uit. Beschrijf beoogde en aangetroffen architectuur afzonderlijk.\n\nWerk uit: systeemcontext, onderdelen en verantwoordelijkheden, frontend,\nbackend, gegevensopslag, bestandsopslag, interfaces, authenticatie, rechten,\ntrust boundaries, bedrijfsregels, omgevingen, configuratie, deployment,\nlogging, monitoring, prestaties, kosten, foutafhandeling, herstel en relevante\nafhankelijkheden. Documenteer API- en datacontracten, statussen, null-waarden,\ntime-outs, retrybeleid en bescherming tegen dubbele uitvoering waar relevant.\nLeg betekenisvolle besluiten vast met reden, alternatieven en gevolgen.\n\nMaak leesbare Mermaid-schema's voor de relevante systeem-, gegevens- en\nuitvoeringsrelaties. Koppel beschrijvingen en schema's aan concrete bronnen\nen versie. Controleer scheiding van verantwoordelijkheden, centrale afhandeling\nvan externe diensten en hergebruik van logica en configuratie. Onderzoek de\nvolgende foutcategorieën: ongeldige invoer, gelijktijdige handelingen, uitval\nvan externe diensten, gegevensintegriteit, limieten en publicatiefouten.\nKoppel risico's aan maatregelen en verificatie.\n\nMarkeer niet-toepasselijke onderwerpen met reden en onbekende onderdelen als\nonbekend. Verzin geen componenten, garanties, metingen of geslaagde controles.\nLever ARCHITECTURE.md met gekoppelde detaildocumenten, besluitenregister,\ndiagramregister en open punten. Benoem wat alleen is gelezen en wat werkelijk\nis uitgevoerd. Wijzig productcode alleen binnen een afzonderlijk gegeven\nbouw- of herstelopdracht.\n\nNeem voor openbare websites het SEO-plan en meetplan op in de architectuur: echte routes en uitleesbare inhoud, metadata, sitemap/canonical/robots, mobiel en prestaties, Analytics met toestemming en meetvalidatie. Beschrijf GitHub als codebewaarplaats, Antigravity als bouwagent en Railway als gekozen hostingroute wanneer die voor dit project zijn afgesproken. Voeg geen diensten toe die het project niet nodig heeft.",
-    "result": "Architectuur en besluiten die onderscheid maken tussen ontwerp en aangetroffen werkelijkheid."
+    "title": "Leg uit hoe de website technisch werkt",
+    "role": "bouwbegeleider",
+    "text": "Lees bestaande code, instellingen en documentatie. Beschrijf in gewone taal welke onderdelen bestaan, hoe ze samenwerken, waar gegevens worden verwerkt en wie toegang heeft. Neem starten, publiceren, kosten, fouten en herstel mee voor zover van toepassing. Beschrijf de afgesproken SEO- en meetinrichting. Voeg een leesbaar schema toe waar dat helpt. Verwijs naar bestanden en maak onderscheid tussen plannen en echte werking. Werk 04-bouw/architectuur.md bij; wijzig met deze opdracht geen productcode.",
+    "result": "Een technische uitleg die aansluit op de huidige bestanden."
   },
   {
     "id": 27,
-    "title": "Maak gebruikersdocumentatie en Mermaid-schema’s",
-    "role": "Functioneel ontwerper en technisch schrijver",
-    "text": "Maak of actualiseer\n/docs/APPLICATION_USER_OPERATING_MODEL.md en de bijbehorende gebruikers-\nen beheerdershandleidingen. Beschrijf de volledige toepasselijke werking:\nrollen, toegang, onboarding, dagelijkse taken, objecten, acties, formulieren,\ngegevens, statussen, berichten, instellingen en uitzonderingen.\nKoppel elke gebruikershandeling aan pagina, scherm, component en relevante\nAPI of gegevensopslag. Neem acceptatiecriteria en open productvragen op.\n\nMaak echte Mermaid-code voor navigatie, kernprocessen, toestanden,\ngegevensrelaties en technische interacties waar die bestaan. Geef ieder\nschema een ID, doel, status en bron. Houd schema's leesbaar en splits grote\nschema's op. Controleer syntax en gerenderde leesbaarheid als de omgeving\ndat ondersteunt. Markeer niet-uitgevoerde rendering expliciet.\nEen generiek voorbeeld mag niet als schema van de gebouwde site worden getoond.",
-    "result": "Bruikbare gebruikers- en beheerinstructies met gecontroleerde diagrammen of expliciete renderbeperking."
+    "title": "Schrijf de gebruikershandleiding",
+    "role": "bouwbegeleider",
+    "text": "Bekijk de actuele website en de bestaande uitleg. Beschrijf voor bezoeker en beheerder de taken stap voor stap: waar openen, wat invullen, welke knop, welk resultaat en wat te doen bij een fout. Verbind uitleg aan echte schermen. Voeg eenvoudige schema’s toe als dat helpt en controleer of ze leesbaar zijn. Noteer wat je niet kon testen. Lever 06-overdracht/gebruikershandleiding.md.",
+    "result": "Een handleiding waarmee bezoeker en beheerder de website kunnen gebruiken."
   },
   {
     "id": 28,
-    "title": "Controleer en synchroniseer documentatie bij oplevering",
-    "role": "Documentatie-auditor",
-    "text": "Beoordeel systematisch het dossier tegen de actuele siteversie. Begin bij de volledige\ninventaris van routes, teksten, talen, rollen, flows, onderdelen en koppelingen.\nVergelijk die met documentatie, Mermaid-schema's en testbewijs. Controleer ook\nomgekeerd of ieder beschreven onderdeel werkelijk bestaat of herkenbaar als\nontwerp of toekomstig onderdeel is gemarkeerd.\n\nWerk alle geraakte documentatie bij. Registreer afwijkingen met AUD-ID,\nbewijs, impact, prioriteit, eigenaar en hertest. Controleer verwijzingen en\nleesbaarheid. Leg documentversie, codeversie, omgeving, controledatum en niet\nonderzochte onderdelen vast. Geef per toepasselijk dossieronderdeel de status:\nVOLLEDIG, DEELS, ONTBREEKT of GEBLOKKEERD; motiveer N.V.T. afzonderlijk.\nMaak geen totaalscore die een ontbrekend essentieel onderdeel verbergt.\nLever de bijgewerkte bestanden en een documentatie-releasecheck op.",
-    "result": "Een dossier dat in beide richtingen met de productversie is vergeleken."
+    "title": "Controleer of de handleiding nog klopt",
+    "role": "bouwbegeleider",
+    "text": "Vergelijk de huidige website met de paginalijst, teksten, technische uitleg, handleiding en schema’s. Controleer beide richtingen: mist er uitleg en beschrijft de uitleg iets dat niet meer bestaat? Werk fouten bij met verwijzing naar de huidige versie. Benoem ontoegankelijke of niet gecontroleerde onderdelen. Bewaar de uitkomst in 05-tests/documentatiecheck.md.",
+    "result": "Bijgewerkte documentatie en een overzicht van de uitgevoerde vergelijking."
   },
   {
     "id": 29,
-    "title": "Beperk de eerste release tot de propositie",
-    "role": "Productarchitect",
-    "text": "Vergelijk de hieronder genoemde propositie met de volledige bestaande toepassing. Inventariseer functies,\npagina's, navigatie, rollen, koppelingen en gegevens. Geef elk onderdeel een bestemming:\nnodig voor de eerste release, noodzakelijke ondersteuning, latere uitbreiding of nader\nte beslissen. Onderbouw de keuze vanuit een concrete gebruikersbehoefte.\nMaak zichtbaar welke afhankelijkheden geraakt worden wanneer iets wordt uitgezet.\nBehoud toegang, gegevensintegriteit, foutafhandeling en andere noodzakelijke basisfuncties.\nMaak een uitvoerbaar verkleiningsplan. Voer de afgebakende wijzigingen uit wanneer\nde scope vaststaat. Behoud latere mogelijkheden op een onderhoudbare manier en verwijder\ngeen gegevens of grote functionaliteitsdelen zonder concrete opdracht.\nTest dat de gekozen kernroutes werken en dat uitgeschakelde onderdelen nergens meer\nals beschikbare mogelijkheid worden aangeboden. Lever scopematrix, wijzigingen en bewijs.",
-    "result": "Een kleinere, samenhangende release met verklaarde afhankelijkheden en gecontroleerde kernroutes."
+    "title": "Beperk de website tot de eerste versie",
+    "role": "bouwbegeleider",
+    "text": "Vergelijk het aanbod met de bestaande website. Deel functies in: nu nodig, later of nog te beslissen. Leg uit wat van elkaar afhankelijk is. Stel een klein wijzigingsplan voor. Voer alleen de afgesproken aanpassingen uit en behoud gegevens, toegang en foutafhandeling. Test daarna de gekozen bezoekersroutes.",
+    "result": "Een kleinere eerste versie met gecontroleerde werking."
   },
   {
     "id": 30,
-    "title": "Verfijn de mobiele ervaring na het algemene ontwerp",
-    "role": "Mobiel productontwerper en frontendontwikkelaar",
-    "text": "Het algemene ontwerp van de toepassing is vastgesteld. Gebruik het bestaande ontwerpsysteem\nen onderzoek nu de echte mobiele ervaring voor de hieronder genoemde rollen en belangrijkste taken.\nControleer inhoudsprioriteit, bereikbaarheid van acties, navigatie, aanraking, schermtoetsenbord,\nformulieren, uploads, tabellen, teruggaan, hervatten en foutafhandeling.\nBepaal per taak welke informatie direct nodig is en wat later kan verschijnen.\nWerk noodzakelijke wijzigingen daadwerkelijk uit in de toepassing. Maak geen tweede merkstijl\nen beschouw het verticaal stapelen van desktopblokken niet als voldoende bewijs van bruikbaarheid.\nBehoud invoer en voortgang bij relevante scherm- en navigatiewissels.\nDoorloop de kernroutes op afgesproken schermmaten en benoem of je een echt toestel of\nbrowseremulatie gebruikte. Lever voor/na-beelden, gewijzigde onderdelen, testresultaten en open punten.",
-    "result": "Mobiele taken zijn daadwerkelijk doorlopen; desktop en bestaande ontwerpafspraken blijven gecontroleerd."
+    "title": "Verbeter het gebruik op een telefoon",
+    "role": "bouwbegeleider",
+    "text": "Bekijk de huidige mobiele route. Controleer volgorde, tekst, knoppen, menu, invulvelden, schermtoetsenbord, teruggaan en fouten. Pas de afgesproken problemen aan binnen dezelfde stijl. Behoud ingevulde gegevens waar nodig. Test mobiel en computer en benoem of je een echt toestel of een nagebootst telefoonformaat gebruikte.",
+    "result": "Verbeterde mobiele bediening met testuitkomsten."
   },
   {
     "id": 31,
-    "title": "Controleer en herstel alle talen",
-    "role": "Internationaliseringsspecialist",
-    "text": "Audit de volledige toepassing op de opgegeven ondersteunde talen en standaardtaal. Volg de bestaande\ntaalarchitectuur door pagina's, navigatie, formulieren, validatie, meldingen, e-mails,\ndynamische teksten, API-antwoorden en opgeslagen inhoud waar relevant.\nZoek naar ontbrekende vertalingen, gemengde talen, onbedoelde terugval en ruwe vertaalcodes.\nControleer datum-, getal- en valutaweergave en taalbehoud na inloggen en navigeren.\nHerstel de oorzaken in de bestaande vertaalbronnen en gedeelde componenten.\nBehoud de betekenis van goedgekeurde inhoud; leg onduidelijke vaktermen voor met context.\nTest elke ondersteunde taal op de kernroutes en op lange teksten en kleine schermen.\nLever een dekkingsmatrix, concrete correcties en bewezen resterende afwijkingen.",
-    "result": "Taalkeuze en relevante teksten zijn consistent over de volledige onderzochte keten."
+    "title": "Controleer de talen van je website",
+    "role": "bouwbegeleider",
+    "text": "Controleer de opgegeven talen op alle pagina’s, knoppen, formulieren en meldingen. Herstel ontbrekende of onjuiste vertalingen. Controleer taalwisselen, teruggaan en de standaardtaal. Voeg geen nieuwe talen toe. Test de belangrijkste route in elke afgesproken taal.",
+    "result": "Een consistente website in de afgesproken talen."
   },
   {
     "id": 32,
-    "title": "Volg gegevens van bron tot scherm",
-    "role": "Data-engineer en QA-engineer",
-    "text": "Onderzoek de hieronder genoemde gegevensketen veld voor veld: bron of upload, extractie/invoer, transformatie,\nAPI-contract, opslag, berekening en uiteindelijke presentatie.\nMaak een traceerbaarheidsmatrix met veld, datatype, eenheid, bron, opslaglocatie,\ngebruikende functies, zichtbaarheid en vastgestelde afwijking.\nControleer volledigheid, duplicaten, herkomst, perioden, nul versus onbekend,\nafronding en gedrag na bewerken, herladen en cacheverversing.\nVergelijk handmatige invoer en automatische verwerking wanneer beide bestaan.\nGebruik overeengekomen testgevallen met bekende verwachtingen. Vul ontbrekende gegevens\nniet stilzwijgend aan en gebruik geen vaste voorbeeldwaarden als bewijs van een werkende koppeling.\nHerstel aangetoonde mapping- en verwerkingsfouten binnen scope en hertest de hele geraakte keten.\nLever matrix, oorzaken, wijzigingen en werkelijk gecontroleerde resultaten.",
-    "result": "De herkomst en verwerking van ieder onderzocht veld zijn controleerbaar, inclusief ontbrekende gegevens."
+    "title": "Controleer waar gegevens naartoe gaan",
+    "role": "bouwbegeleider",
+    "text": "Volg de genoemde gegevens vanaf invoer tot verwerking, opslag en weergave. Vergelijk wat verwacht wordt met wat echt gebeurt. Controleer lege waarden, fouten, rechten en dubbel verzenden. Herstel het afgesproken probleem en test de hele route opnieuw. Gebruik testgegevens.",
+    "result": "Een gecontroleerde gegevensroute en gerichte reparaties."
   },
   {
     "id": 33,
-    "title": "Verbeter snelheid en breng kosten in beeld",
-    "role": "Performance-engineer",
-    "text": "Onderzoek waarom de hieronder genoemde gebruikershandeling traag is. Reproduceer de handeling in de gekozen omgeving\nen meet de relevante stappen van invoer tot zichtbare uitkomst.\nMaak onderscheid tussen browser, netwerk, server, opslag, externe diensten en eventuele AI.\nRapporteer meetopzet, gegevensomvang, aantal waarnemingen en beperkingen.\nZoek de dominante oorzaak en vergelijk concrete verbeteringen op gebruikerswaarde,\ncorrectheid, beheerlast en kosten. Voer een passende wijziging uit en vergelijk onder\ndezelfde omstandigheden. Behoud foutafhandeling en inhoudelijke kwaliteit.\nBereken kosten alleen met bekende gebruikshoeveelheden en verifieerbare actuele tarieven;\ntoon anders een scenario met expliciete aannames. Meet ontbrekende waarden niet uit de lucht.\nLever de gevonden oorzaak, voor/na-metingen, afwegingen en resterende onzekerheid.",
-    "result": "Een gemeten verbetering of een aantoonbare beperking; kosten zijn berekend of herkenbaar geraamd."
+    "title": "Onderzoek traagheid en kosten",
+    "role": "bouwbegeleider",
+    "text": "Onderzoek de genoemde trage handeling. Meet eerst in de bedoelde omgeving en leg omstandigheden vast. Zoek de oorzaak en stel een gerichte verbetering voor. Voer de afgesproken wijziging uit en vergelijk daarna dezelfde handeling. Gebruik voor kosten echte instellingen, facturen of meetgegevens; benoem wat onbekend is.",
+    "result": "Een meting vóór en na herstel en een onderbouwde kostenuitleg."
   },
   {
     "id": 34,
-    "title": "Toets product- en beveiligingsclaims aan bewijs",
-    "role": "Technisch auditor",
-    "text": "Inventariseer materiële claims in de hieronder genoemde website, documentatie en verkoopmateriaal en vergelijk\ndie met de toegankelijke code, configuratie, contracten en uitvoeringsbewijzen.\nMaak per claim zichtbaar: exacte formulering, betekenis, benodigd bewijs, gevonden bewijs,\nonderzoekgrens en status ONDERBOUWD, DEELS, ONBEKEND of WEERSPROKEN.\nBesteed waar toepasselijk aandacht aan rechten, gegevensscheiding, encryptie, logging,\nherstel, gegevensbewaring en afhankelijkheid van externe diensten.\nEen configuratieregel of certificaat van een leverancier bewijst niet automatisch de\nwerking of naleving van het hele product. Raadpleeg actuele bevoegde bronnen voor normuitleg.\nLever concrete tekstcorrecties en een geprioriteerd herstelplan. Behoud betekenisvolle\nonzekerheid; verleen geen certificering of algemene productiegoedkeuring op basis van alleen code.",
-    "result": "Iedere onderzochte claim heeft een herleidbare status en passende formulering."
+    "title": "Controleer de beloften op je website",
+    "role": "bouwbegeleider",
+    "text": "Vergelijk de meegegeven beloften met de huidige werking en beschikbare bronnen. Noteer per belofte wat die onderbouwt, wat ontbreekt en hoe de tekst eerlijker kan. Verzin geen bewijs, klanten, keurmerken of resultaten. Pas alleen de afgesproken teksten aan.",
+    "result": "Controleerbare beloften en concrete tekstcorrecties."
   },
   {
     "id": 35,
-    "title": "Beoordeel migratie naar een ander platform",
-    "role": "Migratiearchitect",
-    "text": "Onderzoek of de hieronder genoemde bestaande toepassing kan worden overgezet naar het opgegeven doelplatform.\nInventariseer eerst alle pagina's, interactieve functies, rollen, gegevens, koppelingen,\nbeheerwensen en deployment-afhankelijkheden. Vergelijk dit met de actuele officiële\nmogelijkheden van het doelplatform.\nBeoordeel per onderdeel: rechtstreeks overdraagbaar, ombouw nodig, externe dienst nodig\nof onvoldoende onderzocht. Leg uit wat een beheerder daarna zelf kan wijzigen en\nwaarvoor ontwikkeling nodig blijft. Maak onderscheid tussen een statische export,\neen ingebedde toepassing en een echte native implementatie.\nLever begrijpelijke opties met gevolgen voor werking, beheer, kosten, vindbaarheid,\ngegevensmigratie en terugkeer naar de oude oplossing. Geef een onderbouwd advies en\neen voorstel voor een beperkte proef. Voer de migratie pas uit binnen een concrete migratieopdracht.",
-    "result": "Een onderbouwde keuze per functie, inclusief de toekomstige beheerervaring."
+    "title": "Bereid een overstap naar andere software voor",
+    "role": "bouwbegeleider",
+    "text": "Onderzoek de bestaande website en de gewenste nieuwe oplossing. Leg vast welke inhoud, functies, gegevens, webadressen en beheerhandelingen moeten blijven werken. Vergelijk met actuele officiële informatie van de nieuwe oplossing. Beschrijf beperkingen, kosten, testaanpak en terugzetten. Voer de overstap pas uit na een concrete opdracht.",
+    "result": "Een overstapplan met behoud van noodzakelijke werking."
   },
   {
     "id": 36,
-    "title": "Maak AI- en agentgedrag toetsbaar",
-    "role": "AI-evaluatieontwerper",
-    "text": "Onderzoek de bestaande AI-functies en testvoorzieningen voor de toepassing. Leg vast\nwelke invoer, instructies, modellen, tools, uitvoer en beslissingen bij elke functie horen.\nDefinieer controleerbare verwachtingen met passende referentiegevallen en bronmateriaal.\nToets afzonderlijk schema, feitelijke inhoud, volledigheid, onzekerheid, toolgebruik,\nfoutafhandeling, latency en kosten. Een geldig JSON-object bewijst geen juiste inhoud.\nNeem normale gevallen, ontbrekende of tegenstrijdige informatie, tooluitval en instructies\nin bronmateriaal mee. Instructies mogen geen mogelijkheden eisen die de agent niet heeft.\nBreid de bestaande testopzet uit met de kleinst bruikbare set en duidelijke rapportage.\nBewaar versie, dataset, feitelijke uitkomsten en menselijke beoordeling waar nodig.\nLever ontwerp, uitgevoerde controles en zichtbare beperkingen; vermeld welke evaluaties nog niet draaiden.",
-    "result": "AI-kwaliteit is gekoppeld aan toetsbare gevallen en echte uitkomsten, niet aan alleen een eigen score."
+    "title": "Controleer de AI-functie in je eigen product",
+    "role": "bouwbegeleider",
+    "text": "Controleer alleen de genoemde AI-functie. Leg invoer, verwacht resultaat, bronnen en toegangsgrenzen vast. Test normale invoer, ontbrekende informatie, onjuiste antwoorden, storingen en misleidende instructies in bronmateriaal. Gebruik testgevallen en registreer echte resultaten, tijd en kosten waar meetbaar. Herstel afgesproken fouten en test opnieuw.",
+    "result": "Een testoverzicht voor de AI-functie met fouten en herstel."
   },
   {
     "id": 37,
-    "title": "Voer een inhoudelijke wijziging overal consequent door",
-    "role": "Productontwikkelaar",
-    "text": "Verwerk deze wijziging in dit project: de hieronder genoemde oude situatie → gewenste situatie.\nInventariseer eerst waar de geraakte naam, tekst, waarde, regel of vormgeving voorkomt:\npagina's, gedeelde componenten, vertalingen, documenten, templates, tests en afgeleide bestanden.\nWerk vanuit de bestaande centrale bron. Verander betekenisvolle uitzonderingen alleen\nwanneer de opdracht daarop betrekking heeft. Behoud gegevens en bestaande werking.\nWerk toepasselijke documentatie en afgeleide bestanden bij. Controleer expliciet op oude\nvermeldingen en op onbedoelde vervanging van gelijknamige maar andere begrippen.\nLever gewijzigde locaties, gecontroleerde voorbeelden en eventuele open uitzonderingen.\nLeg de versie vast of publiceer alleen als die handeling onderdeel van de concrete opdracht is.",
-    "result": "De wijziging is consistent verwerkt en gecontroleerd op achtergebleven of onbedoelde vervangingen."
+    "title": "Voer één wijziging overal door",
+    "role": "bouwbegeleider",
+    "text": "Zoek waar de genoemde wijziging van toepassing is in pagina’s, tekst, code, berichten, bestanden en uitleg. Maak een concrete lijst en pas de bedoelde onderdelen aan. Behoud historische bronnen waar die ongewijzigd moeten blijven. Controleer daarna de verwijzingen en gebruikersroutes.",
+    "result": "De wijziging is op de bedoelde plekken doorgevoerd en gecontroleerd."
   },
   {
     "id": 38,
-    "title": "Richt vindbaarheid en gebruiksmeting in",
-    "role": "SEO- en productanalysespecialist",
-    "text": "Onderzoek de website en maak een uitvoerbaar plan voor vindbaarheid en gebruiksmeting.\nControleer toegankelijke routes, titels, beschrijvingen, indexeerbaarheid, interne links,\nsitemap, canonieke URLs en bruikbaarheid op mobiel. Pas alleen gestructureerde gegevens\ntoe die overeenkomen met zichtbare en onderbouwde inhoud.\nDefinieer de belangrijkste gebruikersacties vanuit de propositie en bepaal wat we moeten\nmeten om aanmelding, activatie en uitval te begrijpen.\nBeschrijf de inrichting van de hieronder genoemde zoekmachinebeheer en analytics, eigendomsverificatie,\nomgevingsscheiding en passende keuzes voor toestemming en gegevensminimalisatie.\nControleer actuele officiële documentatie voordat je instellingen implementeert.\nVoer de toegestane lokale wijzigingen uit en verifieer feitelijke gebeurtenissen en\nindexeerbaarheid waar toegang bestaat. Claim geen rankings, bezoekers of conversiewinst zonder meting.",
-    "result": "Vindbaarheid en meting hebben een gecontroleerde configuratie of een concrete toegangsbeperking."
+    "title": "Controleer vindbaarheid en bezoekersmeting",
+    "role": "bouwbegeleider",
+    "text": "Lees het SEO-plan en controleer de echte website: bereikbare pagina’s, inhoud, titels, sitemap en instellingen voor zoekmachines. Onderzoek de aanwezige bezoekersmeting, dubbele gebeurtenissen en toestemmingsgedrag. Gebruik werkelijke gegevens en meld ontbrekende toegang. Stel één gerichte verbetering voor en voer alleen de afgesproken wijzigingen uit.",
+    "result": "Een SEO- en meetcontrole met concrete verbeterpunten."
   },
   {
     "id": 39,
-    "title": "Ruim de repository op met behoud van werking",
-    "role": "Refactoring-engineer",
-    "text": "Onderzoek de repository op dubbele logica, verouderde documentatie, ongebruikte onderdelen\nen onduidelijke verantwoordelijkheid. Stel eerst vast welke checkout en specificatie leidend zijn.\nMaak per kandidaat duidelijk: gebruik, afhankelijkheden, bewijs van overbodigheid,\nvoorgestelde wijziging en controle van behoud van gedrag.\nConsolideer overlap in bestaande componenten en leg grenzen en besluiten vast.\nAfwezigheid uit één zoekresultaat is geen bewijs dat een bestand ongebruikt is.\nWerk in kleine wijzigingen en respecteer lopend werk. Bewaar noodzakelijke geschiedenis\nen projectgegevens; grote verwijderingen vragen een concrete, afgebakende opdracht.\nVoer toepasselijke bestaande controles uit en werk verwijzingen en documentatie bij.\nLever een helder overzicht van opgeruimde onderdelen, bewijs en resterende onzekerheden.",
-    "result": "De repository is aantoonbaar eenvoudiger terwijl relevante werking en informatie behouden blijven."
+    "title": "Ruim dubbele code en uitleg op",
+    "role": "bouwbegeleider",
+    "text": "Onderzoek bestaande code en documenten op overlap en verouderde onderdelen. Toon per voorstel waarom iets overbodig is en wat ervan afhankelijk is. Werk in kleine wijzigingen, behoud andermans werk en verwijder geen gegevens zonder concrete opdracht. Voer de afgesproken opruiming uit en controleer dat de gebruikersroutes blijven werken.",
+    "result": "Een overzichtelijker project met behoud van werking en informatie."
   },
   {
     "id": 40,
-    "title": "Maak koppelingen bruikbaar en documenteer de API",
-    "role": "API-architect en integratieontwikkelaar",
-    "text": "Onderzoek hoe de opgegeven externe toepassing met onze toepassing moet koppelen voor het beschreven gebruikersdoel.\nInventariseer eerst bestaande endpoints, authenticatie, rechten, schema's en adapters.\nWerk bestaande mogelijkheden uit voordat je een nieuwe integratielaag maakt.\nDefinieer invoer en uitvoer, foutcodes, statusovergangen, versiebeleid en limieten.\nLeg voor schrijfhandelingen vast hoe dubbele verzoeken en retries worden afgehandeld.\nMaak expliciet welke API wij aanbieden en welke externe API wij gebruiken.\nImplementeer de afgesproken verbinding en publiceer passende specificaties en voorbeelden\nzonder geheime sleutels. Test de contracten en ten minste één complete toegestane integratieroute.\nMarkeer ontbrekende toegang en gesimuleerde diensten. Lever documentatie, voorbeeldverzoeken,\nwerkelijke testuitkomsten en de volgende stap voor een aansluitende ontwikkelaar.",
-    "result": "Een aansluitende ontwikkelaar heeft concrete contracten en een aantoonbaar gecontroleerde route."
+    "title": "Maak de afgesproken softwarekoppeling",
+    "role": "bouwbegeleider",
+    "text": "Onderzoek de genoemde systemen en de bestaande koppeling. Beschrijf welke gegevens heen en terug gaan, wie toegang heeft en wat gebeurt bij fouten of dubbel verzenden. Hergebruik bestaande onderdelen. Bouw alleen de afgesproken verbinding, test met testgegevens en documenteer de instellingen zonder geheime sleutels. Meld ontbrekende toegang en gesimuleerde onderdelen.",
+    "result": "Een gecontroleerde koppeling met uitleg voor gebruik en beheer."
   },
   {
     "id": 41,

@@ -2,11 +2,11 @@
 
 ## 1. Executive summary
 
-**Observatie:** Vibe Lift is een Nederlandstalige leeromgeving voor beginners die met AI een IT-project of website willen opbouwen. De inhoud is verdeeld over veertien stappen en vijf fasen. Lezers kiezen vrij een stap en wisselen tussen Uitleg, Voorbeeld, Opdracht en Controle. De fictieve Studio Maan verbindt de uitleg. Alle 42 genummerde bouwopdrachten en vijf SEO-opdrachten zijn leesbaar en kopieerbaar. Iedere hoofdles heeft toolhulp; de aanvullende SEO-cursus heeft vijf vrij toegankelijke lessen met instellingen en bronlinks.
+**Observatie:** Vibe Lift is een Nederlandstalige leeromgeving voor medewerkers zonder programmeerervaring. De inhoud bestaat uit veertien stappen, vijf fasen en vijf SEO-lessen. Lezers wisselen tussen Uitleg, Voorbeeld, Promptgenerator en Controle. De route begint met één lokale projectmap, submappen en START-HIER.md. Er zijn 42 genummerde opdrachten, vijf SEO-opdrachten en een aparte kopieerbare startopdracht voor de map. De fictieve Studio Maan verbindt de uitleg. Iedere stap benoemt tools, handelingen, opslagpaden en controles.
 
 Er is één appgebruikersrol: lezer. De site-eigenaar onderhoudt de bron buiten de website. Sites regelt de besloten toegang. De applicatie beheert geen accounts of leerlingprojecten. Ze verzendt geen aanvragen en voert geen AI-opdrachten uit.
 
-**[AFGELEID]:** de vaste lesstructuur helpt beginners oriënteren; nog niet met de doelgroep getoetst. **Open punt:** visuele browsercontrole en daadwerkelijk gebruik door beginners zijn niet uitgevoerd.
+**[AFGELEID]:** de vaste lesstructuur en concrete werkinstructies helpen beginners; dit is niet met medewerkers getest. Bron-, kopieer-, opslag- en HTTP-controles zijn uitgevoerd. Voor browserdekking geldt uitsluitend het actuele rapport mobile-validation.json met zijn beperkingen.
 
 ## 2. Product scope
 
@@ -21,9 +21,9 @@ Status PASS betekent hier geïmplementeerd en voor de genoemde broncontracten ge
 | Werkwijze en tools | PASS | app.js, tools.js | 12 tools, per stap concrete inzet en officiële verwijzingen | Externe omgeving kan wijzigen | Laat gebruiker actuele beschikbaarheid checken |
 | SEO-cursus | PASS | seo.js, app.js | Vijf lessen, toolhulp, werkbladen en copy/fallback gecontroleerd | Externe schermen kunnen wijzigen | Officiële bronlinks behouden |
 | Deeltjesveld | PASS | air.js, lift.css | Cursorrespons, pauze, visibility en reduced motion met harness gecontroleerd | Geen visuele browsermeting | Effect achter inhoud; systeemvoorkeur respecteren |
-| Bronhandboek | PASS | downloads/handboek.md | Bewerkte lezerseditie | Lang naslagwerk voor beginner | Lessen als hoofdingang |
+| Bronhandboek | PASS | downloads/handboek.md, scripts/update-guide.mjs | Gegenereerd uit actuele lessen, mapgids, tools, SEO en opdrachten | Afwijking bij handmatige edits | Alleen bronmodules wijzigen en opnieuw genereren |
 | Appregistratie/voortgang | Niet in scope | app.js | Geen appaccounts of voortgang; alleen tabbladinvoer | Onterechte verwachting van voortgang | Geen voortgangsscore tonen |
-| Browser QA | Nog niet uitgevoerd | validation.json | Bron- en handlerchecks wel uitgevoerd | Layout/echte bediening onbekend | Afzonderlijk controleren |
+| Browser QA | Zie actueel rapport | docs/mobile-validation.json | Chromium, schermbreedtes, tekstvergroting en interacties | Geen echte toestellen of begripstest | Grenzen uit rapport behouden |
 
 Bronpaden in dit document zijn ten opzichte van `dist/`, tenzij anders genoemd.
 

@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T13:13:06.363Z",
+  "generated_at": "2026-09-12T13:19:52.761Z",
   "browser": "Chromium",
   "routes": 67,
   "layout_cases": 938,
@@ -87,8 +87,6 @@
     "No physical iOS/Android devices",
     "No native Safari/WebKit or Firefox run",
     "No screen-reader or accessibility certification",
-    "No field network/performance measurements",
-    "Dynamic reduced-motion emulation was inconclusive; initial system preference was verified",
-    "Concurrent copywriting is still in progress; the final publication must rerun this audit"
+    "No field network/performance measurements"
   ]
 }

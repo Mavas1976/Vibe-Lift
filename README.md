@@ -19,6 +19,7 @@ De lokale server luistert alleen op `127.0.0.1:4173`. Dit lokale adres is geen o
 ## Inhoud aanpassen
 
 - `dist/content.js`: lessen, fasen, begrippen en Studio Maan-voorbeelden.
+- `dist/project-guide.js`: gedeelde mapinstructie, startopdracht en afspraken over lezen en opslaan.
 - `dist/app.js`: weergaven, gereedschappen en navigatie.
 - `dist/prompt-config.js`: hoofd- en extra opdrachten per stap, juiste AI-tools en invulvelden.
 - `dist/prompt-workbench.js`: samenstellen, valideren, kopiëren en tijdelijk bewaren van invoer.
@@ -31,7 +32,7 @@ De lokale server luistert alleen op `127.0.0.1:4173`. Dit lokale adres is geen o
 - `dist/downloads/handboek.md` en `opdrachten.md`: lezerseditie en algemene download met 47 invulbare opdrachten. Werk prompts in de bronmodules bij en synchroniseer met `node scripts/sync-prompts.mjs`. Privébronnen blijven buiten dist/.
 - `dist/assets/`: originele illustraties en favicon.
 
-Iedere les moet de vaste inhoudsvelden blijven bevatten. Synchroniseer na wijzigingen in tool- of SEO-inhoud eerst met `node scripts/update-guide.mjs`. De automatisch beheerde aanvulling van het handboek is afgebakend met een vaste marker. Deze opdracht synchroniseert daarna ook de actuele opdrachten en beide downloads.
+Iedere les moet de vaste inhoudsvelden blijven bevatten. Genereer na inhoudswijzigingen het volledige handboek opnieuw met `node scripts/update-guide.mjs`. Het handboek gebruikt dezelfde lessen, voorbeelden, mapgids, tools, SEO en opdrachten als de site. Deze opdracht synchroniseert ook de invulbare opdrachtendownload. Pas downloads niet handmatig aan.
 
 Een opdracht-ID heeft precies één thuisstap in `stepPrompts`. De composer combineert de algemene instructie, gekozen AI-tool, gedeelde projectcontext en stapinput. GitHub-koppelen en pushen zijn compacte opdrachten. Instellingen blijven uitleg. `extract_prompts.py` is alleen nog een compatibiliteitsingang voor synchroniseren; het overschrijft de bibliotheek niet.
 
@@ -43,6 +44,7 @@ node --check dist/content.js
 node --check dist/prompts.js
 node scripts/validate.mjs
 node scripts/check-prompt-workbench.mjs
+node scripts/check-editorial.mjs
 node scripts/check-air.mjs
 node scripts/check-http.mjs
 ```
@@ -84,6 +86,7 @@ Bron: [Railpack — Static Sites](https://railpack.com/languages/staticfile/).
 - `scripts/check-mobile.pw.js`: uitvoerbaar via Playwright `browser_run_code_unsafe` met `filename`; vereist de lokale server. Het script retourneert het rapport voor opslag als `docs/mobile-validation.json`.
 
 - `docs/PROMPT_INTEGRATIE_PLAN.md`: analyse, toolroutering, keuzes en verificatie van de invulbare opdrachten.
+- `docs/TEKSTREVIEW_SPOS.md`: tekst- en stappenanalyse, projectmapafspraken, broncontrole en grenzen van de toetsing.
 - `docs/prompt-validation.json`: controles van invoer, kopiëren, opslag en GitHub-opdrachten.
 - `docs/DESIGN_SPOS.md`: gezamenlijke visuele ontwerpverfijning.
 

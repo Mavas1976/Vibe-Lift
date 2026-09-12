@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {projectSetupPrompt,readFirstInstruction,saveOutputInstruction} from '../dist/project-guide.js';
+import {handlePromptClick,composePrompt,normalizeDraft,allPromptKeys,getPrompt} from '../dist/prompt-workbench.js';
+import {lessons} from '../dist/content.js';
+import {stepPrompts} from '../dist/prompt-config.js';
+let checks=0;const check=(value,message)=>{assert.ok(value,message);checks++;};
+let copied='',notice='',focused=false,selected=false;
+Object.defineProperty(globalThis,'navigator',{configurable:true,value:{clipboard:{writeText:async text=>{copied=text;}}}});
+const event={target:{closest:selector=>selector==='[data-project-setup-copy]'?{}:null}};
+check(await handlePromptClick(event,text=>notice=text,()=>{}),'Setup action is handled');
+check(copied===projectSetupPrompt&&notice.includes('Antigravity'),'Setup copy includes exact instructions and destination');
+globalThis.navigator.clipboard.writeText=async()=>{throw Error('Denied');};
+globalThis.document={querySelector:selector=>selector==='#project-setup-prompt'?{focus:()=>focused=true,select:()=>selected=true}:null};
+await handlePromptClick(event,text=>notice=text,()=>{});
+check(focused&&selected&&notice.includes('zelf'),'Blocked clipboard selects the visible text with manual-copy guidance');
+const state=normalizeDraft(null);state.project.path='C:/Projecten/TEST-ONLY';
+for(const key of allPromptKeys){
+  const p=getPrompt(key),text=composePrompt(key,state);
+  check(text.includes(state.project.path),`${key}: project folder travels with the task`);
+  if(p.config.tools[0]==='antigravity'&&!['41','42'].includes(key))check(text.includes(readFirstInstruction),`${key}: builder reads actual project before working`);
+  if(['chatgpt','claude'].includes(p.config.tools[0]))check(text.includes(saveOutputInstruction),`${key}: chat output must be saved explicitly`);
+}
+check(stepPrompts[7].main[0]===9,'Read/analysis task precedes GitHub setup');
+check(lessons.every(l=>/0[2-6]-/.test(l.output)),'Every lesson names a concrete project folder for its result');
+const guide=fs.readFileSync(new URL('../dist/downloads/handboek.md',import.meta.url),'utf8');
+const download=fs.readFileSync(new URL('../dist/downloads/opdrachten.md',import.meta.url),'utf8');
+check(guide.includes(projectSetupPrompt)&&download.includes(projectSetupPrompt),'Both downloads contain the same setup task');
+check(lessons.every(l=>guide.includes(l.title)&&guide.includes(l.output)&&l.actions.every(([title,text])=>guide.includes(title)&&guide.includes(text))),'Handbook contains current lesson actions and outputs without an old parallel version');
+const report={status:'PASS',generated_at:new Date().toISOString(),checks,scope:['Project setup copy and clipboard fallback','Project path in 47 tasks','Read-first and save-output instructions','Lesson/handbook consistency'],limitations:['No reading-level score or learner comprehension test']};
+fs.writeFileSync(new URL('../docs/editorial-validation.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

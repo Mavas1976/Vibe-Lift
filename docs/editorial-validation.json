@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "generated_at": "2026-09-12T13:20:50.604Z",
+  "checks": 97,
+  "scope": [
+    "Project setup copy and clipboard fallback",
+    "Project path in 47 tasks",
+    "Read-first and save-output instructions",
+    "Lesson/handbook consistency"
+  ],
+  "limitations": [
+    "No reading-level score or learner comprehension test"
+  ]
+}
