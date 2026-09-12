@@ -13,7 +13,7 @@ const verify=(condition,message)=>{assert.ok(condition,message);checks++;};
 const source=fs.readFileSync(path.join(output,'downloads/handboek.md'),'utf8');
 verify(lessons.length===14,'Exactly fourteen lessons');
 verify(phases.length===5,'Exactly five phases');
-verify(prompts.length===28,'Exactly twenty-eight original prompts');
+verify(prompts.length===28,'Exactly twenty-eight reader-edition prompts');
 assert.deepEqual(lessons.map(l=>l.id),Array.from({length:14},(_,i)=>i+1));
 assert.deepEqual(prompts.map(p=>p.id),Array.from({length:28},(_,i)=>i+1));
 assert.deepEqual(lessons.flatMap(l=>l.prompts).sort((a,b)=>a-b),prompts.map(p=>p.id));
@@ -50,11 +50,13 @@ for(const id of [0,15,-1,100]) verify(parseRoute(`#stap/${id}`).page==='missing'
 for(const hash of ['#stap/01','#stap/1/nope','#stap/1/','#__proto__','#<script>','#stap/1?x=2','#stap/%31']) verify(parseRoute(hash).page==='missing',`Reject invalid route ${hash}`);
 verify(escapeHTML('<img src=x onerror="alert(1)">&\'')==='&lt;img src=x onerror=&quot;alert(1)&quot;&gt;&amp;&#39;','Dynamic text is escaped');
 verify(parseRoute('').page==='route','Empty route opens the map');
-const routeNames=['#route','#voorbeeld','#tools','#spos','#opdrachten',...lessons.flatMap(l=>['uitleg','voorbeeld','opdracht','controle'].map(t=>`#stap/${l.id}/${t}`))];
+const routeNames=['#route','#voorbeeld','#tools','#werkwijze','#opdrachten',...lessons.flatMap(l=>['uitleg','voorbeeld','opdracht','controle'].map(t=>`#stap/${l.id}/${t}`))];
 const rendered=new Map();
 for(const hash of routeNames) {
   location.hash=hash;listeners.hashchange();
   const html=main.innerHTML;rendered.set(hash,html);
+  verify(document.title.includes('VIBE Lift'),`${hash}: page title uses the current brand`);
+  verify(!/spos/i.test(html),`${hash}: no removed framework references in rendered content`);
   verify((html.match(/<h1\b/g)||[]).length===1,`${hash}: exactly one main heading`);
   verify(!/\bundefined\b|\[object Object\]|\bNaN\b/.test(html),`${hash}: no unresolved values`);
   for(const match of html.matchAll(/href="(#[^"]+)"/g)) verify(parseRoute(match[1]).page!=='missing',`${hash}: internal link ${match[1]} resolves`);
@@ -70,7 +72,9 @@ for(const hash of routeNames) {
   }
 }
 verify((rendered.get('#route').match(/class="step-card /g)||[]).length===14,'Map contains every step');
-verify((rendered.get('#opdrachten').match(/class="prompt-card"/g)||[]).length===28,'Library contains all original prompts');
+verify((rendered.get('#opdrachten').match(/class="prompt-card"/g)||[]).length===28,'Library contains all reader-edition prompts');
+verify(rendered.get('#route').includes('Digitale<br><span>gewichtloosheid.'),'Homepage leads with the brand promise');
+verify(rendered.get('#werkwijze').includes('Geef je bouwpartner de juiste context.'),'Method page provides actionable, independent guidance');
 verify((rendered.get('#voorbeeld').match(/href="#stap\/\d+\/voorbeeld"/g)||[]).length===14,'Example links to all fourteen lessons');
 // Copy success and denied-clipboard fallback exercise the production handler.
 location.hash='#stap/1/opdracht';listeners.hashchange();
@@ -78,7 +82,8 @@ let copied='',selected=false;
 Object.defineProperty(globalThis,'navigator',{configurable:true,value:{clipboard:{writeText:async t=>{copied=t;}}}});
 const copyEvent={target:{closest:selector=>selector==='[data-copy]'?{dataset:{copy:'1'}}:null}};
 await mainListeners.click(copyEvent);
-verify(copied===prompts[0].text,'Copy sends the exact original prompt');
+verify(copied===prompts[0].text,'Copy sends the current reader-edition prompt');
+verify(!/spos/i.test(copied),'Copied prompt does not require the removed framework');
 navigator.clipboard.writeText=async()=>{throw new Error('Denied');};
 document.querySelector('#prompt-text-1').select=()=>{selected=true;};
 await mainListeners.click(copyEvent);
@@ -95,6 +100,15 @@ location.hash='#stap/999';listeners.hashchange();
 verify(main.innerHTML.includes('Deze stap kunnen we niet vinden'),'Unknown route has a helpful fallback');
 
 const files=fs.readdirSync(output,{recursive:true}).filter(f=>fs.statSync(path.join(output,f)).isFile());
+for(const file of files) {
+  verify(!/spos/i.test(file),`${file}: no removed framework name in public paths`);
+  if(/\.(html|js|css|md|svg|json|txt)$/i.test(file)) verify(!/spos|truth contract/i.test(fs.readFileSync(path.join(output,file),'utf8')),`${file}: public source and downloads are free of framework references`);
+}
+const shell=fs.readFileSync(path.join(output,'index.html'),'utf8');
+verify(shell.includes('<title>VIBE Lift — Digitale gewichtloosheid</title>'),'Static metadata uses the full brand');
+verify((shell.match(/class="brand-vibe">VIBE/g)||[]).length===2,'Header and footer both use the VIBE Lift wordmark');
+verify(source.startsWith('# VIBE Lift — Digitale gewichtloosheid'),'Download has the current brand');
+verify(!/oorspronkelijke tekst|Originele opdracht|ongewijzigde kopie/i.test(rendered.get('#opdrachten')),'Library does not mislabel edited prompts as original');
 verify(files.includes('index.html'),'Static entrypoint exists');
 const totalBytes=files.reduce((sum,f)=>sum+fs.statSync(path.join(output,f)).size,0);
 verify(totalBytes<5_000_000,'Published assets stay below the five megabyte initial budget');
@@ -104,6 +118,6 @@ for(const file of files.filter(f=>/\.(html|js|css)$/.test(f))) {
 }
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'.openai/hosting.json'),'utf8').replace(/^\uFEFF/,''));
 verify(manifest.project_id==='appgprj_6aa5374be46881918efdd7f0e0b517bd' && manifest.static.directory==='dist','Existing Sites registration and output directory retained');
-const report={status:'PASS',generated_at:new Date().toISOString(),checks,rendered_routes:routeNames.length,lessons:14,original_prompts:28,source_sha256:createHash('sha256').update(fs.readFileSync(path.join(output,'downloads/handboek.md'))).digest('hex'),published_files:files.length,published_bytes:totalBytes,browser_qa:'Not performed; these are source, data and in-memory renderer checks, not browser UI tests.',limitations:['No real novice usability study','No browser layout, keyboard, screen-reader or contrast certification','External tool availability may change','Private hosted access is enforced by Sites, not application JavaScript']};
+const report={status:'PASS',generated_at:new Date().toISOString(),brand:'VIBE Lift',tagline:'Digitale gewichtloosheid',checks,rendered_routes:routeNames.length,lessons:14,reader_edition_prompts:28,public_framework_references:0,reader_edition_sha256:createHash('sha256').update(fs.readFileSync(path.join(output,'downloads/handboek.md'))).digest('hex'),published_files:files.length,published_bytes:totalBytes,browser_qa:'Not performed; these are source, data and in-memory renderer checks, not browser UI tests.',limitations:['No real novice usability study','No browser layout, keyboard, screen-reader or contrast certification','External tool availability may change','Private hosted access is enforced by Sites, not application JavaScript']};
 fs.writeFileSync(path.join(root,'docs/validation.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

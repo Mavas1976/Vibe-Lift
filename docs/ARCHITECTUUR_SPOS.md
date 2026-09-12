@@ -1,3 +1,5 @@
+> Historisch dossier van de eerste oplevering. De actuele branding en bezoekersinhoud zijn gewijzigd naar VIBE Lift; zie docs/REBRANDING.md (vanuit docs: REBRANDING.md). De oorspronkelijke bronopdrachten zijn vervangen door de bewerkte lezerseditie.
+
 # Architectuur en oplevering volgens SPOS
 
 ## 1. Context & Scope

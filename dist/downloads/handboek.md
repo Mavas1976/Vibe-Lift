@@ -1,7 +1,9 @@
-# Van idee naar een werkende website of app
+# VIBE Lift — Digitale gewichtloosheid
 
-**Mijn werkwijze met onderzoek, ontwerp, AI en SPOS**  
-Mark van Asten · Versie 3.1 · 12 september 2026
+**Van idee naar een werkende website of app**  
+Lezerseditie 1.1 · Gebaseerd op de werkwijze van Mark van Asten · 12 september 2026
+
+Deze editie is redactioneel aangepast voor VIBE Lift. De uitleg en opdrachten zijn zelfstandig bruikbaar met je eigen AI-omgeving. De historische verantwoording beschrijft de oorspronkelijke bron; zij is geen nieuwe toets van een werkend product.
 
 Een idee wordt bruikbaar wanneer je het kunt uitleggen, laten zien en uitproberen. In mijn werkwijze verbind ik die drie dingen. Ik onderzoek voor wie ik iets maak, werk het aanbod uit, laat processen en schermen ontwerpen en geef AI gerichte opdrachten om het te bouwen. Vervolgens open ik het resultaat zelf in de browser, doorloop ik de stappen en laat ik verbeteren wat nog niet klopt.
 
@@ -11,7 +13,7 @@ Dit document legt uit hoe je die werkwijze kunt volgen. Je hoeft vooraf geen pro
 
 **Deel A is de handleiding voor de eindgebruiker.** Je doorloopt veertien begrijpelijke stappen, met directe links, kopieerbare opdrachten en een duidelijk resultaat per stap. Dit deel is de basis voor de toekomstige uitlegsite.
 
-**Deel B is het volledige naslagwerk.** Daar staan de 28 gedetailleerde processtappen, gedragsanalyse, architectuurafspraken, SPOS-controles, invulmodellen en bronnen. Die verdieping blijft beschikbaar zonder dat een beginnende lezer haar eerst hoeft te doorgronden.
+**Deel B is het volledige naslagwerk.** Daar staan de 28 gedetailleerde processtappen, gedragsanalyse, architectuurafspraken, kwaliteitscontroles, invulmodellen en bronnen. Die verdieping blijft beschikbaar zonder dat een beginnende lezer haar eerst hoeft te doorgronden.
 
 De opdrachten in Deel A zijn opnieuw geformuleerd op basis van mijn beschreven werkwijze en aangevuld om ze uitvoerbaar te maken. Het zijn **kopieerbare werkinstructies, geen letterlijke citaten uit oude gesprekken**. Vul tekst tussen vierkante haken in voordat je een opdracht gebruikt. Een stap beschrijft hoe je het werk aanpakt; zij bewijst niet dat elke controle in alle eerdere trajecten is uitgevoerd.
 
@@ -29,9 +31,9 @@ De opdrachten in Deel A zijn opnieuw geformuleerd op basis van mijn beschreven w
 
 ## Deel A — De werkwijze stap voor stap
 
-### Wat SPOS in deze aanpak doet
+### Hoe je overzicht houdt
 
-SPOS is het werk- en kwaliteitskader waarmee ik opdrachten structureer en resultaten controleer. Het helpt om het doel vast te houden, bronnen van aannames te onderscheiden, bestaande onderdelen te benutten en te controleren of iets werkelijk werkt.
+Deze werkwijze helpt je opdrachten te structureren en resultaten te controleren. Houd het doel vast, onderscheid bronnen van aannames, benut bestaande onderdelen en controleer of iets werkelijk werkt.
 
 Voor de lezer komt dat bij iedere stap neer op vijf vragen:
 
@@ -41,7 +43,7 @@ Voor de lezer komt dat bij iedere stap neer op vijf vragen:
 4. **Hoe zien we dat het klopt?** Een controle die past bij het resultaat.
 5. **Wat nemen we mee?** De bestanden, besluiten en open punten voor de volgende stap.
 
-Bij onderzoek gaat de controle over bewijs. Bij ontwerp over begrijpelijkheid en volledigheid. Bij bouw over werking. Bij marktintroductie over echte reacties en gebruik. SPOS is in deze uitleg dus steeds verbonden aan een handeling en een zichtbaar resultaat. De technische en historische versieverantwoording staat in Deel B, hoofdstuk 10.4.
+Bij onderzoek gaat de controle over bewijs. Bij ontwerp over begrijpelijkheid en volledigheid. Bij bouw over werking. Bij marktintroductie over echte reacties en gebruik. Iedere controle is dus verbonden aan een handeling en een zichtbaar resultaat. De technische en historische versieverantwoording staat in Deel B, hoofdstuk 10.4.
 
 ### De route in één oogopslag
 
@@ -90,7 +92,7 @@ Ik begin vaak met een brede, gesproken gedachte. Daar kunnen doelgroep, functies
 **Opdracht 01 — Van losse gedachte naar projectbrief**
 
 ```text
-Gebruik SPOS. Zet mijn idee en de bijgevoegde informatie om in een heldere
+Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Zet mijn idee en de bijgevoegde informatie om in een heldere
 projectbrief. Beschrijf doelgroep, probleem, huidige werkwijze, gewenste
 uitkomst, eerste scope en succescriteria. Scheid wat ik expliciet heb gezegd
 van jouw aannames. Benoem tegenstrijdigheden en ontbrekende informatie.
@@ -121,7 +123,7 @@ Ik laat een markt niet alleen beschrijven op basis van verkooppagina’s. Waar r
 **Opdracht 02 — Onderzoek met bewijs**
 
 ```text
-Onderzoek met SPOS het probleem en de markt voor [doelgroep/probleem].
+Onderzoek het probleem en de markt voor [doelgroep/probleem].
 Gebruik actuele primaire bronnen waar mogelijk. Bekijk ook openbare
 handleidingen, werkinstructies, release notes en echte schermbeelden.
 Vergelijk doelgroep, proces, functies, beperkingen en aantoonbare verschillen.
@@ -243,7 +245,7 @@ Open [Antigravity](https://antigravity.google/) en de juiste projectmap. Voeg de
 **Opdracht 09 — Lees eerst het project en maak het bouwplan**
 
 ```text
-Gebruik SPOS. Lees de projectbrief, propositie, flows, schermspecificaties,
+Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Lees de projectbrief, propositie, flows, schermspecificaties,
 ontwerpbestanden en bestaande code in deze projectmap. Maak een overzicht
 van wat aanwezig is, ontbreekt of elkaar tegenspreekt. Onderzoek eerst wat
 je kunt uitbreiden, hergebruiken of aanpassen. Onderbouw nieuwe onderdelen.
@@ -301,7 +303,7 @@ Een `.bat`-bestand is een Windows-startbestand. Je dubbelklikt erop en het voert
 **Opdracht 12 — Maak de lokale starter**
 
 ```text
-Gebruik SPOS. Maak dit project op mijn Windows-computer met één dubbelklik
+Werk vanuit het doel, gebruik de meegegeven bronnen en controleer de uitkomst. Maak dit project op mijn Windows-computer met één dubbelklik
 lokaal startbaar en zichtbaar in mijn browser. Inspecteer eerst de bestaande
 projectstructuur, README, package scripts, lockfiles, omgevingsconfiguratie,
 backend, eventuele Docker-opzet en het bestaande poortregister.
@@ -413,7 +415,7 @@ Ik beoordeel visuele kwaliteit apart. Een scherm kan technisch werken en toch dr
 **Opdracht 16 — Maak de interface rustiger en natuurlijker**
 
 ```text
-Audit met SPOS de bestaande interface op hiërarchie, leesbaarheid, witruimte,
+Beoordeel systematisch de bestaande interface op hiërarchie, leesbaarheid, witruimte,
 knoppen, formulieren, navigatie, feedback en consistentie. Bekijk de echte
 schermen op mobiel en desktop. Leg per bevinding uit welk gebruikersprobleem
 je ziet. Maak een geprioriteerd verbeterplan en voer de afgesproken
@@ -424,7 +426,7 @@ dat de belangrijkste gebruikersroutes blijven werken.
 **Opdracht 17 — Test de hele keten**
 
 ```text
-Controleer de afgesproken release met SPOS tegen de proces-, scherm- en
+Controleer de afgesproken release tegen de proces-, scherm- en
 acceptatiecriteria. Test de relevante rollen, normale routes, foutpaden,
 rechten en gegevensverwerking. Combineer browsercontroles met controles
 van API en opslag waar die bestaan. Gebruik een passende reeks schermmaten.
@@ -573,7 +575,7 @@ Een eenvoudige site mag dit in enkele bestanden bundelen. Bij een grotere applic
 ### Opdracht 25 — Documenteer alle pagina’s en alle teksten
 
 ```text
-Gebruik SPOS en documenteer de volledige site in de huidige projectmap.
+Documenteer de volledige site in de huidige projectmap.
 Lees eerst de bestaande documentatie en inventariseer alle routes,
 navigatie, pagina's, gedeelde componenten, contentbestanden, vertalingen,
 formulieren en berichten. Neem relevante CMS-content mee als die toegankelijk
@@ -595,11 +597,10 @@ Lever leesbare Markdown-bestanden en een dekkingsmatrix op. Alleen een lijst
 paginanamen of een samenvatting van teksten is niet voldoende.
 ```
 
-### Opdracht 26 — Documenteer de volledige architectuur volgens SPOS
+### Opdracht 26 — Documenteer de volledige architectuur van je project
 
 ```text
-Gebruik SPOS CORE en BUILD voor de architectuurbeschrijving en AUDIT voor de
-controle. Onderzoek bestaande code, configuratie, gegevensschema's, routes,
+Beschrijf de architectuur en controleer de beschrijving tegen de aanwezige onderdelen. Onderzoek bestaande code, configuratie, gegevensschema's, routes,
 koppelingen, documentatie en toegankelijke runtime. Breid het bestaande
 dossier uit. Beschrijf beoogde en aangetroffen architectuur afzonderlijk.
 
@@ -615,7 +616,9 @@ Maak leesbare Mermaid-schema's voor de relevante systeem-, gegevens- en
 uitvoeringsrelaties. Koppel beschrijvingen en schema's aan concrete bronnen
 en versie. Controleer scheiding van verantwoordelijkheden, centrale afhandeling
 van externe diensten en hergebruik van logica en configuratie. Onderzoek de
-zes SPOS-foutcategorieën en koppel risico's aan maatregelen en verificatie.
+volgende foutcategorieën: ongeldige invoer, gelijktijdige handelingen, uitval
+van externe diensten, gegevensintegriteit, limieten en publicatiefouten.
+Koppel risico's aan maatregelen en verificatie.
 
 Markeer niet-toepasselijke onderwerpen met reden en onbekende onderdelen als
 onbekend. Verzin geen componenten, garanties, metingen of geslaagde controles.
@@ -628,7 +631,7 @@ bouw- of herstelopdracht.
 ### Opdracht 27 — Maak gebruikersdocumentatie en Mermaid-schema’s
 
 ```text
-Gebruik SPOS PRODUCT. Maak of actualiseer
+Maak of actualiseer
 /docs/APPLICATION_USER_OPERATING_MODEL.md en de bijbehorende gebruikers-
 en beheerdershandleidingen. Beschrijf de volledige toepasselijke werking:
 rollen, toegang, onboarding, dagelijkse taken, objecten, acties, formulieren,
@@ -647,7 +650,7 @@ Een generiek voorbeeld mag niet als schema van de gebouwde site worden getoond.
 ### Opdracht 28 — Controleer en synchroniseer documentatie bij oplevering
 
 ```text
-Audit met SPOS het dossier tegen de actuele siteversie. Begin bij de volledige
+Beoordeel systematisch het dossier tegen de actuele siteversie. Begin bij de volledige
 inventaris van routes, teksten, talen, rollen, flows, onderdelen en koppelingen.
 Vergelijk die met documentatie, Mermaid-schema's en testbewijs. Controleer ook
 omgekeerd of ieder beschreven onderdeel werkelijk bestaat of herkenbaar als
@@ -702,7 +705,7 @@ Een terugkerende les uit mijn opdrachten is dat je het resultaat zelf moet opene
 
 ### Het doel van de site
 
-De bezoeker moet begrijpen hoe ik van een idee naar een bruikbare website of app werk en vervolgens zelf een volgende stap kunnen zetten. De site legt de samenhang uit en maakt de opdrachten bruikbaar. Zij hoeft geen kennis van programmeren of SPOS te veronderstellen.
+De bezoeker moet begrijpen hoe ik van een idee naar een bruikbare website of app werk en vervolgens zelf een volgende stap kunnen zetten. De site legt de samenhang uit en maakt de opdrachten bruikbaar. Zij hoeft geen kennis van programmeren te veronderstellen.
 
 **Voorstel voor de introductietekst**
 
@@ -718,7 +721,7 @@ De bezoeker moet begrijpen hoe ik van een idee naar een bruikbare website of app
 | Gereedschappen | Officiële links met uitleg waarom en wanneer je een tool gebruikt. | Open de relevante tool of installatie-uitleg. |
 | Lokaal bekijken | Extra duidelijke uitleg over de BAT-starter en probleemoplossing. | Laat de starter maken en open je project. |
 | Opdrachten | De 28 opdrachten, gegroepeerd per fase en documentatietaak. | Kopieer een opdracht met de benodigde context. |
-| Werken met SPOS | De vijf controlevragen en praktische voorbeelden. | Pas de controle toe op je huidige resultaat. |
+| De werkwijze | De vijf controlevragen en praktische voorbeelden. | Pas de controle toe op je huidige resultaat. |
 | Documentatie en architectuur | Alle site-inhoud, gebruikerswerking, schema’s, technische samenhang en opdrachten 25–28. | Maak of actualiseer het websitedossier. |
 | Naslagwerk | De verdiepende processtappen, modellen en verantwoording. | Zoek een detail of download dit MD-bestand. |
 
@@ -750,7 +753,7 @@ De kopieerfunctie moet de volledige opdracht kopiëren, inclusief noodzakelijke 
 
 ```text
 Gebruik dit Markdown-document als inhoudelijke bron voor een Nederlandstalige
-uitlegsite over mijn werkwijze van idee tot markt met AI en SPOS.
+uitlegsite over mijn werkwijze van idee tot markt met AI.
 Maak Deel A leidend voor de leesroute. Gebruik Deel B als doorzoekbare of
 geordende verdieping. Behoud de betekenis, alle 14 stappen, de 28 opdrachten,
 de tool-links en de lokale BAT-werkwijze. Maak technische details toegankelijk
@@ -764,7 +767,7 @@ heldere hiërarchie, ruime afstanden en herkenbare vorige/volgende navigatie.
 Voorzie opdrachten van werkende kopieerknoppen. Laat mij de site lokaal
 openen via een passend start_local.bat-bestand. Controleer de stappenroute,
 links, kopieerfunctie, mobiele weergave en de download van het handboek.
-Leg uitgevoerde controles en resterende punten vast met SPOS. Lever ook het
+Leg uitgevoerde controles, onderbouwing en resterende punten vast. Lever ook het
 volledige documentatiedossier volgens hoofdstuk 11 op: alle pagina’s en teksten,
 gebruikerswerking, architectuur, Mermaid-bronnen en beheerinstructies. Werk
 het dossier bij iedere wijziging bij en controleer het tegen de opgeleverde versie.
@@ -835,8 +838,8 @@ Broncodes zoals **B01** verwijzen naar het projectneutrale bronregister in hoofd
 7. Het overdrachtsdossier en invulmodellen
 8. Vertaling naar een uitlegsite
 9. Dekkingsmatrix en aanvullingen
-10. Bronnen, onzekerheden en SPOS-verificatie
-11. Het volledige SPOS-documentatiecontract
+10. Bronnen, onzekerheden en kwaliteitscontrole
+11. Het volledige documentatiecontract
 12. Audit en verwerking van de documentatie-uitbreiding
 
 ## 1. De kern en ontwikkeling van mijn werkwijze
@@ -1569,7 +1572,7 @@ Onderstaande producten en bestanden staan in B01 of in de genoemde gebruikerscon
 
 ### 5.2 Centrale poortregistratie
 
-**DOCUMENTATIE — B01:** de opzet gebruikt `spos_port_registry.json`, met conventies voor `30xx` als ontwikkelpoort, eventueel `80xx` voor backend en `99xx` voor tests. Een centraal dashboard is in die bron gekoppeld aan poort `3000`.
+**DOCUMENTATIE — B01:** de bron beschrijft een centraal poortregister met lokale afspraken voor ontwikkel-, backend- en testdiensten. De concrete bestandsnaam is in deze lezerseditie weggelaten.
 
 Het procesdoel is consistentie tussen service, browser, proxy en testconfiguratie. De exacte projecttoewijzingen zijn uit dit handboek verwijderd. De nummerreeksen zijn lokale afspraken, geen door Antigravity of het web opgelegde standaard.
 
@@ -1591,15 +1594,15 @@ Een specifieke schermbreedte of veel viewports is geen bewijs van volledige resp
 
 ### 5.5 Projectstatus en synchronisatie
 
-**DOCUMENTATIE — B01:** `project_state.json` bevat onder meer `recent_changes`, `current_blockers`, `next_steps` en tijdvelden zoals `spos_hours_spent` en `traditional_hours_equivalent`. Een `sync_portfolio.py` verwerkt de projectstatus naar een centraal overzicht.
+**DOCUMENTATIE — B01:** `project_state.json` bevat onder meer `recent_changes`, `current_blockers`, `next_steps` en velden voor bestede en geschatte tijd. Een `sync_portfolio.py` verwerkt de projectstatus naar een centraal overzicht.
 
 **AANVULLING:** gebruik tijdvelden niet als objectief bewijs van besparing zonder meting en vergelijkingsbasis. Een ingeschatte traditionele inspanning is een schatting. Houd intern en publiek deelbare velden apart, zodat geen blokkades, credentials, klantgegevens of vertrouwelijke codepaden automatisch naar een openbare site gaan.
 
 Synchronisatie moet een herkenbare uitkomst hebben. Als zij mislukt, blijft de lokale status bewaard en wordt zichtbaar dat het centrale overzicht achterloopt. Automatisch synchroniseren is niet hetzelfde als toestemming voor openbaar publiceren.
 
-### 5.6 Wat SPOS wel en niet doet
+### 5.6 Wat werkinstructies wel en niet doen
 
-**OPDRACHT / DOCUMENTATIE — B05, B08, B09 en B19:** SPOS wordt gebruikt om feiten, aannames, uitvoering en onzekerheid uit elkaar te houden; bestaande onderdelen eerst te onderzoeken; de juiste taaksoort te kiezen; en verificatie onderdeel van de oplevering te maken.
+**OPDRACHT / DOCUMENTATIE — B05, B08, B09 en B19:** De werkinstructies worden gebruikt om feiten, aannames, uitvoering en onzekerheid uit elkaar te houden; bestaande onderdelen eerst te onderzoeken; de juiste taaksoort te kiezen; en verificatie onderdeel van de oplevering te maken.
 
 | Laag | Wat daar thuishoort |
 |---|---|
@@ -1626,7 +1629,7 @@ Bronverwijzingen, confidence-aanduidingen en een menselijke reviewmogelijkheid m
 
 **AANVULLING:** leg per relevante verwerking het doel, de gegevens, betrokken partijen, toegang, externe doorgifte en verwijdering vast. Beoordeel gegevensrechten en gebruiksvoorwaarden vóór het overnemen van externe data. Laat bij de uitvoering de dan toepasselijke regels en contracten verifiëren. Dit handboek geeft geen juridisch oordeel over een concreet product.
 
-Beveiliging wordt vertaald naar aantoonbaar gedrag: server-side toegangscontroles, gescheiden accounts, veilige omgang met geheimen, beperkte logging en gecontroleerde afhankelijkheden. Een certificerings- of complianceclaim vraagt eigen bewijs; een cookiebanner of SPOS-bestand is daarvoor onvoldoende.
+Beveiliging wordt vertaald naar aantoonbaar gedrag: server-side toegangscontroles, gescheiden accounts, veilige omgang met geheimen, beperkte logging en gecontroleerde afhankelijkheden. Een certificerings- of complianceclaim vraagt eigen bewijs; een cookiebanner of instructiebestand is daarvoor onvoldoende.
 
 ### 5.9 Deploymentconfiguratie en technische claims
 
@@ -1736,7 +1739,7 @@ Volledigheid betekent alle relevante onderdelen behandelen. Zij betekent niet ie
 | `GROWTH_AND_FEEDBACK.md` | Marktacties, meetpunten, reacties en verbeteringen. | Er nieuwe markt- of gebruiksinformatie is. |
 | `project_state.json` of gelijkwaardig | Actuele stand, versie, blokkades en eerstvolgende stap. | Iedere betekenisvolle sessie eindigt. |
 
-Hoofdstuk 11 maakt de toepasselijke inhoud van dit dossier verplicht binnen de werkwijze, met volledige site-inhoud, SPOS PRODUCT-documentatie en architectuur. Bestandsnamen mogen worden hergebruikt; registreer één leidende locatie per onderwerp.
+Hoofdstuk 11 maakt de toepasselijke inhoud van dit dossier verplicht binnen de werkwijze, met volledige site-inhoud, gebruikers- en beheerdocumentatie en architectuur. Bestandsnamen mogen worden hergebruikt; registreer één leidende locatie per onderwerp.
 
 Deze bestandsindeling is een voorstel, geen claim dat alle genoemde bestanden al in de lokale omgeving aanwezig zijn. Hergebruik bestaande namen als die hetzelfde doel goed vervullen.
 
@@ -1856,7 +1859,7 @@ resultaten, beperkingen en open punten. Noem niet-uitgevoerde controles
 niet geslaagd. Geef aan welke onderdelen nog mocks of demo zijn.
 ```
 
-Dit model maakt de opdracht concreet zonder een specifieke frameworkversie, modelnaam of toolmogelijkheid te verzinnen. Voeg de geldende lokale SPOS-instructies toe wanneer die werkelijk beschikbaar zijn.
+Dit model maakt de opdracht concreet zonder een specifieke frameworkversie, modelnaam of toolmogelijkheid te verzinnen. Voeg de geldende projectafspraken en relevante bronbestanden toe.
 
 ### 7.7 Invulmodel voor een bevinding en hertest
 
@@ -2013,7 +2016,7 @@ Bij latere screenshots van de werkplek moeten projectnamen, paden, accounts, URL
 | 4 IT-architectuur en data contracts | P09–P10, P17; 5.1, 5.7–5.8 | Verantwoordelijkheden, contracten, externe invoer, AI-evaluatie en datagrenzen. |
 | 5 Full-stack implementatie | P19 | Volledige kernflow, werkelijk gedrag, meertaligheid, states en mockstatus. |
 | 6 Lokale starters | P18; 5.3 | Gereedheid, foutmelding, stoppen en hervatten. |
-| 7 SPOS-validatie en E2E | P20–P22; 5.4, 5.6; hoofdstuk 6 | Eigen waarneming, tweede testlaag, herstel, bewijs en releasebesluit. |
+| 7 Kwaliteitscontrole en E2E | P20–P22; 5.4, 5.6; hoofdstuk 6 | Eigen waarneming, tweede testlaag, herstel, bewijs en releasebesluit. |
 | 8 State tracking en synchronisatie | P28; 5.5; 7.9–7.10 | Versies, beperkingen, gemeten versus geschatte tijd, publiek versus intern en herstelbaarheid. |
 | 9 Git en remotes | P23–P24 | Continue versiecontrole, assetbeleid, gevolgde bestanden en afzonderlijke pushstatus. |
 | 10 Deployment en hosting | P25; 5.9 | Live kernflow, configuratie, herstel en het verschil tussen healthcheck en echte werking. |
@@ -2071,7 +2074,7 @@ Bij latere screenshots van de werkplek moeten projectnamen, paden, accounts, URL
 9. **Commerciële stappen zijn concreter.** Eerste marktcontact, SEO, meetpunten, activatie, betaalbereidheid en feedback zijn opgenomen zonder verkoopresultaten te verzinnen.
 10. **De uitlegsite kan op dit dossier voortbouwen.** Pagina’s, leerdoelen, formats en neutrale voorbeelden zijn beschreven.
 
-## 10. Bronnen, onzekerheden en SPOS-verificatie
+## 10. Bronnen, onzekerheden en kwaliteitscontrole
 
 ### 10.1 Onderzoeksafbakening
 
@@ -2081,7 +2084,7 @@ Deze analyse heeft **geen nieuwe inspectie van de lokale Windows-projectomgeving
 
 Voor versie 3.0 zijn daarnaast officiële ingangen voor ontwerp, bouw, lokale installatie, browserregistratie en hosting geraadpleegd. De nieuwe bijlage met `(1)` in de bestandsnaam is byte voor byte gelijk aan de eerdere bijlage en telt daarom niet als onafhankelijke bevestiging. Deel A vertaalt de werkwijze naar eindgebruikersstappen en opnieuw geformuleerde opdrachten; dit zijn geen historische woordelijke citaten.
 
-De gekozen SPOS-route is **RESEARCH**, complexiteit **L**, met productprocesstructuur en de bewijsdiscipline uit CORE en het Truth Contract. Het gaat hier om procesreconstructie, niet om een nieuwe forensische code-audit. Er is daarom geen nieuwe technische kwaliteitsscore aan het portfolio toegekend.
+De oorspronkelijke bron reconstrueert een werkwijze en beschrijft de bijbehorende kwaliteitscontroles. Zij is geen nieuwe forensische code-audit en kent geen nieuwe technische kwaliteitsscore toe aan de beschreven producten.
 
 ### 10.2 Projectneutraal bronregister
 
@@ -2089,7 +2092,7 @@ Projectnamen en herkenbare verwijzingen zijn weggelaten. Het register geeft datu
 
 | Code | Bron en datum | Geraadpleegde inhoud | Wat dit ondersteunt | Grens |
 |---|---|---|---|---|
-| B01 | `SPOS_Ontwikkelcyclus_en_Architectuur_Audit.md`, 12 september 2026 | Volledige bijlage, hoofdstukken 1–4. | Beschreven tienfasenproces, tooling, bestanden en configuratiepatronen. | Onderliggende pc, code en tests niet opnieuw onderzocht. Eerder teruggevonden kopie is dezelfde bronfamilie. |
+| B01 | Bijlage over ontwikkelcyclus en architectuur, 12 september 2026 | Volledige bijlage, hoofdstukken 1–4. | Beschreven tienfasenproces, tooling, bestanden en configuratiepatronen. | Onderliggende pc, code en tests niet opnieuw onderzocht. Eerder teruggevonden kopie is dezelfde bronfamilie. |
 | B02 | Huidige opdrachten, 12 september 2026 | Verzoek tot reconstructie, aanvulling, gedragsanalyse en MD-output. | Doel, volledige procesbeschrijving, projectneutraliteit en beoogde uitlegsite. | Opdracht, geen bewijs van eerdere uitvoering. |
 | B03 | Teruggevonden context, 16 januari 2026; eerdere propositiecontext uit januari | Opdrachten voor samenhangende propositie, inhoudsstructuur, branding en bouwbriefing. | Inhoudelijk voorwerk en samenhang van product en site. | Fragmentarische context; geen repo-inspectie. |
 | B04 | Beschikbare eerdere gesprekscontext, 23 februari 2026 | Doelgroepsegmentatie, eerste aanbod, gefaseerde introductie, marketing/sales/activatie. | Gevraagde commerciële voorbereiding en productfocus. | Plannen bewijzen geen gerealiseerde verkoop of activatie. |
@@ -2107,13 +2110,13 @@ Projectnamen en herkenbare verwijzingen zijn weggelaten. Het register geeft datu
 | B16 | Eerder volledig gelezen strategie- en propositiedocument, 17 juli 2026 | Werkwijze in vijf fasen, productmanagement vóór technologie, AI-evaluatie en doorontwikkeling. | Vastgelegde methodiek en commercieel ontwerp. | Positionering en voorschrift, geen onafhankelijke bevestiging van alle handelingen. |
 | B17 | Teruggevonden gebruikersmededeling, 10 september 2026 | Verwijderde lokale mappen en problemen met reconstructie uit chats. | Belang van herstelbaarheid als procesles. | Oorzaak, omvang en herstelstatus niet onderzocht. |
 | B18 | Beschikbare context rond SEO- en marktintroductieopdrachten, september 2026; aanvullende documentverwijzingen via retrieval | Vindbaarheid, indexatie, content, analytics en marketingplannen. | Onderwerpen voor de voorgestelde commerciële uitvoeringsstappen. | Onderliggende SEO-documenten niet in deze ronde integraal gelezen; specifieke implementatieclaims worden er niet op gebaseerd. |
-| B19 | Beschikbare SPOS CORE, RESEARCH en Truth Contract, gelezen in deze conversatie | Bronstatus, anti-hallucinatie, verificatie, afbakening en reconstructiediscipline. | Methode voor deze analyse. | Instructiekader, geen productcertificering. |
+| B19 | Interne instructies voor brononderzoek en kwaliteitscontrole, gelezen in deze conversatie | Bronstatus, anti-hallucinatie, verificatie, afbakening en reconstructiediscipline. | Methode voor deze analyse. | Instructiekader, geen productcertificering. |
 | B20 | Eerdere versie van dit handboek, 12 september 2026 | Veertien hoofdstukken in Word; inhoud en hoofdstukstructuur gecontroleerd. | Basis voor uitbreiding en inhoudelijke dekkingscontrole. | Eigen eerdere synthese, geen onafhankelijke bron. |
 | B21 | Aanvullende huidige gebruikersopdrachten, 12 september 2026 | Tool-links, belangrijke bouwopdrachten, BAT voor lokaal bekijken en een leesbaar document als websitebasis. | De aanvullingen en lezersroute in Deel A. | Opdracht, geen bewijs van uitvoering op de lokale pc. |
 | B22 | Teruggevonden gebruikerscontext, 27 februari 2026 | Stitch-opdracht met merkrichtlijnen, gebruik van aanwezige ontwerpbestanden en propositie; aansluiting van marketingsite op bestaande demo/login en talen. | Contextgestuurde ontwerpopdracht en overdracht met behoud van bestaande routes. | Fragmenten, geen nieuwe inspectie van ontwerp of code. |
 | B23 | Officiële webdocumentatie, geraadpleegd 12 september 2026 | De direct gelinkte product-, download- en documentatiepagina’s in Deel A. | Tool-ingangen en de beschreven algemene rol van die gereedschappen. | Geen accountinspectie, featuretest of toets van lokale compatibiliteit. |
-| B24 | Aanvullende huidige gebruikersopdrachten na versie 3.0 | Volledige site-documentatie, alle teksten, pagina’s, Mermaid en architectuur volgens SPOS opnemen en auditen. | Documentatiecontract en verwerking in de ontwikkelcyclus. | Opdracht; geen bewijs van eerdere naleving. |
-| B25 | Beschikbare SPOS CORE, Truth Contract, AUDIT, PRODUCT en BUILD, gelezen bij deze aanvulling | Documentaire audit, architectuureisen, zes failure modes en volledige product-/operationele documentatie. | Normenkader voor hoofdstuk 11 en audit in hoofdstuk 12. | Kandidaatmetadata zoals uitgelegd in 10.4; geen certificering. |
+| B24 | Aanvullende huidige gebruikersopdrachten na versie 3.0 | Volledige site-documentatie, alle teksten, pagina’s, Mermaid en architectuur opnemen en controleren. | Documentatiecontract en verwerking in de ontwikkelcyclus. | Opdracht; geen bewijs van eerdere naleving. |
+| B25 | Interne instructies voor documentatie, architectuur en kwaliteitscontrole, gelezen bij deze aanvulling | Documentaire audit, architectuureisen, zes failure modes en volledige product-/operationele documentatie. | Normenkader voor hoofdstuk 11 en audit in hoofdstuk 12. | Historische methodeverantwoording; geen certificering. |
 
 ### 10.3 Omgang met stellige claims uit de bijlage
 
@@ -2130,11 +2133,11 @@ Projectnamen en herkenbare verwijzingen zijn weggelaten. Het register geeft datu
 
 Dit zijn begrenzingen van wat deze analyse kan vaststellen. Zij betekenen niet dat de beschreven inrichting onwaar is.
 
-### 10.4 SPOS-versieverantwoording
+### 10.4 Verantwoording van deze lezerseditie
 
-De aangeleverde audit noemt **SPOS v4.6.0** en **Truth Contract v1.0**. De in deze omgeving beschikbare skillbestanden bevatten een **v4.7.0 candidate**-kop en daarnaast verwijzingen naar het integratiecontract voor **v4.6.0 candidate**. Daarom wordt deze uitvoering niet gepresenteerd als een zuivere of gecertificeerde v4.6.0-runtime.
+Deze versie is bewerkt voor VIBE Lift. Formuleringen, opdrachten en verwijzingen naar de interne analysemethode zijn aangepast voor de lezer. De procesindeling en inhoudelijke controlecriteria blijven beschikbaar. De download is daardoor geen ongewijzigde kopie van het oorspronkelijke document.
 
-Voor de oorspronkelijke reconstructie zijn de feitelijk beschikbare CORE- en RESEARCH-instructies met het volledige Truth Contract gebruikt. Voor de aanvulling in versie 3.1 is AUDIT de primaire route, met PRODUCT en BUILD als inhoudelijke capabilities. De huidige gebruikersvoorkeur voor SPOS v4.6.0 blijft uitgangspunt; de beschikbare bestanden hebben de hierboven genoemde afwijkende kandidaatmetadata. De historische standaard uit de bijlage blijft als bronmetadata behouden. Er is geen installatie, upgrade of certificering van de lokale omgeving van Mark uitgevoerd of verondersteld.
+De historische reconstructie en haar beperkingen blijven als achtergrond herkenbaar. Er is bij deze redactionele bewerking geen nieuwe inspectie van onderliggende producten, installatie of technische certificering uitgevoerd. Beoordeel in je eigen project welke controles werkelijk zijn uitgevoerd en welk bewijs daarbij hoort.
 
 ### 10.5 Falsificatiecheck en alternatieve verklaringen
 
@@ -2207,11 +2210,11 @@ De bestandscontrole richt zich op een zelfstandig leesbaar UTF-8 Markdown-bestan
 
 Versie 3.0 behoudt het volledige procesnaslagwerk en voegt een zelfstandig leesbare handleiding toe. Nieuw zijn de officiële tool-links, 24 concrete opdrachten, de uitgewerkte BAT-startprocedure, een begrippenlijst en een bouwbrief voor de uitlegsite. De algemene kwaliteitsaanvullingen in de opdrachten blijven voorschriften voor uitvoering. Ze zijn geen claim dat de onderliggende Windows-scripts of projecten in deze sessie zijn gebouwd of getest.
 
-## 11. Het volledige SPOS-documentatiecontract
+## 11. Het volledige documentatiecontract
 
 ### 11.1 Doel, status en toepasselijkheid
 
-**OPDRACHT — B24:** site-inhoud, gebruikerswerking, Mermaid-schema’s en architectuur zijn verplichte onderdelen van deze werkwijze. **AANVULLING:** de onderstaande dossierindeling, formats en controlemomenten operationaliseren die opdracht met SPOS CORE, PRODUCT, BUILD en AUDIT, bron B25. Het zijn vastgelegde uitvoeringsvereisten; geen claims dat al deze documenten in eerdere projecten aanwezig waren.
+**OPDRACHT — B24:** site-inhoud, gebruikerswerking, Mermaid-schema’s en architectuur zijn verplichte onderdelen van deze werkwijze. **AANVULLING:** de onderstaande dossierindeling, formats en controlemomenten operationaliseren die opdracht met eisen voor inhoud, gebruikerswerking, architectuur en controle, bron B25. Het zijn vastgelegde uitvoeringsvereisten; geen claims dat al deze documenten in eerdere projecten aanwezig waren.
 
 Dit contract verdiept P11–P12, P15–P17, P22 en P28. Het geldt voor de ontwikkeling én voor het bijwerken van een bestaande site. De documentatie van een specifieke applicatie wordt op basis van haar eigen bronnen ingevuld. Deze handleiding levert daarvoor het proces en de modellen.
 
@@ -2227,7 +2230,7 @@ Gebruik drie afzonderlijke dimensies per onderdeel:
 
 ### 11.2 Het dossier en de leidende bronnen
 
-Bestaande bestandsnamen blijven bruikbaar. Leg in `docs/README.md` vast welk bestand leidend is voor elk onderwerp, wie het bijhoudt en hoe het samenhangt met de andere bestanden. De voorgestelde indeling hieronder breidt hoofdstuk 7.1 uit. Een kleine site kan onderwerpen bundelen, zolang de index elk toepasselijk onderwerp terugvindbaar maakt. Het SPOS PRODUCT-hoofddocument behoudt de herkenbare naam `APPLICATION_USER_OPERATING_MODEL.md`.
+Bestaande bestandsnamen blijven bruikbaar. Leg in `docs/README.md` vast welk bestand leidend is voor elk onderwerp, wie het bijhoudt en hoe het samenhangt met de andere bestanden. De voorgestelde indeling hieronder breidt hoofdstuk 7.1 uit. Een kleine site kan onderwerpen bundelen, zolang de index elk toepasselijk onderwerp terugvindbaar maakt. Het hoofddocument over gebruikerswerking behoudt de herkenbare naam `APPLICATION_USER_OPERATING_MODEL.md`.
 
 | Dossieronderdeel | Verplichte inhoud | Bijwerken bij |
 |---|---|---|
@@ -2317,25 +2320,25 @@ Dit is een invulmodel. Vervang de velden tijdens uitvoering door werkelijke inho
 
 De architectuur moet zowel de gebruikerstaak als de technische verdeling verklaren. Leg per hoofdstuk vast wat beoogd is, wat in code/configuratie is aangetroffen en wat operationeel is gecontroleerd. Een ontwerpdiagram is geen bewijs van de productie-inrichting.
 
-| Architectuuronderwerp | Minimale documentatie | SPOS-koppeling |
+| Architectuuronderwerp | Minimale documentatie | Aandachtspunt |
 |---|---|---|
-| Context en scope | Doelen, gebruikers, externe systemen, systeemgrens, randvoorwaarden en uitgesloten onderdelen. | CORE context en scope. |
+| Context en scope | Doelen, gebruikers, externe systemen, systeemgrens, randvoorwaarden en uitgesloten onderdelen. | context en scope. |
 | Bestaande oplossing | Inventaris van herbruikbare onderdelen, overlap, te wijzigen delen en gemotiveerde nieuwe onderdelen. | Build gate: extend → reuse → modify → create. |
-| Onderdelen en verantwoordelijkheden | Frontend, backend, modules, componenten, services, opslag en hun onderlinge relaties. | BUILD architectuur en scheiding van logica. |
-| Bedrijfsregels | Waar regels worden beheerd, wie ze toepast en hoe duplicatie wordt voorkomen. | BUILD architectuurhandhaving. |
-| Interfaces en integraties | Centrale adapters/gateway waar relevant; eigenaar, richting, contract, authenticatie, fouten en versiebeleid. | BUILD externe calls en data contracts. |
-| Data en bestanden | Schema’s, relaties, eigenaarschap, classificatie, opslaglocaties, bron/herkomst, wijzigen, exporteren en verwijderen. | CORE data contracts en security. |
-| Toegang en trust boundaries | Identiteit, sessie, autorisatie per actie, organisatiegrenzen indien aanwezig en validatie aan grenzen. | CORE trust boundaries; BUILD security. |
-| Configuratie en afhankelijkheden | Vereiste versies, lockfiles, configuratiebronnen, geheime waarden buiten documentatie en updatebeleid. | BUILD hergebruik en centrale configuratie. |
-| Omgevingen en deployment | Lokale, test- en productieopzet; build/start, poorten, domeinen, persistente data, migraties en rollback. | BUILD deployment failure modes. |
-| Uitvoering en toestanden | Kritieke sequenties, transacties, achtergrondtaken, retries, time-outs en dubbele uitvoering. | CORE state/idempotency. |
-| Observability | Gebeurtenissen/logs, correlation-ID’s waar relevant, metingen, signalen, eigenaar en reactie. | CORE/BUILD observability. |
-| Prestaties en capaciteit | Vastgestelde eisen, meetmethode, limieten, verwachte belasting en gedrag bij overschrijding. | BUILD resource limits. |
-| Kosten | Kostendragers, meting waar beschikbaar, budgetten, limieten en reactie op afwijkingen. | CORE/BUILD kosten. |
-| Fouten en herstel | Foutcategorieën, fallback, veilige herhaling, back-up, herstelstappen en bewijs van herstelproeven. | BUILD failure mode analyse. |
-| AI-functies, indien aanwezig | Prompt-/modelversies, gegevensgrenzen, evaluatie, menselijke afhandeling, variatie en kostenbeheersing. | CORE evaluatie en outputstabiliteit. |
-| Besluiten en technische schuld | Alternatieven, gemaakte afweging, gevolg, eigenaar en heroverwegingsmoment. | AUDIT architecture decision review. |
-| Verificatie | Eis → architectuurmaatregel → implementatie → controle → bewijs, plus open afwijkingen. | CORE verificatie en AUDIT. |
+| Onderdelen en verantwoordelijkheden | Frontend, backend, modules, componenten, services, opslag en hun onderlinge relaties. | architectuur en scheiding van logica. |
+| Bedrijfsregels | Waar regels worden beheerd, wie ze toepast en hoe duplicatie wordt voorkomen. | architectuurhandhaving. |
+| Interfaces en integraties | Centrale adapters/gateway waar relevant; eigenaar, richting, contract, authenticatie, fouten en versiebeleid. | externe calls en data contracts. |
+| Data en bestanden | Schema’s, relaties, eigenaarschap, classificatie, opslaglocaties, bron/herkomst, wijzigen, exporteren en verwijderen. | data contracts en security. |
+| Toegang en trust boundaries | Identiteit, sessie, autorisatie per actie, organisatiegrenzen indien aanwezig en validatie aan grenzen. | trust boundaries; security. |
+| Configuratie en afhankelijkheden | Vereiste versies, lockfiles, configuratiebronnen, geheime waarden buiten documentatie en updatebeleid. | hergebruik en centrale configuratie. |
+| Omgevingen en deployment | Lokale, test- en productieopzet; build/start, poorten, domeinen, persistente data, migraties en rollback. | deployment failure modes. |
+| Uitvoering en toestanden | Kritieke sequenties, transacties, achtergrondtaken, retries, time-outs en dubbele uitvoering. | state/idempotency. |
+| Observability | Gebeurtenissen/logs, correlation-ID’s waar relevant, metingen, signalen, eigenaar en reactie. | observability. |
+| Prestaties en capaciteit | Vastgestelde eisen, meetmethode, limieten, verwachte belasting en gedrag bij overschrijding. | resource limits. |
+| Kosten | Kostendragers, meting waar beschikbaar, budgetten, limieten en reactie op afwijkingen. | kosten. |
+| Fouten en herstel | Foutcategorieën, fallback, veilige herhaling, back-up, herstelstappen en bewijs van herstelproeven. | failure mode analyse. |
+| AI-functies, indien aanwezig | Prompt-/modelversies, gegevensgrenzen, evaluatie, menselijke afhandeling, variatie en kostenbeheersing. | evaluatie en outputstabiliteit. |
+| Besluiten en technische schuld | Alternatieven, gemaakte afweging, gevolg, eigenaar en heroverwegingsmoment. | Beoordeling van architectuurbesluiten. |
+| Verificatie | Eis → architectuurmaatregel → implementatie → controle → bewijs, plus open afwijkingen. | verificatie en dossiercontrole. |
 
 **Zes verplichte vragen bij de toepasselijke architectuuronderdelen**
 
@@ -2368,9 +2371,9 @@ Vervangt/vervangen door: [ADR-ID of n.v.t.]
 
 ### 11.5 Functionele en operationele productdocumentatie
 
-Gebruik het SPOS PRODUCT-model als inhoudelijke checklist. De gekozen omvang van het product bepaalt welke onderdelen bestaan; ontbrekende productfuncties worden niet verzonnen om het format te vullen. Voor een volledige applicatie documenteer je alle toepasselijke onderwerpen hieronder, inclusief de beheer- en gebruiksdetails.
+Gebruik het model voor gebruikers- en beheerdocumentatie als inhoudelijke checklist. De gekozen omvang van het product bepaalt welke onderdelen bestaan; ontbrekende productfuncties worden niet verzonnen om het format te vullen. Voor een volledige applicatie documenteer je alle toepasselijke onderwerpen hieronder, inclusief de beheer- en gebruiksdetails.
 
-| SPOS PRODUCT-onderwerp | Wat het dossier uitlegt |
+| Onderwerp over gebruikerswerking | Wat het dossier uitlegt |
 |---|---|
 | 1. Samenvatting | Doel, gebruikers en hoofdwerking. |
 | 2. Productscope | Bestaand, gedeeltelijk, placeholder, gepland en onbekend. |
@@ -2488,21 +2491,21 @@ Leg de werkelijk onderzochte populatie vast. “Alle routes” mag niet betekene
 
 Deze eisen zijn onderdeel van de oplevering van een site. Het aanmaken van lege bestanden of alleen invullen van een inhoudsopgave voldoet niet.
 
-## 12. SPOS-audit en verwerking van de documentatie-uitbreiding
+## 12. Documentatiecontrole en verwerking van de documentatie-uitbreiding
 
 ### 12.1 Scope en conclusie
 
 | Onderdeel | Binnen deze audit | Bewijsgrens |
 |---|---|---|
 | Object | Versie 3.0 van dit proceshandboek, aangepast naar 3.1. | De documenten zijn onderzocht; een afzonderlijke site of repository niet. |
-| Normenkader | Huidige gebruikersopdracht, beschikbare SPOS CORE/Truth Contract, AUDIT, PRODUCT en BUILD. | Kandidaatversies en integratieverschillen blijven vermeld in 10.4. |
+| Normenkader | Huidige gebruikersopdracht, de afgesproken eisen voor bronnen, architectuur, gebruikerswerking en controle. | Afbakening en redactionele aanpassingen staan in 10.4. |
 | Observatie | Bestaande teksten, processtappen, dossiermodellen en verwijzingen. | Controleerbaar in de genoemde hoofdstukken. |
 | Afleiding | Gevolgen van onvolledige afspraken voor overdracht en actualiteit. | Kwaliteitsrisico van de werkwijze; geen aangetoond productie-incident. |
 | Buiten scope | Actuele productarchitectuur, codeveiligheid, juridische naleving en werking op Windows. | Niet onderzocht en niet gecertificeerd. |
 
 **Conclusie:** documentatie en architectuur waren aanwezig, maar vormden nog geen volledig uitvoerbaar oplevercontract. De aanvulling maakt inhoud, werking, diagrammen, architectuur en beheer gezamenlijk onderdeel van ontwerp, wijziging en release. De bevindingen hieronder zijn in het handboek verwerkt. Uitvoering van dit contract in een afzonderlijk bouwproject vereist eigen bewijs.
 
-**Aanpak:** bestaande passages vergelijken met de gevraagde volledigheid; tegenbewijs zoeken in P11, P17, P22, P28 en hoofdstuk 7; ontbrekende uitwerking aanvullen; de gewijzigde tekst, verwijzingen en scope controleren. Complexiteit **L**, primaire route **AUDIT**, met PRODUCT- en BUILD-capabilities voor het documentatiecontract.
+**Aanpak:** bestaande passages vergelijken met de gevraagde volledigheid; tegenbewijs zoeken in P11, P17, P22, P28 en hoofdstuk 7; ontbrekende uitwerking aanvullen; de gewijzigde tekst, verwijzingen en scope controleren. De beoordeling richt zich op documentatie, gebruikerswerking en architectuur.
 
 ### 12.2 Sterke punten en tegenbewijs
 
@@ -2521,7 +2524,7 @@ Deze observaties ontkrachten de hypothese “documentatie ontbrak volledig”. Z
 | AUD-ARC-001 | P17; hoofdstuk 5 en 7.1 | Architectuurafspraken hadden geen volledig dossiercontract voor context, uitvoering, beheer, besluiten en bronstatus. | MIDDEN; belangrijke technische keuzes en herstelkennis kunnen buiten de overdracht vallen. | Opdracht 26; 11.4; aangescherpt P17. | M; verwerkt. |
 | AUD-DOC-002 | Procesdiagrammen in hoofdstuk 3/6; modellen in hoofdstuk 7 | Mermaid kwam voor als procesillustratie, maar een onderhouden register van diagrammen van de site ontbrak. | MIDDEN; illustraties kunnen worden aangezien voor actuele systeemdocumentatie. | Opdracht 27; 11.6 met ID, bron, versie en renderstatus. | S; verwerkt. |
 | AUD-DOC-003 | P28; hoofdstuk 6.4 en 7.10 | Bijwerken was voorgeschreven, maar volledige koppeling aan wijzigings- en releasecriteria ontbrak. | MIDDEN; het dossier kan achterlopen terwijl een release toch wordt afgerond. | Opdracht 28; 11.7–11.9; aangescherpt P22 en P28. | M; verwerkt. |
-| AUD-DOC-004 | Scherm- en flowmodellen, hoofdstuk 7 | De volledige SPOS PRODUCT-inhoud voor dagelijkse werking, objectbeheer en beheerhandleidingen was niet als één checklist opgenomen. | MIDDEN; een volgende gebruiker of beheerder kan noodzakelijke taakcontext missen. | 11.2 en 11.5; gebruikers- en beheerdersdocumentatie expliciet toegevoegd. | M; verwerkt. |
+| AUD-DOC-004 | Scherm- en flowmodellen, hoofdstuk 7 | De volledige inhoud over gebruikers- en beheerderswerking voor dagelijkse werking, objectbeheer en beheerhandleidingen was niet als één checklist opgenomen. | MIDDEN; een volgende gebruiker of beheerder kan noodzakelijke taakcontext missen. | 11.2 en 11.5; gebruikers- en beheerdersdocumentatie expliciet toegevoegd. | M; verwerkt. |
 
 Impact is een **afgeleid procesrisico**, geen waargenomen defect van een live applicatie. Geen kritieke of hoge productiebevindingen zijn vastgesteld in deze documentaudit.
 
@@ -2566,4 +2569,4 @@ De documentcontrole omvat hoofdstukstructuur, 14 lezersstappen, 28 kopieerbare o
 
 De nieuwe Mermaid-voorbeelden zijn tekstueel gecontroleerd; zij zijn in deze sessie niet gerenderd. De syntaxis- en visuele rendercontrole blijven voor deze voorbeelden dus **NIET UITGEVOERD**. Er zijn geen lokale Windows-tests, repository-audits of livecontroles uitgevoerd. De aanwezige externe links zijn overgenomen uit de vorige editie en in deze documentaudit niet opnieuw bezocht.
 
-**Eindstatus:** de vijf vastgestelde documentatiegaps zijn verwerkt in versie 3.1. Dit is een aangevuld en gecontroleerd werkwijzedocument op basis van de beschikbare SPOS-instructies, geen certificaat voor een onderliggende site of SPOS-runtime.
+**Eindstatus:** de vijf vastgestelde documentatiegaps zijn verwerkt in versie 3.1. Dit is een aangevuld en gecontroleerd werkwijzedocument op basis van de beschreven werkwijze, geen certificaat voor een onderliggende site of ontwikkelomgeving.

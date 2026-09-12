@@ -2,7 +2,7 @@
 
 ## 1. Executive summary
 
-**Observatie:** Lift is een Nederlandstalige leeromgeving voor beginners die met AI een IT-project of website willen opbouwen. De inhoud is verdeeld over veertien stappen en vijf fasen. Lezers kiezen vrij een stap en wisselen tussen Uitleg, Voorbeeld, Opdracht en Controle. De fictieve Studio Maan verbindt de uitleg. Alle 28 genummerde bronopdrachten zijn leesbaar en kopieerbaar.
+**Observatie:** VIBE Lift is een Nederlandstalige leeromgeving voor beginners die met AI een IT-project of website willen opbouwen. De inhoud is verdeeld over veertien stappen en vijf fasen. Lezers kiezen vrij een stap en wisselen tussen Uitleg, Voorbeeld, Opdracht en Controle. De fictieve Studio Maan verbindt de uitleg. Alle 28 genummerde opdrachten uit de actuele lezerseditie zijn leesbaar en kopieerbaar.
 
 Er is één appgebruikersrol: lezer. De site-eigenaar onderhoudt de bron buiten de website. Sites regelt de besloten toegang. De applicatie beheert geen accounts of leerlingprojecten. Ze verzendt geen aanvragen en voert geen AI-opdrachten uit.
 
@@ -17,9 +17,9 @@ Status PASS betekent hier geïmplementeerd en voor de genoemde broncontracten ge
 | Routekaart/lijst | PASS | app.js, content.js, styles.css | Alle stappen direct bereikbaar | Kaart kan voor sommige lezers minder overzichtelijk zijn | Lijstalternatief behouden |
 | Veertien lessen | PASS | content.js, app.js | Vier onderdelen per les | Didactische duidelijkheid niet gemeten | Test met beginner |
 | Voorbeeldproject | PASS | content.js, app.js | Fictief, zonder echte verwerking | Illustratie als echt resultaat opvatten | Fictieve status zichtbaar |
-| Opdrachten | PASS | prompts.js, app.js | 28 brongetrouwe teksten + losse context | Gebruiker plakt zonder documenten | Context vóór de opdracht |
-| SPOS en tools | PASS | app.js | Rollen en officiële verwijzingen | Externe omgeving kan wijzigen | Laat gebruiker actuele beschikbaarheid checken |
-| Bronhandboek | PASS | downloads/handboek.md | Ongewijzigde bron | Lang naslagwerk voor beginner | Lessen als hoofdingang |
+| Opdrachten | PASS | prompts.js, app.js | 28 teksten uit de lezerseditie + losse context | Gebruiker plakt zonder documenten | Context vóór de opdracht |
+| Werkwijze en tools | PASS | app.js | Rollen en officiële verwijzingen | Externe omgeving kan wijzigen | Laat gebruiker actuele beschikbaarheid checken |
+| Bronhandboek | PASS | downloads/handboek.md | Bewerkte lezerseditie | Lang naslagwerk voor beginner | Lessen als hoofdingang |
 | Appregistratie/voortgang | Niet in scope | app.js | Geen appaccounts of opslag | Onterechte verwachting van voortgang | Geen voortgangsscore tonen |
 | Browser QA | Nog niet uitgevoerd | validation.json | Bron- en handlerchecks wel uitgevoerd | Layout/echte bediening onbekend | Afzonderlijk controleren |
 
@@ -31,18 +31,18 @@ Bronpaden in dit document zijn ten opzichte van `dist/`, tenzij anders genoemd.
 |---|---|---|---|---|
 | Type | Statische interactieve leeromgeving | index.html, app.js | Hoog | Hashnavigatie, geen serverfuncties |
 | Inhoud | 5 fasen → 14 lessen → 4 lesonderdelen | content.js, app.js | Hoog | Vrije navigatie |
-| Opdrachten | 28 originele teksten gekoppeld aan lessen | prompts.js | Hoog | Geen AI-uitvoering |
+| Opdrachten | 28 bewerkte teksten gekoppeld aan lessen | prompts.js | Hoog | Geen AI-uitvoering |
 | Voorbeeld | Eén fictieve keramiekstudio | content.js | Hoog | Geen klant of verkochte dienst |
 | Leereffect | Waarschijnlijk eenvoudiger dan een lang document | Plan | [AFGELEID] | Geen gebruikersonderzoek |
 
-Werkelijk model: fase → les → uitleg/voorbeeld/opdracht/controle → resultaat in het eigen project buiten Lift. Een les verwijst naar één of meer bronopdrachten en procescodes. Er zijn geen leerlingprojectrecords.
+Werkelijk model: fase → les → uitleg/voorbeeld/opdracht/controle → resultaat in het eigen project buiten VIBE Lift. Een les verwijst naar één of meer bronopdrachten en procescodes. Er zijn geen leerlingprojectrecords.
 
 ## 4. Gebruikersrollen en rechtenmodel
 
 | Rol | Lezen/navigeren | Kopiëren/downloaden | Lesinhoud wijzigen | Appgebruikers beheren | Opslaan/verwijderen | Bron |
 |---|---|---|---|---|---|---|
 | Toegelaten lezer | Ja | Ja, eigen apparaat | Nee | Nee | Geen leerlingdata | app.js |
-| Site-eigenaar buiten app | Ja | Ja | Via bronproject | Via Sites, niet in Lift | Bronversies beheren | README.md, hostingconfig |
+| Site-eigenaar buiten app | Ja | Ja | Via bronproject | Via Sites, niet in VIBE Lift | Bronversies beheren | README.md, hostingconfig |
 
 De inhoud verschilt niet per lezer. Er zijn geen app-authroutes, redirects na login of administratorpanelen. De gepubliceerde toegang wordt vóór de site door Sites gehandhaafd. De eerste publicatie is uitsluitend voor de eigenaar. Clientcode zelf kan toegang niet afdwingen.
 
@@ -67,7 +67,7 @@ De inhoud verschilt niet per lezer. Er zijn geen app-authroutes, redirects na lo
 
 ```mermaid
 flowchart TD
-  A[Toegelaten lezer opent Lift] --> B[Routekaart of lijst]
+  A[Toegelaten lezer opent VIBE Lift] --> B[Routekaart of lijst]
   B --> C[Kiest een van 14 stappen]
   C --> D[Leest uitleg en benodigde input]
   D --> E[Bekijkt Studio Maan]
@@ -81,11 +81,11 @@ flowchart TD
   K --> C
 ```
 
-Lift slaat het externe resultaat niet op en kent geen voltooide-lesstatus. De beoordelingsbeslissing is van de leerling.
+VIBE Lift slaat het externe resultaat niet op en kent geen voltooide-lesstatus. De beoordelingsbeslissing is van de leerling.
 
 ## 7. Toegang, registratie, uitnodigingen en activatie
 
-Geen zelfregistratie, uitnodigingsformulier, appaccount of eigen login aanwezig. Sites levert de toegangslaag voor de besloten publicatie. Deze website bevat geen knoppen waarmee de lezer anderen toegang kan geven. Accountactivatie, e-mailverificatie en wachtwoordherstel zijn daarom geen eigen Lift-flows.
+Geen zelfregistratie, uitnodigingsformulier, appaccount of eigen login aanwezig. Sites levert de toegangslaag voor de besloten publicatie. Deze website bevat geen knoppen waarmee de lezer anderen toegang kan geven. Accountactivatie, e-mailverificatie en wachtwoordherstel zijn daarom geen eigen VIBE Lift-flows.
 
 ## 8. Onboarding per rol
 
@@ -93,7 +93,7 @@ Geen zelfregistratie, uitnodigingsformulier, appaccount of eigen login aanwezig.
 |---|---|---|---|---|---|---|
 | Lezer | 1 | Open routekaart | Startpunt | Geen | Begrippen onbekend | renderHome |
 | Lezer | 2 | Begin bij idee of kies gewenste stap | Vrije keuze | Hash | Overzicht kan groot lijken | renderLesson |
-| Lezer | 3 | Bekijk gereedschappen/SPOS indien nodig | Contextafhankelijk | Geen | Framework ontbreekt in eigen omgeving | renderSPOS |
+| Lezer | 3 | Bekijk gereedschappen/Werkwijze indien nodig | Contextafhankelijk | Geen | Projectafspraken ontbreken | renderMethod |
 | Lezer | 4 | Lees voorbeeld en neem opdracht mee | Naar behoefte | Eigen klembord | Context vergeten | promptCard |
 
 Er zijn geen profielvelden, organisatiekoppelingen of gedwongen rondleidingen. Succes is een begrepen volgende handeling, niet een geautomatiseerde voortgangsbadge.
@@ -102,7 +102,7 @@ Er zijn geen profielvelden, organisatiekoppelingen of gedwongen rondleidingen. S
 
 | Rol | Startroute | Primaire taak | Secundair | CTA's | Data | Bron |
 |---|---|---|---|---|---|---|
-| Lezer | #route | Een stap kiezen | Kaart/lijst, casus, tools, SPOS | Begin bij je idee; alle stapkaarten | Vaste inhoud | renderHome |
+| Lezer | #route | Een stap kiezen | Kaart/lijst, casus, tools, Werkwijze | Begin bij je idee; alle stapkaarten | Vaste inhoud | renderHome |
 
 Desktop: vijf fasekolommen. Smallere schermen: fasen onder elkaar; op telefoons kaarten per fase. Lessen gebruiken op brede schermen een zijbalk en op kleine schermen een selectielijst. De kaart/lijstkeuze leeft alleen in geheugen en wordt bij herladen teruggezet. Er zijn geen lege projectdashboards of serverlaadstates. Onbekende routes tonen een herstelpagina; bij niet-ladend JavaScript blijft de handboekfallback beschikbaar.
 
@@ -115,7 +115,7 @@ Desktop: vijf fasekolommen. Smallere schermen: fasen onder elkaar; op telefoons 
 | Voorbeeld | Concrete samenhang | #voorbeeld | Naar casus van iedere stap | Gebouwd | renderExample |
 | Opdrachten | Bronprompts meenemen | #opdrachten, #stap/n/opdracht | Openklappen, lezen, kopiëren | Gebouwd | promptCard |
 | Gereedschappen | Begrippen en rollen | #tools | Officiële site openen | Gebouwd | renderTools |
-| SPOS | Kader en bootstrap | #spos | Uitleg lezen, handboek ophalen | Gebouwd | renderSPOS |
+| Werkwijze | Praktische werkwijze | #werkwijze | Uitleg lezen, handboek ophalen | Gebouwd | renderMethod |
 | Naslag | Volledige bron | downloads/handboek.md | Download/openen | Gebouwd | index.html |
 
 ## 11. Kernobjectbeheer
@@ -143,6 +143,6 @@ Zoeken, dupliceren, archiveren en toewijzen zijn geen appfuncties voor lezers.
 | Opdracht meenemen | Details geopend | Lees context; kopieer | Expliciete klik | Bronopdracht op klembord + melding | Geen toegang → selectie en uitleg | Platformklembord kan verschillen |
 | Casus volgen | #voorbeeld | Kies een van 14 casuslinks | Stapkeuze | Voorbeeldtab van die les | Geen externe verwerking | Casus is fictief |
 | Extern gereedschap | #tools | Officiële link openen | Klik | Nieuwe tab naar leverancier | Leverancier kan onbereikbaar zijn | Actuele functies/kosten daar controleren |
-| Naslag ophalen | Footer of SPOS-pagina | Download handboek | Klik | Oorspronkelijk Markdown-bestand | Browserdownloadinstelling | Geen interne documenteditor |
+| Naslag ophalen | Footer of Werkwijze-pagina | Download handboek | Klik | Oorspronkelijk Markdown-bestand | Browserdownloadinstelling | Geen interne documenteditor |
 
-Geen flow verstuurt berichten, publiceert leerlingprojecten of slaat resultaten op. De tijdelijke kopieermelding is de enige appnotificatie. De leerling rondt de werkelijke projecttaak buiten Lift af.
+Geen flow verstuurt berichten, publiceert leerlingprojecten of slaat resultaten op. De tijdelijke kopieermelding is de enige appnotificatie. De leerling rondt de werkelijke projecttaak buiten VIBE Lift af.

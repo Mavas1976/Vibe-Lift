@@ -1,3 +1,5 @@
+> Historisch dossier van de eerste oplevering. De actuele branding en bezoekersinhoud zijn gewijzigd naar VIBE Lift; zie docs/REBRANDING.md (vanuit docs: REBRANDING.md). De oorspronkelijke bronopdrachten zijn vervangen door de bewerkte lezerseditie.
+
 **Lift — plan voor een interactieve leeromgeving**
 
 12 september 2026 · SPOS CORE + BUILD als hoofdroute, RESEARCH en PRODUCT als inhoudelijke hulpmiddelen · Complexiteit L.

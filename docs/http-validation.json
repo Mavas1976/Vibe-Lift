@@ -1,40 +1,40 @@
 {
   "status": "PASS",
-  "generated_at": "2026-09-12T11:49:03.240Z",
+  "generated_at": "2026-09-12T12:04:05.128Z",
   "base_url": "http://127.0.0.1:4173",
   "assets": [
     {
       "file": "app.js",
       "status": 200,
-      "bytes": 31778,
+      "bytes": 31559,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "content.js",
       "status": 200,
-      "bytes": 33131,
+      "bytes": 33149,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "index.html",
       "status": 200,
-      "bytes": 2381,
+      "bytes": 2633,
       "content_type": "text/html; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "prompts.js",
       "status": 200,
-      "bytes": 21154,
+      "bytes": 21435,
       "content_type": "text/javascript; charset=utf-8",
       "exact_content": true
     },
     {
       "file": "styles.css",
       "status": 200,
-      "bytes": 34700,
+      "bytes": 36582,
       "content_type": "text/css; charset=utf-8",
       "exact_content": true
     },
@@ -62,7 +62,7 @@
     {
       "file": "downloads\\handboek.md",
       "status": 200,
-      "bytes": 188340,
+      "bytes": 188386,
       "content_type": "text/markdown; charset=utf-8",
       "exact_content": true
     }

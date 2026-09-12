@@ -8,7 +8,7 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-echo Lift starten. Laat dit venster open zolang je de site gebruikt.
+echo VIBE Lift starten. Laat dit venster open zolang je de site gebruikt.
 echo Open het lokale adres dat hieronder verschijnt.
 echo Stoppen: druk op Ctrl+C.
 node scripts\serve.mjs

@@ -1,4 +1,4 @@
-"""Extract the 28 numbered source prompts without changing their text."""
+"""Extract the 28 prompts from the current VIBE Lift reader edition."""
 import pathlib, re, json
 root = pathlib.Path(__file__).resolve().parents[1]
 source = (root / 'dist/downloads/handboek.md').read_text(encoding='utf-8-sig')
@@ -12,4 +12,4 @@ for i, match in enumerate(matches):
     prompts.append({'id': int(match[1]), 'title': match[2].rstrip('*'), 'text': block[1]})
 assert [p['id'] for p in prompts] == list(range(1,29)), 'Expected exactly 28 prompts'
 (root / 'dist/prompts.js').write_text('export const prompts = ' + json.dumps(prompts, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
-print(f'Extracted {len(prompts)} original prompts.')
+print(f'Extracted {len(prompts)} reader-edition prompts.')

@@ -16,4 +16,4 @@ const server = http.createServer((req,res) => {
   } catch {res.writeHead(400); res.end('Ongeldig verzoek');}
 });
 server.on('error', error => {console.error('Starten mislukt:', error.code, 'Controleer of poort 4173 al in gebruik is.'); process.exit(1);});
-server.listen(4173,'127.0.0.1',()=>console.log('Lift staat klaar op http://127.0.0.1:4173'));
+server.listen(4173,'127.0.0.1',()=>console.log('VIBE Lift staat klaar op http://127.0.0.1:4173'));

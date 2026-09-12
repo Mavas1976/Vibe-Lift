@@ -1,6 +1,6 @@
-# Lift — Van idee naar live
+# VIBE Lift — Digitale gewichtloosheid
 
-Nederlandstalige interactieve leeromgeving voor iemand zonder programmeerachtergrond. Veertien vrij toegankelijke stappen in vijf fasen, één fictief voorbeeldproject, visuele flows en alle 28 oorspronkelijke AI-opdrachten uit het handboek.
+Nederlandstalige interactieve leeromgeving voor iemand zonder programmeerachtergrond. Veertien vrij toegankelijke stappen in vijf fasen, één fictief voorbeeldproject, visuele flows en alle 28 AI-opdrachten uit de bewerkte lezerseditie uit het handboek.
 
 ## Lokaal openen
 
@@ -21,11 +21,11 @@ De lokale server luistert alleen op `127.0.0.1:4173`. Dit lokale adres is geen o
 - `dist/content.js`: lessen, fasen, begrippen en Studio Maan-voorbeelden.
 - `dist/app.js`: weergaven, gereedschappen, opdrachtcontext en navigatie.
 - `dist/styles.css`: kleuren, typografie, responsive layout en beweging.
-- `dist/prompts.js`: oorspronkelijke opdrachten. Opnieuw genereren vanuit het handboek met `python scripts/extract_prompts.py`.
-- `dist/downloads/handboek.md`: ongewijzigde bron. Wijzig dit bestand niet als onderdeel van gewone lesredactie.
+- `dist/prompts.js`: opdrachten uit de actuele VIBE Lift-lezerseditie. Opnieuw genereren vanuit het handboek met `python scripts/extract_prompts.py`.
+- `dist/downloads/handboek.md`: VIBE Lift-lezerseditie 1.1. Wijzig een opdracht in deze handleiding en genereer daarna `prompts.js` opnieuw. Het oorspronkelijke aangeleverde document wordt buiten de publicatiemap bewaard.
 - `dist/assets/`: originele illustraties en favicon.
 
-Iedere les moet de vaste inhoudsvelden blijven bevatten. Een opdracht-ID verwijst naar een bestaande oorspronkelijke opdracht; schrijf aanvullingen in de context in `app.js`, zodat de bronopdracht herkenbaar blijft.
+Iedere les moet de vaste inhoudsvelden blijven bevatten. Een opdracht-ID verwijst naar een bestaande opdracht uit de lezerseditie; schrijf aanvullingen in de context in `app.js`, zodat context en kopieerbare opdracht herkenbaar gescheiden blijven.
 
 ## Controleren
 
@@ -46,7 +46,8 @@ Geen appdatabase, accounts, analytics, AI-API of externe bibliotheken. Sites ver
 
 ## Documentatie
 
-- `PLAN_SPOS.md`: diepgaand analyse- en bouwplan.
+- `docs/REBRANDING.md`: actuele merkkeuzes, verwijdering van bezoekersgerichte frameworkverwijzingen en controles.
+- `PLAN_SPOS.md`: intern analyse- en bouwplan van de eerste oplevering.
 - `docs/ARCHITECTUUR_SPOS.md`: onderbouwing, grenzen, risico's en verificatie.
 - `docs/APPLICATION_USER_OPERATING_MODEL.md`: feitelijke werking en gebruikersflows.
 - `docs/BRONMAPPING.md`: koppeling tussen lessen, procescodes en opdrachten.
