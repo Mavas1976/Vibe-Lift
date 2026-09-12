@@ -106,7 +106,7 @@ verify((rendered.get('#opdrachten').match(/class="prompt-card"/g)||[]).length===
 verify((rendered.get('#opdrachten').match(/class="seo-prompt"/g)||[]).length===5,'Library also includes five SEO prompts');
 verify(rendered.get('#stap/14/controle').includes('href="#seo">Volgende: je SEO-cursus'),'End of main course leads to SEO');
 verify(rendered.get('#stap/7/uitleg').includes('Antigravity koppelen aan GitHub') && rendered.get('#stap/12/uitleg').includes('Van GitHub naar Railway'),'Repository and hosting walkthroughs in the actual lessons');
-verify(rendered.get('#route').includes('Digitale<br><span>gewichtloosheid.'),'Homepage leads with the brand promise');
+verify(rendered.get('#route').includes('Goed idee.<br><span>Maak het waar.'),'Homepage leads with the current brand promise');
 verify(rendered.get('#werkwijze').includes('Geef je bouwpartner de juiste context.'),'Method page provides actionable, independent guidance');
 verify((rendered.get('#voorbeeld').match(/href="#stap\/\d+\/voorbeeld"/g)||[]).length===14,'Example links to all fourteen lessons');
 // Copy success and denied-clipboard fallback exercise the production handler.
